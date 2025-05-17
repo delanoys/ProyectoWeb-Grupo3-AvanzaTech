@@ -3,120 +3,214 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developers in Process</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Developers in Process - Aprende Tecnologías Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/codemirror.min.css">
   <link rel="stylesheet" href="estilos/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.7/mode/javascript/javascript.min.js"></script>
 </head>
 <body>
   <header class="navbar">
     <h1 class="logo">Developers in Process</h1>
     <nav>
       <ul class="nav-links">
-        <li><a href="#css">CSS</a></li>
         <li><a href="#html">HTML</a></li>
+        <li><a href="#css">CSS</a></li>
         <li><a href="#javascript">JavaScript</a></li>
         <li><a href="#other">Otros</a></li>
       </ul>
     </nav>
   </header>
 
+  <section class="hero">
+    <h2>Aprende a Crear Sitios Web Increíbles</h2>
+    <p>Explora HTML, CSS, JavaScript y más con recursos interactivos y editores de código en tiempo real.</p>
+    <a href="#html" class="cta-button">Comienza Ahora</a>
+  </section>
+
   <main>
-    <section class="hero">
-      <h2>Aprende a Crear Sitios Web Increíbles</h2>
-      <p>Explora HTML, CSS, JavaScript y más con recursos interactivos para todos los niveles.</p>
-      <a href="#html" class="cta-button">Comienza Ahora</a>
-    </section>
-<section id="editor" class="topic-section">
-  <div class="topic-content">
-    <h2>Editor de Código Online</h2>
-    <p>Escribe y prueba tu propio código HTML, CSS y JavaScript en tiempo real.</p>
-
-    <div style="display: flex; flex-direction: column; gap: 1rem;">
-      <label for="html">HTML</label>
-      <textarea id="html" rows="6" placeholder="Escribe tu HTML aquí..."></textarea>
-
-      <label for="css">CSS</label>
-      <textarea id="css" rows="6" placeholder="Escribe tu CSS aquí..."></textarea>
-
-      <label for="js">JavaScript</label>
-      <textarea id="js" rows="6" placeholder="Escribe tu JavaScript aquí..."></textarea>
-
-      <button onclick="runCode()">Ejecutar Código</button>
-
-      <h3>Resultado:</h3>
-      <iframe id="preview" style="width: 100%; height: 300px; border: 1px solid #ccc;"></iframe>
-    </div>
-  </div>
-</section>
-
-<script>
-  function runCode() {
-    const html = document.getElementById("html").value;
-    const css = `<style>${document.getElementById("css").value}</style>`;
-    const js = `<script>${document.getElementById("js").value}<\/script>`;
-    const result = html + css + js;
-    const iframe = document.getElementById("preview");
-    iframe.srcdoc = result;
-  }
-</script>
-
-    <section id="css" class="topic-section">
+    <section id="html" class="topic-section">
       <div class="topic-content">
-        <div class="topic-image">
-          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8" alt="CSS Design">
+        <h2>HTML: La Estructura del Web</h2>
+        <p>Descubre cómo usar HTML para crear la base de cualquier sitio web con una estructura semántica y accesible.</p>
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" class="learn-more">Explorar HTML</a>
+        <div class="code-editor">
+          <h3>Prueba HTML</h3>
+          <textarea id="html-editor">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi Página</title>
+</head>
+<body>
+  <h1>¡Hola, Mundo!</h1>
+  <p>Este es un ejemplo de HTML.</p>
+</body>
+</html>
+          </textarea>
+          <button onclick="runCode('html')">Ejecutar Código</button>
+          <h3>Resultado:</h3>
+          <iframe id="html-preview" style="width: 100%; height: 300px; border: 1px solid #ccc;"></iframe>
         </div>
-        <h2>CSS: Estilo y Diseño</h2>
-        <p>Aprende a estilizar tus sitios con CSS, desde diseños básicos hasta animaciones avanzadas.</p>
-        <a href="https://css-tricks.com" target="_blank" class="learn-more">CSS-Tricks</a>
-        <iframe height="300" style="width:100%;" scrolling="no" title="CSS Example" src="https://codepen.io/team/css-tricks/embed/preview/PoqxBYV?default-tab=css%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+      </div>
+      <div class="topic-image">
+        <img src="https://images.unsplash.com/photo-1555066931-43674753d503" alt="HTML Code">
       </div>
     </section>
 
-    <section id="html" class="topic-section reverse">
+    <section id="css" class="topic-section reverse">
       <div class="topic-content">
-        <div class="topic-image">
-          <img src="https://images.unsplash.com/photo-1516321318427-8d6b681b3d64" alt="HTML Code">
+        <h2>CSS: Estilo y Diseño</h2>
+        <p>Aprende a estilizar tus sitios con CSS, desde diseños básicos hasta animaciones avanzadas.</p>
+        <a href="https://css-tricks.com" target="_blank" class="learn-more">Explorar CSS</a>
+        <div class="code-editor">
+          <h3>Prueba CSS</h3>
+          <textarea id="css-editor">
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  color: #3498db;
+  text-align: center;
+}
+          </textarea>
+          <button onclick="runCode('css')">Ejecutar Código</button>
+          <h3>Resultado:</h3>
+          <iframe id="css-preview" style="width: 100%; height: 300px; border: 1px solid #ccc;"></iframe>
         </div>
-        <h2>HTML: La Estructura del Web</h2>
-        <p>Descubre cómo usar HTML para crear la base de cualquier sitio web con una estructura semántica y accesible.</p>
-        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" class="learn-more">MDN HTML</a>
-        <iframe height="300" style="width:100%;" scrolling="no" title="HTML Example" src="https://codepen.io/team/codepen/embed/preview/ZExJrYb?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+      </div>
+      <div class="topic-image">
+        <img src="https://images.unsplash.com/photo-1516321165247-7b389bd1c7c2" alt="CSS Design">
       </div>
     </section>
 
     <section id="javascript" class="topic-section">
       <div class="topic-content">
-        <div class="topic-image">
-          <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f" alt="JavaScript Code">
-        </div>
         <h2>JavaScript: Interactividad Dinámica</h2>
         <p>Domina JavaScript para añadir funcionalidad interactiva y dinámica a tus proyectos web.</p>
-        <a href="https://javascript.info" target="_blank" class="learn-more">JavaScript.info</a>
-        <iframe height="300" style="width:100%;" scrolling="no" title="JavaScript Example" src="https://codepen.io/team/codepen/embed/preview/jOqzjOy?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+        <a href="https://javascript.info" target="_blank" class="learn-more">Explorar JavaScript</a>
+        <div class="code-editor">
+          <h3>Prueba JavaScript</h3>
+          <textarea id="js-editor">
+function sayHello() {
+  alert("¡Hola, Mundo!");
+}
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("JavaScript está listo!");
+});
+          </textarea>
+          <button onclick="runCode('javascript')">Ejecutar Código</button>
+          <h3>Resultado:</h3>
+          <iframe id="js-preview" style="width: 100%; height: 300px; border: 1px solid #ccc;"></iframe>
+        </div>
+      </div>
+      <div class="topic-image">
+        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f" alt="JavaScript Code">
       </div>
     </section>
 
     <section id="other" class="topic-section reverse">
       <div class="topic-content">
-        <div class="topic-image">
-          <img src="https://images.unsplash.com/photo-1538439907460-1596cafd4eff" alt="Web Technologies">
-        </div>
         <h2>Otras Tecnologías Web</h2>
         <p>Explora frameworks como React, Vue, y herramientas como Git, Webpack y más.</p>
-        <a href="https://www.w3schools.com" target="_blank" class="learn-more">W3Schools</a>
+        <a href="https://www.w3schools.com" target="_blank" class="learn-more">Explorar Más</a>
+        <div class="code-editor">
+          <h3>Prueba React (JSX)</h3>
+          <textarea id="other-editor">
+import React from 'react';
+
+function App() {
+  return (
+    <div>
+      <h1>Bienvenido a React</h1>
+      <p>Este es un componente básico.</p>
+    </div>
+  );
+}
+export default App;
+          </textarea>
+        </div>
+      </div>
+      <div class="topic-image">
+        <img src="https://images.unsplash.com/photo-1538439907460-1596cafd4eff" alt="Web Technologies">
       </div>
     </section>
   </main>
 
   <footer class="footer-content">
+    <h3>Developers in Process</h3>
+    <p>Únete a nuestra comunidad de aprendizaje y construye el futuro del web.</p>
     <h3>Enlaces Recomendados</h3>
     <ul class="footer-links">
-      <li><a href="https://css-tricks.com" target="_blank">CSS-Tricks</a></li>
       <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
-      <li><a href="https://javascript.info" target="_blank">JavaScript.info</a></li>
       <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+      <li><a href="https://css-tricks.com" target="_blank">CSS-Tricks</a></li>
+      <li><a href="https://javascript.info" target="_blank">JavaScript.info</a></li>
     </ul>
-    <p class="footer-copy">&copy; 2025 Developers in Process. Todos los derechos reservados.</p>
+    <p class="footer-copy">© 2025 Developers in Process. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    // Initialize CodeMirror for each editor
+    CodeMirror.fromTextArea(document.getElementById("html-editor"), {
+      mode: "xml",
+      theme: "default",
+      lineNumbers: true,
+      indentUnit: 2,
+      tabSize: 2,
+      matchTags: true,
+    });
+
+    CodeMirror.fromTextArea(document.getElementById("css-editor"), {
+      mode: "css",
+      theme: "default",
+      lineNumbers: true,
+      indentUnit: 2,
+      tabSize: 2,
+      matchBrackets: true,
+    });
+
+    CodeMirror.fromTextArea(document.getElementById("js-editor"), {
+      mode: "javascript",
+      theme: "default",
+      lineNumbers: true,
+      indentUnit: 2,
+      tabSize: 2,
+      matchBrackets: true,
+    });
+
+    CodeMirror.fromTextArea(document.getElementById("other-editor"), {
+      mode: "javascript",
+      theme: "default",
+      lineNumbers: true,
+      indentUnit: 2,
+      tabSize: 2,
+      matchBrackets: true,
+    });
+
+    // Function to run code and display in iframe
+    function runCode(section) {
+      const html = section === 'html' || section === 'css' || section === 'javascript' ? 
+        document.getElementById("html-editor").value : 
+        '<h1>¡Hola, Mundo!</h1><p>Este es un ejemplo básico.</p>';
+      const css = section === 'css' || section === 'javascript' ? 
+        `<style>${document.getElementById("css-editor").value}</style>` : '';
+      const js = section === 'javascript' ? 
+        `<script>${document.getElementById("js-editor").value}<\/script>` : '';
+      const result = `
+        <!DOCTYPE html>
+        <html>
+        <head>${css}</head>
+        <body>${html}${js}</body>
+        </html>
+      `;
+      const iframe = document.getElementById(`${section}-preview`);
+      iframe.srcdoc = result;
+    }
+  </script>
 </body>
 </html>

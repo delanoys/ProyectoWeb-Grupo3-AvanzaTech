@@ -1,6 +1,5 @@
 
     body {
-      font-family: Arial, sans-serif;
       text-align: center;
       background: linear-gradient(334deg, #3568d4, #100530, #0a0712);
       background-size: 180% 180%;
@@ -12,7 +11,7 @@
       justify-content: center;
       align-items: center;
 
-      /* Tamaño completo de la ventana */
+       /* Tamaño completo de la ventana */
       width: 100vw;
       height: 100vh;
 
@@ -32,36 +31,73 @@
           background-position: 0% 50%;
         }
       }
+   
 
-
-
-    h1 {
+     h1 {
       font-size: 60px;
       color: #ffffff;
-      margin-bottom: 10px;
+      margin-bottom: 1px;
+      font-family:"Archivo Black", sans-serif;
     }
 
+   
     p {
       font-size: 18px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: #ffffff;
+      font-family:"Montserrat", sans-serif;
+      font-weight: 629;
+      font-style: normal;
     }
+    
+    a {
+      color: #ffffff;
+      font-family:"Montserrat", sans-serif;
+      font-weight: 529;
+      font-style: normal;
+    }
+    
 
     .botones {
       display: flex;  
       justify-content: center;
       gap: 20px;
     }
+    
+    .botones a:hover {
+        transform: scale(1.05);
+      }
+    
+      
 
     .botones a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       text-decoration: none;
       padding: 15px 25px;
       font-size: 16px;
       border-radius: 8px;
       transition: background-color 0.3s;
       color: white;
+      cursor: pointer;
+      
     }
 
+    .icono {
+        width: 24px;
+        height: 24px;
+      }
+
+    .blanco {
+        filter: brightness(0) invert(1); /* simula blanco */
+      }
+
+
+
+
+    /*ESTOS SON LOS COLORES Y ESTILOS DE LOS BOTONES*/
+    
     .html-btn {
       background-color: #e34c26;
     }
@@ -71,7 +107,7 @@
     }
 
     .js-btn {
-      background-color: #ebcc00;
+      background-color: #ffd904;
       color: #000;
     }
 
@@ -84,19 +120,23 @@
       background-color: #c44100;
       color: #000000;
     }
-
+    
+    .GIT-btn {
+      background-color: #000000;
+      color: #000000;
+    }
 
 
     .html-btn:hover {
-      background-color: #d56808;
+      background-color: #ff9436;
     }
 
     .css-btn:hover {
-      background-color: #1b3bb3;
+      background-color: #567bff;
     }
 
     .js-btn:hover {
-      background-color: #ffdf2c;
+      background-color: #ffe37d;
     }
     
     .Pyth-btn:hover {
@@ -108,6 +148,14 @@
       background-color: #ff8737;
       
     }
+
+    .GIT-btn:hover {
+      background-color: #4b4b4b;
+      
+    }
     
+    
+
+
       
 

@@ -1,23 +1,54 @@
-body {
+
+    body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background-color: #f4f4f4;
-      padding: 50px;
+      background: linear-gradient(334deg, #3568d4, #100530, #0a0712);
+      background-size: 180% 180%;
+      animation: gradient-animation 6s ease infinite;
+
+      /* Centrado con Flexbox */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      /* Tamaño completo de la ventana */
+      width: 100vw;
+      height: 100vh;
+
+      /* Elimina o reduce padding */
+      padding: 0;
+      margin: 0;
     }
+       
+       @keyframes gradient-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+
 
     h1 {
-      color: #333;
+      font-size: 60px;
+      color: #ffffff;
       margin-bottom: 10px;
     }
 
     p {
       font-size: 18px;
       margin-bottom: 30px;
-      color: #555;
+      color: #ffffff;
     }
 
-    *.botones {
-      display: flex;
+    .botones {
+      display: flex;  
       justify-content: center;
       gap: 20px;
     }
@@ -40,12 +71,24 @@ body {
     }
 
     .js-btn {
-      background-color: #f0db4f;
+      background-color: #ebcc00;
       color: #000;
     }
 
+     .Pyth-btn {
+      background-color: #439df8;
+      color: #000000;
+    }
+
+    .SQL-btn {
+      background-color: #c44100;
+      color: #000000;
+    }
+
+
+
     .html-btn:hover {
-      background-color: #c14021;
+      background-color: #d56808;
     }
 
     .css-btn:hover {
@@ -53,6 +96,18 @@ body {
     }
 
     .js-btn:hover {
-      background-color: #e6c300;
+      background-color: #ffdf2c;
     }
-    */
+    
+    .Pyth-btn:hover {
+      background-color: #00407f;
+      
+    }
+
+    .SQL-btn:hover {
+      background-color: #ff8737;
+      
+    }
+    
+      
+

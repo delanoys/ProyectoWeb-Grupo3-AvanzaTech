@@ -3,9 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aprende Python</title>
+    <link rel="stylesheet" href="/estilos/">
 </head>
 <body>
-    <h1>ESTO ES PYTHON</h1>
+    <h1>ESTO ES PYTHON</h1><br><br>
+
+    <small>Por Juan José Lozano Gómez,ver sitio web <a href="https://j2logo.com/python/tutorial/introduccion-a-python/#intro-caracteristicas">aqui.</a> </small><br><br>
+
+        <h2>Introducción a Python</h2><br>
+               
+            <h3>Características del lenguaje</h3><br>
+            <p>Python es un lenguaje de programación de alto nivel cuya máxima es la legibilidad del código. Las principales características de Python son las siguientes:</p>
+
+            <ul>
+                <li>Es multiparadigma, ya que soporta la programación imperativa, programación orientada a objetos y funcional.</li>
+                <li>Es multiplataforma: Se puede encontrar un intérprete de Python para los principales sistemas operativos: Windows, Linux y Mac OS. Además, se puede reutilizar el mismo código en cada una de las plataformas.</li>
+                <li>Es dinámicamente tipado: Es decir, el tipo de las variables se decide en tiempo de ejecución.</li>
+                <li>Es fuertemente tipado: No se puede usar una variable en un contexto fuera de su tipo. Si se quisiera, habría que hacer una conversión de tipos.</li>
+                <li>Es interpretado: El código no se compila a lenguaje máquina.</li>
+            </ul>
+            <br><br> 
+
+            <h3>El intérprete</h3><br>
+            <p>El hecho de que Python sea interpretado quiere decir que hace falta un intérprete que permita ejecutar un programa o script escrito en Python sin necesidad de compilarlo.<br>
+            Cuando instalas Python correctamente (en cualquier sistema operativo) ocurren, entre otras, dos cosas: se añade el comando <code>python</code> o <code>python3</code>, en caso de que instales la versión 3.x de Python al path y se instala el intérprete de Python correspondiente.<br>
+            Si ya has instalado Python, abre una consola o terminal y ejecuta el comando python3. Este comando lanzará el intérprete de Python correspondiente.<br>
+            En el intérprete de Python podemos escribir expresiones e instrucciones que este interpretará y ejecutará.<br>
+            Para salir del intérprete basta con ejecutar la instrucción <code>quit()</code><br>
+            No obstante, aunque esta forma de escribir código puede ser útil para aprender y en casos muy puntuales, no es la habitual a la hora de escribir un programa o script en Python. Normalmente, los programas en Python se escriben en archivos con la extensión <code>.py</code>. Estos archivos se pasan al intérprete de Python para que los interprete y ejecute.
+            </p>
+            <br><br>
+
+            <h3>Operadores, expresiones y sentencias</h3><br>
+            <p>Son las formas básicas que componen la estructura de cualquier programa.</p><br>
+
+                <h4>Operador</h4><br>
+                <p>Un operador es un caracter o conjunto de caracteres que actúa sobre una, dos o mas variables y/o literales para llevar a cabo una operación con un resultado determinado.
+                Ejemplos de operadores comunes son los operadores aritméticos + (suma), - (resta) o * (producto), aunque en Python existen otros operadores.</p><br>
+
+                <h4>Expresion</h4><br>
+                <p>Una expresión es una unidad de código que devuelve un valor y está formada por una combinación de operandos (variables y literales) y operadores. Los siguientes son ejemplos de expresiones (cada línea es una expresión diferente):
+                <ul>
+                    <li><code>5 + 2</code></li>
+                    <li><code>a < 10</code></li>
+                    <li><code>b is None</code></li>
+                    <li><code>3 * (200 - c)</code></li>
+                </ul>
+                </p><br>
+
+                <h4>Sentencia</h4><br>
+                <p>Por su parte, una sentencia o declaración es una instrucción que define una acción. Una sentencia puede estar formada por una o varias expresiones, aunque no siempre es así.
+                En definitiva, las sentencias son las instrucciones que componen nuestro programa y determinan su comportamiento.
+                Ejemplos de sentencias son:</p><br>
+                <ul>
+                    <li>La asignacion <code> = </code></li>
+                    <li>o las instrucciones <code>if</code>, <code>if...else...</code>, <code>for</code> o <code>while</code></li>
+                </ul>
+                <p>entre otras.</p><br>
+
+                <h4>Sentencias de mas de una linea</h4><br>
+                <p>Normalmente, las sentencias ocupan una sola línea. Sin embargo, aquellas sentencias que son muy largas pueden ocupar más de una línea (la guía de estilo PEP 8, recomienda una longitud de línea máxima de 72 caracteres).<br>
+                Para dividir una sentencia en varias líneas se utiliza el caracter \, se le llama separacion explicita.<br>
+                En Python, la continuacion de linea es implicita siempre y cuando la expresion vaya dentro de los caracteres (), [] y {}.
+                </p>
+
+            <br><br>
+
+            <h3>Bloques de código (Indentación)</h3><br>
+            <p><b></b>Esta es una de las <b>principales características</b> de Python.<br>
+
+            Un bloque de código es un grupo de sentencias relacionadas bien delimitadas. A diferencia de otros lenguajes como JAVA o C, en los que se usan los caracteres {} para definir un bloque de código, en Python se usa la indentación o sangria.<br>
+
+            La sangria o indentacion consiste en mover un bloque de texto hacia la derecha insertando espacios o tabuladores al principio de la linea, dejando un margen a la izquierda.
+            Un bloque comienza con una nueva sangria y acaba con la primera línea cuya sangria sea menor. De nuevo, la guía de estilo de Python recomienda usar los espacios en lugar de las tabulaciones para realizar la sangria. Yo suelo utilizar 4 espacios.</p>
+            <br><br>
+
+            <h3>Comentarios en Python</h3><br>
+            <p>Los comentarios son ignorados por el intérprete de Python. Solo tienen sentido para los programadores. <br>
+
+            Para añadir un comentario a tu código simplemente comienza una línea con el caracter #. Si ocupa dos o más líneas, cada línea debe empezar por el caracter #, así:<br>
+            <code>#Este comentario</code><br>
+            <code>#ocupa dos líneas.</code><br>
+            </p><br><br>
+
+            <h3>Convenciones de nombres en Python</h3><br>
+
+            <h3>Palabras reservadas</h3><br>
+
+            <h3>Constantes</h3><br>
+
+    
 </body>
 </html>

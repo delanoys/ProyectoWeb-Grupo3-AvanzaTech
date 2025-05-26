@@ -1,0 +1,113 @@
+/* Reset básico 
+* {
+  margin: 10px;
+  padding: 10vh;
+  box-sizing: border-box;
+}
+*/
+/* Body con fondo blanco y tipografía legible 
+body {
+  background-color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+body h1{
+color: #243987;
+}
+*/
+/* Contenedor principal centrado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Sección de héroe */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: #fff;
+  /* Sombra azul suave */
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  box-shadow: #00ff9d;
+}
+
+.hero p {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Botón principal */
+.btn-primary {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  /* Sombra azul */
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
+}
+
+/* Tarjetas de contenido */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid transparent;
+  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.15);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  font-size: 3rem;
+  color: #f1f1f1;
+}
+
+/* Sección de características en grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Pie de página simple */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+

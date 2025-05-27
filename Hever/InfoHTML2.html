@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="/estilos/menu.css" />
   <link rel="stylesheet" href="/estilos/editor.css">
 
-  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
@@ -25,9 +24,9 @@
 </head>
 
 <body>
+  <!-- ENCABEZADO -->
   <header>
     <div class="botones">
-
       <a href="/index.html" class="html-btn">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="icono" alt="HTML">
         INICIO
@@ -37,17 +36,15 @@
         CSS
       </a>
       <a href="/Mariano/InfoJS.html" class="js-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icono"
-          alt="JavaScript">JAVASCRIPT
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icono" alt="JavaScript">
+        JAVASCRIPT
       </a>
       <a href="/Maria/InfoPython.html" class="Pyth-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icono"
-          alt="Python">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icono" alt="Python">
         PYTHON
       </a>
       <a href="/Valeria/InfoSQL.html" class="SQL-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="icono blanco"
-          alt="SQL">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="icono blanco" alt="SQL">
         SQL
       </a>
       <a href="/Git/InfoGIT.html" class="GIT-btn">
@@ -55,18 +52,77 @@
         GIT
       </a>
     </div>
-
   </header>
-  <!-- <h1>COnviértete en desarrollador <br> web desde cero</h1> -->
-  <p>Explora los lenguajes claves para construir sitios y aplicaciones increíbles.</p>
+
+  <!-- INTRODUCCIÓN -->
+  <section class="intro">
+    <p>Explora los lenguajes claves para construir sitios y aplicaciones increíbles.</p>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
-    <section>
+
+    <!-- ¿Qué es HTML? -->
+    <section class="que-es-html">
       <h1>¿Qué es HTML?</h1>
       <h3>HTML es el lenguaje de marcado estándar para crear páginas Web.</h3>
     </section>
 
-    <!-- Editor 
-    <section>
+    <!-- MENÚ DESPLEGABLE -->
+    <section class="menu-desplegable">
+      <div class="menu-container">
+        <h1 class="menu-header">Introducción</h1>
+        <ul class="menu-items">
+          <li>Elementos</li>
+          <li>Lista</li>
+          <li>Tabla</li>
+          <li>Iframe</li>
+        </ul>
+      </div>
+
+      <div class="menu-container">
+        <h1 class="menu-header">Estructura Básica</h1>
+        <ul class="menu-items">
+          <li>Elementos</li>
+          <li>Lista</li>
+          <li>Tabla</li>
+          <li>Iframe</li>
+        </ul>
+      </div>
+
+      <div class="menu-container">
+        <h1 class="menu-header">Elementos de texto</h1>
+        <ul class="menu-items">
+          <li>Elementos</li>
+          <li>Lista</li>
+          <li>Tabla</li>
+          <li>Iframe</li>
+        </ul>
+      </div>
+
+      <div class="menu-container">
+        <h1 class="menu-header">Imágenes y Multimedia</h1>
+        <ul class="menu-items">
+          <li>Elementos</li>
+          <li>Lista</li>
+          <li>Tabla</li>
+          <li>Iframe</li>
+        </ul>
+      </div>
+
+      <div class="menu-container">
+        <h1 class="menu-header">Listas y Tablas</h1>
+        <ul class="menu-items">
+          <li>Elementos</li>
+          <li>Lista</li>
+          <li>Tabla</li>
+          <li>Iframe</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDITOR (DESCOMENTAR PARA ACTIVAR)-->
+    <section class="editor">
       <div class="editor-wrapper">
         <div class="tabs">
           <div class="tab active" data-lang="html">HTML</div>
@@ -84,84 +140,24 @@
         </div>
       </div>
       <iframe id="preview"></iframe>
-
-    </section>-->
-
-    <!-- Menu Desplegable -->
-    <section>
-
-      <div class="menu-container" id="menu">
-        <h1 id="menu-header">Introducción </h1>
-        <ul class="menu-items" id="menu-items">
-
-          <li>Elementos </li>
-          <li>Lista </li>
-          <li>Tabla </li>
-          <li>Iframe </li>
-
-        </ul>
-      </div>
-      <div class="menu-container" id="menu">
-        <h1 id="menu-header">Estructura Basica </h1>
-        <ul class="menu-items" id="menu-items">
-
-          <li>Elementos </li>
-          <li>Lista </li>
-          <li>Tabla </li>
-          <li>Iframe </li>
-
-        </ul>
-      </div>
-      <div class="menu-container" id="menu">
-        <h1 id="menu-header">Elementos de texto </h1>
-        <ul class="menu-items" id="menu-items">
-
-          <li>Elementos </li>
-          <li>Lista </li>
-          <li>Tabla </li>
-          <li>Iframe </li>
-
-        </ul>
-      </div>
-      <!-- <div class="menu-container" id="menu">
-        <h1 id="menu-header">Imágenes y Multimedia </h1>
-        <ul class="menu-items" id="menu-items">
-
-          <li>Elementos </li>
-          <li>Lista </li>
-          <li>Tabla </li>
-          <li>Iframe </li>
-
-        </ul>
-      </div>
-      <div class="menu-container" id="menu">
-        <h1 id="menu-header">Listas y Tablas </h1>
-        <ul class="menu-items" id="menu-items">
-
-          <li>Elementos </li>
-          <li>Lista </li>
-          <li>Tabla </li>
-          <li>Iframe </li>
-
-        </ul>
-      </div> -->
     </section>
-
-
-    </div>
-
+    
 
   </main>
+
+  <!-- PIE DE PÁGINA -->
   <footer>
+    <h2>Referencias:</h2>
     <ul>
-      <h2>Referencias: </h2>
       <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools.com</a></li>
     </ul>
-
   </footer>
+
+  <!-- SCRIPTS -->
   <script src="/js/menu.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="/js/editor.js"></script>
 </body>
+
 
 </html>

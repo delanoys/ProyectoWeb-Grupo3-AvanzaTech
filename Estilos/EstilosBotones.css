@@ -1,0 +1,215 @@
+body {
+  text-align: center;
+  background: linear-gradient(334deg, #100530, #100530, #3568d4);
+  background-size: 180% 180%;
+  animation: gradient-animation 8s ease infinite;
+
+  /* Centrado con Flexbox */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Tamaño completo de la ventana */
+  width: 100vw;
+  height: auto;
+
+  /* Elimina o reduce padding */
+  padding: 0;
+  margin: 5px;
+}
+
+footer {
+  text-align: center;
+  /* background: linear-gradient(334deg, #100530, #100530, #3568d4);
+  background-size: 180% 180%;
+  animation: gradient-animation 8s ease infinite; */
+
+  /* Centrado con Flexbox */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  /* Tamaño completo de la ventana */
+  width: 100vw;
+  height: 50vh;
+
+  /* Elimina o reduce padding */
+  padding: 20px;
+  margin: 5px;
+}
+footer h2{
+  font-size: 25px;
+  color: #ffffff;
+  margin-bottom: 1px;
+  font-family: "Archivo Black", sans-serif;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+h1 {
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 1px;
+  font-family: "Archivo Black", sans-serif;
+}
+h3 {
+  /* font-size: 40px; */
+  color: #ffffff;
+  margin-bottom: 1px;
+  font-family: "Archivo Black", sans-serif;
+}
+
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 629;
+  font-style: normal;
+}
+
+a {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 529;
+  font-style: normal;
+}
+
+div {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 629;
+  font-style: normal;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.botones a:hover {
+  transform: scale(1.05);
+}
+
+
+
+.botones a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  color: white;
+  cursor: pointer;
+
+  /* dejar los botones fijos arriba  */
+  .botones {
+    position: fixed;
+    /* 🔒 Fijo en la pantalla */
+    top: 5px;
+    /* ⬇️ Separación desde arriba */
+    left: 50%;
+    /* 📍 Centro horizontal */
+    transform: translateX(-50%);
+    /* 🔄 Centrado exacto */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1000;
+    /* 🥇 Se asegura de estar por encima de otros elementos */
+  }
+
+
+}
+
+.icono {
+  width: 24px;
+  height: 24px;
+}
+
+.blanco {
+  filter: brightness(0) invert(1);
+  /* simula blanco */
+}
+
+
+
+
+/*ESTOS SON LOS COLORES Y ESTILOS DE LOS BOTONES*/
+
+.html-btn {
+  background-color: #e34c26;
+}
+
+.css-btn {
+  background-color: #264de4;
+}
+
+.js-btn {
+  background-color: #ffd904;
+  color: #000;
+}
+
+.Pyth-btn {
+  background-color: #439df8;
+  color: #000000;
+}
+
+.SQL-btn {
+  background-color: #c44100;
+  color: #000000;
+}
+
+.GIT-btn {
+  background-color: #000000;
+  color: #000000;
+}
+
+
+.html-btn:hover {
+  background-color: #ff9436;
+}
+
+.css-btn:hover {
+  background-color: #567bff;
+}
+
+.js-btn:hover {
+  background-color: #ffe37d;
+}
+
+.Pyth-btn:hover {
+  background-color: #00407f;
+
+}
+
+.SQL-btn:hover {
+  background-color: #ff8737;
+
+}
+
+.GIT-btn:hover {
+  background-color: #4b4b4b;
+
+}

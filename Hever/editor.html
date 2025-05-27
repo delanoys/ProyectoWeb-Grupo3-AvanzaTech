@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editor Web en Pestañas</title>
+  <link rel="stylesheet" href="/estilos/editor.css">
+</head>
+<body>
+
+  <div class="editor-wrapper">
+    <div class="tabs">
+      <div class="tab active" data-lang="html">HTML</div>
+      <div class="tab" data-lang="css">CSS</div>
+      <div class="tab" data-lang="js">JavaScript</div>
+    </div>
+
+    <textarea id="html" class="active" placeholder="Escribe tu HTML aquí..."></textarea>
+    <textarea id="css" placeholder="Escribe tu CSS aquí..."></textarea>
+    <textarea id="js" placeholder="Escribe tu JavaScript aquí..."></textarea>
+
+    <div class="controls">
+      <button onclick="runCode()">Ejecutar</button>
+      <button onclick="downloadZip()">Descargar ZIP</button>
+    </div>
+  </div>
+
+  <iframe id="preview"></iframe>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="/js/editor.js"></script>
+</body>
+</html>

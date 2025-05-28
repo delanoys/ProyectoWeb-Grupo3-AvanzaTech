@@ -213,3 +213,58 @@ div {
   background-color: #4b4b4b;
 
 }
+
+/*  Estilos Tablas Agregar estilos para tarjetas (cards) */
+
+.tarjeta-git {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.tarjeta-git h2 {
+  font-size: 24px;
+  color: #ffffff;
+  font-family: "Archivo Black", sans-serif;
+  margin-bottom: 10px;
+}
+
+.tarjeta-git p,
+.tarjeta-git li {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.tarjeta-git code {
+  background-color: #00000099;
+  color: #00ffc3;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.tabla-git {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.tabla-git th, .tabla-git td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  color: white;
+}
+
+.tabla-git th {
+  background-color: #222;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}

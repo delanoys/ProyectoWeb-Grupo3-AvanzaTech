@@ -4,20 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS</title>
-  <!-- Estilos Hever -->
+  <title>GIT</title>
+
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="/estilos/EstilosBotones.css">
 
-  <!-- fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body>
@@ -27,7 +23,6 @@
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="icono" alt="Git">
         INICIO
       </a>
-
       <a href="/Hever/InfoHTML.html" class="html-btn">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="icono" alt="HTML">
         HTML
@@ -37,82 +32,88 @@
         CSS
       </a>
       <a href="/Mariano/InfoJS.html" class="js-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icono"
-          alt="JavaScript">JAVASCRIPT
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icono" alt="JavaScript">
+        JAVASCRIPT
       </a>
       <a href="/Maria/InfoPython.html" class="Pyth-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icono"
-          alt="Python">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icono" alt="Python">
         PYTHON
       </a>
       <a href="/Valeria/InfoSQL.html" class="SQL-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="icono blanco"
-          alt="SQL">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="icono blanco" alt="SQL">
         SQL
       </a>
     </div>
-    <H1>GIT </H1>
-    <div>
-      <!-- <h1>COnviértete en desarrollador <br> web desde cero</h1> -->
-      <p>Explora los lenguajes claves para construir sitios y aplicaciones increíbles.</p>
 
-    </div>
+    <h1>GIT</h1>
+    <p>Git es una herramienta que te ayuda: <br>
+       <i>- guarde y administre diferentes versiones de sus archivos y código.</i> <br>
+      <i>- rabaja con otros, realiza un seguimiento de los cambios y deshace los errores.</i></p>
+    
   </header>
+
   <main>
-    <!-- <div class="gradient">
-      </div> -->
-
-    <div>
+    <div class="tarjeta-git">
+      <h2>Comandos recientes utilizados</h2>
       <ul>
-        <li>
-          <p><strong>git reset --hard 12e5d42</strong> restaurar el commit (12e5d42) vuelve el codigo a un estado
-            anterior</p>
-        </li>
-        <li>
-          <p><strong>git pull origin main </strong> actualiza la rama <i>Activa </i> con el contenido del main</p>
-        </li>
+        <li><strong>git reset --hard 97131fb</strong>: restaura el código a un estado anterior según el hash del commit.</li>
+        <li><strong>git pull origin main</strong>: actualiza la rama activa con el contenido más reciente del main remoto.</li>
       </ul>
-
-
     </div>
 
+    <div class="tarjeta-git">
+      <h2>Script de Git para actualizar ramas desde <code>SQL</code></h2>
+      <pre><code>for branch in CSS Html JavaScript Mariano2 Python SQL Git; do
+  git checkout $branch
+  git merge SQL
+done</code></pre>
+      <img src="/imagenes/Git Script parte A.png" alt="Script Git Parte A" style="max-width: 100%; margin-top: 15px;">
     </div>
 
-
-    <div>
-      <h2>Scrip de Git para actualizar ramas <i>desde la rama SQL</i></h2>
-      <p>for branch in <strong>CSS Html JavaScript Mariano2 Python SQL Git;</strong> do <br>
-        git checkout $branch <br>
-        git merge SQL <br>
-        done <br>
-      </p>
-      <p>la rama main no se actualizó ?</p>
-      <p>script completo que puedes ejecutar en tu terminal para hacer git push de todas las ramas que actualizaste:
-        <br>
-        for branch in CSS Html JavaScript Mariano2 Python SQL main; do <br>
-        git checkout $branch <br>
-        git push origin $branch <br>
-        done <br>
-
-      </p>
-      <p><i> Modificar Script Modificando las ramas que se quieren actualizar <br>
-          en el ejemplo: en la rama <strong>CSS Html JavaScript Mariano2 Python SQL Git;</strong> <br>
-          y debe indicar desde que rama en este ejmplo: git merge <i>SQL</i> rama actual
-        </i></p>
-      <h1></h1>
+    <div class="tarjeta-git">
+      <h2>Acciones para eliminar ramas</h2>
+      <table class="tabla-git">
+        <thead>
+          <tr>
+            <th>Acción</th>
+            <th>Comando</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Eliminar rama remota <code>SQL</code></td>
+            <td><code>git push origin --delete SQL</code></td>
+          </tr>
+          <tr>
+            <td>Eliminar rama local <code>SQL</code></td>
+            <td><code>git branch -d SQL</code> o <code>git branch -D SQL</code></td>
+          </tr>
+          <tr>
+            <td>Limpiar referencias remotas viejas</td>
+            <td><code>git remote prune origin</code></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div>
-      <img src="/imagenes/Git Script parte A.png" alt="Script A">
-      <img src="/imagenes/Git Script parte B.png" alt="Scrip B">
+
+    <div class="tarjeta-git">
+      <h2>Script para hacer push de todas las ramas</h2>
+      <pre><code>for branch in CSS Html JavaScript Mariano2 Python SQL main; do
+  git checkout $branch
+  git push origin $branch
+done</code></pre>
+      <p><i>Modifica el script con las ramas que desees actualizar. El comando <code>git merge SQL</code> se refiere a integrar cambios desde la rama <strong>SQL</strong>.</i></p>
+      <img src="/imagenes/Git Script parte B.png" alt="Script Git Parte B" style="max-width: 100%; margin-top: 15px;">
     </div>
   </main>
+
   <footer>
     <ul>
-      <h2>Referencias: </h2>
+      <h2>Referencias:</h2>
       <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools.com</a></li>
     </ul>
-
   </footer>
 </body>
 
 </html>
+

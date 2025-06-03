@@ -1,37 +1,85 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Información sobre JavaScript</title>
-    <link rel="stylesheet" href="/estilos/JAVA.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript</title>
+  <link rel="stylesheet" href="/ProyectoWeb-Grupo3-AvanzaTech/Estilos/JAVA.css" />
 </head>
 <body>
-    <div class="top-bar">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Logo JavaScript" class="logo">
-        <h1 class="title">Información sobre JavaScript</h1>
-        <form class="search-bar">
-            <input type="text" placeholder="Buscar...">
-            <button type="submit">&#128269;</button>
-        </form>
+  <header class="container">
+    <div class="logo">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo">
+      JavaScript
     </div>
-    
-    <nav class="menu" aria-label="Menú de JavaScript">
-        <ul>
-            <li>
-                <a href="#">Intro JavaScript</a>
-                <ul class="submenu">
-                    <li><a href="#">¿Qué es JavaScript?</a></li>
-                    <li><a href="#">Historia</a></li>
-                    <li><a href="#">¿Para qué sirve?</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Variables y Tipos de Datos</a></li>
-            <li><a href="#">Operadores Básicos</a></li>
-            <li><a href="#">Estructuras de Control</a></li>
-            <li><a href="#">Funciones</a></li>
-        </ul>
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="#">Intro JavaScript</a>
+          <ul class="submenu">
+            <li><a href="#">¿Qué es JavaScript?</a></li>
+            <li><a href="#">Historia</a></li>
+            <li><a href="#">¿Para qué sirve?</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Variables y Tipos de Datos</a></li>
+        <li><a href="#">Operadores Básicos</a></li>
+        <li><a href="#">Estructuras de Control</a></li>
+        <li><a href="#">Funciones</a></li>
+      </ul>
     </nav>
-    <!-- Aquí puedes agregar más contenido sobre JavaScript -->
+    <form class="search-bar">
+      <input type="text" placeholder="Buscar...">
+      <button type="submit">🔍</button>
+    </form>
+  </header>
+
+  <!-- Barra informativa debajo del menú -->
+  <div class="info-bar">
+    ¿Quieres saber más?
+    <a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools.com</a>
+  </div>
+
+  <main class="content">
+    <h1>GIT</h1>
+    <div>
+      <p>Explora los lenguajes claves para construir sitios y aplicaciones increíbles.</p>
+    </div>
+    <div>
+      <ul>
+        <li>
+          <p><strong>git reset --hard 12e5d42</strong> restaurar el commit (12e5d42) vuelve el código a un estado anterior</p>
+        </li>
+        <li>
+          <p><strong>git pull origin main </strong> actualiza la rama <i>Activa </i> con el contenido del main</p>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h2>Scrip de Git para actualizar ramas <i>desde la rama SQL</i></h2>
+      <p>for branch in <strong>CSS Html JavaScript Mariano2 Python SQL Git;</strong> do <br>
+        git checkout $branch <br>
+        git merge SQL <br>
+        done <br>
+      </p>
+      <p>la rama main no se actualizó ?</p>
+      <p>script completo que puedes ejecutar en tu terminal para hacer git push de todas las ramas que actualizaste:
+        <br>
+        for branch in CSS Html JavaScript Mariano2 Python SQL main; do <br>
+        git checkout $branch <br>
+        git push origin $branch <br>
+        done <br>
+      </p>
+      <p><i>Modificar Script Modificando las ramas que se quieren actualizar.<br>
+        En el ejemplo: en la rama <strong>CSS Html JavaScript Mariano2 Python SQL Git;</strong> <br>
+        y debe indicar desde qué rama en este ejemplo: git merge <i>SQL</i> rama actual
+      </i></p>
+    </div>
+    <div>
+      <img src="/imagenes/Git Script parte A.png" alt="Script A">
+      <img src="/imagenes/Git Script parte B.png" alt="Script B">
+    </div>
+  </main>
 </body>
 </html>
+

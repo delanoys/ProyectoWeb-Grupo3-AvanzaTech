@@ -1,152 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-      text-align: center;
-      background: linear-gradient(334deg, #0f2556, hsl(255, 81%, 10%), #0a0712);
-      background-size: 180% 180%;
-      animation: gradient-animation 6s ease infinite;
-      min-height: 100vh;
-      padding: 0;
-      margin: 0;
-      font-family: 'Archivo Black', Arial, sans-serif;
-    }
-      
-      
-      
-/* Barra superior para logo, título y búsqueda */
-.top-bar {
-    width: 100%;
-    height: 150px;
-    background: #fdc94eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1100;
-    padding: 0 60px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.22);
-    border-bottom: 1.5px solid #232946;
-    gap: 60px;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(334deg, #3568d4, #100530, #0a0712);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+  color: #fff;
+  line-height: 1.6;
+  width: 100vw;
+  height: 100vh;
 }
 
-/* Logo JavaScript grande y animado al pasar el cursor */
-.top-bar .logo {
-    height: 80px;
-    width: 80px;
-    border-radius: 18px;
-    background: #fff;
-    padding: 6px;
-    box-shadow: 0 4px 16px rgba(253, 250, 250, 0.1);
-    object-fit: contain;
-    transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+ @keyframes gradient-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 40px;
+  z-index: 1000;
+  gap: 40px; /* Espacio entre logo, menú y buscador */
 }
 
-.top-bar .logo:hover {
-    transform: scale(1.15) rotate(-8deg);
-    box-shadow: 0 8px 32px #3568d4a0;
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 40px; /* Más separación con el menú */
 }
 
-/* Título centrado en la barra superior */
-.top-bar .title {
-    flex: 1;
-    text-align: center;
-    font-size: 2em;
-    color: #ffffff;
-    font-family: 'Archivo Black', Arial, sans-serif;
-    margin: 0;
+.logo img {
+  height: 42px;
+  margin-right: 8px;
+  width: auto;
+  display: block;
 }
 
-/* Buscador minimalista */
-.top-bar .search-bar {
-    display: flex;
-    align-items: center;
-    background: #232946;
-    border-radius: 30px;
-    padding: 4px 10px 4px 18px; /* Más padding a la izquierda */
-    box-shadow: 0 2px 8px rgba(53,104,212,0.08);
-    min-width: 140px;
-    max-width: 220px;
-    width: 100%;
-    position: relative;
-}
-
-.top-bar input[type="text"] {
-    padding: 6px 0 6px 8px;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    background: transparent;
-    color: #fff;
-    width: 90px;
-    transition: width 0.3s;
-    border-radius: 0;
-}
-
-.top-bar input[type="text"]:focus {
-    width: 140px;
-    background: transparent;
-}
-
-.top-bar button {
-    background: none;
-    color: #3568d4;
-    border: none;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    margin-left: 20px; /* Más pegado al borde derecho */
-    margin-right: -6px; /* Ligeramente fuera del padding para alinearlo al borde */
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-}
-
-.top-bar button:hover {
-    background: #232946;
-    color: #ffd700;
-    transform: scale(1.12);
-}
-
-/* Menú principal fijo debajo de la barra superior */
 .menu {
-    width: 100%;
-    position: fixed;
-    top: 150px; /* Altura de la barra superior */
-    left: 0;
-    z-index: 1000;
-    background: rgba(30, 30, 40, 0.95);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  flex: 1;
 }
 
 .menu ul {
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    max-width: 1200px;
-}
-
-.menu ul li {
-    position: relative;
+  display: flex;
+  gap: 24px;
+  list-style: none;
 }
 
 .menu ul li a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.menu ul li a:hover {
+  background-color: #3c2d70;
+}
+
+
+.container .menu ul li {
+    position: relative;
+}
+
+.container .menu ul li a {
     display: block;
-    padding: 15px 24px;
-    color: #fff;
+    padding: 10px 18px;
+    color: #fcfcfc;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.4em;
+    font-size: 1.2em;
+    border-radius: 8px;
     transition: background 0.3s, color 0.3s;
 }
 
-.menu ul li:hover {
+.container .menu ul li:hover {
     background-color: #444;
+}
+
+.container .menu ul li a:hover {
+    color: #ffd700;
+    background: #9393934e;
 }
 
 /* Submenú desplegable con efecto suave */
@@ -155,9 +113,9 @@ body {
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 0; /* Cambiado de left: 0 a right: 0 para alinear a la derecha */
     background-color: #444;
-    min-width: 180px;
+    min-width: 190px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.18);
     z-index: 100;
@@ -192,39 +150,93 @@ body {
     color: #ffffff;
 }
 
-/* Título principal con espacio para barra y menú */
-h1 {
-    margin-top: 150px; /* 150px barra + menú */
-    margin-bottom: 24px;
-    color: #ffffff;
-    font-size: 2.5em;
-    letter-spacing: 1px;
+.actions .primary {
+  background-color: #7c3aed;
+  border: none;
 }
 
-/* Responsive para menú y barra superior */
-@media (max-width: 700px) {
-    .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 18px 10px;
-        gap: 18px;
-    }
-    .top-bar .logo {
-        height: 60px;
-        width: 60px;
-        padding: 6px;
-    }
-    .top-bar .search-bar {
-        min-width: 120px;
-        max-width: 100%;
-        width: 100%;
-        padding: 6px 10px;
-    }
-    .menu {
-        top: 100px;
-    }
-    h1 {
-        margin-top: 130px;
-    }
+.actions .primary:hover {
+  background-color: #5b21b6;
+}
+
+.content {
+  padding: 140px 40px 40px 40px; /* 90px header + 50px info-bar */
+  max-width: 900px;
+  margin: auto;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.content h2 {
+  margin-top: 40px;
+  font-size: 1.8rem;
+}
+
+.content a {
+  color: #7c3aed;
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+/* Buscador alineado a la derecha */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #232946;
+  border-radius: 30px;
+  padding: 4px 10px 4px 18px;
+  box-shadow: 0 2px 8px rgba(53,104,212,0.08);
+  min-width: 140px;
+  max-width: 220px;
+  width: 100%;
+  position: relative;
+  margin-left: 40px;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  font-size: 1em;
+  width: 100%;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  color: #ffd700;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding-left: 8px;
+}
+
+/* Barra informativa debajo del menú */
+.info-bar {
+  width: 100%;
+  background: #ffd700;
+  color: #232946;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 9px 0 10px 0;
+  position: fixed;
+  top: 90px; /* Justo debajo del header de 90px */
+  left: 0;
+  z-index: 999;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.info-bar a {
+  margin-left: 12px;
+  color: #232946;
+  font-weight: bold;
+  text-decoration: underline;
 }

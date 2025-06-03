@@ -1,33 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML - lenguaje de marcado</title>
   <!-- Estilos Hever -->
-  <link rel="stylesheet" href="../Estilos/HeverEstilos.css">
-  <link rel="stylesheet" href="../estilos/menu.css" />
-  <link rel="stylesheet" href="../estilos/editor.css">
-  <link rel="stylesheet" href="../estilos/EstilosBotones.css">
+  <link rel="stylesheet" href="/estilos/EstilosBotones.css">
+  <link rel="stylesheet" href="/estilos/menu.css" />
+  <link rel="stylesheet" href="/estilos/editor.css">
+
   <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <!-- Iconos devicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-  <!-- <link rel="stylesheet" href="/estilos/HeverEstilos.css"> -->
+  <style>
+    header {
+      background-color: #1f1f1f;
+      padding: 10px;
+      text-align: center;
+    }
 
+    .botones {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .botones a {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      background-color: #333;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      transition: background-color 0.3s;
+    }
+
+    .botones a:hover {
+      background-color: #555;
+    }
+
+    .botones .icono {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <div class="botones">
-
+    <nav class="botones">
       <a href="/index.html" class="html-btn">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="icono" alt="HTML">
         INICIO
@@ -37,131 +69,128 @@
         CSS
       </a>
       <a href="/Mariano/InfoJS.html" class="js-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icono"
-          alt="JavaScript">JAVASCRIPT
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icono" alt="JavaScript">
+        JAVASCRIPT
       </a>
       <a href="/Maria/InfoPython.html" class="Pyth-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icono"
-          alt="Python">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icono" alt="Python">
         PYTHON
       </a>
       <a href="/Valeria/InfoSQL.html" class="SQL-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="icono blanco"
-          alt="SQL">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="icono blanco" alt="SQL">
         SQL
       </a>
       <a href="/Git/InfoGIT.html" class="GIT-btn">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="icono" alt="Git">
         GIT
       </a>
-    </div>
-
+    </nav>
   </header>
-  <!-- <h1>COnviértete en desarrollador <br> web desde cero</h1> -->
-  <p>Explora los lenguajes claves para construir sitios y aplicaciones increíbles.</p>
+
   <main>
-    <section>
+    <section class="intro">
       <h1>¿Qué es HTML?</h1>
       <h3>HTML es el lenguaje de marcado estándar para crear páginas Web.</h3>
+      <p>Explora los lenguajes claves para construir sitios y aplicaciones increíbles.</p>
     </section>
 
-    <!-- Editor 
-    <section>
-      <div class="editor-wrapper">
-        <div class="tabs">
-          <div class="tab active" data-lang="html">HTML</div>
-          <div class="tab" data-lang="css">CSS</div>
-          <div class="tab" data-lang="js">JavaScript</div>
-        </div>
-
-        <textarea id="html" class="active" placeholder="Escribe tu HTML aquí..."></textarea>
-        <textarea id="css" placeholder="Escribe tu CSS aquí..."></textarea>
-        <textarea id="js" placeholder="Escribe tu JavaScript aquí..."></textarea>
-
-        <div class="controls">
-          <button onclick="runCode()">Ejecutar</button>
-          <button onclick="downloadZip()">Descargar ZIP</button>
-        </div>
-      </div>
-      <iframe id="preview"></iframe>
-
-    </section>-->
-
-    <!-- Menu Desplegable -->
-    <section>
-
-      <div class="menu-container" id="menu">
-        <h1 id="menu-header">Introducción </h1>
-        <ul class="menu-items" id="menu-items">
-
-          <li>Elementos </li>
-          <li>Lista </li>
-          <li>Tabla </li>
-          <li>Iframe </li>
-
-        </ul>
-      </div>
-      <div class="menu-container" id="menu">
-        <h1 id="menu-header">Estructura Basica </h1>
-        <ul class="menu-items" id="menu-items">
-
-          <li>Elementos </li>
-          <li>Lista </li>
-          <li>Tabla </li>
-          <li>Iframe </li>
-
-        </ul>
-      </div>
-      <div class="menu-container" id="menu">
-        <h1 id="menu-header">Elementos de texto </h1>
-        <ul class="menu-items" id="menu-items">
-
-          <li>Elementos </li>
-          <li>Lista </li>
-          <li>Tabla </li>
-          <li>Iframe </li>
-
-        </ul>
-      </div>
-      <!-- <div class="menu-container" id="menu">
-        <h1 id="menu-header">Imágenes y Multimedia </h1>
-        <ul class="menu-items" id="menu-items">
-
-          <li>Elementos </li>
-          <li>Lista </li>
-          <li>Tabla </li>
-          <li>Iframe </li>
-
-        </ul>
-      </div>
-      <div class="menu-container" id="menu">
-        <h1 id="menu-header">Listas y Tablas </h1>
-        <ul class="menu-items" id="menu-items">
-
-          <li>Elementos </li>
-          <li>Lista </li>
-          <li>Tabla </li>
-          <li>Iframe </li>
-
-        </ul>
-      </div> -->
-    </section>
-
-
+    <div class="menu-container">
+      <div class="menu-header html-btn">Menú HTML</div>
+      <ul class="menu-items">
+        <li onclick="mostrarContenido('que-es')">¿Qué es HTML?</li>
+        <li onclick="mostrarContenido('historia')">Historia</li>
+        <li onclick="mostrarContenido('versiones')">Versiones</li>
+        <li onclick="mostrarContenido('estructura')">Estructura Básica</li>
+        <li onclick="mostrarContenido('texto')">Elementos de Texto</li>
+        <li onclick="mostrarContenido('multimedia')">Imágenes y Multimedia</li>
+        <li onclick="mostrarContenido('listas-tablas')">Listas y Tablas</li>
+      </ul>
     </div>
 
+    <section id="que-es" class="tarjeta-git">
+      <h2>¿Qué es HTML?</h2>
+      <p>HTML (HyperText Markup Language) es el lenguaje que se utiliza para estructurar el contenido en la web. Utiliza etiquetas para definir elementos como títulos, párrafos, enlaces, imágenes, listas y más.</p>
+    </section>
 
+    <section id="historia" class="tarjeta-git" style="display:none;">
+      <h2>Historia</h2>
+      <p>HTML fue creado por Tim Berners-Lee en 1991 como una forma de compartir documentos científicos. Desde entonces ha evolucionado en múltiples versiones.</p>
+    </section>
+
+    <section id="versiones" class="tarjeta-git" style="display:none;">
+      <h2>Versiones</h2>
+      <ul>
+        <li><strong>HTML 1.0:</strong> Primer borrador no oficial (1991)</li>
+        <li><strong>HTML 2.0:</strong> Estándar oficial en 1995</li>
+        <li><strong>HTML 4.01:</strong> Introdujo mejoras importantes (1999)</li>
+        <li><strong>HTML5:</strong> Versión actual y más utilizada (2014)</li>
+      </ul>
+    </section>
+
+    <section id="estructura" class="tarjeta-git" style="display:none;">
+      <h2>Estructura Básica</h2>
+      <p>Todo documento HTML debe seguir una estructura base:</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Título de la página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Contenido visible de la página
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <section id="texto" class="tarjeta-git" style="display:none;">
+      <h2>Elementos de Texto</h2>
+      <ul>
+        <li><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>: Encabezados</li>
+        <li><code>&lt;p&gt;</code>: Párrafos</li>
+        <li><code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>: Negrita y cursiva</li>
+      </ul>
+    </section>
+
+    <section id="multimedia" class="tarjeta-git" style="display:none;">
+      <h2>Imágenes y Multimedia</h2>
+      <ul>
+        <li><code>&lt;img src="imagen.jpg" alt="Descripción"&gt;</code>: Inserta una imagen</li>
+        <li><code>&lt;audio&gt;</code> y <code>&lt;video&gt;</code>: Para contenido multimedia</li>
+      </ul>
+    </section>
+
+    <section id="listas-tablas" class="tarjeta-git" style="display:none;">
+      <h2>Listas y Tablas</h2>
+      <ul>
+        <li><code>&lt;ul&gt;</code>: Lista desordenada</li>
+        <li><code>&lt;ol&gt;</code>: Lista ordenada</li>
+        <li><code>&lt;table&gt;</code>: Tabla con filas y columnas</li>
+      </ul>
+    </section>
   </main>
+
   <footer>
+    <h2>Referencias:</h2>
     <ul>
-      <h2>Referencias: </h2>
       <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools.com</a></li>
     </ul>
-
   </footer>
-  <script src="/js/menu.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    document.querySelector('.menu-header').addEventListener('click', function () {
+      document.querySelector('.menu-items').classList.toggle('menu-visible');
+    });
+
+    function mostrarContenido(id) {
+      document.querySelectorAll('main .tarjeta-git').forEach(seccion => seccion.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      document.querySelector('.menu-items').classList.remove('menu-visible');
+    }
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="/js/editor.js"></script>
 </body>
 
 </html>
+
+

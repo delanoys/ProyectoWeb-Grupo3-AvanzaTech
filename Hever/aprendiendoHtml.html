@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo HTML - Guía Completa</title>
+    <link rel="stylesheet" href="aprendiendoHtml.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Aprendiendo HTML</h1>
+            <p>Guía completa desde cero hasta profesional</p>
+        </div>
+    </header>
+
+    <nav class="main-nav" id="mainNav">
+        <div class="container">
+            <ul>
+                <li><a href="/index.html">INICIO</a></li>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#estructura">Estructura</a></li>
+                <li><a href="#texto">Texto</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+                <li><a href="#listas-tablas">Listas & Tablas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="introduccion" class="section">
+            <h2>Introducción a HTML</h2>
+            
+            <article class="article">
+                <h3 id="que-es-html">¿Qué es HTML?</h3>
+                <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Es un lenguaje de marcado que define la estructura y el contenido de una página web mediante el uso de etiquetas (tags). HTML no es un lenguaje de programación, sino de marcado, lo que significa que se usa para organizar y dar formato al contenido.</p>
+                
+                <h4>Características principales:</h4>
+                <ul>
+                    <li>Define la estructura de una página web</li>
+                    <li>Utiliza elementos (etiquetas) para marcar diferentes partes del contenido</li>
+                    <li>Permite incluir otros recursos como imágenes, videos y scripts</li>
+                    <li>Es interpretado por los navegadores web para mostrar el contenido</li>
+                </ul>
+            </article>
+            
+            <article class="article">
+                <h3 id="historia-html">Historia y evolución de HTML</h3>
+                <p>HTML fue creado por Tim Berners-Lee en 1991 como parte de la World Wide Web. Desde entonces ha evolucionado significativamente:</p>
+                
+                <ul>
+                    <li><strong>HTML 2.0 (1995)</strong>: Primera versión estandarizada</li>
+                    <li><strong>HTML 3.2 (1997)</strong>: Agregó tablas, applets y flujo de texto alrededor de imágenes</li>
+                    <li><strong>HTML 4.01 (1999)</strong>: Introdujo hojas de estilo (CSS) y scripting</li>
+                    <li><strong>XHTML (2000)</strong>: Versión más estricta basada en XML</li>
+                    <li><strong>HTML5 (2014)</strong>: Versión actual con soporte para multimedia y aplicaciones web modernas</li>
+                </ul>
+                
+                <p>HTML5 introdujo elementos semánticos, soporte nativo para audio y video, canvas para gráficos, y mejoras en APIs para aplicaciones web.</p>
+            </article>
+        </section>
+
+        <section id="estructura" class="section">
+            <h2>Estructura Básica</h2>
+            
+            <article class="article">
+                <h3 id="etiquetas-fundamentales">Etiquetas fundamentales</h3>
+                <p>Toda página HTML tiene una estructura básica que incluye:</p>
+                
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Título de la página&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    Contenido visible de la página
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                
+                <h4>Etiquetas esenciales:</h4>
+                <ul>
+                    <li><code>&lt;!DOCTYPE html&gt;</code>: Declara el tipo de documento</li>
+                    <li><code>&lt;html&gt;</code>: Elemento raíz que contiene todo el documento</li>
+                    <li><code>&lt;head&gt;</code>: Contiene metadatos y enlaces a recursos externos</li>
+                    <li><code>&lt;title&gt;</code>: Define el título que aparece en la pestaña del navegador</li>
+                    <li><code>&lt;body&gt;</code>: Contiene todo el contenido visible de la página</li>
+                </ul>
+            </article>
+            
+            <article class="article">
+                <h3 id="comentarios-buenas-practicas">Comentarios y buenas prácticas</h3>
+                <p>Los comentarios en HTML se escriben así:</p>
+                <pre><code>&lt;!-- Esto es un comentario --&gt;</code></pre>
+                
+                <h4>Buenas prácticas:</h4>
+                <ul>
+                    <li>Usar indentación consistente</li>
+                    <li>Cerrar todas las etiquetas</li>
+                    <li>Usar minúsculas para nombres de etiquetas</li>
+                    <li>Incluir el atributo <code>alt</code> en imágenes</li>
+                    <li>Validar el código HTML</li>
+                    <li>Separar estructura (HTML), presentación (CSS) y comportamiento (JavaScript)</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="texto" class="section">
+            <h2>Elementos de Texto</h2>
+            
+            <article class="article">
+                <h3 id="titulos-parrafos">Títulos y párrafos</h3>
+                <p>HTML proporciona 6 niveles de títulos:</p>
+                
+                <pre><code>&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Encabezado de sección&lt;/h3&gt;
+...
+&lt;h6&gt;Encabezado menor&lt;/h6&gt;</code></pre>
+                
+                <p>Para párrafos:</p>
+                <pre><code>&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;
+&lt;p&gt;Este es otro párrafo.&lt;/p&gt;</code></pre>
+            </article>
+            
+            <article class="article">
+                <h3 id="formato-texto">Formato de texto</h3>
+                <p>HTML ofrece varias etiquetas para formato de texto:</p>
+                <ul>
+                    <li><code>&lt;strong&gt;</code> o <code>&lt;b&gt;</code>: Texto en negrita</li>
+                    <li><code>&lt;em&gt;</code> o <code>&lt;i&gt;</code>: Texto en cursiva</li>
+                    <li><code>&lt;u&gt;</code>: Texto subrayado</li>
+                    <li><code>&lt;mark&gt;</code>: Texto resaltado</li>
+                    <li><code>&lt;small&gt;</code>: Texto más pequeño</li>
+                    <li><code>&lt;sup&gt;</code>: Superíndice</li>
+                    <li><code>&lt;sub&gt;</code>: Subíndice</li>
+                    <li><code>&lt;del&gt;</code>: Texto eliminado (tachado)</li>
+                    <li><code>&lt;ins&gt;</code>: Texto insertado (subrayado)</li>
+                </ul>
+                
+                <p>Ejemplo:</p>
+                <pre><code>&lt;p&gt;Este es un texto &lt;strong&gt;importante&lt;/strong&gt; y &lt;em&gt;enfatizado&lt;/em&gt;.&lt;/p&gt;</code></pre>
+            </article>
+        </section>
+
+        <section id="multimedia" class="section">
+            <h2>Imágenes y Multimedia</h2>
+            
+            <article class="article">
+                <h3 id="insertar-imagenes">Insertar imágenes</h3>
+                <p>Para insertar imágenes:</p>
+                <pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen" width="500" height="300"&gt;</code></pre>
+                
+                <h4>Atributos importantes:</h4>
+                <ul>
+                    <li><code>src</code>: Ruta a la imagen</li>
+                    <li><code>alt</code>: Texto alternativo (accesibilidad y SEO)</li>
+                    <li><code>width</code> y <code>height</code>: Dimensiones (en píxeles o porcentaje)</li>
+                </ul>
+            </article>
+            
+            <article class="article">
+                <h3 id="enlaces-video-audio">Enlaces, video y audio</h3>
+                <p><strong>Enlaces</strong>:</p>
+                <pre><code>&lt;a href="https://www.ejemplo.com" target="_blank"&gt;Texto del enlace&lt;/a&gt;</code></pre>
+                
+                <p><strong>Video</strong> (HTML5):</p>
+                <pre><code>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+                
+                <p><strong>Audio</strong> (HTML5):</p>
+                <pre><code>&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;</code></pre>
+            </article>
+        </section>
+
+        <section id="listas-tablas" class="section">
+            <h2>Listas y Tablas</h2>
+            
+            <article class="article">
+                <h3 id="listas-ordenadas-no-ordenadas">Listas ordenadas y no ordenadas</h3>
+                <p><strong>Lista no ordenada</strong> (con viñetas):</p>
+                <pre><code>&lt;ul&gt;
+  &lt;li&gt;Elemento 1&lt;/li&gt;
+  &lt;li&gt;Elemento 2&lt;/li&gt;
+  &lt;li&gt;Elemento 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                
+                <p><strong>Lista ordenada</strong> (numerada):</p>
+                <pre><code>&lt;ol&gt;
+  &lt;li&gt;Primer elemento&lt;/li&gt;
+  &lt;li&gt;Segundo elemento&lt;/li&gt;
+  &lt;li&gt;Tercer elemento&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                
+                <p><strong>Lista de definición</strong>:</p>
+                <pre><code>&lt;dl&gt;
+  &lt;dt&gt;Término 1&lt;/dt&gt;
+  &lt;dd&gt;Definición 1&lt;/dd&gt;
+  &lt;dt&gt;Término 2&lt;/dt&gt;
+  &lt;dd&gt;Definición 2&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+            </article>
+            
+            <article class="article">
+                <h3 id="tablas-basicas">Tablas básicas</h3>
+                <p>Estructura básica de una tabla:</p>
+                <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Encabezado 1&lt;/th&gt;
+    &lt;th&gt;Encabezado 2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Dato 1&lt;/td&gt;
+    &lt;td&gt;Dato 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Dato 3&lt;/td&gt;
+    &lt;td&gt;Dato 4&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                
+                <h4>Elementos de tabla:</h4>
+                <ul>
+                    <li><code>&lt;table&gt;</code>: Contenedor principal</li>
+                    <li><code>&lt;tr&gt;</code>: Fila de tabla</li>
+                    <li><code>&lt;th&gt;</code>: Celda de encabezado</li>
+                    <li><code>&lt;td&gt;</code>: Celda de datos</li>
+                    <li><code>&lt;caption&gt;</code>: Título de la tabla</li>
+                    <li><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>: Agrupación semántica</li>
+                </ul>
+                
+                <h4>Atributos comunes:</h4>
+                <ul>
+                    <li><code>border</code>: Grosor del borde</li>
+                    <li><code>colspan</code>: Expandir celda a través de columnas</li>
+                    <li><code>rowspan</code>: Expandir celda a través de filas</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <aside class="sidebar">
+        <div class="container">
+            <h3>Índice rápido</h3>
+            <ul class="index-list">
+                <li><a href="#que-es-html">¿Qué es HTML?</a></li>
+                <li><a href="#historia-html">Historia de HTML</a></li>
+                <li><a href="#etiquetas-fundamentales">Etiquetas fundamentales</a></li>
+                <li><a href="#comentarios-buenas-practicas">Buenas prácticas</a></li>
+                <li><a href="#titulos-parrafos">Títulos y párrafos</a></li>
+                <li><a href="#formato-texto">Formato de texto</a></li>
+                <li><a href="#insertar-imagenes">Insertar imágenes</a></li>
+                <li><a href="#enlaces-video-audio">Multimedia</a></li>
+                <li><a href="#listas-ordenadas-no-ordenadas">Listas</a></li>
+                <li><a href="#tablas-basicas">Tablas</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>©developersinprocess 2025 Aprendiendo HTML - Todos los derechos reservados</p>
+            <p>Guía educativa sobre HTML para principiantes</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" title="Volver arriba">↑</button>
+
+    <script src="aprendiendoHtml.js"></script>
+</body>
+</html>

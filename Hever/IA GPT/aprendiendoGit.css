@@ -1,0 +1,147 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(24, 34, 56, 0.9);
+  color: white;
+  padding: 1rem;
+  z-index: 1000;
+  border-radius: 0 0 1rem 1rem;
+  backdrop-filter: blur(6px);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+main {
+  max-width: 1000px;
+  margin: 8rem auto 4rem;
+  padding: 1rem;
+}
+
+section {
+  background: white;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+  position: fixed;
+  top: 7rem;
+  left: 1rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 900;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 0.5rem 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.toggle-btn {
+  display: none;
+}
+
+#previewGit {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #222;
+  color: white;
+  margin-top: 4rem;
+}
+
+footer a {
+  color: #aad;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #1e3a8a;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: none;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .toggle-btn {
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: 1rem;
+    z-index: 1001;
+  }
+}

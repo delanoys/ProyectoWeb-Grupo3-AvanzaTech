@@ -32,32 +32,38 @@
         CSS
       </a>
       <a href="/Mariano/InfoJS.html" class="js-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icono" alt="JavaScript">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icono"
+          alt="JavaScript">
         JAVASCRIPT
       </a>
       <a href="/Maria/InfoPython.html" class="Pyth-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icono" alt="Python">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icono"
+          alt="Python">
         PYTHON
       </a>
       <a href="/Valeria/InfoSQL.html" class="SQL-btn">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="icono blanco" alt="SQL">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="icono blanco"
+          alt="SQL">
         SQL
       </a>
     </div>
 
     <h1>GIT</h1>
     <p>Git es una herramienta que te ayuda: <br>
-       <i>- guarde y administre diferentes versiones de sus archivos y código.</i> <br>
-      <i>- rabaja con otros, realiza un seguimiento de los cambios y deshace los errores.</i></p>
-    
+      <i>- guarde y administre diferentes versiones de sus archivos y código.</i> <br>
+      <i>- rabaja con otros, realiza un seguimiento de los cambios y deshace los errores.</i>
+    </p>
+
   </header>
 
   <main>
     <div class="tarjeta-git">
       <h2>Comandos recientes utilizados</h2>
       <ul>
-        <li><strong>git reset --hard 97131fb</strong>: restaura el código a un estado anterior según el hash del commit.</li>
-        <li><strong>git pull origin main</strong>: actualiza la rama activa con el contenido más reciente del main remoto.</li>
+        <li><strong>git reset --hard 97131fb</strong>: restaura el código a un estado anterior según el hash del commit.
+        </li>
+        <li><strong>git pull origin main</strong>: actualiza la rama activa con el contenido más reciente del main
+          remoto.</li>
       </ul>
     </div>
 
@@ -97,12 +103,53 @@ done</code></pre>
     </div>
 
     <div class="tarjeta-git">
+      <h2>Para descartar los cambios del main y pasarlos a una rama nueva sin perder tu trabajo actual, sigue estos pasos:</h2>
+      <table class="tabla-git">
+        <thead >
+          <tr>
+            <th>Paso</th>
+            <th>Descripción</th>
+            <th>Comando</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1</strong></td>
+            <td>Crear una nueva rama con los cambios actuales</td>
+            <td><code>git checkout -b menu-lateral-html</code></td>
+          </tr>
+          <tr>
+            <td><strong>2</strong></td>
+            <td>Volver a la rama <code>main</code></td>
+            <td><code>git checkout main</code></td>
+          </tr>
+          <tr>
+            <td><strong>3</strong></td>
+            <td>Descartar los archivos modificados en <code>main</code></td>
+            <td><code>git restore Git/InfoGIT.html Hever/InfoHTML.html Maria/InfoPython.html</code></td>
+          </tr>
+          <tr>
+            <td><strong>3.1</strong></td>
+            <td>Eliminar archivos nuevos sin seguimiento en <code>main</code></td>
+            <td><code>git clean -f Hever/menuProyecto.html estilos/MenuNAV.css</code></td>
+          </tr>
+          <tr>
+            <td><strong>4</strong></td>
+            <td>Verificar que <code>main</code> esté limpio</td>
+            <td><code>git status</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="tarjeta-git">
       <h2>Script para hacer push de todas las ramas</h2>
       <pre><code>for branch in CSS Html JavaScript Mariano2 Python SQL main; do
   git checkout $branch
   git push origin $branch
 done</code></pre>
-      <p><i>Modifica el script con las ramas que desees actualizar. El comando <code>git merge SQL</code> se refiere a integrar cambios desde la rama <strong>SQL</strong>.</i></p>
+      <p><i>Modifica el script con las ramas que desees actualizar. El comando <code>git merge SQL</code> se refiere a
+          integrar cambios desde la rama <strong>SQL</strong>.</i></p>
       <img src="/imagenes/Git Script parte B.png" alt="Script Git Parte B" style="max-width: 100%; margin-top: 15px;">
     </div>
   </main>
@@ -116,4 +163,3 @@ done</code></pre>
 </body>
 
 </html>
-

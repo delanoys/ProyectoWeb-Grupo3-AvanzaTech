@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aprendiendo HTML</title>
+  <link rel="stylesheet" href="AprendiendoHtml.css" />
+</head>
+<body>
+  <header>
+    <h1>Aprendiendo HTML</h1>
+    <div class="header-controls">
+      <label class="switch">
+        <input type="checkbox" id="toggleTheme" />
+        <span class="slider round"></span>
+      </label>
+      <nav>
+        <ul>
+          <li><a href="#introduccion">Introducción a HTML</a></li>
+          <li><a href="#estructura">Estructura Básica</a></li>
+          <li><a href="#texto">Elementos de Texto</a></li>
+          <li><a href="#multimedia">Imágenes y Multimedia</a></li>
+          <li><a href="#listas">Listas y Tablas</a></li>
+          <li><a href="#editor">Editor en Línea</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="introduccion" class="card">
+      <h2>Introducción a HTML</h2>
+      <article>
+        <h3>¿Qué es HTML?</h3>
+        <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Permite estructurar el contenido mediante el uso de etiquetas.</p>
+      </article>
+      <article>
+        <h3>Historia y evolución de HTML</h3>
+        <p>HTML fue desarrollado a finales de los 80s por Tim Berners-Lee. Desde entonces ha evolucionado hasta HTML5, la versión actual que permite integrar multimedia, gráficos y más.</p>
+      </article>
+    </section>
+
+    <section id="estructura" class="card">
+      <h2>Estructura Básica</h2>
+      <article>
+        <h3>Etiquetas fundamentales</h3>
+        <p>Las etiquetas básicas incluyen <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, entre otras.</p>
+      </article>
+      <article>
+        <h3>Comentarios y buenas prácticas</h3>
+        <p>Los comentarios en HTML se escriben así: <code>&lt;!-- Esto es un comentario --&gt;</code>. Es buena práctica escribir código claro y bien indentado.</p>
+      </article>
+    </section>
+
+    <section id="texto" class="card">
+      <h2>Elementos de Texto</h2>
+      <article>
+        <h3>Títulos y párrafos</h3>
+        <p>Los títulos se definen con <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> y los párrafos con <code>&lt;p&gt;</code>.</p>
+      </article>
+      <article>
+        <h3>Formato de texto</h3>
+        <p>HTML permite aplicar formato con etiquetas como <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;mark&gt;</code> y más.</p>
+      </article>
+    </section>
+
+    <section id="multimedia" class="card">
+      <h2>Imágenes y Multimedia</h2>
+      <article>
+        <h3>Insertar imágenes</h3>
+        <p>La etiqueta <code>&lt;img&gt;</code> se usa para mostrar imágenes. Ejemplo: <code>&lt;img src=&quot;imagen.jpg&quot; alt=&quot;Descripción&quot;&gt;</code>.</p>
+      </article>
+      <article>
+        <h3>Enlaces, video y audio</h3>
+        <p>Los enlaces usan <code>&lt;a&gt;</code>, el video se inserta con <code>&lt;video&gt;</code> y el audio con <code>&lt;audio&gt;</code>.</p>
+      </article>
+    </section>
+
+    <section id="listas" class="card">
+      <h2>Listas y Tablas</h2>
+      <article>
+        <h3>Listas ordenadas y no ordenadas</h3>
+        <p>Las listas ordenadas usan <code>&lt;ol&gt;</code> y las no ordenadas <code>&lt;ul&gt;</code>. Los elementos de lista son <code>&lt;li&gt;</code>.</p>
+      </article>
+      <article>
+        <h3>Tablas básicas</h3>
+        <p>Las tablas usan <code>&lt;table&gt;</code> con filas <code>&lt;tr&gt;</code>, encabezados <code>&lt;th&gt;</code> y celdas <code>&lt;td&gt;</code>.</p>
+      </article>
+    </section>
+
+    <section id="editor" class="card">
+      <h2>Editor en Línea</h2>
+      <p>Escribe tu código HTML y presiona "Ejecutar" para ver el resultado.</p>
+      <textarea id="htmlEditor" rows="10" spellcheck="false">
+&lt;h1&gt;Hola Mundo&lt;/h1&gt;
+&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
+      </textarea>
+      <div class="buttons">
+        <button id="runBtn">Ejecutar</button>
+        <button id="copyBtn">Copiar código</button>
+      </div>
+      <iframe id="preview" sandbox="allow-scripts" style="width: 100%; height: 200px; border: 1px solid #ccc;"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Aprendiendo HTML</p>
+  </footer>
+
+  <script src="aprendiendoHtml.js"></script>
+</body>
+</html>
+

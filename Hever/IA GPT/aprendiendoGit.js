@@ -1,24 +1,34 @@
-// Ejecutar código del editor en el iframe como texto
-document.getElementById("runBtn").addEventListener("click", function () {
-  const code = document.getElementById("gitEditor").value;
-  const previewFrame = document.getElementById("preview");
-  const preview = previewFrame.contentDocument || previewFrame.contentWindow.document;
+// Mostrar botón de scroll cuando el usuario se desplaza
+const scrollBtn = document.getElementById('scrollTopBtn');
 
-  preview.open();
-  preview.write(`<pre>${code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>`);
-  preview.close();
+window.onscroll = () => {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollBtn.style.display = 'block';
+  } else {
+    scrollBtn.style.display = 'none';
+  }
+};
+
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Copiar el contenido del editor al portapapeles
-document.getElementById("copyBtn").addEventListener("click", function () {
-  const textarea = document.getElementById("gitEditor");
-  textarea.select();
-  document.execCommand("copy");
-  alert("Código copiado al portapapeles");
+// Simulación de ejecución de comandos Git
+function ejecutarCodigoGit() {
+  const codigo = document.getElementById('gitEditor').value;
+  const salida = `
+    <h3>Resultado Simulado:</h3>
+    <pre>${codigo.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>
+    <p>(Nota: Esta es una simulación visual. Git no se ejecuta en el navegador)</p>
+  `;
+  document.getElementById('previewGit').srcdoc = salida;
+}
+
+// Mostrar/ocultar sidebar en móviles
+const toggleSidebar = document.getElementById('toggleSidebar');
+const sidebar = document.getElementById('sidebar');
+
+toggleSidebar.addEventListener('click', () => {
+  sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
 });
 
-// Toggle sidebar en pantallas pequeñas
-document.getElementById("toggleSidebar").addEventListener("click", function () {
-  const sidebar = document.getElementById("sidebar");
-  sidebar.classList.toggle("active");
-});

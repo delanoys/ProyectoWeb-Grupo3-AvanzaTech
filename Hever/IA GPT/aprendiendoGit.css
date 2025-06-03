@@ -1,8 +1,9 @@
 /* Estilos generales */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  background-color: #f3f4f6;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f8;
   color: #333;
 }
 
@@ -10,198 +11,137 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 0 0 1rem 1rem;
+  background-color: rgba(24, 34, 56, 0.9);
+  color: white;
+  padding: 1rem;
   z-index: 1000;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-radius: 0 0 1rem 1rem;
+  backdrop-filter: blur(6px);
 }
 
 header h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
   list-style: none;
-  padding: 0;
-  margin-top: 0.5rem;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
 }
 
 nav a {
-  color: white;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid white;
-  padding: 0.4rem 1rem;
+  color: white;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  transition: background-color 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
-/* menu lateral */
-/* Sidebar */
+
+main {
+  max-width: 1000px;
+  margin: 8rem auto 4rem;
+  padding: 1rem;
+}
+
+section {
+  background: white;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 .sidebar {
   position: fixed;
-  top: 100px;
-  left: 0;
-  width: 220px;
-  height: calc(100% - 100px);
-  background-color: rgba(255, 255, 255, 0.85);
-  border-right: 1px solid #ccc;
+  top: 7rem;
+  left: 1rem;
+  background-color: white;
   padding: 1rem;
-  overflow-y: auto;
+  border-radius: 1rem;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   z-index: 900;
-  backdrop-filter: blur(5px);
-  border-radius: 0 1rem 1rem 0;
-  transition: transform 0.3s ease;
-}
-
-/* Toggle button */
-.toggle-btn {
-  position: absolute;
-  top: 10px;
-  right: -40px;
-  background-color: #2563eb;
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 0 0.5rem 0.5rem 0;
-  cursor: pointer;
-  font-size: 1.2rem;
-  z-index: 1001;
-}
-
-/* Responsive hide */
-@media (max-width: 768px) {
-  .sidebar {
-    transform: translateX(-100%);
-  }
-
-  .sidebar.active {
-    transform: translateX(0);
-  }
-
-  main {
-    margin-left: 0 !important;
-  }
-}
-
-.sidebar h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #333;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
-  margin: 0;
-}
-
-.sidebar li {
-  margin-bottom: 1rem;
 }
 
 .sidebar a {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 500;
   display: block;
+  padding: 0.5rem 0;
+  color: #333;
+  text-decoration: none;
 }
 
 .sidebar a:hover {
   text-decoration: underline;
 }
 
-/* Main content adjusted */
-main {
-  margin-left: 240px;
-  transition: margin-left 0.3s ease;
+.toggle-btn {
+  display: none;
 }
 
-
-/* Ajuste del contenido principal para que no quede debajo del aside */
-main {
-  margin-left: 240px;
-}
-
-main {
-  padding: 200px 2rem 4rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  margin-bottom: 2rem;
-}
-
-h2 {
-  color: #2563eb;
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 0.5rem;
-}
-
-pre {
-  background-color: #f9fafb;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  overflow-x: auto;
-  font-family: monospace;
-}
-
-textarea {
-  width: 100%;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  font-family: monospace;
-  border: 1px solid #d1d5db;
-  margin-bottom: 1rem;
-}
-
-.buttons {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-button {
-  background-color: #2563eb;
-  color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-button:hover {
-  background-color: #1e40af;
-}
-
-.preview-frame {
+#previewGit {
   width: 100%;
   height: 200px;
   border: 1px solid #ccc;
-  background-color: white;
-  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
 
 footer {
   text-align: center;
-  padding: 1.5rem;
-  color: #555;
-  font-size: 0.9rem;
+  padding: 2rem;
+  background-color: #222;
+  color: white;
+  margin-top: 4rem;
+}
+
+footer a {
+  color: #aad;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #1e3a8a;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: none;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .toggle-btn {
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: 1rem;
+    z-index: 1001;
+  }
 }

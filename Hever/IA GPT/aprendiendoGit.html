@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aprendiendo Git</title>
+  <link rel="stylesheet" href="aprendiendoGit.css" />
+</head>
+<body>
+  <header>
+    <h1>Aprendiendo Git & GitHub</h1>
+    <nav>
+      <ul>
+        <li><a href="#que-es-git">¿Qué es Git?</a></li>
+        <li><a href="#comandos-basicos">Comandos Básicos</a></li>
+        <li><a href="#repositorios">Repositorios</a></li>
+        <li><a href="#ramas">Ramas</a></li>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="#editor">Editor en Línea</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Menu lateral -->
+<aside class="sidebar" id="sidebar">
+  <button class="toggle-btn" id="toggleSidebar">☰</button>
+  <h3>Guía Rápida</h3>
+  <ul>
+    <li><a href="#que-es-git">📘 ¿Qué es Git?</a></li>
+    <li><a href="#comandos-basicos">💻 Comandos</a></li>
+    <li><a href="#repositorios">📁 Repositorios</a></li>
+    <li><a href="#ramas">🌿 Ramas</a></li>
+    <li><a href="#github">🌐 GitHub</a></li>
+  </ul>
+</aside>
+
+
+  <main>
+    <section id="que-es-git" class="card">
+      <h2>¿Qué es Git?</h2>
+      <p>Git es un sistema de control de versiones distribuido que permite a múltiples desarrolladores trabajar en el mismo proyecto de forma eficiente.</p>
+    </section>
+
+    <section id="comandos-basicos" class="card">
+      <h2>Comandos Básicos de Git</h2>
+      <ul>
+        <li><code>git init</code>: Inicializa un nuevo repositorio.</li>
+        <li><code>git status</code>: Muestra el estado del repositorio.</li>
+        <li><code>git add .</code>: Añade archivos al área de preparación.</li>
+        <li><code>git commit -m \"mensaje\"</code>: Crea un commit.</li>
+        <li><code>git log</code>: Muestra el historial de commits.</li>
+      </ul>
+    </section>
+
+    <section id="repositorios" class="card">
+      <h2>Repositorios</h2>
+      <p>Un repositorio es donde se almacenan los archivos y el historial de versiones. Puede ser local (en tu máquina) o remoto (en servidores como GitHub).</p>
+    </section>
+
+    <section id="ramas" class="card">
+      <h2>Ramas (Branches)</h2>
+      <p>Las ramas permiten trabajar en nuevas funcionalidades sin afectar la versión principal. El comando <code>git branch</code> gestiona ramas.</p>
+    </section>
+
+    <section id="github" class="card">
+      <h2>¿Qué es GitHub?</h2>
+      <p>GitHub es una plataforma de alojamiento de repositorios Git que facilita la colaboración y publicación de código de forma remota.</p>
+    </section>
+
+    <section id="editor" class="card">
+      <h2>Editor en Línea</h2>
+      <p>Prueba comandos o escribe notas de Git aquí:</p>
+      <textarea id="gitEditor" rows="8" placeholder="Ejemplo: git init"></textarea>
+      <div class="buttons">
+        <button id="runBtn">Ejecutar</button>
+        <button id="copyBtn">Copiar</button>
+      </div>
+      <iframe id="preview" class="preview-frame"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Aprendiendo Git</p>
+  </footer>
+
+  <script src="aprendiendoGit.js"></script>
+</body>
+</html>

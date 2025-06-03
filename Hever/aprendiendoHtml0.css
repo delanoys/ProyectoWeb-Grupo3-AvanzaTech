@@ -1,0 +1,252 @@
+/* Estilos generales */
+:root {
+    --primary-color: #e34c26;
+    --secondary-color: #ea5928;
+    --dark-color: #1c2566;
+    --light-color: #ecf0f1;
+    --success-color: #27ae60;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --info-color: #1abc9c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navegación */
+.main-nav {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.main-nav li {
+    margin: 0 1rem;
+}
+
+.main-nav a {
+    color: #1c2566;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+   background-color: #ecf0f1;
+    /* background-color: var(--secondary-color); */
+}
+
+/* Contenido principal */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.section {
+    flex: 0 0 70%;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.section h2 {
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.article {
+    margin-bottom: 2rem;
+}
+
+.article h3 {
+    color: var(--secondary-color);
+    margin: 1.5rem 0 1rem;
+}
+
+.article h4 {
+    color: var(--dark-color);
+    margin: 1rem 0;
+}
+
+/* Sidebar */
+.sidebar0 {
+    flex: 10% 0 25%;
+    background: #1c2566;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #f0db4f;
+    align-self: flex-start;
+    position: sticky;
+    top: 80px;
+}
+.sidebar {
+    flex: 15 10 25%;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed; /* Cambiado de sticky a fixed para que permanezca en la pantalla */
+    top: 260px;
+    left: 1%; /* Oculta la barra fuera de la pantalla a la izquierda */
+    height: calc(100vh - 80px); /* Ocupa la altura de la ventana menos el offset superior */
+    transition: left 0.3s ease; /* Transición suave para el deslizamiento */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+.sidebar:hover {
+    left: 0; /* Muestra la barra al pasar el mouse */
+}
+
+.sidebar h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.index-list {
+    list-style: none;
+}
+
+.index-list li {
+    margin-bottom: 0.5rem;
+}
+
+.index-list a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    display: block;
+    padding: 0.3rem 0;
+}
+
+.index-list a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Código */
+pre {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.main-footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Botón volver arriba */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    
+    .section, .sidebar {
+        flex: 0 0 100%;
+    }
+    
+    .sidebar {
+        position: static;
+        margin-top: 2rem;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+    
+    .main-nav li {
+        margin: 0.3rem;
+    }
+}

@@ -66,6 +66,24 @@
           remoto.</li>
       </ul>
     </div>
+    <div class="tarjeta-git">
+      <h2>INICIANDO REPO <i>create a new repository on the command line</i> </h2>
+      <pre>
+        echo "# Python2025" >> README.md
+        git init
+        git add README.md
+        git commit -m "first commit"
+        git branch -M main
+        git remote add origin https://github.com/delanoys/Python2025.git
+        git push -u origin main
+      </pre>
+      <h2><i>OR</i>push an existing repository from the command line</h2>
+      <p style="white-space: pre; ">
+        git remote add origin https://github.com/delanoys/Python2025.git
+        git branch -M main
+        git push -u origin main
+      </p>
+    </div>
 
     <div class="tarjeta-git">
       <h2>Script de Git para actualizar ramas desde <code>SQL</code></h2>
@@ -103,9 +121,10 @@ done</code></pre>
     </div>
 
     <div class="tarjeta-git">
-      <h2>Para descartar los cambios del main y pasarlos a una rama nueva sin perder tu trabajo actual, sigue estos pasos:</h2>
+      <h2>Para descartar los cambios del main y pasarlos a una rama nueva sin perder tu trabajo actual, sigue estos
+        pasos:</h2>
       <table class="tabla-git">
-        <thead >
+        <thead>
           <tr>
             <th>Paso</th>
             <th>Descripción</th>

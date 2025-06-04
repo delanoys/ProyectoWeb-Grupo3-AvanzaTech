@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background: linear-gradient(334deg, #100530, #100530, #3568d4);
+  background: linear-gradient(434deg, #4260e7, #1c2566, #439df8);
   background-size: 180% 180%;
   animation: gradient-animation 8s ease infinite;
 
@@ -216,20 +216,58 @@ div {
 
 /*  Estilos Tablas Agregar estilos para tarjetas (cards) */
 
-.tarjeta-git {
-  background-color: rgba(255, 255, 255, 0.1);
+/* .tarjeta-git {
+  background-color:#4260e7;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   padding: 20px;
   margin: 20px auto;
-  max-width: 800px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 1200px;
+  box-shadow: 0 14px 22px rgba(201, 236, 4, 0.15);
   backdrop-filter: blur(10px);
+} */
+
+/* versión mejorada de tu tarjeta, con efectos más modernos, mejor legibilidad y un diseño más pulido: */
+.tarjeta-git {
+  background: linear-gradient(135deg, rgba(66, 96, 231, 0.9) 0%, rgba(33, 150, 243, 0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  padding: 28px;
+  margin: 24px auto;
+  max-width: 1200px;
+  box-shadow: 
+    0 8px 32px rgba(201, 236, 4, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px) saturate(120%);
+  color: white;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para interactividad */
+.tarjeta-git:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 12px 40px rgba(201, 236, 4, 0.25),
+    0 6px 16px rgba(0, 0, 0, 0.15),
+    inset 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Mejora para el contenido interno */
+.tarjeta-git pre, 
+.tarjeta-git code {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .tarjeta-git h2 {
   font-size: 24px;
-  color: #ffffff;
+  color: #ffd904;
   font-family: "Archivo Black", sans-serif;
   margin-bottom: 10px;
 }
@@ -267,4 +305,4 @@ div {
   background-color: #222;
   font-size: 0.9rem;
   text-transform: uppercase;
-}
+} 

@@ -171,6 +171,74 @@ done</code></pre>
           integrar cambios desde la rama <strong>SQL</strong>.</i></p>
       <img src="/imagenes/Git Script parte B.png" alt="Script Git Parte B" style="max-width: 100%; margin-top: 15px;">
     </div>
+    <div class="tarjeta-git">
+      <h2>Guía Completa: Tags en Git</h2>
+
+      <section class="git-section">
+        <h3>¿Qué son los Tags en Git?</h3>
+        <p>Los tags (etiquetas) son referencias estáticas que apuntan a momentos específicos en el historial de Git. Se
+          usan principalmente para marcar versiones de lanzamiento (v1.0, v2.1, etc.).</p>
+
+        <h4>Tipos de Tags:</h4>
+        <ul>
+          <li><strong>Lightweight:</strong> Punteros simples a commits específicos</li>
+          <li><strong>Anotados:</strong> Objetos completos en la base de Git (almacenan metadatos)</li>
+        </ul>
+      </section>
+
+      <section class="git-section">
+        <h3>Comandos Esenciales</h3>
+
+        <h4>Crear tags:</h4>
+        <pre><code># Tag ligero
+git tag v1.0
+
+# Tag anotado (con mensaje)
+git tag -a v2.0 -m "Versión 2.0 estable"
+
+# Tag en commit específico
+git tag -a v1.5 abc1234 -m "Versión 1.5 hotfix"</code></pre>
+
+        <h4>Listar tags:</h4>
+        <pre><code># Listar todos los tags
+git tag
+
+# Buscar tags con patrón
+git tag -l "v1.*"</code></pre>
+
+        <h4>Gestionar tags:</h4>
+        <pre><code># Mostrar detalles de un tag
+git show v1.0
+
+# Eliminar tag local
+git tag -d v1.0
+
+# Enviar tags al repositorio remoto
+git push origin v2.0
+
+# Enviar todos los tags
+git push origin --tags</code></pre>
+      </section>
+
+      <section class="git-section">
+        <h3>Ejemplo de Workflow con Tags</h3>
+        <p>Flujo típico para marcar una nueva versión:</p>
+        <pre><code># 1. Desarrollar características y hacer commits
+git commit -m "Implementar nueva funcionalidad X"
+
+# 2. Verificar que todo funciona correctamente
+npm test
+
+# 3. Crear tag para la nueva versión
+git tag -a v1.2.0 -m "Lanzamiento versión 1.2.0 - Nueva funcionalidad X"
+
+# 4. Subir el tag al repositorio
+git push origin v1.2.0</code></pre>
+
+        <p class="git-note">Nota: Es buena práctica seguir <a href="https://semver.org/">Semantic Versioning</a>
+          (vMAJOR.MINOR.PATCH) para los nombres de tags.</p>
+      </section>
+    </div>
   </main>
 
   <footer>

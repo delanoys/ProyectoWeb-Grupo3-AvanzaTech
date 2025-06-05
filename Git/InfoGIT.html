@@ -8,6 +8,7 @@
 
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="/estilos/EstilosBotones.css">
+  <link rel="stylesheet" href="/estilos/menudenavegacion.css">
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,6 +57,27 @@
 
   </header>
 
+  <!-- Menu de navegacion -->
+   <aside class="menu-navegacion">
+  <div class="menu-contenedor">
+    <div class="menu-header">
+      <h3>Navegación Git</h3>
+      <button class="menu-toggle">☰</button>
+    </div>
+    <nav class="menu-links">
+      <ul>
+        <li><a href="#comandos-recientes" class="menu-link"><i class="devicon-git-plain"></i> Comandos Recientes</a></li>
+        <li><a href="#iniciando-repo" class="menu-link"><i class="devicon-github-original"></i> Iniciando Repo</a></li>
+        <li><a href="#actualizar-ramas" class="menu-link"><i class="devicon-git-plain"></i> Actualizar Ramas</a></li>
+        <li><a href="#eliminar-ramas" class="menu-link"><i class="devicon-git-plain"></i> Eliminar Ramas</a></li>
+        <li><a href="#descartar-cambios" class="menu-link"><i class="devicon-git-plain"></i> Descartar Cambios</a></li>
+        <li><a href="#push-ramas" class="menu-link"><i class="devicon-github-original"></i> Push de Ramas</a></li>
+        <li><a href="#tags-git" class="menu-link"><i class="devicon-git-plain"></i> Tags en Git</a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+
   <main>
     <div class="tarjeta-git">
       <h2>Comandos recientes utilizados</h2>
@@ -64,6 +86,7 @@
         </li>
         <li><strong>git pull origin main</strong>: actualiza la rama activa con el contenido más reciente del main
           remoto.</li>
+           <li><a href="infocod.html">Info codigo Git</a></li>
       </ul>
     </div>
     <div class="tarjeta-git">
@@ -245,8 +268,10 @@ git push origin v1.2.0</code></pre>
     <ul>
       <h2>Referencias:</h2>
       <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools.com</a></li>
+      <li><a href="infocod.html">Info codigo Git</a></li>
     </ul>
   </footer>
+  <script src="/js/menudenavegacion.js"></script>
 </body>
 
 </html>

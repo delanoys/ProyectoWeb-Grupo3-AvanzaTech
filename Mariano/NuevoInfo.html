@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo CSS - Guía Completa</title>
+    <link rel="stylesheet" href="/EstilosPagina.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1><i class="fab fa-js-square"></i> Información sobre JavaScript</h1>
+
+            <p>Domina los estilos web profesionales</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="/ProyectoWeb-Grupo3-AvanzaTech/index.html"><i class="fas fa-basics"></i>  INICIO</a>
+                </li>
+                <li><a href="#diseno-layout"><i class="fas fa-basics"></i> Variables y Tipos de Datos</a></li>
+                <li><a href="#animaciones"> Operadores Estructuras de Control</a></li>
+                <li><a href="#selectores"> Funciones</a></li>
+               
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <aside class="sidebar">
+            <div class="resource-card">
+                <h3><i class="fas fa-bookmark"></i> Índice Rápido</h3>
+                <ul class="resource-list">
+                    <li><a href="#box-model"><i class="fas fa-square-full"></i> Modelo de Caja</a></li>
+                    <li><a href="#flexbox-grid"><i class="fas fa-th-large"></i> Flexbox & Grid</a></li>
+                    <li><a href="#transiciones"><i class="fas fa-exchange-alt"></i> Transiciones</a></li>
+                    <li><a href="#keyframes"><i class="fas fa-film"></i> @keyframes</a></li>
+                    <li><a href="#selectores"><i class="fas fa-bullseye"></i> Selectores</a></li>
+                    <li><a href="#media-queries"><i class="fas fa-desktop"></i> Media Queries</a></li>
+                </ul>
+            </div>
+            
+            <div class="newsletter-card">
+                <h3><i class="fas fa-envelope"></i> Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+
+            <div class="tip-card">
+                <h3><i class="fas fa-lightbulb"></i> Tip del Día</h3>
+                <p>Usa <code>gap</code> en lugar de márgenes para espaciado entre elementos en Flexbox y Grid.</p>
+            </div>
+        </aside>
+
+        <main>
+            <!-- Sección de Diseño y Layout -->
+            <section id="diseno-layout" class="section">
+                <h2><i class="fas fa-pencil-ruler"></i> Diseño y Layout</h2>
+                
+                <article class="article">
+                    <h3 id="box-model">Modelo de Caja</h3>
+                    <div class="interactive-box-model">
+                        <div class="box-content-example">Contenido</div>
+                    </div>
+                    
+                    <div class="box-model-controls">
+                        <button data-action="margin">Añadir Margin</button>
+                        <button data-action="padding">Añadir Padding</button>
+                        <button data-action="border">Añadir Border</button>
+                        <button data-action="reset">Resetear</button>
+                    </div>
+                    
+                    <div class="box-model-explanation">
+                        <div class="box-model-part margin">
+                            <h4>Margin</h4>
+                            <p>Espacio exterior que separa el elemento de otros elementos</p>
+                           
+                        </div>
+                        
+                        <div class="box-model-part border">
+                            <h4>Border</h4>
+                            <p>Línea que rodea el padding y el contenido</p>
+                           
+                
+                        </div>
+                        
+                        <div class="box-model-part padding">
+                            <h4>Padding</h4>
+                            <p>Espacio interior entre el contenido y el borde</p>
+
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article">
+                    <h3 id="flexbox-grid">Flexbox y Grid</h3>
+                    
+                    <div class="layout-comparison">
+                        <div class="layout-example">
+                            <h4>Flexbox (1D)</h4>
+                            <div class="flex-container-example">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                            <pre><code>.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}</code></pre>
+                        </div>
+                        
+                        <div class="layout-example">
+                            <h4>CSS Grid (2D)</h4>
+                            <div class="grid-container-example">
+                                <div class="grid-item">1</div>
+                                <div class="grid-item">2</div>
+                                <div class="grid-item">3</div>
+                                <div class="grid-item">4</div>
+                                <div class="grid-item">5</div>
+                                <div class="grid-item">6</div>
+                            </div>
+                            <pre><code>.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="use-cases">
+                        <h4>¿Cuándo usar cada uno?</h4>
+                        <ul>
+                            <li><strong>Flexbox</strong>: Diseños unidimensionales (filas o columnas), alineación precisa, componentes pequeños</li>
+                            <li><strong>Grid</strong>: Diseños bidimensionales complejos, layouts completos de página, estructuras regulares</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Sección de Animaciones -->
+            <section id="animaciones" class="section">
+                <h2><i class="fas fa-magic"></i> Animaciones CSS</h2>
+                
+                <article class="article">
+                    <h3 id="transiciones">Transiciones CSS</h3>
+                    <div class="transition-example">
+                        <div class="transition-box hover-me">Pasa el mouse</div>
+                        <div class="transition-box click-me">Haz clic</div>
+                    </div>
+                    
+                    <pre><code>/* Transición básica */
+.elemento {
+    transition: propiedad duración timing-function delay;
+}
+
+/* Ejemplo concreto */
+.boton {
+    background-color: #4a6bff;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.boton:hover {
+    background-color: #1c2566;
+    transform: scale(1.05);
+}</code></pre>
+                    
+                    <h4>Propiedades animables</h4>
+                    <ul class="animatable-properties">
+                        <li>Colores (color, background-color, border-color)</li>
+                        <li>Tamaños (width, height, font-size)</li>
+                        <li>Posición (margin, padding, top, left)</li>
+                        <li>Transformaciones (transform, opacity)</li>
+                    </ul>
+                </article>
+                
+                <article class="article">
+                    <h3 id="keyframes">Animaciones con @keyframes</h3>
+                    <div class="animation-examples">
+                        <div class="animated-box bounce">Rebote</div>
+                        <div class="animated-box rotate">Rotación</div>
+                        <div class="animated-box pulse">Pulso</div>
+                    </div>
+                    
+                    <div class="keyframe-explanation">
+                        <pre><code>/* Definición de la animación */
+@keyframes nombre-animacion {
+    0% { /* Estilos iniciales */ }
+    50% { /* Estilos intermedios */ }
+    100% { /* Estilos finales */ }
+}
+
+/* Aplicación a un elemento */
+.elemento {
+    animation: nombre-animacion 2s infinite alternate;
+}</code></pre>
+                        
+                        <div class="animation-properties">
+                            <h4>Propiedades de animación:</h4>
+                            <ul>
+                                <li><strong>animation-name</strong>: Nombre de la keyframe</li>
+                                <li><strong>animation-duration</strong>: Duración (ej: 2s)</li>
+                                <li><strong>animation-timing-function</strong>: ease, linear, etc.</li>
+                                <li><strong>animation-delay</strong>: Retardo antes de comenzar</li>
+                                <li><strong>animation-iteration-count</strong>: Número de repeticiones</li>
+                                <li><strong>animation-direction</strong>: normal, reverse, alternate</li>
+                                <li><strong>animation-fill-mode</strong>: Estilos antes/después</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Otras secciones... -->
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2023 Aprendiendo CSS - Todos los derechos reservados</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-codepen"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" title="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="AprendiendoCSS.js"></script>
+</body>
+</html>

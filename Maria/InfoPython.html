@@ -4,86 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprende Python</title>
-    <link rel="stylesheet" href="/ProyectoWeb-Grupo3-AvanzaTech/Estilos/pytho.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="EstilosPython.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <header class="main-header">
+        <div class="container">
+            <h1><i class="fab fa-js-square"></i> Información sobre Python</h1><!--MZH: Conseguir icono python-->
 
-    <nav>
-        <ul>
-            <li><button onclick="mostrarSeccion('introduccion')">Introducción</button></li>
-            <li><button onclick="mostrarSeccion('caracteristicas')">Características</button></li>
-            <li><button onclick="mostrarSeccion('interprete')">Intérprete</button></li>
-            <li><button onclick="mostrarSeccion('operadores')">Operadores</button></li>
-            <li><button onclick="mostrarSeccion('bloques')">Bloques</button></li>
-            <li><button onclick="mostrarSeccion('comentarios')">Comentarios</button></li>
-            <li><button onclick="mostrarSeccion('nombres')">Convenciones</button></li>
-        </ul>
+            <p>Domina los estilos web profesionales</p>
+        </div>
+    </header>
+    
+    <nav class="main-nav">
+        <div class="container">
+            <ul> <!--MZH: Pendiente enlazar a otras lecciones docs html-->
+                <li><a href="/ProyectoWeb-Grupo3-AvanzaTech/index.html"><i class="fas fa-basics"></i>  INICIO</a>
+                </li>
+                <li><a href="#"><i class="fas fa-basics"></i> Introducción</a></li>
+                <li><a href="#"> Variables</a></li>
+                <li><a href="#"> Tipos de Datos</a></li>
+                <li><a href="#"> Operadores</a></li>
+                <li><a href="#"> Sentencia If</a></li>
+               
+            </ul>
+        </div>
     </nav>
 
-    <small>Por Juan José Lozano Gómez — ver fuente original <a href="https://j2logo.com/python/tutorial/introduccion-a-python/#intro-caracteristicas" target="_blank">aquí</a>.</small>
+    <div class="container main-content">
+        <aside class="sidebar">
+            <div class="resource-card">
+                <h3><i class="fas fa-bookmark"></i> Índice Rápido</h3>
+                <ul class="resource-list"> <!--MZH: Pendiente enlazar a subtítulos por lección-->
+                    <li><a href="#box-model"><i class="fas fa-square-full"></i> Subtítulo 1</a></li>
+                    <li><a href="#flexbox-grid"><i class="fas fa-th-large"></i> Subtítulo 2</a></li>
+                    <li><a href="#transiciones"><i class="fas fa-exchange-alt"></i> Subtítulo 3</a></li>
+                    <li><a href="#keyframes"><i class="fas fa-film"></i> Subtítulo 4</a></li>
+                    <li><a href="#selectores"><i class="fas fa-bullseye"></i> Subtítulo 5</a></li>
+                    <li><a href="#media-queries"><i class="fas fa-desktop"></i> Subtítulo 6</a></li>
+                </ul>
+            </div>
+            
+            <div class="newsletter-card">
+                <h3><i class="fas fa-envelope"></i> Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
 
-    <main>
-        <section id="introduccion" class="seccion">
-            <h2>Introducción a Python</h2>
-            <p>Python es un lenguaje de programación de alto nivel cuya máxima es la legibilidad del código...</p>
-        </section>
+            <div class="tip-card">
+                <h3><i class="fas fa-lightbulb"></i> Tip del Día</h3>
+                <p>Asigna un valor a una variable usando el operador de asignación <code>(=)</code> y luego imprímelo con <code>print()</code></p>
+            </div>
+        </aside>
 
-        <section id="caracteristicas" class="seccion">
-            <h2>Características del lenguaje</h2>
-            <ul>
-                <li>Es multiparadigma...</li>
-                <li>Es multiplataforma...</li>
-                <li>Es dinámicamente tipado...</li>
-                <li>Es fuertemente tipado...</li>
-                <li>Es interpretado...</li>
-            </ul>
-        </section>
+        <main>
+            <!-- Sección de Diseño y Layout -->
+            <section id="diseno-layout" class="section">
+                <h2><i class="fas fa-pencil-ruler"></i> Introducción</h2>
+                
+                <article class="article">
+                    <p>Por Juan José Lozano Gómez, fuente: clic <a href="https://j2logo.com/">aquí.</a> </p> <!--MZH: Referenciando al autor de la lección-->
 
-        <section id="interprete" class="seccion">
-            <h2>El intérprete</h2>
-            <p>Python es un lenguaje interpretado, lo que significa que necesitas un intérprete para ejecutarlo...</p>
-        </section>
+                    <h3 id="box-model">Características del lenguaje</h3>
+                    <div class="interactive-box-model">
+                        <div class="box-content-example">Contenido</div>
+                    </div>
+                    
+                    <div class="box-model-controls">
+                        <button data-action="margin">Añadir Margin</button>
+                        <button data-action="padding">Añadir Padding</button>
+                        <button data-action="border">Añadir Border</button>
+                        <button data-action="reset">Resetear</button>
+                    </div>
+                    
+                    <div class="box-model-explanation">
+                        <div class="box-model-part margin">
+                            <h4>Margin</h4>
+                            <p>Espacio exterior que separa el elemento de otros elementos</p>
+                           
+                        </div>
+                        
+                        <div class="box-model-part border">
+                            <h4>Border</h4>
+                            <p>Línea que rodea el padding y el contenido</p>
+                           
+                
+                        </div>
+                        
+                        <div class="box-model-part padding">
+                            <h4>Padding</h4>
+                            <p>Espacio interior entre el contenido y el borde</p>
 
-        <section id="operadores" class="seccion">
-            <h2>Operadores, expresiones y sentencias</h2>
-            <p>Un operador es un carácter que actúa sobre variables o literales para producir un resultado...</p>
-        </section>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article">
+                    <h3 id="flexbox-grid">Flexbox y Grid</h3>
+                    
+                    <div class="layout-comparison">
+                        <div class="layout-example">
+                            <h4>Flexbox (1D)</h4>
+                            <div class="flex-container-example">
+                                <div class="flex-item">1</div>
+                                <div class="flex-item">2</div>
+                                <div class="flex-item">3</div>
+                            </div>
+                            <pre><code>.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}</code></pre>
+                        </div>
+                        
+                        <div class="layout-example">
+                            <h4>CSS Grid (2D)</h4>
+                            <div class="grid-container-example">
+                                <div class="grid-item">1</div>
+                                <div class="grid-item">2</div>
+                                <div class="grid-item">3</div>
+                                <div class="grid-item">4</div>
+                                <div class="grid-item">5</div>
+                                <div class="grid-item">6</div>
+                            </div>
+                            <pre><code>.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="use-cases">
+                        <h4>¿Cuándo usar cada uno?</h4>
+                        <ul>
+                            <li><strong>Flexbox</strong>: Diseños unidimensionales (filas o columnas), alineación precisa, componentes pequeños</li>
+                            <li><strong>Grid</strong>: Diseños bidimensionales complejos, layouts completos de página, estructuras regulares</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        
 
-        <section id="bloques" class="seccion">
-            <h2>Bloques de código (Indentación)</h2>
-            <p>En Python, la indentación es parte de la sintaxis. Sirve para agrupar bloques de código...</p>
-        </section>
+        </main>
+    </div>
 
-        <section id="comentarios" class="seccion">
-            <h2>Comentarios en Python</h2>
-            <p>Los comentarios comienzan con el carácter # y se ignoran durante la ejecución...</p>
-        </section>
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 Developers in process - Todos los derechos reservados</p> <!--Decirle a los chicos que actualicen-->
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-codepen"></i></a>
+            </div>
+        </div>
+    </footer>
 
-        <section id="nombres" class="seccion">
-            <h2>Convenciones de nombres</h2>
-            <p>Python tiene ciertas convenciones como usar snake_case para variables y funciones...</p>
-        </section>
-    </main>
+    <button id="backToTop" class="back-to-top" title="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <script>
-        function mostrarSeccion(id) {
-            const secciones = document.querySelectorAll('.seccion');
-            secciones.forEach(sec => {
-                sec.style.display = sec.id === id ? 'block' : 'none';
-            });
-        }
-
-        // Mostrar solo "Introducción" al cargar
-        document.addEventListener('DOMContentLoaded', () => {
-            mostrarSeccion('introduccion');
-        });
-    </script>
-
+    <script src="AprendiendoCSS.js"></script>
+            
 </body>
 </html>

@@ -189,6 +189,16 @@ body {
     color: var(--secondary-color);
 }
 
+/*Para dar formato a los códigos en el resto del doc*/
+code {
+    background: #f0f4ff;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
 /* Main Content */
 main {
     flex: 1;
@@ -284,6 +294,7 @@ main {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: justify;
 }
 
 .box-model-part h4 {

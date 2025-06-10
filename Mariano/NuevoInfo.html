@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprende Python</title>
-    <link rel="stylesheet" href="EstilosPython.css">
+    <title>Aprendiendo CSS - Guía Completa</title>
+    <link rel="stylesheet" href="/Mariano/EstilosPagina.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header class="main-header">
         <div class="container">
-            <h1><i class="fa-brands fa-python"></i> Información sobre Python</h1><!--MZH: Conseguir icono python-->
+            <h1><i class="fab fa-js-square"></i> Información sobre JavaScript</h1>
 
             <p>Domina los estilos web profesionales</p>
         </div>
     </header>
-    
+
     <nav class="main-nav">
         <div class="container">
-            <ul> <!--MZH: Pendiente enlazar a otras lecciones docs html-->
+            <ul>
                 <li><a href="/index.html"><i class="fas fa-basics"></i>  INICIO</a>
                 </li>
-                <li><a href="#"><i class="fas fa-basics"></i> Introducción</a></li>
-                <li><a href="#"> Variables</a></li>
-                <li><a href="#"> Tipos de Datos</a></li>
-                <li><a href="#"> Operadores</a></li>
-                <li><a href="#"> Sentencia If</a></li>
+                <li><a href="#diseno-layout"><i class="fas fa-basics"></i> Variables y Tipos de Datos</a></li>
+                <li><a href="#animaciones"> Operadores Estructuras de Control</a></li>
+                <li><a href="#selectores"> Funciones</a></li>
                
             </ul>
         </div>
@@ -35,13 +33,13 @@
         <aside class="sidebar">
             <div class="resource-card">
                 <h3><i class="fas fa-bookmark"></i> Índice Rápido</h3>
-                <ul class="resource-list"> <!--MZH: Pendiente enlazar a subtítulos por lección-->
-                    <li><a href="#box-model"><i class="fas fa-square-full"></i> Subtítulo 1</a></li>
-                    <li><a href="#flexbox-grid"><i class="fas fa-th-large"></i> Subtítulo 2</a></li>
-                    <li><a href="#transiciones"><i class="fas fa-exchange-alt"></i> Subtítulo 3</a></li>
-                    <li><a href="#keyframes"><i class="fas fa-film"></i> Subtítulo 4</a></li>
-                    <li><a href="#selectores"><i class="fas fa-bullseye"></i> Subtítulo 5</a></li>
-                    <li><a href="#media-queries"><i class="fas fa-desktop"></i> Subtítulo 6</a></li>
+                <ul class="resource-list">
+                    <li><a href="#box-model"><i class="fas fa-square-full"></i> Modelo de Caja</a></li>
+                    <li><a href="#flexbox-grid"><i class="fas fa-th-large"></i> Flexbox & Grid</a></li>
+                    <li><a href="#transiciones"><i class="fas fa-exchange-alt"></i> Transiciones</a></li>
+                    <li><a href="#keyframes"><i class="fas fa-film"></i> @keyframes</a></li>
+                    <li><a href="#selectores"><i class="fas fa-bullseye"></i> Selectores</a></li>
+                    <li><a href="#media-queries"><i class="fas fa-desktop"></i> Media Queries</a></li>
                 </ul>
             </div>
             
@@ -55,37 +53,32 @@
 
             <div class="tip-card">
                 <h3><i class="fas fa-lightbulb"></i> Tip del Día</h3>
-                <p>Asigna un valor a una variable usando el operador de asignación <code>(=)</code> y luego imprímelo con <code>print()</code></p>
+                <p>Usa <code>gap</code> en lugar de márgenes para espaciado entre elementos en Flexbox y Grid.</p>
             </div>
         </aside>
 
         <main>
             <!-- Sección de Diseño y Layout -->
             <section id="diseno-layout" class="section">
-                <h2><i class="fas fa-pencil-ruler"></i> Introducción</h2>
+                <h2><i class="fas fa-pencil-ruler"></i> Diseño y Layout</h2>
                 
                 <article class="article">
-                    <p>Por Juan José Lozano Gómez, fuente: clic <a href="https://j2logo.com/">aquí.</a> </p> <!--MZH: Referenciando al autor de la lección-->
-
-                    <h3 id="box-model">Características del lenguaje</h3>
-                    <p>Python es un lenguaje de programación de alto nivel cuya máxima es la legibilidad del código. Las principales características de Python son las siguientes:</p>
+                    <h3 id="box-model">Modelo de Caja</h3>
                     <div class="interactive-box-model">
-                        <div class="box-content-example">Haz clic en los botones de abajo</div>
+                        <div class="box-content-example">Contenido</div>
                     </div>
                     
                     <div class="box-model-controls">
-                        <button data-action="multiparadigma">Es multiparadigma</button>
-                        <button data-action="multiplataforma">Es multiplataforma</button>
-                        <button data-action="tipado">Es dinámicamente tipado</button>
-                        <button data-action="fuertemente">Es fuertemente tipado</button>
-                        <button data-action="interpretado">Es interpretado</button>
+                        <button data-action="margin">Añadir Margin</button>
+                        <button data-action="padding">Añadir Padding</button>
+                        <button data-action="border">Añadir Border</button>
                         <button data-action="reset">Resetear</button>
                     </div>
                     
                     <div class="box-model-explanation">
                         <div class="box-model-part margin">
-                            <h4>El intérprete de Python</h4>
-                            <p>Cuando instalas Python correctamente (en cualquier sistema operativo) ocurren, entre otras, dos cosas: se añade el comando <code>python</code> (o <code>python3</code>, en caso de que instales la versión 3.x de Python) al path y se instala el intérprete de Python correspondiente. En el intérprete de Python podemos escribir expresiones e instrucciones que este interpretará y ejecutará.</p>
+                            <h4>Margin</h4>
+                            <p>Espacio exterior que separa el elemento de otros elementos</p>
                            
                         </div>
                         
@@ -150,14 +143,87 @@
                     </div>
                 </article>
             </section>
-        
 
+            <!-- Sección de Animaciones -->
+            <section id="animaciones" class="section">
+                <h2><i class="fas fa-magic"></i> Animaciones CSS</h2>
+                
+                <article class="article">
+                    <h3 id="transiciones">Transiciones CSS</h3>
+                    <div class="transition-example">
+                        <div class="transition-box hover-me">Pasa el mouse</div>
+                        <div class="transition-box click-me">Haz clic</div>
+                    </div>
+                    
+                    <pre><code>/* Transición básica */
+.elemento {
+    transition: propiedad duración timing-function delay;
+}
+
+/* Ejemplo concreto */
+.boton {
+    background-color: #4a6bff;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.boton:hover {
+    background-color: #1c2566;
+    transform: scale(1.05);
+}</code></pre>
+                    
+                    <h4>Propiedades animables</h4>
+                    <ul class="animatable-properties">
+                        <li>Colores (color, background-color, border-color)</li>
+                        <li>Tamaños (width, height, font-size)</li>
+                        <li>Posición (margin, padding, top, left)</li>
+                        <li>Transformaciones (transform, opacity)</li>
+                    </ul>
+                </article>
+                
+                <article class="article">
+                    <h3 id="keyframes">Animaciones con @keyframes</h3>
+                    <div class="animation-examples">
+                        <div class="animated-box bounce">Rebote</div>
+                        <div class="animated-box rotate">Rotación</div>
+                        <div class="animated-box pulse">Pulso</div>
+                    </div>
+                    
+                    <div class="keyframe-explanation">
+                        <pre><code>/* Definición de la animación */
+@keyframes nombre-animacion {
+    0% { /* Estilos iniciales */ }
+    50% { /* Estilos intermedios */ }
+    100% { /* Estilos finales */ }
+}
+
+/* Aplicación a un elemento */
+.elemento {
+    animation: nombre-animacion 2s infinite alternate;
+}</code></pre>
+                        
+                        <div class="animation-properties">
+                            <h4>Propiedades de animación:</h4>
+                            <ul>
+                                <li><strong>animation-name</strong>: Nombre de la keyframe</li>
+                                <li><strong>animation-duration</strong>: Duración (ej: 2s)</li>
+                                <li><strong>animation-timing-function</strong>: ease, linear, etc.</li>
+                                <li><strong>animation-delay</strong>: Retardo antes de comenzar</li>
+                                <li><strong>animation-iteration-count</strong>: Número de repeticiones</li>
+                                <li><strong>animation-direction</strong>: normal, reverse, alternate</li>
+                                <li><strong>animation-fill-mode</strong>: Estilos antes/después</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Otras secciones... -->
         </main>
     </div>
 
     <footer class="main-footer">
         <div class="container">
-            <p>© 2025 Developers in process - Todos los derechos reservados</p> <!--Decirle a los chicos que actualicen-->
+            <p>© 2023 Aprendiendo CSS - Todos los derechos reservados</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>
@@ -170,7 +236,6 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="AprendiendoPython.js"></script>
-            
+    <script src="AprendiendoCSS.js"></script>
 </body>
 </html>

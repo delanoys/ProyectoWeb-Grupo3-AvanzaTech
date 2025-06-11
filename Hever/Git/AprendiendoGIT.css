@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #1c2566;
+    --primary-color: #141835;
     --secondary-color: #1c2566;
     --dark-color: #1a1a2e;
     --light-color: #f8f9fa;
@@ -42,7 +42,7 @@ body {
 /* Header Styles */
 .main-header {
     /* background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); */
-    background: linear-gradient(135deg, #ecedf0 0%, #221f1f 60%, #000000 100%);
+    background: linear-gradient(135deg, #c7c9ce 0%, #000000 60%, #000000 100%);
     color: white;
     padding: 3rem 0;
     text-align: center;
@@ -99,7 +99,7 @@ body {
 
 .main-nav a:hover {
     background-color: var(--primary-color);
-    color: rgb(125, 44, 44);
+    color: rgb(233, 232, 232);
     transform: translateY(-2px);
 }
 

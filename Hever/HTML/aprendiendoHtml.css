@@ -99,7 +99,7 @@ body {
 
 .main-nav a:hover {
     background-color: var(--primary-color);
-    color: rgb(9, 42, 228);
+    color: rgb(249, 250, 255);
     transform: translateY(-2px);
 }
 

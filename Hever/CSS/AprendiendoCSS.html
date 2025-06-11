@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,12 @@
     <link rel="stylesheet" href="AprendiendoCSS.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <header class="main-header">
         <div class="container">
-            <h1><i class="fab fa-css3-alt"></i> Aprendiendo CSS</h1>  <!-- <i class="fas fa-paint-brush"></i>  Logo oficial de CSS3 de Font Awesome -->
+            <h1><i class="fab fa-css3-alt"></i> Aprendiendo CSS</h1>
+            <!-- <i class="fas fa-paint-brush"></i>  Logo oficial de CSS3 de Font Awesome -->
 
             <p>Domina los estilos web profesionales</p>
         </div>
@@ -19,7 +22,7 @@
     <nav class="main-nav">
         <div class="container">
             <ul>
-                <li><a href="/index.html"><i class="fas fa-basics"></i>  INICIO</a></li>
+                <li><a href="/index.html"><i class="fas fa-basics"></i> INICIO</a></li>
                 <li><a href="#diseno-layout"><i class="fas fa-basics"></i> Diseño y Layout</a></li>
                 <li><a href="#animaciones"><i class="fas fa-magic"></i> Animaciones</a></li>
                 <li><a href="#selectores"><i class="fas fa-mouse-pointer"></i> Selectores</a></li>
@@ -41,7 +44,7 @@
                     <li><a href="#media-queries"><i class="fas fa-desktop"></i> Media Queries</a></li>
                 </ul>
             </div>
-            
+
             <div class="newsletter-card">
                 <h3><i class="fas fa-envelope"></i> Newsletter</h3>
                 <form id="newsletterForm">
@@ -60,20 +63,20 @@
             <!-- Sección de Diseño y Layout -->
             <section id="diseno-layout" class="section">
                 <h2><i class="fas fa-pencil-ruler"></i> Diseño y Layout</h2>
-                
+
                 <article class="article">
                     <h3 id="box-model">Modelo de Caja</h3>
                     <div class="interactive-box-model">
                         <div class="box-content-example">Contenido</div>
                     </div>
-                    
+
                     <div class="box-model-controls">
                         <button data-action="margin">Añadir Margin</button>
                         <button data-action="padding">Añadir Padding</button>
                         <button data-action="border">Añadir Border</button>
                         <button data-action="reset">Resetear</button>
                     </div>
-                    
+
                     <div class="box-model-explanation">
                         <div class="box-model-part margin">
                             <h4>Margin</h4>
@@ -84,7 +87,7 @@
     margin-top: 15px;
 }</code></pre>
                         </div>
-                        
+
                         <div class="box-model-part border">
                             <h4>Border</h4>
                             <p>Línea que rodea el padding y el contenido</p>
@@ -93,7 +96,7 @@
     border-radius: 8px; /* Esquinas redondeadas */
 }</code></pre>
                         </div>
-                        
+
                         <div class="box-model-part padding">
                             <h4>Padding</h4>
                             <p>Espacio interior entre el contenido y el borde</p>
@@ -104,10 +107,10 @@
                         </div>
                     </div>
                 </article>
-                
+
                 <article class="article">
                     <h3 id="flexbox-grid">Flexbox y Grid</h3>
-                    
+
                     <div class="layout-comparison">
                         <div class="layout-example">
                             <h4>Flexbox (1D)</h4>
@@ -123,7 +126,7 @@
     gap: 10px;
 }</code></pre>
                         </div>
-                        
+
                         <div class="layout-example">
                             <h4>CSS Grid (2D)</h4>
                             <div class="grid-container-example">
@@ -141,12 +144,14 @@
 }</code></pre>
                         </div>
                     </div>
-                    
+
                     <div class="use-cases">
                         <h4>¿Cuándo usar cada uno?</h4>
                         <ul>
-                            <li><strong>Flexbox</strong>: Diseños unidimensionales (filas o columnas), alineación precisa, componentes pequeños</li>
-                            <li><strong>Grid</strong>: Diseños bidimensionales complejos, layouts completos de página, estructuras regulares</li>
+                            <li><strong>Flexbox</strong>: Diseños unidimensionales (filas o columnas), alineación
+                                precisa, componentes pequeños</li>
+                            <li><strong>Grid</strong>: Diseños bidimensionales complejos, layouts completos de página,
+                                estructuras regulares</li>
                         </ul>
                     </div>
                 </article>
@@ -155,14 +160,14 @@
             <!-- Sección de Animaciones -->
             <section id="animaciones" class="section">
                 <h2><i class="fas fa-magic"></i> Animaciones CSS</h2>
-                
+
                 <article class="article">
                     <h3 id="transiciones">Transiciones CSS</h3>
                     <div class="transition-example">
                         <div class="transition-box hover-me">Pasa el mouse</div>
                         <div class="transition-box click-me">Haz clic</div>
                     </div>
-                    
+
                     <pre><code>/* Transición básica */
 .elemento {
     transition: propiedad duración timing-function delay;
@@ -178,7 +183,7 @@
     background-color: #1c2566;
     transform: scale(1.05);
 }</code></pre>
-                    
+
                     <h4>Propiedades animables</h4>
                     <ul class="animatable-properties">
                         <li>Colores (color, background-color, border-color)</li>
@@ -187,7 +192,7 @@
                         <li>Transformaciones (transform, opacity)</li>
                     </ul>
                 </article>
-                
+
                 <article class="article">
                     <h3 id="keyframes">Animaciones con @keyframes</h3>
                     <div class="animation-examples">
@@ -195,7 +200,7 @@
                         <div class="animated-box rotate">Rotación</div>
                         <div class="animated-box pulse">Pulso</div>
                     </div>
-                    
+
                     <div class="keyframe-explanation">
                         <pre><code>/* Definición de la animación */
 @keyframes nombre-animacion {
@@ -208,7 +213,7 @@
 .elemento {
     animation: nombre-animacion 2s infinite alternate;
 }</code></pre>
-                        
+
                         <div class="animation-properties">
                             <h4>Propiedades de animación:</h4>
                             <ul>
@@ -246,4 +251,5 @@
 
     <script src="AprendiendoCSS.js"></script>
 </body>
+
 </html>

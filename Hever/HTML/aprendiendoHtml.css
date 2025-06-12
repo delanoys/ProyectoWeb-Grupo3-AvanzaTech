@@ -275,7 +275,7 @@ main {
 
 .box-model-explanation {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(1300px, 1fr));
     gap: 20px;
     margin-top: 30px;
 }
@@ -519,6 +519,27 @@ main {
     background-color: var(--secondary-color);
     transform: translateY(-3px);
 }
+/* Colores */
+.color-table .copyable {
+                        cursor: pointer;
+                        background: #f4f4f4;
+                        border-radius: 3px;
+                        padding: 2px 6px;
+                        transition: background 0.2s;
+                    }
+                    .color-table .copyable:hover,
+                    .color-customizer .copyable:hover {
+                        background: #d1eaff;
+                    }
+                    .color-preview {
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                        border: 1px solid #ccc;
+                        margin-left: 10px;
+                        vertical-align: middle;
+                        border-radius: 4px;
+                    }
 
 /* Responsive Design */
 @media (max-width: 992px) {

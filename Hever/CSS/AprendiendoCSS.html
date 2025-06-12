@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendiendo CSS - Guía Completa</title>
     <link rel="stylesheet" href="AprendiendoCSS.css">
+    <link rel="stylesheet" href="/estilos/editor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -27,6 +28,7 @@
                 <li><a href="#animaciones"><i class="fas fa-magic"></i> Animaciones</a></li>
                 <li><a href="#selectores"><i class="fas fa-mouse-pointer"></i> Selectores</a></li>
                 <li><a href="#responsive"><i class="fas fa-mobile-alt"></i> Responsive</a></li>
+                <li><a href="#editor"><i class="fa-solid fa-code"></i> Editor on Line</a></li>
             </ul>
         </div>
     </nav>
@@ -42,6 +44,7 @@
                     <li><a href="#keyframes"><i class="fas fa-film"></i> @keyframes</a></li>
                     <li><a href="#selectores"><i class="fas fa-bullseye"></i> Selectores</a></li>
                     <li><a href="#media-queries"><i class="fas fa-desktop"></i> Media Queries</a></li>
+                    <li><a href="#editor"><i class="fa-solid fa-code"></i> Editor on Line</a></li>
                 </ul>
             </div>
 
@@ -231,6 +234,127 @@
             </section>
 
             <!-- Otras secciones... -->
+             <section id="editor" class="section">
+                <h2>Editor HTML-CSS-JS</h2>
+                <article class="article">
+                    <div class="editor-wrapper">
+                        <div class="tabs">
+                            <div class="tab active" data-lang="html">HTML</div>
+                            <div class="tab" data-lang="css">CSS</div>
+                            <div class="tab" data-lang="js">JavaScript</div>
+                        </div>
+
+                        <textarea id="html" class="active" placeholder="Escribe tu HTML aquí..." cols="70"><h1>Hola Bienvenido, Prueba tu codigo Html</h1>
+            <p>Ejemplo de tablas</p>
+            <table border="1">
+              <tr>
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+              </tr>
+              <tr>
+                <td>Dato 1</td>
+                <td>Dato 2</td>
+              </tr>
+              <tr>
+                <td>Dato 3</td>
+                <td>Dato 4</td>
+              </tr>
+            </table>
+            
+            <button onclick="cambiarColor()">Cambiar Color del Título</button>
+            <p id="contador">Clics: 0</p>
+            <button onclick="incrementarContador()">Incrementar Contador</button></textarea>
+                        <textarea id="css" placeholder="Escribe tu CSS aquí..." cols="70">
+              body { 
+              font-family: sans-serif; 
+              background: #FFFFFF; 
+              padding: 20px;
+            }
+            
+            h1 { 
+              color: #FF0000; 
+              text-align: center;
+            }
+            
+            table {
+              width: 100%;
+              border-collapse: collapse;
+               
+    margin: 20px; /* Todos los lados */
+    margin: 10px 20px; /* Vertical | Horizontal */
+    margin-top: 15px;
+}
+            }
+            
+            th, td {
+              padding: 10px;
+              text-align: left;
+              border: 1px solid #ddd;
+            }
+            
+            th {
+              background-color: #f2f2f2;
+              font-weight: bold;
+            }
+            
+            button {
+              background-color: #007bff;
+              color: white;
+              padding: 10px 15px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              margin: 10px 5px;
+              font-size: 14px;
+            }
+            
+            button:hover {
+              background-color: #0056b3;
+            }
+            
+            #contador {
+              font-size: 18px;
+              font-weight: bold;
+              color: #333;
+            }
+        </textarea>
+                        <textarea id="js" placeholder="Escribe tu JavaScript aquí..." cols="70">
+            // Contador de clics
+            let contador = 0;
+            
+            function incrementarContador() {
+              contador++;
+              document.getElementById('contador').textContent = `Clics: ${contador}`;
+            }
+            
+            // Array de colores para cambiar el título
+            const colores = ['#FF0000', '#00FF00', '#0000FF', '#FF00FF', '#FFA500', '#800080'];
+            let indiceColor = 0;
+            
+            function cambiarColor() {
+              const titulo = document.querySelector('h1');
+              indiceColor = (indiceColor + 1) % colores.length;
+              titulo.style.color = colores[indiceColor];
+            }
+            
+            // Mensaje de bienvenida en la consola
+            console.log('¡Editor HTML-CSS-JS cargado correctamente!');
+            
+            // Función que se ejecuta al cargar la página
+            window.addEventListener('load', function() {
+              console.log('Página cargada. Puedes empezar a programar!');
+            });
+        </textarea>
+
+                        <div class="controls">
+                            <button onclick="runCode()">Ejecutar</button>
+                            <button onclick="downloadZip()">Descargar ZIP</button>
+                        </div>
+                    </div>
+
+                    <iframe id="preview"></iframe>
+                </article>
+            </section>
         </main>
     </div>
 
@@ -250,6 +374,7 @@
     </button>
 
     <script src="AprendiendoCSS.js"></script>
+    <script src="/js/editor.js"></script>
 </body>
 
 </html>

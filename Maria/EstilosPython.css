@@ -40,7 +40,7 @@ body {
 
 /* PRIMER CONTENEDOR */
 .main-header {
-    background: linear-gradient(135deg, #fffbe6 0%, #6ab1f8 50%, #439DF7 100%);
+    background: linear-gradient(135deg, #fefefe 0%, #6ab1f8 50%, #439DF7 100%);
     padding: 3rem 0;
     text-align: center;
     margin-bottom: 2rem;

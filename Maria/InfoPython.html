@@ -21,8 +21,8 @@
             <ul> <!--MZH: Pendiente enlazar a otras lecciones docs html-->
                 <li><a href="/index.html"><i class="fas fa-basics"></i>  INICIO</a>
                 </li>
-                <li><a href="#"><i class="fas fa-basics"></i> Introducción</a></li>
-                <li><a href="#"> Variables</a></li>
+                <li><a href="#introduccion"><i class="fas fa-basics"></i> Introducción</a></li>
+                <li><a href="#variables"> Variables</a></li>
                 <li><a href="#"> Tipos de Datos</a></li>
                 <li><a href="#"> Operadores</a></li>
                 <li><a href="#"> Sentencia If</a></li>
@@ -36,10 +36,10 @@
             <div class="resource-card">
                 <h3><i class="fas fa-bookmark"></i> Índice Rápido</h3>
                 <ul class="resource-list"> <!--MZH: Pendiente enlazar a subtítulos por lección-->
-                    <li><a href="#box-model"><i class="fas fa-square-full"></i> Subtítulo 1</a></li>
-                    <li><a href="#flexbox-grid"><i class="fas fa-th-large"></i> Subtítulo 2</a></li>
-                    <li><a href="#transiciones"><i class="fas fa-exchange-alt"></i> Subtítulo 3</a></li>
-                    <li><a href="#keyframes"><i class="fas fa-film"></i> Subtítulo 4</a></li>
+                    <li><a href="#caracteristicas"><i class="fa-brands fa-python"></i> Características del lenguaje</a></li>
+                    <li><a href="#operadores"><i class="fa-solid fa-calculator"></i></i> Operadores, expresiones y sentencias</a></li>
+                    <li><a href="#que-son"><i class="fa-solid fa-box-open"></i></i> ¿Qué son las variables?</a></li>
+                    <li><a href="#Asignar"><i class="fa-solid fa-equals"></i></i> Asignar valor a una variable</a></li>
                     <li><a href="#selectores"><i class="fas fa-bullseye"></i> Subtítulo 5</a></li>
                     <li><a href="#media-queries"><i class="fas fa-desktop"></i> Subtítulo 6</a></li>
                 </ul>
@@ -62,13 +62,13 @@
         <main>
             <!-- Sección de Diseño y Layout -->
             <section id="diseno-layout" class="section">
-                <h2><i class="fas fa-pencil-ruler"></i> Introducción</h2>
+                <h2 id="introduccion"><i class="fas fa-pencil-ruler"></i> Introducción</h2>
                 
                 <article class="article">
-                    <p>Por Juan José Lozano Gómez, fuente: clic <a href="https://j2logo.com/">aquí.</a> </p> <!--MZH: Referenciando al autor de la lección-->
+                    <p class="parrafo-sencillo">Por <b>Juan José Lozano Gómez</b>, fuente: clic <a href="https://j2logo.com/">aquí.</a> </p> <!--MZH: Referenciando al autor de la lección-->
 
-                    <h3 id="box-model">Características del lenguaje</h3>
-                    <p>Python es un lenguaje de programación de alto nivel cuya máxima es la legibilidad del código. Las principales características de Python son las siguientes:</p>
+                    <h3 id="caracteristicas">Características del lenguaje</h3>
+                    <p class="parrafo-sencillo">Python es un lenguaje de programación de alto nivel cuya máxima es la legibilidad del código. Las principales características de Python son las siguientes:</p>
                     <div class="interactive-box-model">
                         <div class="box-content-example">Haz clic en los botones de abajo</div>
                     </div>
@@ -80,78 +80,132 @@
                         <button data-action="fuertemente">Es fuertemente tipado</button>
                         <button data-action="interpretado">Es interpretado</button>
                         <button data-action="reset">Resetear</button>
+                    <p class="parrafo-sencillo">El hecho de que Python sea interpretado quiere decir que <em>hace falta un intérprete que permita ejecutar un programa o script escrito en Python</em> sin necesidad de compilarlo.</p>
                     </div>
                     
                     <div class="box-model-explanation">
                         <div class="box-model-part margin">
                             <h4>El intérprete de Python</h4>
-                            <p>Cuando instalas Python correctamente (en cualquier sistema operativo) ocurren, entre otras, dos cosas: se añade el comando <code>python</code> (o <code>python3</code>, en caso de que instales la versión 3.x de Python) al path y se instala el intérprete de Python correspondiente. En el intérprete de Python podemos escribir expresiones e instrucciones que este interpretará y ejecutará.</p>
+                            <p class="parrafo-sencillo">Cuando instalas Python correctamente (en cualquier sistema operativo) ocurren, entre otras, dos cosas: se añade el comando <code>python</code> (o <code>python3</code>, en caso de que instales la versión 3.x de Python) al path y se instala el intérprete de Python correspondiente. <br><br>
+                            En el intérprete de Python podemos escribir expresiones e instrucciones que este interpretará y ejecutará.</p>
                            
                         </div>
                         
                         <div class="box-model-part border">
-                            <h4>Border</h4>
-                            <p>Línea que rodea el padding y el contenido</p>
-                           
-                
+                            <h4>Tu primer programa en Python</h4>
+                            <p class="parrafo-sencillo">Al crear un archivo, agregamos la extensión <code>.py</code>al final para que el intérprete lo reconozca como un programa de Python. Por ejemplo: <code>suma.py</code>.<br><br>
+                                
+                            Abre una terminal, ubica el directorio (o carpeta) donde guardaste el archivo y escribe el siguiente comando para que sea interpretado y ejecutado: <code>python3 suma.py</code>.
+                            </p>
+                                         
                         </div>
                         
-                        <div class="box-model-part padding">
-                            <h4>Padding</h4>
-                            <p>Espacio interior entre el contenido y el borde</p>
+                    </div>
 
+                    <div class="box-model-editor-codigo">
+                            <h4>Editor de código</h4>
+                            <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
+                            <p class="parrafo-sencillo">Te presentamos este editor de código en línea para ayudarte en tus primeros pasos, hasta que te familiarices con la terminal o un editor de código como Visual Studio Code (VSC).<br><br>
+                            <ul class="lista">
+                                <li>Escribe código en la ventana <b>script.py</b>. Si te sientes perdido, hay pistas al presionar el botón <u>Hint</u>.</li>
+                                <li>Para hacer un salto y crear nueva línea de código, presiona Enter en tu teclado.</li>
+                                <li>Una vez hayas escrito tu código, presiona la tecla <u>Submit</u> para ver el resultado en la ventana <b>Python shell</b>.</li>
+                                <li>Si no te viene a la mente ningún código, puedes presionar en el botón <u>Solution</u>, y luego <u>Submit</u>.</li>
+                            </ul><br><br>
+                            </p>
+                            <div data-datacamp-exercise data-lang="python">
+	                           <code data-type="pre-exercise-code">
+		                           # This will get executed each time the exercise gets initialized
+		                           b = 6
+	                           </code>
+	                           <code data-type="sample-code">
+		                           # Crea la variable "Suma", igual a 2+3 
+
+
+		                           # Imprime el resultado
+
+	                           </code>
+	                           <code data-type="solution">
+		                           # Crea la variable "Suma", igual a 2+3
+		                           suma=2+3
+
+		                           # Imprime el resultado
+		                           print(suma)
+	                           </code>
+	                           <code data-type="sct">
+		                           test_object("suma")
+		                           test_function("print")
+		                           success_msg("¡Bien hecho!")
+	                           </code>
+	                           <div data-type="hint">Usa el operador de asignación (<code>=</code>) para crear la variable, y luego la operación. <code>2+3</code>.</div>
+                           </div>
                         </div>
-                    </div>
-                </article>
-                
-                <article class="article">
-                    <h3 id="flexbox-grid">Flexbox y Grid</h3>
-                    
-                    <div class="layout-comparison">
-                        <div class="layout-example">
-                            <h4>Flexbox (1D)</h4>
-                            <div class="flex-container-example">
-                                <div class="flex-item">1</div>
-                                <div class="flex-item">2</div>
-                                <div class="flex-item">3</div>
-                            </div>
-                            <pre><code>.contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}</code></pre>
-                        </div>
-                        
-                        <div class="layout-example">
-                            <h4>CSS Grid (2D)</h4>
-                            <div class="grid-container-example">
-                                <div class="grid-item">1</div>
-                                <div class="grid-item">2</div>
-                                <div class="grid-item">3</div>
-                                <div class="grid-item">4</div>
-                                <div class="grid-item">5</div>
-                                <div class="grid-item">6</div>
-                            </div>
-                            <pre><code>.contenedor {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-}</code></pre>
-                        </div>
-                    </div>
-                    
-                    <div class="use-cases">
-                        <h4>¿Cuándo usar cada uno?</h4>
-                        <ul>
-                            <li><strong>Flexbox</strong>: Diseños unidimensionales (filas o columnas), alineación precisa, componentes pequeños</li>
-                            <li><strong>Grid</strong>: Diseños bidimensionales complejos, layouts completos de página, estructuras regulares</li>
-                        </ul>
+                    <div>
+                        <h3 id="operadores">Operadores, expresiones y sentencias</h3>
+                        <p class="parrafo-sencillo">Son las formas básicas que componen la estructura de cualquier programa.</p><br>
+                        <h4>Operador</h4>
+                        <p class="parrafo-sencillo"><br>
+                            Un operador es un carácter o conjunto de caracteres que actúa sobre una, dos o más variables y/o literales para llevar a cabo una operación con un resultado determinado.<br>
+
+                            Ejemplos de operadores comunes son los operadores aritméticos + (suma), - (resta) o * (multiplicación o producto), aunque en Python existen otros operadores.<br>
+                        </p><br>
+                        <h4>Expresión</h4>
+                        <br><p class="parrafo-sencillo">
+                            Una expresión es una unidad de código que devuelve un valor y está formada por una combinación de operandos (variables y literales) y operadores. Los siguientes son ejemplos de expresiones (cada línea es una expresión diferente):<br><br>
+                            <ol class="lista">
+                                <li>5 + 2 --- Suma del número 5 y el número 2</li>
+                                <li>a &lt; 10  --- Compara si el valor de la variable a es menor que 10</li>
+                                <li>b is None --- Compara si la identidad de la variable b es None</li>
+                                <li>3 * (200 - c) --- Resta a 200 el valor de c y lo multiplica por 3</li>
+                            </ol><br>
+                        </p><br>
+                        <h4>Sentencia</h4>
+                        <p class="parrafo-sencillo"><br>
+                            Una sentencia o declaración es una instrucción que define una acción. Una sentencia puede estar formada por una o varias expresiones, aunque no siempre es así.
+
+                            En definitiva, las sentencias son las instrucciones que componen nuestro programa y determinan su comportamiento.<br>
+
+                            Ejemplos de sentencias son la asignación <code>=</code> o las instrucciones <code>if</code>, <code>if ... else ...</code>, <code>for</code> o <code>while</code> entre otras.
+                        </p>
                     </div>
                 </article>
             </section>
-        
 
+            <section id="diseno-layout" class="section">
+                <h2 id="variables"><i class="fa-solid fa-box-open"></i></i> Variables</h2>
+                <article class="article">
+                    <h3 id="que-son">¿Qué son las variables?</h3>      
+                    <div class="caja-resaltar">
+                        Las variables son uno de los dos componentes básicos de cualquier programa. 
+                        <br>Se puede definir como un <strong>contenedor, o caja, en el que se almacena un dato.</strong> 
+                    </div>
+                    <br><p class="parrafo-sencillo">En su esencia, un programa está compuesto por datos e instrucciones que manipulan esos datos. Normalmente, los datos se almacenan en memoria (memoria RAM) para que podamos acceder a ellos. El dato almacenado en una variable se puede cambiar durante el flujo del programa.<br><br>
+                    También es importante mencionar el concepto tipo de dato. Al asignar un valor a una variable, dicho valor pertenece a un conjunto de valores conocido como tipo de dato. Un tipo de dato define una serie de características sobre esos datos y las variables que los contienen como, por ejemplo, las operaciones que se pueden realizar con ellos. En Python, los tipos de datos básicos son los numéricos (enteros, reales y complejos), los boolenaos (True, False) y las cadenas de caracteres.
+                    </p><br>
+                    <h3 id="Asignar">Asignar valor a una variable</h3>
+                    <p class="parrafo-sencillo">Cuando asignamos un valor a una variable por primera vez, se dice que en ese lugar se <u>define e inicializa</u> la variable. Para asignar un valor (un dato) a una variable, se utiliza el operador de asignación <code>=</code>.
+                    En la operación de asignación se ven involucradas tres partes:
+                    <ul class="lista">
+                        <li>El operador de asignación <code>=</code>.</li>
+                        <li>Un identificador o nombre de variable, a la izquierda del operador.</li>
+                        <li>Un literal, una expresión, una llamada a una función o una combinación de todos ellos a la derecha del operador de asignación.</li>
+                    </ul><br>
+                    Ejemplos:
+                    <div class="ejemplos-codigos">
+                        <code>
+                            # Asigna a la variable &lt;a&gt; el valor 1
+                            <br>a = 1
+                            <br><br>
+                            # Asigna a la variable &lt;a&gt; el resultado de la expresión 3 * 4
+                            <br>a = 3 * 4
+                            <br><br>
+                            # Asigna a la variable &lt;a&gt; la cadena de caracteres 'Pythonista'
+                            <br>a = 'Pythonista'
+                        </code> 
+                    </div>
+                    </p><br>
+                </article>
+            </section>
         </main>
     </div>
 

@@ -40,7 +40,7 @@ body {
 
 /* PRIMER CONTENEDOR */
 .main-header {
-    background: linear-gradient(135deg, #fffbe6 0%, #6ab1f8 50%, #439DF7 100%);
+    background: linear-gradient(135deg, #fefefe 0%, #6ab1f8 50%, #439DF7 100%);
     padding: 3rem 0;
     text-align: center;
     margin-bottom: 2rem;
@@ -239,6 +239,11 @@ main {
 }
 
 /* Modelo de Caja Interactivo */
+
+.parrafo-sencillo {
+    text-align: justify;
+}
+
 .interactive-box-model {
     background-color: #f0f4ff;
     border: 2px dashed var(--primary-color);
@@ -297,9 +302,32 @@ main {
     text-align: justify;
 }
 
+.box-model-editor-codigo {
+    display: grid;
+    margin-top: 30px;
+}
+
 .box-model-part h4 {
     color: var(--secondary-color);
     margin-bottom: 10px;
+}
+
+.lista {
+    margin-left: 50px;
+}
+
+ol li::marker {
+  font-weight: bold;
+}
+
+.ejemplos-codigos {
+    background-color:#fbfafa;
+    padding: 1.5rem;
+    border:2px;
+    border-color: #201a1a;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    text-align:left;
 }
 
 /* Flexbox vs Grid */
@@ -356,10 +384,11 @@ main {
 }
 
 .use-cases {
-    background: #f8f9fa;
+    background: #e9eff6;
     padding: 1.5rem;
     border-radius: 8px;
     margin-top: 1.5rem;
+    text-align:center;
 }
 
 .use-cases h4 {

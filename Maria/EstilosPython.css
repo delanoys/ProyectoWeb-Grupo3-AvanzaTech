@@ -404,6 +404,111 @@ ol li::marker {
     margin-bottom: 0.8rem;
 }
 
+/* estilos de las tarjetas-------------------------------------------------------------------------------- */
+
+
+/* Contenedor principal de las tarjetas */
+.cards {
+    display: flex;
+    /* Usa Flexbox para organizar las tarjetas */
+    justify-content: center;
+    /* IGUAL Centra las tarjetas horizontalmente */
+    align-items: center;
+    /* IGUAL Centra las tarjetas verticalmente */
+    gap: 2px;
+    /* Espacio entre las tarjetas */
+    padding: 10px;
+    /* Espaciado interno del contenedor */
+    flex-wrap: wrap;
+    /* IGUAL Permite que las tarjetas pasen a la siguiente línea si no caben */
+}
+
+/* Estilos básicos para cada tarjeta */
+.cards .fcard {
+    background-color: transparent;
+    /* Fondo transparente para permitir efecto visual */
+    width: 350px;
+    /* Ancho fijo de la tarjeta */
+    height: 350px;
+    /* Altura fija de la tarjeta */
+    border: solid 1px #ffffff;
+    /* Borde blanco */
+    perspective: 1000px;
+    /* Perspectiva para efecto 3D */
+    display: flex;
+    align-items: center;
+    /* Alinea elementos internos verticalmente (aunque no tendrá efecto aquí sin display:flex) */
+}
+
+/* Contenedor interno que se voltea al hacer hover */
+.cards .fcard .inner {
+    position: relative;
+    /* Posicionamiento relativo para controlar otras posiciones de elementos */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* Centra el contenido horizontalmente */
+    transition: transform 1.5s ease-in-out;
+    /* Transición suave al girar */
+    transform-style: preserve-3d;
+    /* Mantiene el efecto 3D de los hijos */
+}
+
+/* Efecto al pasar el cursor: gira la tarjeta */
+.cards .fcard:hover .inner {
+    transform: rotateY(180deg);
+    /* Rota la tarjeta en el eje Y */
+}
+
+/* Cara frontal de la tarjeta */
+.cards .fcard .pfrente {
+    position: absolute;
+    /* Posicionamiento absoluto para superponer caras */
+    width: 90%;
+    height: 90%;
+    backface-visibility: hidden;
+    /* Oculta el reverso cuando se gira */
+    background-color: #190d0d;
+    /* Color de fondo oscuro */
+    color: #333;
+    /* Color del texto */
+}
+
+/* Cara trasera de la tarjeta */
+.cards .fcard .ptrasera {
+    position: absolute;
+    /* Igual a la cara frontal */
+    width: 90%;
+    height: 90%;
+    backface-visibility: hidden;
+    /* Oculta el reverso cuando no está de frente */
+    background-color: #fcf9f9;
+    /* Fondo azul brillante */
+    box-shadow: 0 5px 15px var(--shadow-color);
+    /* Efecto de sombra en los bordes */
+    color: #333;
+    /* Color del texto oscuro */
+    transform: rotateY(180deg);
+    /* Rota esta cara para que quede visible cuando la tarjeta gira */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.lista-tarjetas {
+    margin-left: 50px;
+    text-align: left;
+}
+
+/* Imagen dentro de la cara frontal */
+.cards .fcard .pfrente img {
+    width: 100%;
+    /* Imagen ocupa todo el ancho del contenedor */
+    height: 100%;
+    /* Imagen ocupa toda la altura del contenedor */
+}
+
 /* Animaciones */
 .transition-example {
     display: flex;
@@ -503,6 +608,7 @@ ol li::marker {
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
+
 
 /* Footer */
 .main-footer {

@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendiendo HTML - Guía Completa</title>
-    <link rel="stylesheet" href="/estilos/editor.css">
-    <link rel="stylesheet" href="Aprendiendohtml.css">
+    
+    
+    // Script para detectar la ubicación de los archivos de estilos CSS
+     <link rel="stylesheet" href="/estilos/editor.css">
+   <link rel="stylesheet" href="Aprendiendohtml.css">
+   
+      
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -564,12 +570,26 @@
             <p>Guía educativa sobre HTML para principiantes</p>
         </div>
     </footer>
-
     <button id="backToTop" class="back-to-top" title="Volver arriba">↑</button>
 
+    <!-- SCRIPT -->
+     <script>
+// Solo si usas en el navegador (adaptar rutaEstilos.js para browser)
+if (typeof require !== 'undefined') {
+    const { buscarEstilo } = require('./js/rutaEstilos.js');
+    
+    // Buscar y mostrar rutas
+    console.log('Archivos CSS encontrados:');
+    console.log('editor.css:', buscarEstilo('editor.css'));
+    console.log('Aprendiendohtml.css:', buscarEstilo('Aprendiendohtml.css'));
+}
+</script>
+
+    
     <script src="aprendiendoHtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script src="/js/editor.js"></script>
+      
 </body>
 
 </html>

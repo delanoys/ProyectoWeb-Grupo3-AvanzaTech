@@ -160,6 +160,7 @@
       h1 {
         font-size: 40px;
       }
+<<<<<<< HEAD
       p {
         font-size: 20px;
       }
@@ -261,5 +262,71 @@
         height: 30px;
       }
     }
+=======
+      .botones a {
+        font-size: 15px;
+        padding: 12px 18px;
+      }
+    }
+>>>>>>> eff9b41015870b0a5636f6e7526a3e9b1a0ad01c
 
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .botones {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: stretch;
+      }
+      .botones a {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 0;
+        justify-content: center;
+      }
+      .icono {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    @media (max-width: 300px) {
+      body {
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .botones {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: stretch;
+      }
+      .botones a {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 0;
+        justify-content: center;
+      }
+      .icono {
+        width: 20px;
+        height: 20px;
+      }
+    }
 

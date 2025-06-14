@@ -3,9 +3,12 @@
     --secondary-color: #1c2566;
     --dark-color: #1a1a2e;
     --light-color: #f8f9fa;
-    --shadow-color: rgba(28, 37, 102, 0.2);
+    --shadow-color: rgba(0,0,0, 2.5);
     --success-color: #28a745;
     --card-bg: #ffffff;
+
+    /* tamaño texto parrafo */
+    --textParrafo:  1.3rem;
 }
 
 * {
@@ -219,7 +222,21 @@ main {
     align-items: center;
     gap: 10px;
 }
-
+.section p {
+    size: 13px;
+    font-size: medium;
+    margin-bottom: 1.2rem;
+    line-height: 1.6; 
+}
+.section img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+.section img:hover {
+    transform: scale(1.10);
+    transition: transform 0.3s ease;
+}
 .article {
     margin-bottom: 2.5rem;
 }
@@ -228,6 +245,11 @@ main {
     color: var(--primary-color);
     margin: 1.8rem 0 1.2rem;
     font-size: 1.5rem;
+}
+.article p {
+    font-size: var(--textParrafo);
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
 }
 
 /* Modelo de Caja Interactivo */

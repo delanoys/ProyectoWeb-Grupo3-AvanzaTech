@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Pull Requests - Proyecto AvanzaTech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            min-height: 100vh;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            margin: -20px -20px 40px -20px;
+            color: white;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .nav-tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 5px;
+            margin-bottom: 30px;
+            overflow-x: auto;
+        }
+
+        .nav-tab {
+            flex: 1;
+            padding: 15px 20px;
+            background: transparent;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            min-width: 120px;
+        }
+
+        .nav-tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-tab:hover:not(.active) {
+            background: #e9ecef;
+            transform: translateY(-1px);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #4facfe;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 20px;
+            box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
+        }
+
+        .step h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        .code-block {
+            background: #1a1a1a;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            overflow-x: auto;
+            position: relative;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .code-block::before {
+            content: "Terminal";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #333;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            border-radius: 10px 0 10px 0;
+        }
+
+        .code-block code {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .command {
+            color: #50fa7b;
+        }
+
+        .comment {
+            color: #6272a4;
+        }
+
+        .warning {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            border: none;
+            border-left: 5px solid #e74c3c;
+            color: #721c24;
+        }
+
+        .success {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border: none;
+            border-left: 5px solid #27ae60;
+            color: #155724;
+        }
+
+        .info {
+            background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+            border: none;
+            border-left: 5px solid #3498db;
+            color: #0c5460;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .checklist li:hover {
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin: 0 -10px;
+            padding-left: 50px;
+        }
+
+        .checklist li::before {
+            content: "✅";
+            position: absolute;
+            left: 10px;
+            font-size: 1.2rem;
+        }
+
+        .team-flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .team-member {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member h4 {
+            color: #4facfe;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .github-mockup {
+            background: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .github-header {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #d0d7de;
+        }
+
+        .pr-template {
+            background: #f8f9fa;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            font-family: monospace;
+            white-space: pre-line;
+        }
+
+        .button {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(79, 172, 254, 0.3);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 4px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 2px solid #e9ecef;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+            }
+            
+            .nav-tab {
+                margin-bottom: 5px;
+            }
+            
+            .step {
+                padding: 20px;
+            }
+            
+            .step-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Guía Pull Requests</h1>
+            <p>Proyecto Web Grupo 3 - AvanzaTech</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('intro')">🎯 Introducción</button>
+            <button class="nav-tab" onclick="showTab('steps')">📝 Pasos</button>
+            <button class="nav-tab" onclick="showTab('team')">👥 Equipo</button>
+            <button class="nav-tab" onclick="showTab('commands')">💻 Comandos</button>
+            <button class="nav-tab" onclick="showTab('practice')">🎮 Práctica</button>
+        </div>
+
+        <!-- Introducción -->
+        <div id="intro" class="tab-content active">
+            <div class="step success">
+                <div class="step-header">
+                    <div class="step-number">💡</div>
+                    <h3>¿Qué es un Pull Request?</h3>
+                </div>
+                <p>Un <strong>Pull Request (PR)</strong> es una solicitud para fusionar cambios de una rama específica hacia la rama principal. Es como decir: <em>"Hey equipo, he terminado mi trabajo, por favor revísenlo antes de integrarlo"</em>.</p>
+                
+                <h4>🎯 Ventajas principales:</h4>
+                <ul class="checklist">
+                    <li>Revisión de código entre compañeros</li>
+                    <li>Prevención automática de conflictos</li>
+                    <li>Historial claro de cambios</li>
+                    <li>Comunicación efectiva del equipo</li>
+                    <li>Control de calidad del código</li>
+                </ul>
+            </div>
+
+            <div class="step warning">
+                <div class="step-header">
+                    <div class="step-number">⚠️</div>
+                    <h3>Problema con el método actual</h3>
+                </div>
+                <p>Actualmente están usando:</p>
+                <div class="code-block">
+                    <code>
+<span class="command">git push origin Html</span>
+<span class="command">git push origin main</span>  <span class="comment"># ❌ PELIGROSO en equipo</span>
+                    </code>
+                </div>
+                <p><strong>Riesgos:</strong></p>
+                <ul>
+                    <li>❌ Pueden sobrescribir cambios de compañeros</li>
+                    <li>❌ No hay revisión de código</li>
+                    <li>❌ Pérdida del historial de cambios</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Pasos -->
+        <div id="steps" class="tab-content">
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <h3>Preparar cambios en tu rama</h3>
+                </div>
+                <div class="code-block">
+                    <code>
+<span class="comment"># Asegúrate de estar en tu rama específica</span>
+<span class="command">git checkout Html</span>
+
+<span class="comment"># Guarda todos tus cambios</span>
+<span class="command">git add .</span>
+<span class="command">git commit -m "feat: Descripción clara de los cambios"</span>
+                    </code>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <h3>Subir tu rama al repositorio remoto</h3>
+                </div>
+                <div class="code-block">
+                    <code>
+<span class="comment"># Sube tu rama al repositorio compartido</span>
+<span class="command">git push origin Html</span>
+                    </code>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <h3>Crear Pull Request en GitHub</h3>
+                </div>
+                <div class="github-mockup">
+                    <div class="github-header">
+                        <h4>📍 En GitHub.com</h4>
+                        <p>Ve a: <code>github.com/delanoys/ProyectoWeb-Grupo3-AvanzaTech</code></p>
+                    </div>
+                    <ol>
+                        <li>Aparecerá una <strong>barra amarilla</strong>: "Html had recent pushes"</li>
+                        <li>Clic en <strong>"Compare & pull request"</strong></li>
+                        <li>Si no aparece: <strong>Pull requests</strong> → <strong>New pull request</strong></li>
+                        <li>Selecciona: <code>base: main</code> ← <code>compare: Html</code></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <h3>Configurar información del PR</h3>
+                </div>
+                <h4>📝 Plantilla recomendada:</h4>
+                <div class="pr-template">## 📝 Descripción de cambios
+- Mejoré la estructura HTML de aprendiendoHtml.html
+- Agregué estilos CSS responsivos
+- Incluí imagen explicativa de encabezados HTML
+
+## 📂 Archivos modificados
+- `Hever/HTML/aprendiendoHtml.html`
+- `Hever/HTML/aprendiendoHtml.css`
+- `imagenes/html-ENCABEZADOS.png` (nuevo archivo)
+
+## ✅ Pruebas realizadas
+- [x] Verificado en Chrome
+- [x] Verificado responsive
+- [x] Sin errores en consola
+
+## 🔍 Revisar especialmente
+- Estructura semántica del HTML
+- Estilos CSS aplicados
+- Optimización de imagen
+
+@compañero1 @compañero2 @compañero3 por favor revisen 🙏</div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                    <h3>Asignar revisores y crear PR</h3>
+                </div>
+                <ul class="checklist">
+                    <li>En el panel derecho, sección "Reviewers"</li>
+                    <li>Selecciona a tus 3 compañeros de equipo</li>
+                    <li>Clic en "Create pull request"</li>
+                    <li>Se enviará notificación automática al equipo</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Equipo -->
+        <div id="team" class="tab-content">
+            <div class="step info">
+                <div class="step-header">
+                    <div class="step-number">👥</div>
+                    <h3>Flujo de trabajo del equipo</h3>
+                </div>
+                <div class="team-flow">
+                    <div class="team-member">
+                        <h4>🎨 Rama Html</h4>
+                        <p>Estructura HTML<br>Semántica y contenido</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>🎨 Rama CSS</h4>
+                        <p>Estilos y diseño<br>Responsive design</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>⚡ Rama JavaScript</h4>
+                        <p>Interactividad<br>Funcionalidades JS</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>🔧 Rama Backend</h4>
+                        <p>Lógica del servidor<br>Base de datos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">📋</div>
+                    <h3>Cómo revisar Pull Requests</h3>
+                </div>
+                <h4>🔍 Para los revisores:</h4>
+                <ul class="checklist">
+                    <li>Recibir notificación por email de GitHub</li>
+                    <li>Ir a la pestaña "Pull requests" en GitHub</li>
+                    <li>Clic en "Files changed" para ver cambios</li>
+                    <li>Revisar línea por línea el código</li>
+                    <li>Agregar comentarios específicos si es necesario</li>
+                    <li>Aprobar con "Approve" o solicitar cambios</li>
+                </ul>
+            </div>
+
+            <div class="step success">
+                <div class="step-header">
+                    <div class="step-number">✅</div>
+                    <h3>Reglas del equipo</h3>
+                </div>
+                <h4>🚫 Prohibido:</h4>
+                <ul>
+                    <li>❌ <code>git push origin main</code> desde tu rama</li>
+                    <li>❌ Hacer merge sin revisión</li>
+                    <li>❌ Commits sin mensaje descriptivo</li>
+                </ul>
+                
+                <h4>✅ Obligatorio:</h4>
+                <ul class="checklist">
+                    <li>Usar Pull Requests para merge a main</li>
+                    <li>Mínimo 1 revisión antes de aprobar</li>
+                    <li>Probar cambios antes de crear PR</li>
+                    <li>Usar plantilla de descripción</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Comandos -->
+        <div id="commands" class="tab-content">
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">💻</div>
+                    <h3>Comandos Git esenciales</h3>
+                </div>
+                
+                <h4>🔄 Rutina diaria:</h4>
+                <div class="code-block">
+                    <code>
+<span class="comment"># Al iniciar el día</span>
+<span class="command">git checkout main</span>
+<span class="command">git pull origin main</span>
+<span class="command">git checkout tu-rama</span>
+<span class="command">git merge main</span>  <span class="comment"># Incorpora cambios de compañeros</span>
+                    </code>
+                </div>
+
+                <h4>📤 Al finalizar cambios:</h4>
+                <div class="code-block">
+                    <code>
+<span class="command">git add .</span>
+<span class="command">git commit -m "feat: Descripción clara"</span>
+<span class="command">git push origin tu-rama</span>
+<span class="comment"># Crear Pull Request en GitHub</span>
+                    </code>
+                </div>
+
+                <h4>🔍 Comandos útiles:</h4>
+                <div class="code-block">
+                    <code>
+<span class="command">git status</span>                <span class="comment"># Ver estado actual</span>
+<span class="command">git branch -a</span>             <span class="comment"># Ver todas las ramas</span>
+<span class="command">git log --oneline -5</span>      <span class="comment"># Ver últimos commits</span>
+<span class="command">git diff main..tu-rama</span>    <span class="comment"># Ver diferencias entre ramas</span>
+                    </code>
+                </div>
+            </div>
+
+            <div class="step warning">
+                <div class="step-header">
+                    <div class="step-number">⚠️</div>
+                    <h3>Resolver conflictos</h3>
+                </div>
+                <div class="code-block">
+                    <code>
+<span class="comment"># Si hay conflictos al hacer merge</span>
+<span class="command">git status</span>  <span class="comment"># Ver archivos en conflicto</span>
+<span class="comment"># Editar archivos manualmente para resolver conflictos</span>
+<span class="command">git add archivo-resuelto</span>
+<span class="command">git commit -m "Resuelto conflicto en archivo X"</span>
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Práctica -->
+        <div id="practice" class="tab-content">
+            <div class="step info">
+                <div class="step-header">
+                    <div class="step-number">🎮</div>
+                    <h3>Ejercicio práctico</h3>
+                </div>
+                <p>Vamos a crear tu primer Pull Request con un cambio pequeño:</p>
+                
+                <h4>📝 Cambio sugerido:</h4>
+                <div class="code-block">
+                    <code>
+<span class="comment">&lt;!-- Agregar al inicio de tu archivo HTML --&gt;</span>
+&lt;!-- 
+Archivo: aprendiendoHtml.html
+Autor: Tu nombre
+Descripción: Página de práctica HTML con encabezados
+Última actualización: [Fecha actual]
+--&gt;
+                    </code>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">🚀</div>
+                    <h3>Pasos para la práctica</h3>
+                </div>
+                <ol>
+                    <li><strong>Hacer el cambio:</strong> Agregar comentarios a tu HTML</li>
+                    <li><strong>Guardar:</strong> <code>git add . && git commit -m "docs: Agregar comentarios explicativos"</code></li>
+                    <li><strong>Subir:</strong> <code>git push origin Html</code></li>
+                    <li><strong>Crear PR:</strong> Ir a GitHub y seguir los pasos</li>
+                    <li><strong>Notificar:</strong> Avisar al equipo en el chat</li>
+                </ol>
+            </div>
+
+            <div class="step success">
+                <div class="step-header">
+                    <div class="step-number">🎯</div>
+                    <h3>Próximos pasos</h3>
+                </div>
+                <ul class="checklist">
+                    <li>Implementar Pull Requests en todos los cambios</li>
+                    <li>Establecer horarios de revisión en equipo</li>
+                    <li>Crear plantillas de PR personalizadas</li>
+                    <li>Configurar protección de la rama main</li>
+                    <li>Usar GitHub Projects para gestión de tareas</li>
+                </ul>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="#" class="button" onclick="showTab('steps')">🔄 Revisar pasos</a>
+                    <a href="#" class="button" onclick="alert('¡Excelente! Ahora tienes todo lo necesario para trabajar con Pull Requests de manera profesional.')">✅ ¡Entendido!</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>📚 <strong>Proyecto Web Grupo 3 - AvanzaTech</strong></p>
+            <p>Guía creada para mejorar el flujo de trabajo colaborativo</p>
+            <p>💡 <em>Recuerda: Un buen Pull Request es la base de un código de calidad</em></p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Ocultar todas las pestañas
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Remover clase active de todos los botones
+            const buttons = document.querySelectorAll('.nav-tab');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Mostrar la pestaña seleccionada
+            document.getElementById(tabName).classList.add('active');
+            
+            // Activar el botón correspondiente
+            event.target.classList.add('active');
+
+            // Actualizar barra de progreso
+            updateProgress(tabName);
+        }
+
+        function updateProgress(tabName) {
+            const progressBar = document.getElementById('progressBar');
+            const progressMap = {
+                'intro': 20,
+                'steps': 40,
+                'team': 60,
+                'commands': 80,
+                'practice': 100
+            };
+            
+            progressBar.style.width = progressMap[tabName] + '%';
+        }
+
+        // Inicializar barra de progreso
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgress('intro');
+        });
+
+        // Efecto de escritura para los códigos
+        document.querySelectorAll('.code-block code').forEach(block => {
+            block.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+            });
+            
+            block.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Animación de los elementos de la checklist
+        document.querySelectorAll('.checklist li').forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html>

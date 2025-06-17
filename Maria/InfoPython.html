@@ -19,13 +19,12 @@
     <nav class="main-nav">
         <div class="container">
             <ul> <!--MZH: Pendiente enlazar a otras lecciones docs html-->
-                <li><a href="/index.html"><i class="fas fa-basics"></i>  INICIO</a>
-                </li>
+                <li><a href="/index.html"><i class="fas fa-basics"></i>  INICIO</a></li>
                 <li><a href="#introduccion"><i class="fas fa-basics"></i> Introducción</a></li>
                 <li><a href="#variables"> Variables</a></li>
-                <li><a href="#"> Tipos de Datos</a></li>
-                <li><a href="#"> Operadores</a></li>
-                <li><a href="#"> Sentencia If</a></li>
+                <li><a href="#tipos-datos"> Tipos de Datos</a></li>
+                <li><a href="#operadores-python"> Operadores</a></li>
+                <li><a href="#sentencia-if"> Sentencia If</a></li>
                
             </ul>
         </div>
@@ -40,8 +39,13 @@
                     <li><a href="#operadores"><i class="fa-solid fa-calculator"></i></i> Operadores, expresiones y sentencias</a></li>
                     <li><a href="#que-son"><i class="fa-solid fa-box-open"></i></i> ¿Qué son las variables?</a></li>
                     <li><a href="#Asignar"><i class="fa-solid fa-equals"></i></i> Asignar valor a una variable</a></li>
-                    <li><a href="#selectores"><i class="fas fa-bullseye"></i> Subtítulo 5</a></li>
-                    <li><a href="#media-queries"><i class="fas fa-desktop"></i> Subtítulo 6</a></li>
+                    <li><a href="#que-son-datos"><i class="fa-solid fa-code"></i></i> ¿Qué son los tipos de datos?</a></li>
+                    <li><a href="#datos-python"><i class="fa-solid fa-server"></i>Tipos de datos en Python</a></li>
+                    <li><a href="#conocer-tipo"><i class="fa-solid fa-clipboard-question"></i></i>Conocer el tipo de una variable</a></li>
+                    <li><a href="#conversion"><i class="fa-solid fa-arrow-right-arrow-left"></i>Conversión de tipos</a></li></a></li>
+                    <li><a href="#tipos-operadores"><i class="fa-solid fa-list-ul"></i></i>Tipos de operadores</a></li></a></li>
+                    <li><a href="#prioridad-operadores"><i class="fa-solid fa-arrow-up-short-wide"></i></i>Prioridad de los operadores en Python</a></li></a></li>
+                    <li><a href="#alternativas"><i class="fa-solid fa-rectangle-list"></i>Alternativas de la sentencia if</a></li></a></li>
                 </ul>
             </div>
             
@@ -65,7 +69,7 @@
                 <h2 id="introduccion"><i class="fas fa-pencil-ruler"></i> Introducción</h2>
                 
                 <article class="article">
-                    <p class="parrafo-sencillo">Por <b>Juan José Lozano Gómez</b>, fuente: clic <a href="https://j2logo.com/">aquí.</a> </p> <!--MZH: Referenciando al autor de las lecciones-->
+                    <p class="parrafo-sencillo">Por <b>Juan José Lozano Gómez</b>, fuente: clic <a href="https://j2logo.com/" target="_blank">aquí.</a> </p> <!--MZH: Referenciando al autor de las lecciones-->
 
                     <h3 id="caracteristicas">Características del lenguaje</h3>
                     <p class="parrafo-sencillo">Python es un lenguaje de programación de alto nivel cuya máxima es la legibilidad del código. Las principales características de Python son las siguientes:</p>
@@ -147,7 +151,7 @@
                         <p class="parrafo-sencillo"><br>
                             Un operador es un carácter o conjunto de caracteres que actúa sobre una, dos o más variables y/o literales para llevar a cabo una operación con un resultado determinado.<br>
 
-                            Ejemplos de operadores comunes son los operadores aritméticos + (suma), - (resta) o * (multiplicación o producto), aunque en Python existen otros operadores.<br>
+                            Ejemplos de operadores comunes son los operadores aritméticos + (suma), - (resta), * (multiplicación o producto), aunque en Python existen otros operadores.<br>
                         </p><br>
                         <h4>Expresión</h4>
                         <br><p class="parrafo-sencillo">
@@ -173,7 +177,7 @@
 
             <section id="diseno-layout" class="section">
                 <h2 id="variables"><i class="fa-solid fa-box-open"></i></i> Variables</h2>
-                <p class="parrafo-sencillo">Por <b>Juan José Lozano Gómez</b>, fuente: clic <a href="https://j2logo.com/">aquí.</a> </p>
+                <p class="parrafo-sencillo">Por <b>Juan José Lozano Gómez</b>, fuente: clic <a href="https://j2logo.com/" target="_blank">aquí.</a> </p>
                 
                 <article class="article">
                     <h3 id="que-son">¿Qué son las variables?</h3>      
@@ -182,7 +186,7 @@
                         <br>Se puede definir como un <strong>contenedor, o caja, en el que se almacena un dato.</strong> 
                     </div>
                     <br><p class="parrafo-sencillo">En su esencia, un programa está compuesto por datos e instrucciones que manipulan esos datos. Normalmente, los datos se almacenan en memoria (memoria RAM) para que podamos acceder a ellos. El dato almacenado en una variable se puede cambiar durante el flujo del programa.<br><br>
-                    También es importante mencionar el concepto tipo de dato. Al asignar un valor a una variable, dicho valor pertenece a un conjunto de valores conocido como tipo de dato. Un tipo de dato define una serie de características sobre esos datos y las variables que los contienen como, por ejemplo, las operaciones que se pueden realizar con ellos. En Python, los tipos de datos básicos son los numéricos (enteros, reales y complejos), los boolenaos (True, False) y las cadenas de caracteres.
+                    También es importante mencionar el concepto tipo de dato. Al asignar un valor a una variable, dicho valor pertenece a un conjunto de valores conocido como tipo de dato. Un tipo de dato define una serie de características sobre esos datos y las variables que los contienen como, por ejemplo, las operaciones que se pueden realizar con ellos. En Python, los tipos de datos básicos son los numéricos (enteros, reales y complejos), los booleanos (True, False) y las cadenas de caracteres.
                     </p><br>
                     <h3 id="Asignar">Asignar valor a una variable</h3>
                     <p class="parrafo-sencillo">Cuando asignamos un valor a una variable por primera vez, se dice que en ese lugar se <u>define e inicializa</u> la variable. Para asignar un valor (un dato) a una variable, se utiliza el operador de asignación <code>=</code>.
@@ -207,6 +211,300 @@
                     </div>
                     </p><br>
                 </article>
+            </section>
+
+            <section id="diseno-layout" class="section">
+                <h2 id="tipos-datos"><i class="fa-solid fa-code"></i></i>Tipos de datos</h2>
+                <p class="parrafo-sencillo">Por <b>Juan José Lozano Gómez</b>, fuente: clic <a href="https://j2logo.com/" target="_blank">aquí.</a> </p>
+                
+                <article class="article">
+                    <h3 id="que-son-datos">¿Qué son los tipos de datos?</h3>      
+                    <p class="parrafo-sencillo">Los tipos de datos definen un conjunto de valores que tienen una serie de características y propiedades determinadas. En Python, todo valor que pueda ser asignado a una variable tiene asociado un tipo de dato.<br>
+                    Un tipo de dato establece qué valores puede tomar una variable y qué operaciones se pueden realizar sobre la misma.
+                    </p><br>
+                    
+                    <h3 id="datos-python">Tipos de datos en Python</h3>
+                    <p class="parrafo-sencillo">Hay varias formas de clasificarlos, pero para una mejor comprensión los dividiremos en dos grandes grupos: tipos de datos básicos, y otros tipos.
+                    <br>Desliza el ratón sobre cada tarjeta para ver a detalle cada uno.</p><br>
+                    
+                    <!--Inicio tarjetas-->
+                    <div class="cards">
+                         <!--tarjeta 1 -->
+                        <div class="fcard">
+
+                            <!-- Contenedor interno para la animación de giro o contenido dual (frontal y trasera) -->
+                            <div class="inner">
+
+                                <!-- Parte frontal de la tarjeta: muestra una imagen -->
+                                <div class="pfrente">
+                                    <img src="ImagenesPython/Tipo de dato numero.png" alt="">
+                                </div>
+
+                                <!-- Parte trasera de la tarjeta: muestra información del perfil -->
+                                <div class="ptrasera">
+                                    
+                                    <h3>Tipo: básico</h3>
+                                    <h4>Datos numéricos</h4>
+                                    <ul class="lista-tarjetas">
+                                        <li>Números enteros <code>int</code>.</li>
+                                        <li>Números de punto flotante <code>float</code>, representa a los números reales.</li>
+                                        <li>Números complejos, <code>complex</code>. Tienen una parte real y otra imaginaria.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--tarjeta 2 -->
+
+                        <div class="fcard">
+                            <div class="inner">
+                                <div class="pfrente">
+                                    <img src="ImagenesPython/Tipo de dato booleano.png" alt="">
+                                </div>
+                                <div class="ptrasera">
+                                    <br>
+                                    <br>
+                                    <h3>Tipo: básico</h3>
+                                    <h4>Datos booleanos</h4>
+                                    <ul class="lista-tarjetas">
+                                        <li><code>True</code>, representa verdadero.</li>
+                                        <li><code>False</code>, representa falso</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--tarjeta 3 -->
+                        <div class="fcard">
+                            <div class="inner">
+                                <div class="pfrente">
+                                    <img src="ImagenesPython/Tipo de dato string.png" alt="">
+                                </div>
+                                <div class="ptrasera">
+                                    <br>
+                                    <br>
+                                    <h3>Tipo: básico</h3>
+                                    <h4>Cadenas de caracteres</h4>
+                                    <ul class="lista-tarjetas">
+                                        <li>String <code>str</code>: Es un conjunto de caracteres o letras.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--tarjeta 4 -->
+                        <div class="fcard">
+                            <div class="inner">
+                                <div class="pfrente">
+                                    <img src="ImagenesPython/Tipo de dato otros.png" alt="">
+                                </div>
+                                <div class="ptrasera">
+                                    <br>
+                                    <h3>Tipo: otros</h3>
+                                    <h4>Otros tipos de datos</h4>
+                                    <ul class="lista-tarjetas">
+                                        <li>Secuencias: Los tipos <code>list</code>, <code>tuple</code> y <code>range</code>.</li>
+                                        <li>Mapas: El tipo <code>dict</code></li>
+                                        <li>Conjuntos: El tipo <code>set</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    <!--Fin tarjetas-->
+                    <h3 id="conocer-tipo">Conocer el tipo de una variable</h3>
+                    <p class="parrafo-sencillo">Hay dos funciones que nos ayudan a saber el tipo de una variable:<br><br>
+                        <ul class="lista">
+                            <li><code>type()</code> recibe como parámetro un objeto y te devuelve el tipo del mismo. Escríbelo como en este ejemplo: <code>type(3)</code> para saber qué tipo de dato es el objeto 3.</li>
+                            <li><code>isinstance()</code> recibe dos parámetros: un objeto y un tipo. Devuelve <code>True</code> si el objeto es del tipo que se pasa como parámetro y <code>False</code> en caso contrario. Escríbelo como en este ejemplo: <code>isinstance(3, bool)</code> para saber si el objeto 3 es (o no) un tipo de dato booleano.</li>
+                        </ul><br>
+                    Puedes practicarlo en el editor de código:
+                    </p><br>
+                    <div data-datacamp-exercise data-lang="python">
+	                           <code data-type="pre-exercise-code">
+		                           # This will get executed each time the exercise gets initialized
+		                           b = 6
+	                           </code>
+	                           <code data-type="sample-code">
+                                   # Asigna el valor 3 a la variable a
+		                           
+
+		                           # Averigua qué tipo de dato es el 3
+		                           
+
+		                           # Confirma si el 3 es de tipo booleano
+		                            
+
+	                           </code>
+	                           <code data-type="solution">
+		                           # Asigna el valor 3 a la variable a
+		                           a=3
+
+		                           # Averigua qué tipo de dato es el 3
+		                           type(3)
+
+		                           # Confirma si el 3 es de tipo booleano
+		                           isinstance(3,bool) 
+
+	                           </code>
+	                           <code data-type="sct">
+		                           test_object("a")
+		                           test_function("type")
+		                           success_msg("¡Bien hecho!")
+	                           </code>
+	                           <div data-type="hint">Función <code>type(objeto)</code>. Función <code>isinstance(objeto,tipo)</code>.</div>
+                           </div>
+                    <h3 id="conversion">Conversión de tipos</h3>
+                    <p class="parrafo-sencillo">Imagina que tienes una variable edad de tipo string cuyo valor es '25'. Se podría decir que edad, aunque realmente es una cadena de caracteres, contiene un número. Sin embargo, si intentas sumar 10 a edad, el intérprete te dará un error porque edad es de tipo <code>str</code> y 10 un tipo numérico.
+                    <br>¿Cómo puedo tratar la variable edad como un número? Convirtiéndola a un tipo numérico, por ejemplo, al tipo int.
+                    Para ello, Python ofrece las siguientes funciones:
+                    <br><br>
+                        <ul class="lista">
+                            <li><code>str()</code>: Devuelve la representación en cadena de caracteres del objeto que se pasa como parámetro.</li>
+                            <li><code>int()</code>: Devuelve un int a partir de un número o secuencia de caracteres.</li>
+                            <li><code>float()</code>: Devuelve un float a partir de un número o secuencia de caracteres.</li>
+                            <li><code>complex()</code>: Devuelve un complex a partir de un número o secuencia de caracteres.</li>
+                        </ul><br>
+                    </p><br>
+                </article>
+            </section>
+            
+            <section id="diseno-layout" class="section">
+                <h2 id="operadores-python"><i class="fa-solid fa-book"></i>Operadores en Python</h2>
+                <p class="parrafo-sencillo">Por <b>Juan José Lozano Gómez</b>, fuente: clic <a href="https://j2logo.com/" target="_blank">aquí.</a> </p>
+                
+                <br><p class="parrafo-sencillo">Los operadores son símbolos reservados por el propio lenguaje que se utilizan para llevar a cabo operaciones sobre uno, dos o más elementos llamados operandos. Los operandos pueden ser variables, literales, el valor devuelto por una expresión o el valor devuelto por una función.
+                 </p>
+                
+                <article class="article">
+                    <h3 id="tipos-operadores">Tipos de operadores</h3>      
+                        <h4>Concatenación</h4>
+                        <p class="parrafo-sencillo">Consiste en unir dos cadenas en una sola, siendo el resultado un nuevo string, usando el operador <code>+</code>.
+                        </p><br>
+                        
+                        <h4>Lógicos o booleanos</h4>
+                        <p class="parrafo-sencillo">Tenemos a nuestra disposición los operadores <code>and</code>, <code>or</code> y <code>not</code>. Los resultados son basados en las tablas de verdad.
+                        </p><br>
+
+                        <h4>Comparación</h4>
+                        <p class="parrafo-sencillo">Para comparar dos o más valores. El resultado de estos operadores siempre es <code>True</code> o <code>False</code>.
+                        <br>Pasa el mouse por encima de cada operador para ver más detalles.
+                        </p><br>
+                        
+                            <div class="comparacion">
+                                <button data-tooltip="&gt;">Mayor que</button>
+                                <button data-tooltip="&gt;=">Mayor o igual que</button>
+                                <button data-tooltip="&lt;">Menor que</button>
+                                <button data-tooltip="&lt;=">Menor o igual que</button>
+                                <button data-tooltip="==">Igual</button>
+                                <button data-tooltip="!=">Diferente</button>
+                            </div><br>
+                        
+                        <h4>Aritméticos</h4>
+                        <p class="parrafo-sencillo">Permiten realizar las diferentes operaciones aritméticas del álgebra: suma, resta, producto, división, etc.
+                        </p><br>
+                        
+                            <div class="comparacion">
+                                <button data-tooltip="+">Suma</button>
+                                <button data-tooltip="-">Resta</button>
+                                <button data-tooltip="*">Multiplicación o producto</button>
+                                <button data-tooltip="/">División con resultado float</button>
+                                <button data-tooltip="//">División con resultado int</button>
+                                <button data-tooltip="%">Módulo</button>
+                                <button data-tooltip="**">Potencia</button>
+                            </div> <br>
+                        
+                        <h4>Asignación</h4>
+                        <p class="parrafo-sencillo">El operador de asignación se utiliza para asignar un valor a una variable con el signo <code>=</code>.
+                        También existen otros operadores de asignación compuestos que realizan una operación básica sobre la variable a la que se le asigna el valor.
+                        Por ejemplo, <code>x += 1</code> es lo mismo que <code>x = x + 1</code>. Los operadores compuestos realizan la operación que hay antes del signo igual, tomando como operandos la propia variable y el valor a la derecha del signo igual.
+                        </p><br>
+                        
+                        <h4>Operadores de pertenencia</h4>
+                        <p class="parrafo-sencillo">Los operadores de pertenencia se utilizan para comprobar si un valor o variable se encuentran en una secuencia (list, tuple, dict, set o str).
+                        El operador <strong><code>in</code></strong> ayuda a verificar si el valor se encuentra en una secuencia, y en el caso contrario se usa el operador <strong><code>not in</code></strong>.
+                        </p><br>
+                        
+                        <h4>Identidad</h4>
+                        <p class="parrafo-sencillo">Los operadores de identidad se utilizan para comprobar si dos variables son, o no, el mismo objeto. Se usan <strong><code>is</code></strong> e <strong><code>is not</code></strong>.
+                        </p><br>
+                        
+                     
+                    <h3 id="prioridad-operadores">Prioridad de los operadores en Python</h3>
+                        <p class="parrafo-sencillo">
+                            Al igual que ocurre en las matemáticas, los operadores en Python tienen un orden de prioridad. Este orden es el siguiente, de más prioritario a menos prioritario:<br><br>
+                                <ol>
+                                    <li class="lista">Aritméticos (con el mismo orden de prioridad que en las matemáticas)</li>
+                                    <li class="lista">A nivel de bits</li>
+                                    <li class="lista">Identidad y pertenencia</li>
+                                    <li class="lista">Comparación</li>
+                                    <li class="lista">Booleanos</li>
+                                    <li class="lista">Asignación</li>
+                                </ol>
+                                
+                            <br>Este orden de prioridad se puede alterar con el uso de los paréntesis <code>()</code>.
+                        </p>
+                </article>
+            </section>
+        
+            <section id="diseno-layout" class="section">
+                <h2 id="sentencia-if"><i class="fa-solid fa-box-open"></i></i>Sentencia if</h2>
+                <p class="parrafo-sencillo">Por <b>Juan José Lozano Gómez</b>, fuente: clic <a href="https://j2logo.com/" target="_blank">aquí.</a> </p><br>
+                <p class="parrafo-sencillo">En Python, if es una de las principales sentencias de control de flujo, junto a while y for. La sentencia <code>if</code> de control de flujo tiene diferentes alternativas, que veremos a continuación.</p>
+
+                <article class="article">
+                    <h3 id="alternativas">Alternativas de la sentencia if</h3>
+                        <h4>if: Sentencia básica</h4>    
+                        <br><p class="parrafo-sencillo">
+                            La estructura básica de esta sentencia if es la siguiente:</p><br><br>
+                    
+<pre><code><strong>if</strong> condición:
+    bloque de código</code></pre>
+                            <br><p class="parrafo-sencillo">Es decir, solo si la <u>condición</u> se evalúa a True, se ejecutarán las sentencias que forman parte del <u>bloque de código</u>. En caso de que se evalúe a False, no se ejecutará ninguna sentencia perteneciente al bloque de código.
+                            <br>Aquí, la condición puede ser un literal, el valor de una variable, el resultado de una expresión o el valor devuelto por una función.
+                         </p><br>
+
+                        <h4>Sentencia if... else</h4>    
+                        <br><p class="parrafo-sencillo">
+                             Es posible que te encuentres situaciones en que una decisión dependa de más de una condición. En estos casos se usa una sentencia if compuesta, cuya estructura es como se indica a continuación:</p><br><br>
+<pre><code><strong>if</strong> condición:
+    bloque de código
+<strong>else:</strong>
+    bloque de código 2</code></pre>                    
+
+                            <br><p class="parrafo-sencillo">Es decir, solo si la <u>condición</u> se evalúa a True, se ejecutará el primer <u>bloque de código</u>. En caso de que la condición se evalúe a False, se ejecuta el <u>bloque de código 2</u>.
+                         </p><br>
+
+                         <h4>Sentencia if... elif...else</h4>    
+                        <br><p class="parrafo-sencillo">
+                            Su estructura es la siguiente:</p><br><br>
+<pre><code><strong>if</strong> condición 1:
+    bloque de código 1
+<strong>elif</strong> condición 2
+    bloque de código 2
+<strong>else:</strong>
+    bloque de código 3</code></pre>                   
+                            <br><p class="parrafo-sencillo">Es decir, si la <u>condición 1</u> se evalúa a True, se ejecutará el <u>bloque de código 1</u>. En caso que sea False, pasamos a la condición 2 expresado en el <u>elif</u>, si la <u>condición 2</u> es true, se ejecuta el <u>bloque de código 2</u>. Pero si esta también es false, pasamos al <u>else</u> para ejecutar el <u>bloque de código 3</u>.
+                         </p><br>
+
+                         <h4>Sentencias if anidadas</h4>    
+                        <br><p class="parrafo-sencillo">
+                            En cualquiera de los bloques de sentencias anteriores se puede volver a incluir una sentencia if, o if … else … o if … elif … else …
+                            <br>Por ejemplo, podemos simular el caso de la siguiente manera:<br><br>
+<pre><code>
+x = 28
+if x < 0:
+    print(f'{x} es menor que 0')
+else:
+    if x > 0:
+        print(f'{x} es mayor que 0')
+    else:
+        print('x es 0')
+</code></pre>                   
+                           </p>
+                </article>
+
+
+
             </section>
         </main>
     </div>

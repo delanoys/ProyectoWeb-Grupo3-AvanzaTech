@@ -16,7 +16,7 @@
     box-sizing: border-box;
 }
 
-body {
+body {  
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -544,7 +544,7 @@ ol li::marker {
     /* Imagen ocupa todo el ancho del contenedor */
     height: 100%;
     /* Imagen ocupa toda la altura del contenedor */
-}
+} 
 
 /* Animaciones */
 .transition-example {

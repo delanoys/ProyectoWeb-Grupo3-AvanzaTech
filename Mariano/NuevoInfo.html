@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendiendo CSS - Guía Completa</title>
-    <link rel="stylesheet" href="/Mariano/EstilosPagina.css">
+    <link rel="stylesheet" href="EstilosPagina.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -16,30 +16,37 @@
         </div>
     </header>
 
+    <!-- Menú principal -->
     <nav class="main-nav">
         <div class="container">
             <ul>
-                <li><a href="/index.html"><i class="fas fa-basics"></i>  INICIO</a>
-                </li>
-                <li><a href="#diseno-layout"><i class="fas fa-basics"></i> Variables y Tipos de Datos</a></li>
-                <li><a href="#animaciones"> Operadores Estructuras de Control</a></li>
-                <li><a href="#selectores"> Funciones</a></li>
-               
+                <li><a href="/ProyectoWeb-Grupo3-AvanzaTech/index.html"><i class="fas fa-home"></i> INICIO</a></li>
+                <li><a href="#variables"><i class="fas fa-code"></i> Variables y Tipos de Datos</a></li>
+                <li><a href="#operadores"><i class="fas fa-calculator"></i> Operadores</a></li>
+                <li><a href="#estructuras"><i class="fas fa-random"></i> Estructuras de Control</a></li>
+                <li><a href="#funciones"><i class="fas fa-function"></i> Funciones</a></li>
+                <li><a href="#objetos"><i class="fas fa-cube"></i> Objetos</a></li>
+                <li><a href="#arrays"><i class="fas fa-list"></i> Arrays</a></li>
+                <li><a href="#eventos"><i class="fas fa-bolt"></i> Eventos</a></li>
+                <li><a href="#dom"><i class="fas fa-sitemap"></i> DOM</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="container main-content">
+        <!-- Sidebar / Índice rápido -->
         <aside class="sidebar">
             <div class="resource-card">
                 <h3><i class="fas fa-bookmark"></i> Índice Rápido</h3>
                 <ul class="resource-list">
-                    <li><a href="#box-model"><i class="fas fa-square-full"></i> Modelo de Caja</a></li>
-                    <li><a href="#flexbox-grid"><i class="fas fa-th-large"></i> Flexbox & Grid</a></li>
-                    <li><a href="#transiciones"><i class="fas fa-exchange-alt"></i> Transiciones</a></li>
-                    <li><a href="#keyframes"><i class="fas fa-film"></i> @keyframes</a></li>
-                    <li><a href="#selectores"><i class="fas fa-bullseye"></i> Selectores</a></li>
-                    <li><a href="#media-queries"><i class="fas fa-desktop"></i> Media Queries</a></li>
+                    <li><a href="#variables"><i class="fas fa-code"></i> Variables y Tipos de Datos</a></li>
+                    <li><a href="#operadores"><i class="fas fa-calculator"></i> Operadores</a></li>
+                    <li><a href="#estructuras"><i class="fas fa-random"></i> Estructuras de Control</a></li>
+                    <li><a href="#funciones"><i class="fas fa-function"></i> Funciones</a></li>
+                    <li><a href="#objetos"><i class="fas fa-cube"></i> Objetos</a></li>
+                    <li><a href="#arrays"><i class="fas fa-list"></i> Arrays</a></li>
+                    <li><a href="#eventos"><i class="fas fa-bolt"></i> Eventos</a></li>
+                    <li><a href="#dom"><i class="fas fa-sitemap"></i> DOM</a></li>
                 </ul>
             </div>
             
@@ -58,166 +65,172 @@
         </aside>
 
         <main>
-            <!-- Sección de Diseño y Layout -->
-            <section id="diseno-layout" class="section">
-                <h2><i class="fas fa-pencil-ruler"></i> Diseño y Layout</h2>
-                
-                <article class="article">
-                    <h3 id="box-model">Modelo de Caja</h3>
-                    <div class="interactive-box-model">
-                        <div class="box-content-example">Contenido</div>
-                    </div>
-                    
-                    <div class="box-model-controls">
-                        <button data-action="margin">Añadir Margin</button>
-                        <button data-action="padding">Añadir Padding</button>
-                        <button data-action="border">Añadir Border</button>
-                        <button data-action="reset">Resetear</button>
-                    </div>
-                    
-                    <div class="box-model-explanation">
-                        <div class="box-model-part margin">
-                            <h4>Margin</h4>
-                            <p>Espacio exterior que separa el elemento de otros elementos</p>
-                           
-                        </div>
-                        
-                        <div class="box-model-part border">
-                            <h4>Border</h4>
-                            <p>Línea que rodea el padding y el contenido</p>
-                           
-                
-                        </div>
-                        
-                        <div class="box-model-part padding">
-                            <h4>Padding</h4>
-                            <p>Espacio interior entre el contenido y el borde</p>
-
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="article">
-                    <h3 id="flexbox-grid">Flexbox y Grid</h3>
-                    
-                    <div class="layout-comparison">
-                        <div class="layout-example">
-                            <h4>Flexbox (1D)</h4>
-                            <div class="flex-container-example">
-                                <div class="flex-item">1</div>
-                                <div class="flex-item">2</div>
-                                <div class="flex-item">3</div>
-                            </div>
-                            <pre><code>.contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}</code></pre>
-                        </div>
-                        
-                        <div class="layout-example">
-                            <h4>CSS Grid (2D)</h4>
-                            <div class="grid-container-example">
-                                <div class="grid-item">1</div>
-                                <div class="grid-item">2</div>
-                                <div class="grid-item">3</div>
-                                <div class="grid-item">4</div>
-                                <div class="grid-item">5</div>
-                                <div class="grid-item">6</div>
-                            </div>
-                            <pre><code>.contenedor {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-}</code></pre>
-                        </div>
-                    </div>
-                    
-                    <div class="use-cases">
-                        <h4>¿Cuándo usar cada uno?</h4>
-                        <ul>
-                            <li><strong>Flexbox</strong>: Diseños unidimensionales (filas o columnas), alineación precisa, componentes pequeños</li>
-                            <li><strong>Grid</strong>: Diseños bidimensionales complejos, layouts completos de página, estructuras regulares</li>
-                        </ul>
-                    </div>
-                </article>
+            <!-- VARIABLES Y TIPOS DE DATOS -->
+            <section id="variables" class="section">
+                <h2><i class="fas fa-code"></i> Variables y Tipos de Datos</h2>
+                <p>
+                    En JavaScript, las variables se utilizan para almacenar datos que pueden cambiar durante la ejecución del programa. Puedes declarar variables usando <code>var</code> (forma antigua), <code>let</code> (moderna y recomendada para variables que cambian) y <code>const</code> (para valores constantes). Los principales tipos de datos son:
+                </p>
+                <ul>
+                    <li><strong>Number:</strong> Números, tanto enteros como decimales (<code>let edad = 25;</code>).</li>
+                    <li><strong>String:</strong> Cadenas de texto (<code>let nombre = "Ana";</code>).</li>
+                    <li><strong>Boolean:</strong> Valores verdadero o falso (<code>let activo = true;</code>).</li>
+                    <li><strong>Null:</strong> Valor nulo o vacío (<code>let vacio = null;</code>).</li>
+                    <li><strong>Undefined:</strong> Variable declarada pero sin valor (<code>let x;</code>).</li>
+                    <li><strong>Object:</strong> Colección de datos (<code>let persona = {nombre: "Ana", edad: 30};</code>).</li>
+                    <li><strong>Array:</strong> Lista ordenada de elementos (<code>let numeros = [1,2,3];</code>).</li>
+                </ul>
+                <pre><code>// Ejemplo de declaración
+                    let nombre = "Juan";
+                    const PI = 3.1416;
+                    var edad = 30;
+                    let activo = true;
+                    let vacio = null;
+                    let x; // undefined
+                </code></pre>
+                <p class="fuente">Fuente: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types" target="_blank">MDN Web Docs</a></p>
             </section>
 
-            <!-- Sección de Animaciones -->
-            <section id="animaciones" class="section">
-                <h2><i class="fas fa-magic"></i> Animaciones CSS</h2>
-                
-                <article class="article">
-                    <h3 id="transiciones">Transiciones CSS</h3>
-                    <div class="transition-example">
-                        <div class="transition-box hover-me">Pasa el mouse</div>
-                        <div class="transition-box click-me">Haz clic</div>
-                    </div>
-                    
-                    <pre><code>/* Transición básica */
-.elemento {
-    transition: propiedad duración timing-function delay;
-}
-
-/* Ejemplo concreto */
-.boton {
-    background-color: #4a6bff;
-    transition: background-color 0.3s ease, transform 0.2s;
-}
-
-.boton:hover {
-    background-color: #1c2566;
-    transform: scale(1.05);
-}</code></pre>
-                    
-                    <h4>Propiedades animables</h4>
-                    <ul class="animatable-properties">
-                        <li>Colores (color, background-color, border-color)</li>
-                        <li>Tamaños (width, height, font-size)</li>
-                        <li>Posición (margin, padding, top, left)</li>
-                        <li>Transformaciones (transform, opacity)</li>
-                    </ul>
-                </article>
-                
-                <article class="article">
-                    <h3 id="keyframes">Animaciones con @keyframes</h3>
-                    <div class="animation-examples">
-                        <div class="animated-box bounce">Rebote</div>
-                        <div class="animated-box rotate">Rotación</div>
-                        <div class="animated-box pulse">Pulso</div>
-                    </div>
-                    
-                    <div class="keyframe-explanation">
-                        <pre><code>/* Definición de la animación */
-@keyframes nombre-animacion {
-    0% { /* Estilos iniciales */ }
-    50% { /* Estilos intermedios */ }
-    100% { /* Estilos finales */ }
-}
-
-/* Aplicación a un elemento */
-.elemento {
-    animation: nombre-animacion 2s infinite alternate;
-}</code></pre>
-                        
-                        <div class="animation-properties">
-                            <h4>Propiedades de animación:</h4>
-                            <ul>
-                                <li><strong>animation-name</strong>: Nombre de la keyframe</li>
-                                <li><strong>animation-duration</strong>: Duración (ej: 2s)</li>
-                                <li><strong>animation-timing-function</strong>: ease, linear, etc.</li>
-                                <li><strong>animation-delay</strong>: Retardo antes de comenzar</li>
-                                <li><strong>animation-iteration-count</strong>: Número de repeticiones</li>
-                                <li><strong>animation-direction</strong>: normal, reverse, alternate</li>
-                                <li><strong>animation-fill-mode</strong>: Estilos antes/después</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
+            <!-- OPERADORES -->
+            <section id="operadores" class="section">
+                <h2><i class="fas fa-calculator"></i> Operadores</h2>
+                <p>
+                    Los operadores permiten realizar operaciones sobre variables y valores. Los principales tipos son:
+                </p>
+                <ul>
+                    <li><strong>Aritméticos:</strong> <code>+</code> (suma), <code>-</code> (resta), <code>*</code> (multiplicación), <code>/</code> (división), <code>%</code> (módulo).</li>
+                    <li><strong>Asignación:</strong> <code>=</code>, <code>+=</code>, <code>-=</code>, etc.</li>
+                    <li><strong>Comparación:</strong> <code>==</code> (igualdad), <code>===</code> (igualdad estricta), <code>!=</code>, <code>!==</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>.</li>
+                    <li><strong>Lógicos:</strong> <code>&&</code> (AND), <code>||</code> (OR), <code>!</code> (NOT).</li>
+                </ul>
+                <pre><code>// Ejemplos
+                    let suma = 5 + 3;        // 8
+                    let esIgual = (10 === 10); // true
+                    let resultado = (5 > 3) && (2 < 4); // true
+                    let texto = "Hola" + " Mundo"; // "Hola Mundo"
+                    </code></pre>
+                <p class="fuente">Fuente: <a href="https://www.w3schools.com/js/js_operators.asp" target="_blank">w3schools</a></p>
             </section>
 
-            <!-- Otras secciones... -->
+            <!-- ESTRUCTURAS DE CONTROL -->
+            <section id="estructuras" class="section">
+                <h2><i class="fas fa-random"></i> Estructuras de Control</h2>
+                <p>
+                    Permiten controlar el flujo de ejecución del código, tomando decisiones o repitiendo acciones:
+                </p>
+                <ul>
+                    <li><strong>Condicionales:</strong> <code>if</code>, <code>else</code>, <code>else if</code>, <code>switch</code>.</li>
+                    <li><strong>Bucles:</strong> <code>for</code>, <code>while</code>, <code>do...while</code>.</li>
+                </ul>
+                <pre><code>// Condicional
+                    if (edad >= 18) {
+                        console.log("Eres mayor de edad");
+                    } else {
+                        console.log("Eres menor de edad");
+                    }
+
+                    // Bucle for
+                    for (let i = 0; i < 5; i++) {
+                        console.log(i);
+                    }
+                    </code></pre>
+                <p class="fuente">Fuente: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling" target="_blank">MDN Web Docs</a></p>
+            </section>
+
+            <!-- FUNCIONES -->
+            <section id="funciones" class="section">
+                <h2><i class="fas fa-function"></i> Funciones</h2>
+                <p>
+                    Las funciones son bloques de código que realizan una tarea específica y pueden ser reutilizadas. Se pueden declarar de varias formas:
+                </p>
+                <ul>
+                    <li><strong>Declaración tradicional:</strong> <code>function nombre() { ... }</code></li>
+                    <li><strong>Expresión de función:</strong> <code>const suma = function(a, b) { ... }</code></li>
+                    <li><strong>Función flecha (arrow):</strong> <code>const suma = (a, b) =&gt; a + b;</code></li>
+                </ul>
+                <pre><code>// Declaración tradicional
+                    function saludar(nombre) {
+                        return "Hola, " + nombre;
+                    }
+
+                    // Función flecha
+                    const sumar = (a, b) => a + b;
+
+                    console.log(saludar("Ana")); // "Hola, Ana"
+                    console.log(sumar(2, 3));    // 5
+                    </code></pre>
+                <p class="fuente">Fuente: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Functions" target="_blank">MDN Web Docs</a></p>
+            </section>
+
+            <!-- OBJETOS -->
+            <section id="objetos" class="section">
+                <h2><i class="fas fa-cube"></i> Objetos</h2>
+                <p>
+                    Los objetos permiten agrupar datos y funcionalidades. Cada propiedad tiene un nombre (clave) y un valor. Los métodos son funciones dentro de objetos.
+                </p>
+                <pre><code>const persona = {
+                        nombre: "Ana",
+                        edad: 30,
+                        saludar: function() {
+                            console.log("Hola, soy " + this.nombre);
+                        }
+                    };
+
+                    persona.saludar(); // "Hola, soy Ana"
+                    </code></pre>
+                <p class="fuente">Fuente: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Working_with_Objects" target="_blank">MDN Web Docs</a></p>
+            </section>
+
+            <!-- ARRAYS -->
+            <section id="arrays" class="section">
+                <h2><i class="fas fa-list"></i> Arrays</h2>
+                <p>
+                    Los arrays son listas ordenadas de elementos. Puedes acceder a cada elemento por su índice y usar métodos como <code>push</code>, <code>pop</code>, <code>map</code>, <code>filter</code>, etc.
+                </p>
+                <pre><code>let numeros = [1, 2, 3, 4, 5];
+                numeros.push(6); // [1,2,3,4,5,6]
+                let primero = numeros[0]; // 1
+
+                // Recorrer un array
+                numeros.forEach(function(num) {
+                    console.log(num);
+                });
+
+                // Mapear un array
+                let dobles = numeros.map(n => n * 2); // [2,4,6,8,10,12]
+                </code></pre>
+                <p class="fuente">Fuente: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">MDN Web Docs</a></p>
+            </section>
+
+            <!-- EVENTOS -->
+            <section id="eventos" class="section">
+                <h2><i class="fas fa-bolt"></i> Eventos</h2>
+                <p>
+                    Los eventos permiten ejecutar código cuando el usuario interactúa con la página (clics, teclas, etc.). Se usan con <code>addEventListener</code>.
+                </p>
+                <pre><code>// HTML: &lt;button id="miBoton"&gt;Haz clic&lt;/button&gt;
+
+                document.getElementById("miBoton").addEventListener("click", function() {
+                    alert("¡Botón clickeado!");
+                });
+                </code></pre>
+                <p class="fuente">Fuente: <a href="https://developer.mozilla.org/es/docs/Web/Events" target="_blank">MDN Web Docs</a></p>
+            </section>
+
+            <!-- DOM -->
+            <section id="dom" class="section">
+                <h2><i class="fas fa-sitemap"></i> DOM</h2>
+                <p>
+                    El DOM (Document Object Model) es la representación estructurada del HTML de una página. JavaScript puede modificar el DOM para cambiar el contenido, estructura o estilos.
+                </p>
+                <pre><code>// Cambiar el texto de un elemento
+                document.getElementById("titulo").textContent = "Nuevo título";
+
+                // Cambiar el color de un elemento
+                document.querySelector(".clase").style.color = "red";
+                </code></pre>
+                <p class="fuente">Fuente: <a href="https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model" target="_blank">MDN Web Docs</a></p>
+            </section>
         </main>
     </div>
 

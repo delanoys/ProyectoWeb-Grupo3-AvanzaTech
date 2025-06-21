@@ -1,3 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* Bloques de código tipo editor */
+.section pre {
+    background: #232946;
+    color: #f4f4f4;
+    border-radius: 12px;
+    padding: 1.2rem 1rem 1rem 1.2rem;
+    font-size: 1.08rem;
+    overflow-x: auto;
+    margin-bottom: 1.1rem;
+    font-family: 'JetBrains Mono', 'Fira Mono', 'Consolas', 'Menlo', monospace;
+    border-left: 4px solid #dbac11;
+    box-shadow: 0 2px 8px rgba(53,104,212,0.10);
+    position: relative;
+}
+
+.section pre::before {
+    content: "Ejemplo";
+    position: absolute;
+    top: 8px;
+    left: 18px;
+    font-size: 0.85rem;
+    color: #dbac11;
+    font-family: 'Inter', Arial, sans-serif;
+    opacity: 0.8;
+}
+
+/* Sintaxis de colores para código */
+.section code .token.keyword { color: #dbac11; }
+.section code .token.string { color: #7ed957; }
+.section code .token.number { color: #6cb4ff; }
+.section code .token.boolean { color: #ff6bcb; }
+.section code .token.function { color: #ffd700; }
+.section code .token.comment { color: #8a8a8a; font-style: italic; }
+.section code .token.operator { color: #ffb86c; }
+.section code .token.property { color: #ffb86c; }
+.section code .token.punctuation { color: #f4f4f4; }
+
+/* Inline code */
+.section code:not(pre code) {
+    background: #e9eafc;
+    color: #232946;
+    border-radius: 5px;
+    padding: 2px 7px;
+    font-size: 1em;
+    font-family: 'JetBrains Mono', 'Fira Mono', 'Consolas', 'Menlo', monospace;
+}@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
 :root {
     --primary-color: #4a6bff;
     --secondary-color: #1c2566;
@@ -26,16 +75,16 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 98%;              /* Más ancho en pantallas grandes */
+    max-width: 1600px;       /* Aumenta el máximo a 1600px */
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 30px;         /* Más espacio lateral */
 }
 
 .main-content {
     display: flex;
-    gap: 30px;
-    margin: 30px auto;
+    gap: 50px;               /* Más espacio entre columnas */
+    margin: 40px auto;       /* Más espacio arriba y abajo */
 }
 
 /* PRIMER CONTENEDOR */
@@ -104,13 +153,13 @@ body {
 
 /* Sidebar */
 .sidebar {
-    flex: 0 0 280px;
+    flex: 0 0 340px;         /* Más ancho el sidebar */
     position: sticky;
     top: 120px;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 
 .resource-card, .newsletter-card, .tip-card {
@@ -196,11 +245,12 @@ main {
 
 .section {
     background: var(--card-bg);
-    padding: 2rem;
+    padding: 3rem;           /* Más espacio interno */
     border-radius: 12px;
     box-shadow: 0 8px 25px var(--shadow-color);
     margin-bottom: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;         /* Ocupa todo el ancho disponible */
 }
 
 .section:hover {
@@ -295,7 +345,7 @@ main {
 .layout-comparison {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 50px; /* Aumenta el espacio entre columnas */
     margin: 30px 0;
 }
 
@@ -518,6 +568,57 @@ main {
     background-color: var(--secondary-color);
     transform: translateY(-3px);
 }
+
+/* Ventana tipo VS Code para bloques de ejemplo */
+.vscode-window {
+    background: #232946;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(53,104,212,0.10);
+    margin-bottom: 1.1rem;
+    overflow: hidden;
+    position: relative;
+    border-left: 4px solid #dbac11;
+    max-width: 100%;
+}
+
+.vscode-bar {
+    background: #1a1a2e;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-bottom: 1px solid #22223b;
+}
+
+.vscode-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+}
+.vscode-dot.red { background: #ff5f56; }
+.vscode-dot.yellow { background: #ffbd2e; }
+.vscode-dot.green { background: #27c93f; }
+
+.vscode-title {
+    color: #bfc7d5;
+    font-size: 0.95rem;
+    margin-left: 10px;
+    font-family: 'Inter', Arial, sans-serif;
+    opacity: 0.8;
+}
+
+.vscode-content {
+    padding: 1.2rem 1rem 1rem 1.2rem;
+    font-family: 'JetBrains Mono', 'Fira Mono', 'Consolas', 'Menlo', monospace;
+    font-size: 1.08rem;
+    background: none;
+    color: #f4f4f4;
+    overflow-x: auto;
+}
+
+/* Mantén la sintaxis de colores para el código igual que antes */
 
 /* Responsive Design */
 @media (max-width: 992px) {

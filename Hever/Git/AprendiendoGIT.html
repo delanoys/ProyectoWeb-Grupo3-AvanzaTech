@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo Git</title>
+    <link rel="stylesheet" href="AprendiendoGIT.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1><i class="fab fa-git-alt"></i> Aprendiendo Git y GitHub</h1>
+            <p>Guía práctica para el control de versiones y colaboración en proyectos</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                 <li><a href="/index.html"><i class="fas fa-clock"></i> INICIO</a></li>
+                <li><a href="#que-es-git"><i class="fas fa-question-circle"></i> ¿Qué es Git?</a></li>
+                <li><a href="#comandos-basicos"><i class="fas fa-terminal"></i> Comandos Básicos</a></li>
+                <li><a href="#github"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="#flujo-trabajo"><i class="fas fa-project-diagram"></i> Flujo de Trabajo</a></li>
+                <li><a href="#recursos"><i class="fas fa-book"></i> Recursos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <aside class="sidebar">
+            <div class="resource-card">
+                <h3><i class="fas fa-bookmark"></i> Índice Rápido</h3>
+                <ul class="resource-list">
+                    
+                    <li><a href="#que-es-git"><i class="fas fa-question"></i> ¿Qué es Git?</a></li>
+                    <li><a href="#comandos-basicos"><i class="fas fa-terminal"></i> Comandos Básicos</a></li>
+                    <li><a href="#github"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="#flujo-trabajo"><i class="fas fa-project-diagram"></i> Flujo de Trabajo</a></li>
+                    <li><a href="git.html"><i class="fas fa-clock"></i> Comandos recientes utilizados</a></li>
+                    <li><a href="#recursos"><i class="fas fa-book"></i> Recursos</a></li>
+                </ul>
+            </div>
+            <div class="tip-card">
+                <h3><i class="fas fa-lightbulb"></i> Tip del Día</h3>
+                <p>Haz <code>git status</code> frecuentemente para conocer el estado de tu repositorio.</p>
+            </div>
+        </aside>
+
+        <main>
+            <section id="que-es-git" class="section">
+                <h2><i class="fab fa-git-alt"></i> ¿Qué es Git?</h2>
+                <p>
+                    Git es un sistema de control de versiones distribuido que permite gestionar los cambios en el código fuente de un proyecto. Facilita la colaboración entre desarrolladores y el seguimiento del historial de modificaciones.
+                </p>
+                <ul>
+                    <li>Permite trabajar en equipo sin sobrescribir el trabajo de otros.</li>
+                    <li>Guarda el historial de cambios y facilita la recuperación de versiones anteriores.</li>
+                    <li>Es la base de plataformas como GitHub, GitLab y Bitbucket.</li>
+                </ul>
+            </section>
+
+            <section id="comandos-basicos" class="section">
+                <h2><i class="fas fa-terminal"></i> Comandos Básicos de Git</h2>
+                <div class="article">
+                    <h3>Inicializar un repositorio</h3>
+                    <pre><code>git init</code></pre>
+                    <p>Crea un nuevo repositorio Git en el directorio actual.</p>
+                </div>
+                <div class="article">
+                    <h3>Clonar un repositorio</h3>
+                    <pre><code>git clone &lt;url-del-repositorio&gt;</code></pre>
+                    <p>Copia un repositorio remoto a tu máquina local.</p>
+                </div>
+                <div class="article">
+                    <h3>Ver el estado</h3>
+                    <pre><code>git status</code></pre>
+                    <p>Muestra los archivos modificados y los cambios pendientes de confirmar.</p>
+                </div>
+                <div class="article">
+                    <h3>Agregar cambios</h3>
+                    <pre><code>git add &lt;archivo&gt;</code></pre>
+                    <p>Prepara los archivos para ser confirmados (commit).</p>
+                </div>
+                <div class="article">
+                    <h3>Confirmar cambios</h3>
+                    <pre><code>git commit -m "Mensaje descriptivo"</code></pre>
+                    <p>Guarda los cambios preparados en el historial del repositorio.</p>
+                </div>
+                <div class="article">
+                    <h3>Ver historial</h3>
+                    <pre><code>git log</code></pre>
+                    <p>Muestra el historial de confirmaciones (commits).</p>
+                </div>
+            </section>
+
+            <section id="github" class="section">
+                <h2><i class="fab fa-github"></i> ¿Qué es GitHub?</h2>
+                <p>
+                    GitHub es una plataforma en línea para alojar repositorios Git y facilitar la colaboración entre desarrolladores. Permite compartir código, gestionar proyectos y contribuir a proyectos de código abierto.
+                </p>
+                <ul>
+                    <li>Permite crear repositorios públicos y privados.</li>
+                    <li>Facilita la colaboración mediante pull requests y revisiones de código.</li>
+                    <li>Incluye herramientas para gestión de incidencias, documentación y despliegue.</li>
+                </ul>
+            </section>
+
+            <section id="flujo-trabajo" class="section">
+                <h2><i class="fas fa-project-diagram"></i> Flujo de Trabajo Básico</h2>
+                <ol>
+                    <li>Clona el repositorio: <code>git clone &lt;url&gt;</code></li>
+                    <li>Crea una nueva rama: <code>git checkout -b mi-rama</code></li>
+                    <li>Realiza cambios y agrégalos: <code>git add .</code></li>
+                    <li>Confirma los cambios: <code>git commit -m "Descripción"</code></li>
+                    <li>Sube la rama al repositorio remoto: <code>git push origin mi-rama</code></li>
+                    <li>Abre un Pull Request en GitHub para revisión y fusión.</li>
+                </ol>
+            </section>
+
+            <section id="recursos" class="section">
+                <h2><i class="fas fa-book"></i> Recursos Recomendados</h2>
+                <ul>
+                    <li><a href="https://git-scm.com/book/es/v2" target="_blank">Pro Git (Libro gratuito)</a></li>
+                    <li><a href="https://guides.github.com/" target="_blank">Guías de GitHub</a></li>
+                    <li><a href="https://learngitbranching.js.org/" target="_blank">Learn Git Branching (Interactivo)</a></li>
+                    <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Tutoriales de Git por Atlassian</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2024 Aprendiendo Git y GitHub - Todos los derechos reservados</p>
+            <div class="social-links">
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="que-es-git" class="back-to-top" title="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+
+</html>

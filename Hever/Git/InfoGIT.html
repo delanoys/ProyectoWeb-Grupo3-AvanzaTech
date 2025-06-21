@@ -7,8 +7,9 @@
   <title>GIT</title>
 
   <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="/estilos/EstilosBotones.css">
-  <link rel="stylesheet" href="/estilos/menudenavegacion.css">
+  <!-- <link rel="stylesheet" href="/estilos/EstilosBotones.css"> -->
+    <link rel="stylesheet" href="AprendiendoGIT.css">
+  <!-- <link rel="stylesheet" href="/estilos/menudenavegacion.css"> -->
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,12 +50,11 @@
       </a>
     </div>
 
-    <h1>GIT</h1>
-    <p>Git es una herramienta que te ayuda: <br>
-      <i>- guarde y administre diferentes versiones de sus archivos y código.</i> <br>
-      <i>- rabaja con otros, realiza un seguimiento de los cambios y deshace los errores.</i>
+    <h1 class="titulo-git">GIT</h1>
+    <p class="descripcion-git">Git es una herramienta que te ayuda: <br>
+      <i>- Guarda y administra diferentes versiones de tus archivos y código.</i> <br>
+      <i>- Trabaja con otros, realiza un seguimiento de los cambios y deshace los errores.</i>
     </p>
-
   </header>
 
   <!-- Menu de navegacion -->
@@ -76,8 +76,6 @@
           </li>
           <li><a href="#push-ramas" class="menu-link"><i class="devicon-github-original"></i> Push de Ramas</a></li>
           <li><a href="#tags-git" class="menu-link"><i class="devicon-git-plain"></i> Tags en Git</a></li>
-          <!-- infoCode -->
-          <!-- <li><a href="infocod.html" class="menu-link"  ><i class="devicon-git-plain"></i> Comandos Git</a></li> -->
           <li><a href="/Hever/IA GPT/aprendiendoGit.html" class="menu-link"><i class="devicon-git-plain"></i> <h3>Aprendiendo Git</h3></a></li>
           <li><a href="infocod.html" class="menu-link"><i class="devicon-git-plain"></i><h3>Comandos Git</h3></a></li>
         </ul>
@@ -86,46 +84,46 @@
   </aside>
 
   <main>
-    <div class="tarjeta-git">
-      <h2>Comandos recientes utilizados</h2>
+    <section class="tarjeta-git">
+      <h2 id="comandos-recientes">Comandos recientes utilizados</h2>
       <ul>
         <li><strong>git reset --hard 97131fb</strong>: restaura el código a un estado anterior según el hash del commit.
         </li>
         <li><strong>git pull origin main</strong>: actualiza la rama activa con el contenido más reciente del main
           remoto.</li>
-        <li><a href="infocod.html">Info codigo Git</a></li>
+        <li><a href="infocod.html">Info código Git</a></li>
       </ul>
-    </div>
-    <div class="tarjeta-git">
-      <h2>INICIANDO REPO <i>create a new repository on the command line</i> </h2>
+    </section>
+    <section class="tarjeta-git">
+      <h2 id="iniciando-repo">INICIANDO REPO <i>create a new repository on the command line</i> </h2>
       <pre>
-        echo "# Python2025" >> README.md
-        git init
-        git add README.md
-        git commit -m "first commit"
-        git branch -M main
-        git remote add origin https://github.com/delanoys/Python2025.git
-        git push -u origin main
+echo "# Python2025" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/delanoys/Python2025.git
+git push -u origin main
       </pre>
-      <h2><i>OR</i>push an existing repository from the command line</h2>
-      <p style="white-space: pre; ">
-        git remote add origin https://github.com/delanoys/Python2025.git
-        git branch -M main
-        git push -u origin main
-      </p>
-    </div>
+      <h2><i>OR</i> push an existing repository from the command line</h2>
+      <pre>
+git remote add origin https://github.com/delanoys/Python2025.git
+git branch -M main
+git push -u origin main
+      </pre>
+    </section>
 
-    <div class="tarjeta-git">
-      <h2>Script de Git para actualizar ramas desde <code>SQL</code></h2>
+    <section class="tarjeta-git">
+      <h2 id="actualizar-ramas">Script de Git para actualizar ramas desde <code>SQL</code></h2>
       <pre><code>for branch in CSS Html JavaScript Mariano2 Python SQL Git; do
   git checkout $branch
   git merge SQL
 done</code></pre>
-      <img src="/imagenes/Git Script parte A.png" alt="Script Git Parte A" style="max-width: 100%; margin-top: 15px;">
-    </div>
+      <img src="/imagenes/Git Script parte A.png" alt="Script Git Parte A" class="img-git">
+    </section>
 
-    <div class="tarjeta-git">
-      <h2>Acciones para eliminar ramas</h2>
+    <section class="tarjeta-git">
+      <h2 id="eliminar-ramas">Acciones para eliminar ramas</h2>
       <table class="tabla-git">
         <thead>
           <tr>
@@ -148,11 +146,10 @@ done</code></pre>
           </tr>
         </tbody>
       </table>
-    </div>
+    </section>
 
-    <div class="tarjeta-git">
-      <h2>Para descartar los cambios del main y pasarlos a una rama nueva sin perder tu trabajo actual, sigue estos
-        pasos:</h2>
+    <section class="tarjeta-git">
+      <h2 id="descartar-cambios">Para descartar los cambios del main y pasarlos a una rama nueva sin perder tu trabajo actual, sigue estos pasos:</h2>
       <table class="tabla-git">
         <thead>
           <tr>
@@ -189,20 +186,19 @@ done</code></pre>
           </tr>
         </tbody>
       </table>
-
-    </div>
-    <div class="tarjeta-git">
-      <h2>Script para hacer push de todas las ramas</h2>
+    </section>
+    <section class="tarjeta-git">
+      <h2 id="push-ramas">Script para hacer push de todas las ramas</h2>
       <pre><code>for branch in CSS Html JavaScript Mariano2 Python SQL main; do
   git checkout $branch
   git push origin $branch
 done</code></pre>
       <p><i>Modifica el script con las ramas que desees actualizar. El comando <code>git merge SQL</code> se refiere a
           integrar cambios desde la rama <strong>SQL</strong>.</i></p>
-      <img src="/imagenes/Git Script parte B.png" alt="Script Git Parte B" style="max-width: 100%; margin-top: 15px;">
-    </div>
-    <div class="tarjeta-git">
-      <h2>Guía Completa: Tags en Git</h2>
+      <img src="/imagenes/Git Script parte B.png" alt="Script Git Parte B" class="img-git">
+    </section>
+    <section class="tarjeta-git">
+      <h2 id="tags-git">Guía Completa: Tags en Git</h2>
 
       <section class="git-section">
         <h3>¿Qué son los Tags en Git?</h3>
@@ -268,14 +264,14 @@ git push origin v1.2.0</code></pre>
         <p class="git-note">Nota: Es buena práctica seguir <a href="https://semver.org/">Semantic Versioning</a>
           (vMAJOR.MINOR.PATCH) para los nombres de tags.</p>
       </section>
-    </div>
+    </section>
   </main>
 
   <footer>
     <ul>
       <h2>Referencias:</h2>
       <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools.com</a></li>
-      <li><a href="infocod.html">Info codigo Git</a></li>
+      <li><a href="infocod.html">Info código Git</a></li>
     </ul>
   </footer>
   <script src="/js/menudenavegacion.js"></script>

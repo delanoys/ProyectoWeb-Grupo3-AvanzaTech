@@ -4,10 +4,8 @@
     --dark-color: #1a1a2e;
     --light-color: #f8f9fa;
     --shadow-color: rgba(28, 37, 102, 0.2);
-    --success-color: #a72828;
+    --success-color: #28a745;
     --card-bg: #ffffff;
-    --animacionMenu: #ffffff;
-     
 }
 
 * {
@@ -16,20 +14,23 @@
     box-sizing: border-box;
 }
 
-body {  
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: var(--animacionMenu);
+    background-color: #f5f7ff;
     padding-top: 20px;
-    
 }
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 15px;
+ /* organizar el contenido 
+     display: flex;
+    flex-direction: column;*/
+    align-items: center; /* Centra el contenido horizontalmente */
 }
 
 .main-content {
@@ -38,14 +39,16 @@ body {
     margin: 30px auto;
 }
 
-/* PRIMER CONTENEDOR */
+/* Header Styles */
 .main-header {
-    background: linear-gradient(135deg, #fefefe 0%, #6ab1f8 50%, #439DF7 100%);
+    /* background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); */
+    background: linear-gradient(135deg, #4666f4 0%, #3042b9 50%, #202b73 100%);
+    color: white;
     padding: 3rem 0;
     text-align: center;
     margin-bottom: 2rem;
     border-radius: 10px;
-    color: #f9faff;
+    box-shadow: 0 10px 30px var(--shadow-color);
 }
 
 .main-header h1 {
@@ -55,12 +58,12 @@ body {
 
 .main-header p {
     font-size: 1.2rem;
-    color: var(--dark-color)
+    opacity: 0.9;
 }
 
 /* Navigation */
 .main-nav {
-    background-color: var(--animacionMenu);
+    background-color: rgba(255, 255, 255, 0.95);
     border: 1px solid #000000;
     position: sticky;
     top: 0;
@@ -71,20 +74,38 @@ body {
     border-radius: 8px;
 }
 
+/* --- Cambios para hacer el menú de navegación responsive --- */
+
+/* Estilos para el botón de menú hamburguesa (solo visible en móvil) */
+.main-nav .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    z-index: 1101; /* Asegura que esté por encima del menú */
+}
+
+/* Estilos base del menú de navegación */
 .main-nav ul {
     display: flex;
     list-style: none;
     justify-content: center;
     padding: 1rem 0;
     flex-wrap: wrap;
+    transition: max-height 0.3s ease;
 }
 
 .main-nav li {
     margin: 0 1rem;
 }
-/* Menu de contenido y color */
+
 .main-nav a {
-    color: rgb(0, 0, 0);
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: 600;
     padding: 0.5rem 1rem;
@@ -95,12 +116,52 @@ body {
     gap: 8px;
 }
 
-/* cambio de color animacion de menu */
 .main-nav a:hover {
-    background-color: hsl(210, 73%, 62%);
-    color: rgb(0, 0, 0);
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
     transform: translateY(-2px);
 }
+
+/* --- Media queries para hacerlo responsive --- */
+@media (max-width: 768px) {
+    .main-nav {
+        position: relative;
+        padding-right: 60px; /* Espacio para el botón hamburguesa */
+    }
+    .main-nav .nav-toggle {
+        display: block; /* Mostrar el botón hamburguesa en móvil */
+        z-index: 1101; /* Asegura que esté por encima del menú */
+    }
+    .main-nav ul {
+        flex-direction: column; /* Menú vertical */
+        align-items: flex-start;
+        max-height: 0; /* Ocultar menú por defecto */
+        overflow: hidden;
+        width: 100%;
+        background: rgba(255,255,255,0.98);
+        box-shadow: 0 5px 15px var(--shadow-color);
+        border-radius: 0 0 8px 8px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        padding: 0;
+        transition: max-height 0.3s ease;
+        z-index: 1100; /* Asegura que el menú esté debajo del botón */
+    }
+    .main-nav ul.open {
+        max-height: 500px; /* Mostrar menú cuando está abierto */
+        padding: 1rem 0;
+    }
+    .main-nav li {
+        margin: 0.5rem 1rem;
+        width: 100%;
+    }
+    .main-nav a {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+/* --- Fin de los cambios para navegación responsive --- */
 
 /* Sidebar */
 .sidebar {
@@ -189,16 +250,6 @@ body {
     color: var(--secondary-color);
 }
 
-/*Para dar formato a los códigos en el resto del doc*/
-code {
-    background: #f0f4ff;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9rem;
-    color: var(--secondary-color);
-}
-
 /* Main Content */
 main {
     flex: 1;
@@ -222,7 +273,7 @@ main {
     color: var(--secondary-color);
     margin-bottom: 1.5rem;
     padding-bottom: 0.8rem;
-    border-bottom: 2px solid var(--dark-color);
+    border-bottom: 2px solid var(--primary-color);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -239,11 +290,6 @@ main {
 }
 
 /* Modelo de Caja Interactivo */
-
-.parrafo-sencillo {
-    text-align: justify;
-}
-
 .interactive-box-model {
     background-color: #f0f4ff;
     border: 2px dashed var(--primary-color);
@@ -299,35 +345,11 @@ main {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    text-align: justify;
-}
-
-.box-model-editor-codigo {
-    display: grid;
-    margin-top: 30px;
 }
 
 .box-model-part h4 {
     color: var(--secondary-color);
     margin-bottom: 10px;
-}
-
-.lista {
-    margin-left: 50px;
-}
-
-ol li::marker {
-  font-weight: bold;
-}
-
-.ejemplos-codigos {
-    background-color:#fbfafa;
-    padding: 1.5rem;
-    border:2px;
-    border-color: #201a1a;
-    border-radius: 8px;
-    margin-top: 1.5rem;
-    text-align:left;
 }
 
 /* Flexbox vs Grid */
@@ -384,11 +406,10 @@ ol li::marker {
 }
 
 .use-cases {
-    background: #e9eff6;
+    background: #f8f9fa;
     padding: 1.5rem;
     border-radius: 8px;
     margin-top: 1.5rem;
-    text-align:center;
 }
 
 .use-cases h4 {
@@ -403,148 +424,6 @@ ol li::marker {
 .use-cases li {
     margin-bottom: 0.8rem;
 }
-
-.comparacion button {
-    position: relative;
-    margin: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
-
-.comparacion button:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-1px);
-}
-
-.comparacion button::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 26px;
-  right: 0px;
-  background-color: #6ab1f8;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: none;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.comparacion button:hover::after {
-  display: block;
-  opacity: 1;
-}
-
-/* estilos de las tarjetas-------------------------------------------------------------------------------- */
-
-
-/* Contenedor principal de las tarjetas */
-.cards {
-    display: flex;
-    /* Usa Flexbox para organizar las tarjetas */
-    justify-content: center;
-    /* IGUAL Centra las tarjetas horizontalmente */
-    align-items: center;
-    /* IGUAL Centra las tarjetas verticalmente */
-    gap: 2px;
-    /* Espacio entre las tarjetas */
-    padding: 10px;
-    /* Espaciado interno del contenedor */
-    flex-wrap: wrap;
-    /* IGUAL Permite que las tarjetas pasen a la siguiente línea si no caben */
-}
-
-/* Estilos básicos para cada tarjeta */
-.cards .fcard {
-    background-color: transparent;
-    /* Fondo transparente para permitir efecto visual */
-    width: 350px;
-    /* Ancho fijo de la tarjeta */
-    height: 350px;
-    /* Altura fija de la tarjeta */
-    border: solid 1px #ffffff;
-    /* Borde blanco */
-    perspective: 1000px;
-    /* Perspectiva para efecto 3D */
-    display: flex;
-    align-items: center;
-    /* Alinea elementos internos verticalmente (aunque no tendrá efecto aquí sin display:flex) */
-}
-
-/* Contenedor interno que se voltea al hacer hover */
-.cards .fcard .inner {
-    position: relative;
-    /* Posicionamiento relativo para controlar otras posiciones de elementos */
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    /* Centra el contenido horizontalmente */
-    transition: transform 1.5s ease-in-out;
-    /* Transición suave al girar */
-    transform-style: preserve-3d;
-    /* Mantiene el efecto 3D de los hijos */
-}
-
-/* Efecto al pasar el cursor: gira la tarjeta */
-.cards .fcard:hover .inner {
-    transform: rotateY(180deg);
-    /* Rota la tarjeta en el eje Y */
-}
-
-/* Cara frontal de la tarjeta */
-.cards .fcard .pfrente {
-    position: absolute;
-    /* Posicionamiento absoluto para superponer caras */
-    width: 90%;
-    height: 90%;
-    backface-visibility: hidden;
-    /* Oculta el reverso cuando se gira */
-    background-color: #190d0d;
-    /* Color de fondo oscuro */
-    color: #333;
-    /* Color del texto */
-}
-
-/* Cara trasera de la tarjeta */
-.cards .fcard .ptrasera {
-    position: absolute;
-    /* Igual a la cara frontal */
-    width: 90%;
-    height: 90%;
-    backface-visibility: hidden;
-    /* Oculta el reverso cuando no está de frente */
-    background-color: #fcf9f9;
-    /* Fondo azul brillante */
-    box-shadow: 0 5px 15px var(--shadow-color);
-    /* Efecto de sombra en los bordes */
-    color: #333;
-    /* Color del texto oscuro */
-    transform: rotateY(180deg);
-    /* Rota esta cara para que quede visible cuando la tarjeta gira */
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: left;
-}
-
-.lista-tarjetas {
-    margin-left: 50px;
-    text-align: left;
-}
-
-/* Imagen dentro de la cara frontal */
-.cards .fcard .pfrente img {
-    width: 100%;
-    /* Imagen ocupa todo el ancho del contenedor */
-    height: 100%;
-    /* Imagen ocupa toda la altura del contenedor */
-} 
 
 /* Animaciones */
 .transition-example {
@@ -646,7 +525,6 @@ ol li::marker {
     100% { transform: scale(1); }
 }
 
-
 /* Footer */
 .main-footer {
     background-color: var(--dark-color);
@@ -703,19 +581,33 @@ ol li::marker {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        width: 98%;
+        padding: 0 8px;
+    }
+    .main-content {
+        gap: 18px;
+    }
+}
+
 @media (max-width: 992px) {
     .main-content {
         flex-direction: column;
+        gap: 24px;
     }
-    
+
     .sidebar {
         position: static;
         flex: 0 0 auto;
         order: -1;
         margin-bottom: 30px;
+        width: 100%;
+        max-width: none;
     }
-    
-    .layout-comparison, .keyframe-explanation {
+
+    .layout-comparison,
+    .keyframe-explanation {
         grid-template-columns: 1fr;
     }
 }
@@ -724,17 +616,67 @@ ol li::marker {
     .main-nav ul {
         flex-direction: column;
         align-items: center;
+        gap: 0.5rem;
     }
-    
+
     .main-nav li {
         margin: 0.3rem 0;
     }
-    
+
     .main-header h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
-    
+
+    .main-header p {
+        font-size: 1rem;
+    }
+
     .box-model-explanation {
         grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 1.2rem;
+    }
+
+    .sidebar {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-header {
+        padding: 1.5rem 0;
+    }
+
+    .main-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .main-content {
+        gap: 10px;
+    }
+
+    .section {
+        padding: 0.7rem;
+    }
+
+    .resource-card,
+    .newsletter-card,
+    .tip-card {
+        padding: 1rem;
+    }
+
+    .layout-example,
+    .animation-properties {
+        padding: 0.7rem;
+    }
+
+    .back-to-top {
+        width: 38px;
+        height: 38px;
+        bottom: 16px;
+        right: 16px;
+        font-size: 1.1rem;
     }
 }

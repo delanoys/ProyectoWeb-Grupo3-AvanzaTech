@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo HTML - Guía Completa</title>
+    
+    
+    <meta name="description" content="Aprende HTML desde cero con esta guía completa. Descubre la estructura, etiquetas, colores, multimedia y más.">
+    <meta name="keywords" content="HTML, guía HTML, aprender HTML, etiquetas HTML, colores HTML, multimedia HTML, listas HTML, tablas HTML">
+    <meta name="author" content="developersinprocess">
+     <link rel="stylesheet" href="/estilos/editor.css">
+   <link rel="stylesheet" href="Aprendiendohtml.css">
+   
+      
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1><i class="fab fa-html5"></i> Aprendiendo HTML</h1> <!-- Logo oficial de HTML5 -->
+            <p>Guía completa desde cero hasta profesional</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="/index.html">INICIO.</a></li>
+                <li><a href="#introduccion">Introducción.</a></li>
+                <li><a href="#estructura">Estructura</a></li>
+                <li><a href="#texto">Texto</a></li>
+                <li><a href="#colores-html">Colores</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+                <li><a href="#listas-tablas">Listas & Tablas</a></li>
+                <li><a href="#editor">Editor on Line</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container main-content">
+        <aside class="sidebar">
+            <div class="resource-card">
+                <h3><i class="fas fa-bookmark"></i>Índice rápido</h3>
+                <ul class="resource-list">
+                    <li><a href="#que-es-html"><i class="fa-brands fa-html5"></i> ¿Qué es HTML?</a></li>
+                    <li><a href="#historia-html"><i class="fa-solid fa-clock-rotate-left"></i> Historia de HTML</a></li>
+                    <li><a href="#etiquetas-fundamentales"><i class="fa-solid fa-code"></i> Etiquetas fundamentales</a>
+                    </li>
+                    <li><a href="#comentarios-buenas-practicas"><i class="fa-solid fa-comment-dots"></i> Buenas
+                            prácticas</a></li>
+                    <li><a href="#titulos-parrafos"><i class="fa-solid fa-heading"></i> Títulos y párrafos</a></li>
+                    <li><a href="#formato-texto"><i class="fa-solid fa-font"></i> Formato de texto</a></li>
+                    <li><a href="#colores-html"><i class="fa-solid fa-palette"></i> Colores en HTML</a></li>
+                    <li><a href="#insertar-imagenes"><i class="fa-regular fa-image"></i> Insertar imágenes</a></li>
+                    <li><a href="#enlaces-video-audio"><i class="fa-solid fa-photo-film"></i> Multimedia</a></li>
+                    <li><a href="#listas-ordenadas-no-ordenadas"><i class="fa-solid fa-list-ul"></i> Listas</a></li>
+                    <li><a href="#tablas-basicas"><i class="fa-solid fa-table"></i> Tablas</a></li>
+                    <li><a href="#editor"><i class="fa-solid fa-code"></i> Editor on Line</a></li>
+                </ul>
+            </div>
+            <div class="newsletter-card">
+                <h3><i class="fas fa-envelope"></i> Newsletter</h3>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+
+            <div class="tip-card">
+                <h3><i class="fas fa-lightbulb"></i> Tip del Día</h3>
+                <p>Usa <code>gap</code> en lugar de márgenes para espaciado entre elementos en Flexbox y Grid.</p>
+            </div>
+        </aside>
+
+        <main>
+            <section id="introduccion" class="section">
+                <h2>Introducción a HTML</h2>
+
+                <article class="article">
+                    <h3 id="que-es-html">¿Qué es HTML?</h3>
+                    <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Es un lenguaje
+                        de marcado que define la estructura y el contenido de una página web mediante el uso de
+                        etiquetas (tags). HTML no es un lenguaje de programación, sino de marcado, lo que significa que
+                        se usa para organizar y dar formato al contenido.</p>
+
+                    <h4>Características principales:</h4>
+                    <ul>
+                        <li>Define la estructura de una página web</li>
+                        <li>Utiliza elementos (etiquetas) para marcar diferentes partes del contenido</li>
+                        <li>Permite incluir otros recursos como imágenes, videos y scripts</li>
+                        <li>Es interpretado por los navegadores web para mostrar el contenido</li>
+                    </ul>
+                </article>
+
+                <article class="article">
+                    <h3 id="historia-html">Historia y evolución de HTML</h3>
+                    <p>HTML fue creado por Tim Berners-Lee en 1991 como parte de la World Wide Web. Desde entonces ha
+                        evolucionado significativamente:</p>
+
+                    <ul>
+                        <li><strong>HTML 2.0 (1995)</strong>: Primera versión estandarizada</li>
+                        <li><strong>HTML 3.2 (1997)</strong>: Agregó tablas, applets y flujo de texto alrededor de
+                            imágenes</li>
+                        <li><strong>HTML 4.01 (1999)</strong>: Introdujo hojas de estilo (CSS) y scripting</li>
+                        <li><strong>XHTML (2000)</strong>: Versión más estricta basada en XML</li>
+                        <li><strong>HTML5 (2014)</strong>: Versión actual con soporte para multimedia y aplicaciones web
+                            modernas</li>
+                    </ul>
+
+                    <p>HTML5 introdujo elementos semánticos, soporte nativo para audio y video, canvas para gráficos, y
+                        mejoras en APIs para aplicaciones web.</p>
+                </article>
+            </section>
+
+            <section id="estructura" class="section">
+                <h2>Estructura Básica y Semántica en HTML</h2>
+
+                <article class="article">
+                    <h3 id="etiquetas-fundamentales">Estructura fundamental de una página HTML</h3>
+                    <p>
+                        Toda página HTML comienza con una estructura básica que define el esqueleto del documento. Esta
+                        estructura asegura que los navegadores interpreten correctamente el contenido.
+                    </p>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+            &lt;html lang="es"&gt;
+              &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Título de la página&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                Contenido visible de la página
+              &lt;/body&gt;
+            &lt;/html&gt;</code></pre>
+                    <h4>Etiquetas esenciales:</h4>
+                    <ul>
+                        <li><code>&lt;!DOCTYPE html&gt;</code>: Declara el tipo de documento (HTML5).</li>
+                        <li><code>&lt;html&gt;</code>: Elemento raíz que contiene todo el documento.</li>
+                        <li><code>&lt;head&gt;</code>: Incluye metadatos, enlaces a estilos y scripts.</li>
+                        <li><code>&lt;title&gt;</code>: Título que aparece en la pestaña del navegador.</li>
+                        <li><code>&lt;body&gt;</code>: Contiene todo el contenido visible de la página.</li>
+                    </ul>
+                </article>
+
+                <article class="article">
+                    <h3 id="estructura-semantica">Estructura semántica en HTML5</h3>
+                    <p>
+                        HTML5 introduce etiquetas <strong>semánticas</strong> que describen el significado del
+                        contenido, facilitando la accesibilidad, el SEO y el mantenimiento del código. Estas etiquetas
+                        ayudan a los navegadores y tecnologías de asistencia a entender mejor la estructura de la
+                        página.
+                    </p>
+                    <ul>
+                        <li><code>&lt;header&gt;</code>: Encabezado de la página o sección.</li>
+                        <li><code>&lt;nav&gt;</code>: Navegación principal.</li>
+                        <li><code>&lt;main&gt;</code>: Contenido principal y único de la página.</li>
+                        <li><code>&lt;section&gt;</code>: Sección temática del contenido.</li>
+                        <li><code>&lt;article&gt;</code>: Contenido independiente y reutilizable (como una noticia o
+                            entrada de blog).</li>
+                        <li><code>&lt;aside&gt;</code>: Contenido complementario (barras laterales, widgets).</li>
+                        <li><code>&lt;footer&gt;</code>: Pie de página o sección.</li>
+                    </ul>
+                    <p>
+                        Ejemplo de estructura semántica:
+                    </p>
+                    <pre><code>&lt;body&gt;
+              &lt;header&gt;Encabezado&lt;/header&gt;
+              &lt;nav&gt;Menú de navegación&lt;/nav&gt;
+              &lt;main&gt;
+                &lt;section&gt;
+                  &lt;article&gt;Contenido principal&lt;/article&gt;
+                &lt;/section&gt;
+                &lt;aside&gt;Información adicional&lt;/aside&gt;
+              &lt;/main&gt;
+              &lt;footer&gt;Pie de página&lt;/footer&gt;
+            &lt;/body&gt;</code></pre>
+                </article>
+
+                <article class="article">
+                    <h3 id="comentarios-buenas-practicas">Comentarios y buenas prácticas</h3>
+                    <p>Los comentarios en HTML ayudan a documentar el código y se escriben así:</p>
+                    <pre><code>&lt;!-- Esto es un comentario --&gt;</code></pre>
+                    <h4>Buenas prácticas:</h4>
+                    <ul>
+                        <li>Utilizar etiquetas semánticas para mejorar la estructura y accesibilidad.</li>
+                        <li>Usar indentación consistente para facilitar la lectura.</li>
+                        <li>Cerrar todas las etiquetas correctamente.</li>
+                        <li>Utilizar minúsculas para los nombres de las etiquetas y atributos.</li>
+                        <li>Incluir el atributo <code>alt</code> en imágenes para accesibilidad.</li>
+                        <li>Separar estructura (HTML), presentación (CSS) y comportamiento (JavaScript).</li>
+                        <li>Validar el código HTML con herramientas como el <a href="https://validator.w3.org/"
+                                target="_blank" rel="noopener">validador de W3C</a>.</li>
+                    </ul>
+                </article>
+
+                <article class="article">
+                    <h3>Recursos recomendados</h3>
+                    <p>
+                        Para aprender más sobre la estructura y semántica en HTML, visita la guía de <a
+                            href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank"
+                            rel="noopener">W3Schools: HTML5 Semantic Elements</a>.
+                    </p>
+                </article>
+            </section>
+
+            <section id="texto" class="section">
+                <h2>Elementos de Texto</h2>
+                <img src="/imagenes/html-ENCABEZADOS.png" alt="Encamezadoros HTML" class="img-responsive">
+                                
+                <article class="article">
+                    <h3 id="titulos-parrafos">Títulos y párrafos</h3>
+                    <p>HTML proporciona 6 niveles de títulos:</p>
+
+                    <pre><code>&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Encabezado de sección&lt;/h3&gt;
+...
+&lt;h6&gt;Encabezado menor&lt;/h6&gt;</code></pre>
+
+                    <p>Para párrafos:</p>
+                    <pre><code>&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;
+&lt;p&gt;Este es otro párrafo.&lt;/p&gt;</code></pre>
+                </article>
+
+                <article class="article">
+                    <h3 id="formato-texto">Formato de texto</h3>
+                    <p>HTML ofrece varias etiquetas para formato de texto:</p>
+                    <ul>
+                        <li><code>&lt;strong&gt;</code> o <code>&lt;b&gt;</code>: Texto en negrita</li>
+                        <li><code>&lt;em&gt;</code> o <code>&lt;i&gt;</code>: Texto en cursiva</li>
+                        <li><code>&lt;u&gt;</code>: Texto subrayado</li>
+                        <li><code>&lt;mark&gt;</code>: Texto resaltado</li>
+                        <li><code>&lt;small&gt;</code>: Texto más pequeño</li>
+                        <li><code>&lt;sup&gt;</code>: Superíndice</li>
+                        <li><code>&lt;sub&gt;</code>: Subíndice</li>
+                        <li><code>&lt;del&gt;</code>: Texto eliminado (tachado)</li>
+                        <li><code>&lt;ins&gt;</code>: Texto insertado (subrayado)</li>
+                    </ul>
+
+                    <p>Ejemplo:</p>
+                    <pre><code>&lt;p&gt;Este es un texto &lt;strong&gt;importante&lt;/strong&gt; y &lt;em&gt;enfatizado&lt;/em&gt;.&lt;/p&gt;</code></pre>
+                </article>
+            </section>
+
+            <section id="multimedia" class="section">
+                <h2>Imágenes y Multimedia</h2>
+
+                <article class="article">
+                    <h3 id="insertar-imagenes">Insertar imágenes</h3>
+                    <p>Para insertar imágenes:</p>
+                    <pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen" width="500" height="300"&gt;</code></pre>
+
+                    <h4>Atributos importantes:</h4>
+                    <ul>
+                        <li><code>src</code>: Ruta a la imagen</li>
+                        <li><code>alt</code>: Texto alternativo (accesibilidad y SEO)</li>
+                        <li><code>width</code> y <code>height</code>: Dimensiones (en píxeles o porcentaje)</li>
+                    </ul>
+                </article>
+
+                <article class="article">
+                    <h3 id="enlaces-video-audio">Enlaces, video y audio</h3>
+                    <p><strong>Enlaces</strong>:</p>
+                    <pre><code>&lt;a href="https://www.ejemplo.com" target="_blank"&gt;Texto del enlace&lt;/a&gt;</code></pre>
+
+                    <p><strong>Video</strong> (HTML5):</p>
+                    <pre><code>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+
+                    <p><strong>Audio</strong> (HTML5):</p>
+                    <pre><code>&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;</code></pre>
+                </article>
+            </section>
+
+            <section id="listas-tablas" class="section">
+                <h2>Listas y Tablas</h2>
+
+                <article class="article">
+                    <h3 id="listas-ordenadas-no-ordenadas">Listas ordenadas y no ordenadas</h3>
+                    <p><strong>Lista no ordenada</strong> (con viñetas):</p>
+                    <pre><code>&lt;ul&gt;
+  &lt;li&gt;Elemento 1&lt;/li&gt;
+  &lt;li&gt;Elemento 2&lt;/li&gt;
+  &lt;li&gt;Elemento 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                    <p><strong>Lista ordenada</strong> (numerada):</p>
+                    <pre><code>&lt;ol&gt;
+  &lt;li&gt;Primer elemento&lt;/li&gt;
+  &lt;li&gt;Segundo elemento&lt;/li&gt;
+  &lt;li&gt;Tercer elemento&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                    <p><strong>Lista de definición</strong>:</p>
+                    <pre><code>&lt;dl&gt;
+  &lt;dt&gt;Término 1&lt;/dt&gt;
+  &lt;dd&gt;Definición 1&lt;/dd&gt;
+  &lt;dt&gt;Término 2&lt;/dt&gt;
+  &lt;dd&gt;Definición 2&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                </article>
+
+                <article class="article">
+                    <h3 id="tablas-basicas">Tablas básicas</h3>
+                    <p>Estructura básica de una tabla:</p>
+                    <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Encabezado 1&lt;/th&gt;
+    &lt;th&gt;Encabezado 2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Dato 1&lt;/td&gt;
+    &lt;td&gt;Dato 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Dato 3&lt;/td&gt;
+    &lt;td&gt;Dato 4&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+                    <h4>Elementos de tabla:</h4>
+                    <ul>
+                        <li><code>&lt;table&gt;</code>: Contenedor principal</li>
+                        <li><code>&lt;tr&gt;</code>: Fila de tabla</li>
+                        <li><code>&lt;th&gt;</code>: Celda de encabezado</li>
+                        <li><code>&lt;td&gt;</code>: Celda de datos</li>
+                        <li><code>&lt;caption&gt;</code>: Título de la tabla</li>
+                        <li><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>:
+                            Agrupación semántica</li>
+                    </ul>
+
+                    <h4>Atributos comunes:</h4>
+                    <ul>
+                        <li><code>border</code>: Grosor del borde</li>
+                        <li><code>colspan</code>: Expandir celda a través de columnas</li>
+                        <li><code>rowspan</code>: Expandir celda a través de filas</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!--
+                Sección: Colores en HTML
+
+                Esta sección explica cómo se utilizan los colores en HTML y CSS, detallando las diferentes formas de definir colores:
+                - Por nombre (ej: red, blue, green)
+                - Por código hexadecimal (ej: #FF0000)
+                - Por valores RGB y RGBA (ej: rgb(255,0,0), rgba(255,0,0,0.5))
+                - Por valores HSL (ej: hsl(0, 100%, 50%))
+
+                Incluye ejemplos prácticos de uso en HTML y CSS para aplicar colores al texto y al fondo.
+
+                Además, proporciona una tabla interactiva de colores generada dinámicamente con JavaScript, donde el usuario puede:
+                - Visualizar diferentes colores junto a su nombre, código hexadecimal y valores RGB.
+                - Seleccionar y modificar colores usando un selector de color personalizado.
+                - Ver el código correspondiente para copiarlo y utilizarlo en sus propios proyectos.
+
+                Esta sección está diseñada con fines educativos para que el usuario comprenda y experimente con los distintos formatos de color en HTML y CSS.
+            -->
+            <section id="colores-html" class="section">
+                <h2>Colores en HTML</h2>
+
+                <article class="article">
+                    <h3>¿Cómo se usan los colores en HTML?</h3>
+                    <p>
+                        En HTML, los colores se aplican principalmente a través de CSS usando propiedades como
+                        <code>color</code> (para el texto) y <code>background-color</code> (para el fondo). Los colores
+                        pueden definirse de varias formas:
+                    </p>
+                    <ul>
+                        <li><strong>Nombre del color:</strong> <code>red</code>, <code>blue</code>, <code>green</code>,
+                            etc.</li>
+                        <li><strong>Código hexadecimal:</strong> <code>#FF0000</code> (rojo), <code>#00FF00</code>
+                            (verde), <code>#0000FF</code> (azul).</li>
+                        <li><strong>RGB:</strong> <code>rgb(255,0,0)</code> (rojo), <code>rgb(0,255,0)</code> (verde).
+                        </li>
+                        <li><strong>RGBA:</strong> Igual que RGB pero con transparencia, por ejemplo
+                            <code>rgba(255,0,0,0.5)</code>.
+                        </li>
+                        <li><strong>HSL:</strong> <code>hsl(0, 100%, 50%)</code> (rojo).</li>
+                    </ul>
+                    <p>
+                        Ejemplo de uso en HTML y CSS:
+                    </p>
+                    <pre><code>&lt;p style="color: #3498db; background-color: #f0f0f0;"&gt;Texto con color personalizado&lt;/p&gt;</code></pre>
+                </article>
+
+                <article class="article">
+                    <h3>Tabla interactiva de colores</h3>
+                    <p>
+                        Prueba y modifica los colores usando los selectores. Haz clic en los códigos para copiarlos.
+                    </p>
+                    <div class="color-table-wrapper">
+                        <table class="color-table">
+                            <thead>
+                                <tr>
+                                    <th>Color</th>
+                                    <th>Nombre</th>
+                                    <th>Hex</th>
+                                    <th>RGB</th>
+                                    <th>Selector</th>
+                                </tr>
+                            </thead>
+                            <tbody id="colorTableBody">
+                                <!-- Las filas se generan dinámicamente con JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="color-customizer">
+                        <label for="customColor">Elige un color personalizado: </label>
+                        <input type="color" id="customColor" value="#ff6600">
+                        <span id="customColorCode" class="copyable" title="Haz clic para copiar">#ff6600</span>
+                        <div id="customColorPreview" class="color-preview"></div>
+                    </div>
+                    <p>
+                        <strong>¿Cómo funciona?</strong> Selecciona un color en la tabla o usa el selector para ver el
+                        código hexadecimal y RGB. Haz clic en cualquier código para copiarlo y usarlo en tus estilos
+                        CSS.
+                    </p>
+                </article>
+
+                <script>
+
+                </script>
+            </section>
+
+
+            <section id="editor" class="section">
+                <h2>Editor HTML-CSS-JS</h2>
+                <article class="article">
+                    <div class="editor-wrapper">
+                        <div class="tabs">
+                            <div class="tab active" data-lang="html">HTML</div>
+                            <div class="tab" data-lang="css">CSS</div>
+                            <div class="tab" data-lang="js">JavaScript</div>
+                        </div>
+
+                        <textarea id="html" class="active" placeholder="Escribe tu HTML aquí..." cols="70"><h1>Hola Bienvenido, Prueba tu codigo Html</h1>
+            <p>Ejemplo de tablas</p>
+            <table border="1">
+              <tr>
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+              </tr>
+              <tr>
+                <td>Dato 1</td>
+                <td>Dato 2</td>
+              </tr>
+              <tr>
+                <td>Dato 3</td>
+                <td>Dato 4</td>
+              </tr>
+            </table>
+            
+            <button onclick="cambiarColor()">Cambiar Color del Título</button>
+            <p id="contador">Clics: 0</p>
+            <button onclick="incrementarContador()">Incrementar Contador</button></textarea>
+                        <textarea id="css" placeholder="Escribe tu CSS aquí..." cols="70">
+            <!-- body { 
+              font-family: sans-serif; 
+              background: #fefefe; 
+              padding: 20px;
+            }
+            
+            h1 { 
+              color: #FF0000; 
+              text-align: center;
+            }
+            
+            table {
+              width: 100%;
+              border-collapse: collapse;
+              margin: 20px 0;
+            }
+            
+            th, td {
+              padding: 10px;
+              text-align: left;
+              border: 1px solid #ddd;
+            }
+            
+            th {
+              background-color: #f2f2f2;
+              font-weight: bold;
+            }
+            
+            button {
+              background-color: #007bff;
+              color: white;
+              padding: 10px 15px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              margin: 10px 5px;
+              font-size: 14px;
+            }
+            
+            button:hover {
+              background-color: #0056b3;
+            }
+            
+            #contador {
+              font-size: 18px;
+              font-weight: bold;
+              color: #333;
+            } -->
+        </textarea>
+                        <textarea id="js" placeholder="Escribe tu JavaScript aquí..." cols="70">
+            <!-- // Contador de clics
+            let contador = 0;
+            
+            function incrementarContador() {
+              contador++;
+              document.getElementById('contador').textContent = `Clics: ${contador}`;
+            }
+            
+            // Array de colores para cambiar el título
+            const colores = ['#FF0000', '#00FF00', '#0000FF', '#FF00FF', '#FFA500', '#800080'];
+            let indiceColor = 0;
+            
+            function cambiarColor() {
+              const titulo = document.querySelector('h1');
+              indiceColor = (indiceColor + 1) % colores.length;
+              titulo.style.color = colores[indiceColor];
+            }
+            
+            // Mensaje de bienvenida en la consola
+            console.log('¡Editor HTML-CSS-JS cargado correctamente!');
+            
+            // Función que se ejecuta al cargar la página
+            window.addEventListener('load', function() {
+              console.log('Página cargada. Puedes empezar a programar!');
+            }); -->
+        </textarea>
+
+                        <div class="controls">
+                            <button onclick="runCode()">Ejecutar</button>
+                            <button onclick="downloadZip()">Descargar ZIP</button>
+                        </div>
+                    </div>
+
+                    <iframe id="preview"></iframe>
+                </article>
+            </section>
+
+            <section class="section">
+                <article class="article">
+                    <h3>Recursos recomendados</h3>
+                    <p>
+                        Para aprender más sobre la estructura y semántica en HTML, visita la guía de <a
+                            href="https://www.w3schools.com/html" target="_blank" rel="noopener">W3Schools: HTML</a>.
+                    </p>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    <div></div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>©developersinprocess 2025 Aprendiendo HTML - Todos los derechos reservados</p>
+            <p>Guía educativa sobre HTML para principiantes</p>
+        </div>
+    </footer>
+    <button id="backToTop" class="back-to-top" title="Volver arriba">↑</button>
+
+    <!-- SCRIPT -->
+     <script>
+// Solo si usas en el navegador (adaptar rutaEstilos.js para browser)
+if (typeof require !== 'undefined') {
+    const { buscarEstilo } = require('./js/rutaEstilos.js');
+    
+    // Buscar y mostrar rutas
+    console.log('Archivos CSS encontrados:');
+    console.log('editor.css:', buscarEstilo('editor.css'));
+    console.log('Aprendiendohtml.css:', buscarEstilo('Aprendiendohtml.css'));
+}
+</script>
+
+    
+    <script src="aprendiendoHtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="/js/editor.js"></script>
+      
+</body>
+
+</html>

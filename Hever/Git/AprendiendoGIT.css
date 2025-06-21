@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #4a6bff;
+    --primary-color: #141835;
     --secondary-color: #1c2566;
     --dark-color: #1a1a2e;
     --light-color: #f8f9fa;
@@ -24,9 +24,13 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 15px;
+ /* organizar el contenido 
+     display: flex;
+    flex-direction: column;*/
+    align-items: center; /* Centra el contenido horizontalmente */
 }
 
 .main-content {
@@ -37,7 +41,8 @@ body {
 
 /* Header Styles */
 .main-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    /* background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); */
+    background: linear-gradient(135deg, #c7c9ce 0%, #000000 60%, #000000 100%);
     color: white;
     padding: 3rem 0;
     text-align: center;
@@ -59,6 +64,7 @@ body {
 /* Navigation */
 .main-nav {
     background-color: rgba(255, 255, 255, 0.95);
+     border: 1px solid #000000;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -94,7 +100,7 @@ body {
 
 .main-nav a:hover {
     background-color: var(--primary-color);
-    color: white;
+    color: rgb(233, 232, 232);
     transform: translateY(-2px);
 }
 

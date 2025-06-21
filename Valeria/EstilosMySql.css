@@ -97,13 +97,13 @@ body {
 
 /* cambio de color animacion de menu */
 .main-nav a:hover {
-<<<<<<< HEAD
-    background-color: hsl(33, 73%, 62%);
-    color: rgb(0, 0, 0);
-=======
+<<<<<<<<< Temporary merge branch 1
      background-color: var(--primary-color);
     color: rgb(247, 244, 244);
->>>>>>> 3b25031cd1fbc10b8da298abe06ee4b6d79c8adf
+=========
+    background-color: hsl(33, 73%, 62%);
+    color: rgb(0, 0, 0);
+>>>>>>>>> Temporary merge branch 2
     transform: translateY(-2px);
 }
 

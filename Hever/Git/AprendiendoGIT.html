@@ -12,21 +12,20 @@
 <body>
     <header class="main-header">
         <div class="container">
-            <h1><i class="fab fa-git-alt"></i>  Aprendiendo Git y GitHub</h1><!-- Logo oficial de Git -->
-            
-
-            <p>Domina los estilos web profesionales</p>
+            <h1><i class="fab fa-git-alt"></i> Aprendiendo Git y GitHub</h1>
+            <p>Guía práctica para el control de versiones y colaboración en proyectos</p>
         </div>
     </header>
 
     <nav class="main-nav">
         <div class="container">
             <ul>
-                <li><a href="/index.html"><i class="fas fa-basics"></i> INICIO</a></li>
-                <li><a href="#diseno-layout"><i class="fas fa-basics"></i> Diseño y Layout</a></li>
-                <li><a href="#animaciones"><i class="fas fa-magic"></i> Animaciones</a></li>
-                <li><a href="#selectores"><i class="fas fa-mouse-pointer"></i> Selectores</a></li>
-                <li><a href="#responsive"><i class="fas fa-mobile-alt"></i> Responsive</a></li>
+                 <li><a href="/index.html"><i class="fas fa-clock"></i> INICIO</a></li>
+                <li><a href="#que-es-git"><i class="fas fa-question-circle"></i> ¿Qué es Git?</a></li>
+                <li><a href="#comandos-basicos"><i class="fas fa-terminal"></i> Comandos Básicos</a></li>
+                <li><a href="#github"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="#flujo-trabajo"><i class="fas fa-project-diagram"></i> Flujo de Trabajo</a></li>
+                <li><a href="#recursos"><i class="fas fa-book"></i> Recursos</a></li>
             </ul>
         </div>
     </nav>
@@ -36,220 +35,117 @@
             <div class="resource-card">
                 <h3><i class="fas fa-bookmark"></i> Índice Rápido</h3>
                 <ul class="resource-list">
-                    <li><a href="#box-model"><i class="fas fa-square-full"></i> Modelo de Caja</a></li>
-                    <li><a href="#flexbox-grid"><i class="fas fa-th-large"></i> Flexbox & Grid</a></li>
-                    <li><a href="#transiciones"><i class="fas fa-exchange-alt"></i> Transiciones</a></li>
-                    <li><a href="#keyframes"><i class="fas fa-film"></i> @keyframes</a></li>
-                    <li><a href="#selectores"><i class="fas fa-bullseye"></i> Selectores</a></li>
-                    <li><a href="#media-queries"><i class="fas fa-desktop"></i> Media Queries</a></li>
+                    
+                    <li><a href="#que-es-git"><i class="fas fa-question"></i> ¿Qué es Git?</a></li>
+                    <li><a href="#comandos-basicos"><i class="fas fa-terminal"></i> Comandos Básicos</a></li>
+                    <li><a href="#github"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="#flujo-trabajo"><i class="fas fa-project-diagram"></i> Flujo de Trabajo</a></li>
+                    <li><a href="git.html"><i class="fas fa-clock"></i> Comandos recientes utilizados</a></li>
+                    <li><a href="#recursos"><i class="fas fa-book"></i> Recursos</a></li>
                 </ul>
             </div>
-
-            <div class="newsletter-card">
-                <h3><i class="fas fa-envelope"></i> Newsletter</h3>
-                <form id="newsletterForm">
-                    <input type="email" placeholder="Tu email" required>
-                    <button type="submit">Suscribirse</button>
-                </form>
-            </div>
-
             <div class="tip-card">
                 <h3><i class="fas fa-lightbulb"></i> Tip del Día</h3>
-                <p>Usa <code>gap</code> en lugar de márgenes para espaciado entre elementos en Flexbox y Grid.</p>
+                <p>Haz <code>git status</code> frecuentemente para conocer el estado de tu repositorio.</p>
             </div>
         </aside>
 
         <main>
-            <!-- Sección de Diseño y Layout -->
-            <section id="diseno-layout" class="section">
-                <h2><i class="fas fa-pencil-ruler"></i> Diseño y Layout</h2>
-
-                <article class="article">
-                    <h3 id="box-model">Modelo de Caja</h3>
-                    <div class="interactive-box-model">
-                        <div class="box-content-example">Contenido</div>
-                    </div>
-
-                    <div class="box-model-controls">
-                        <button data-action="margin">Añadir Margin</button>
-                        <button data-action="padding">Añadir Padding</button>
-                        <button data-action="border">Añadir Border</button>
-                        <button data-action="reset">Resetear</button>
-                    </div>
-
-                    <div class="box-model-explanation">
-                        <div class="box-model-part margin">
-                            <h4>Margin</h4>
-                            <p>Espacio exterior que separa el elemento de otros elementos</p>
-                            <pre><code>.elemento {
-    margin: 20px; /* Todos los lados */
-    margin: 10px 20px; /* Vertical | Horizontal */
-    margin-top: 15px;
-}</code></pre>
-                        </div>
-
-                        <div class="box-model-part border">
-                            <h4>Border</h4>
-                            <p>Línea que rodea el padding y el contenido</p>
-                            <pre><code>.elemento {
-    border: 2px solid #1c2566;
-    border-radius: 8px; /* Esquinas redondeadas */
-}</code></pre>
-                        </div>
-
-                        <div class="box-model-part padding">
-                            <h4>Padding</h4>
-                            <p>Espacio interior entre el contenido y el borde</p>
-                            <pre><code>.elemento {
-    padding: 15px;
-    padding-left: 30px;
-}</code></pre>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="article">
-                    <h3 id="flexbox-grid">Flexbox y Grid</h3>
-
-                    <div class="layout-comparison">
-                        <div class="layout-example">
-                            <h4>Flexbox (1D)</h4>
-                            <div class="flex-container-example">
-                                <div class="flex-item">1</div>
-                                <div class="flex-item">2</div>
-                                <div class="flex-item">3</div>
-                            </div>
-                            <pre><code>.contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}</code></pre>
-                        </div>
-
-                        <div class="layout-example">
-                            <h4>CSS Grid (2D)</h4>
-                            <div class="grid-container-example">
-                                <div class="grid-item">1</div>
-                                <div class="grid-item">2</div>
-                                <div class="grid-item">3</div>
-                                <div class="grid-item">4</div>
-                                <div class="grid-item">5</div>
-                                <div class="grid-item">6</div>
-                            </div>
-                            <pre><code>.contenedor {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-}</code></pre>
-                        </div>
-                    </div>
-
-                    <div class="use-cases">
-                        <h4>¿Cuándo usar cada uno?</h4>
-                        <ul>
-                            <li><strong>Flexbox</strong>: Diseños unidimensionales (filas o columnas), alineación
-                                precisa, componentes pequeños</li>
-                            <li><strong>Grid</strong>: Diseños bidimensionales complejos, layouts completos de página,
-                                estructuras regulares</li>
-                        </ul>
-                    </div>
-                </article>
+            <section id="que-es-git" class="section">
+                <h2><i class="fab fa-git-alt"></i> ¿Qué es Git?</h2>
+                <p>
+                    Git es un sistema de control de versiones distribuido que permite gestionar los cambios en el código fuente de un proyecto. Facilita la colaboración entre desarrolladores y el seguimiento del historial de modificaciones.
+                </p>
+                <ul>
+                    <li>Permite trabajar en equipo sin sobrescribir el trabajo de otros.</li>
+                    <li>Guarda el historial de cambios y facilita la recuperación de versiones anteriores.</li>
+                    <li>Es la base de plataformas como GitHub, GitLab y Bitbucket.</li>
+                </ul>
             </section>
 
-            <!-- Sección de Animaciones -->
-            <section id="animaciones" class="section">
-                <h2><i class="fas fa-magic"></i> Animaciones CSS</h2>
-
-                <article class="article">
-                    <h3 id="transiciones">Transiciones CSS</h3>
-                    <div class="transition-example">
-                        <div class="transition-box hover-me">Pasa el mouse</div>
-                        <div class="transition-box click-me">Haz clic</div>
-                    </div>
-
-                    <pre><code>/* Transición básica */
-.elemento {
-    transition: propiedad duración timing-function delay;
-}
-
-/* Ejemplo concreto */
-.boton {
-    background-color: #4a6bff;
-    transition: background-color 0.3s ease, transform 0.2s;
-}
-
-.boton:hover {
-    background-color: #1c2566;
-    transform: scale(1.05);
-}</code></pre>
-
-                    <h4>Propiedades animables</h4>
-                    <ul class="animatable-properties">
-                        <li>Colores (color, background-color, border-color)</li>
-                        <li>Tamaños (width, height, font-size)</li>
-                        <li>Posición (margin, padding, top, left)</li>
-                        <li>Transformaciones (transform, opacity)</li>
-                    </ul>
-                </article>
-
-                <article class="article">
-                    <h3 id="keyframes">Animaciones con @keyframes</h3>
-                    <div class="animation-examples">
-                        <div class="animated-box bounce">Rebote</div>
-                        <div class="animated-box rotate">Rotación</div>
-                        <div class="animated-box pulse">Pulso</div>
-                    </div>
-
-                    <div class="keyframe-explanation">
-                        <pre><code>/* Definición de la animación */
-@keyframes nombre-animacion {
-    0% { /* Estilos iniciales */ }
-    50% { /* Estilos intermedios */ }
-    100% { /* Estilos finales */ }
-}
-
-/* Aplicación a un elemento */
-.elemento {
-    animation: nombre-animacion 2s infinite alternate;
-}</code></pre>
-
-                        <div class="animation-properties">
-                            <h4>Propiedades de animación:</h4>
-                            <ul>
-                                <li><strong>animation-name</strong>: Nombre de la keyframe</li>
-                                <li><strong>animation-duration</strong>: Duración (ej: 2s)</li>
-                                <li><strong>animation-timing-function</strong>: ease, linear, etc.</li>
-                                <li><strong>animation-delay</strong>: Retardo antes de comenzar</li>
-                                <li><strong>animation-iteration-count</strong>: Número de repeticiones</li>
-                                <li><strong>animation-direction</strong>: normal, reverse, alternate</li>
-                                <li><strong>animation-fill-mode</strong>: Estilos antes/después</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
+            <section id="comandos-basicos" class="section">
+                <h2><i class="fas fa-terminal"></i> Comandos Básicos de Git</h2>
+                <div class="article">
+                    <h3>Inicializar un repositorio</h3>
+                    <pre><code>git init</code></pre>
+                    <p>Crea un nuevo repositorio Git en el directorio actual.</p>
+                </div>
+                <div class="article">
+                    <h3>Clonar un repositorio</h3>
+                    <pre><code>git clone &lt;url-del-repositorio&gt;</code></pre>
+                    <p>Copia un repositorio remoto a tu máquina local.</p>
+                </div>
+                <div class="article">
+                    <h3>Ver el estado</h3>
+                    <pre><code>git status</code></pre>
+                    <p>Muestra los archivos modificados y los cambios pendientes de confirmar.</p>
+                </div>
+                <div class="article">
+                    <h3>Agregar cambios</h3>
+                    <pre><code>git add &lt;archivo&gt;</code></pre>
+                    <p>Prepara los archivos para ser confirmados (commit).</p>
+                </div>
+                <div class="article">
+                    <h3>Confirmar cambios</h3>
+                    <pre><code>git commit -m "Mensaje descriptivo"</code></pre>
+                    <p>Guarda los cambios preparados en el historial del repositorio.</p>
+                </div>
+                <div class="article">
+                    <h3>Ver historial</h3>
+                    <pre><code>git log</code></pre>
+                    <p>Muestra el historial de confirmaciones (commits).</p>
+                </div>
             </section>
 
-            <!-- Otras secciones... -->
+            <section id="github" class="section">
+                <h2><i class="fab fa-github"></i> ¿Qué es GitHub?</h2>
+                <p>
+                    GitHub es una plataforma en línea para alojar repositorios Git y facilitar la colaboración entre desarrolladores. Permite compartir código, gestionar proyectos y contribuir a proyectos de código abierto.
+                </p>
+                <ul>
+                    <li>Permite crear repositorios públicos y privados.</li>
+                    <li>Facilita la colaboración mediante pull requests y revisiones de código.</li>
+                    <li>Incluye herramientas para gestión de incidencias, documentación y despliegue.</li>
+                </ul>
+            </section>
+
+            <section id="flujo-trabajo" class="section">
+                <h2><i class="fas fa-project-diagram"></i> Flujo de Trabajo Básico</h2>
+                <ol>
+                    <li>Clona el repositorio: <code>git clone &lt;url&gt;</code></li>
+                    <li>Crea una nueva rama: <code>git checkout -b mi-rama</code></li>
+                    <li>Realiza cambios y agrégalos: <code>git add .</code></li>
+                    <li>Confirma los cambios: <code>git commit -m "Descripción"</code></li>
+                    <li>Sube la rama al repositorio remoto: <code>git push origin mi-rama</code></li>
+                    <li>Abre un Pull Request en GitHub para revisión y fusión.</li>
+                </ol>
+            </section>
+
+            <section id="recursos" class="section">
+                <h2><i class="fas fa-book"></i> Recursos Recomendados</h2>
+                <ul>
+                    <li><a href="https://git-scm.com/book/es/v2" target="_blank">Pro Git (Libro gratuito)</a></li>
+                    <li><a href="https://guides.github.com/" target="_blank">Guías de GitHub</a></li>
+                    <li><a href="https://learngitbranching.js.org/" target="_blank">Learn Git Branching (Interactivo)</a></li>
+                    <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Tutoriales de Git por Atlassian</a></li>
+                </ul>
+            </section>
         </main>
     </div>
 
     <footer class="main-footer">
         <div class="container">
-            <p>© 2023 Aprendiendo CSS - Todos los derechos reservados</p>
+            <p>© 2024 Aprendiendo Git y GitHub - Todos los derechos reservados</p>
             <div class="social-links">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-codepen"></i></a>
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top" title="Volver arriba">
+    <button id="que-es-git" class="back-to-top" title="Volver arriba">
         <i class="fas fa-arrow-up"></i>
     </button>
-
-    <script src="AprendiendoCSS.js"></script>
 </body>
 
 </html>

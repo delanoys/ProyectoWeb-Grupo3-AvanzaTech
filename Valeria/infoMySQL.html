@@ -19,13 +19,13 @@
     <nav class="main-nav">
         <div class="container">
             <ul> <!--MZH: Pendiente enlazar a otras lecciones docs html-->
-                <li><a href="/index.html"><i class="fas fa-basics"></i>  INICIO</a>
+                <li><a href="/index.html"><i class="fas fa-basics">Inicio</i></a>
                 </li>
-                <li><a href="#"><i class="fas fa-basics"></i> Introducción</a></li>
-                <li><a href="#"> Variables</a></li>
-                <li><a href="#"> Tipos de Datos</a></li>
-                <li><a href="#"> Operadores</a></li>
-                <li><a href="#"> Sentencia If</a></li>
+                <li><a href="#"><i class="fas fa-basics"></i>Introducción</a></li>
+                <li><a href="#">Tipos de datos</a></li>
+                <li><a href="#">Modelado de Datos</a></li>
+                <li><a href="#">Diseño de tablas</a></li>
+                <li><a href="#">Consulta Básicas</a></li>
                
             </ul>
         </div>
@@ -67,14 +67,23 @@
                 <article class="article">
                     <p>Por Juan José Lozano Gómez, fuente: clic <a href="https://j2logo.com/">aquí.</a> </p> <!--MZH: Referenciando al autor de la lección-->
 
-                    <h3 id="box-model">Características del lenguaje</h3>
-                    <p>Python es un lenguaje de programación de alto nivel cuya máxima es la legibilidad del código. Las principales características de Python son las siguientes:</p>
+                    <h3 id="box-model">Que es una base de datos</h3>
+                    <p>Una base de datos es un conjunto organizado de datos que se almacenan y se gestionan de forma estructurada, permitiendo su acceso, manipulación y actualización de manera eficiente por medio de un sistema de 
+                        gestión de bases de datos (SGBD)
+                        <br>
+                        <br>
+                        <strong>¿Qué es un SGBD?</strong>(Sistema de Gestión de Bases de Datos)
+                        Es un conjunto de programas de software que permiten definir, crear,
+                         mantener y controlar el acceso a una base de datos, garantizando la integridad, seguridad y consistencia de los datos. 
+                         El SGBD actúa como intermediario entre los usuarios y la base de datos, facilitando tareas como la consulta, inserción, actualización y eliminación de información.
+
+                    </p>
                     <div class="interactive-box-model">
                         <div class="box-content-example">Haz clic en los botones de abajo</div>
                     </div>
                     
                     <div class="box-model-controls">
-                        <button data-action="multiparadigma">Es multiparadigma</button>
+                        <button data-action="multiparadigma">Diferencias B relacionales </button>
                         <button data-action="multiplataforma">Es multiplataforma</button>
                         <button data-action="tipado">Es dinámicamente tipado</button>
                         <button data-action="fuertemente">Es fuertemente tipado</button>
@@ -84,9 +93,36 @@
                     
                     <div class="box-model-explanation">
                         <div class="box-model-part margin">
-                            <h4>El intérprete de Python</h4>
-                            <p>Cuando instalas Python correctamente (en cualquier sistema operativo) ocurren, entre otras, dos cosas: se añade el comando <code>python</code> (o <code>python3</code>, en caso de que instales la versión 3.x de Python) al path y se instala el intérprete de Python correspondiente. En el intérprete de Python podemos escribir expresiones e instrucciones que este interpretará y ejecutará.</p>
-                           
+                            <h4>Tipos de datos</h4>
+                          <p> Numérico MySQL ofrece una amplia gama de tipos numéricos que van desde enteros 
+                              pequeños hasta grandes números decimales:<br><br>
+
+                              TINYIN, SMALLINT, MEDIUMINT, INT, BIGINT: Estos tipos permiten almacenar enteros con diferentes rangos, 
+                               ya sea con o sin signo.DECIMAL, FLOAT, DOUBLE: 
+                              Para cálculos exactos o aproximados con números decimales.
+                          </p> <br> <br> 
+
+                          <p>
+                             Fecha y Marca Temporal MySQL proporciona varias opciones para almacenar fechas y horas:
+                             DATE, DATETIME: Para fechas y horas específicas.
+                             TIMESTAMP: Ideal para marcas temporales que automáticamente se actualizan.
+                             TIME, YEAR: Para almacenar solo la hora o el año respectivamente.
+                          </p> <br> <br> 
+
+                          <p>
+                             Cadena En el ámbito de las cadenas de caracteres, MySQL ofrece flexibilidad con opciones como:
+                             CHAR, VARCHAR: Para cadenas de longitud fija o variable.
+                             TEXT, MEDIUMTEXT, LONGTEXT: Para almacenar cantidades variables de texto.
+                             BLOB, MEDIUMBLOB, LONGBLOB: Para datos binarios grandes.
+                          </p> <br> <br> 
+
+                          <p>
+                             Espacial MySQL también soporta tipos de datos espaciales basados en OpenGIS,
+                              ideal para aplicaciones que manejan datos geoespaciales:<br>
+                              GEOMETRY, POINT, LINESTRING, POLYGON: Para almacenar puntos, líneas y polígonos.
+                              MULTIPOINT, MULTILINESTRING, MULTIPOLYGON, GEOMETRYCOLLECTION: Para colecciones de objetos espaciales.
+                         </p> <br> <br>
+                            
                         </div>
                         
                         <div class="box-model-part border">

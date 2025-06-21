@@ -5,8 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendiendo HTML - Guía Completa</title>
-    <link rel="stylesheet" href="/estilos/editor.css">
-    <link rel="stylesheet" href="Aprendiendohtml.css">
+    
+    
+    <meta name="description" content="Aprende HTML desde cero con esta guía completa. Descubre la estructura, etiquetas, colores, multimedia y más.">
+    <meta name="keywords" content="HTML, guía HTML, aprender HTML, etiquetas HTML, colores HTML, multimedia HTML, listas HTML, tablas HTML">
+    <meta name="author" content="developersinprocess">
+     <link rel="stylesheet" href="/estilos/editor.css">
+   <link rel="stylesheet" href="Aprendiendohtml.css">
+   
+      
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -21,8 +29,8 @@
     <nav class="main-nav">
         <div class="container">
             <ul>
-                <li><a href="/index.html">INICIO</a></li>
-                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="/index.html">INICIO.</a></li>
+                <li><a href="#introduccion">Introducción.</a></li>
                 <li><a href="#estructura">Estructura</a></li>
                 <li><a href="#texto">Texto</a></li>
                 <li><a href="#colores-html">Colores</a></li>
@@ -202,7 +210,8 @@
 
             <section id="texto" class="section">
                 <h2>Elementos de Texto</h2>
-
+                <img src="/imagenes/html-ENCABEZADOS.png" alt="Encamezadoros HTML" class="img-responsive">
+                                
                 <article class="article">
                     <h3 id="titulos-parrafos">Títulos y párrafos</h3>
                     <p>HTML proporciona 6 niveles de títulos:</p>
@@ -564,12 +573,26 @@
             <p>Guía educativa sobre HTML para principiantes</p>
         </div>
     </footer>
-
     <button id="backToTop" class="back-to-top" title="Volver arriba">↑</button>
 
+    <!-- SCRIPT -->
+     <script>
+// Solo si usas en el navegador (adaptar rutaEstilos.js para browser)
+if (typeof require !== 'undefined') {
+    const { buscarEstilo } = require('./js/rutaEstilos.js');
+    
+    // Buscar y mostrar rutas
+    console.log('Archivos CSS encontrados:');
+    console.log('editor.css:', buscarEstilo('editor.css'));
+    console.log('Aprendiendohtml.css:', buscarEstilo('Aprendiendohtml.css'));
+}
+</script>
+
+    
     <script src="aprendiendoHtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script src="/js/editor.js"></script>
+      
 </body>
 
 </html>

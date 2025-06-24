@@ -1,15 +1,15 @@
-.clima-header {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 280px;
-  padding: 15px;
-  background-color: transparent; /* Fondo transparente */
-  color: #222; /* Asegúrate de que el texto sea legible */
-  font-family: sans-serif;
+.clima-tarjeta {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 15px 20px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-#resultadoClima p {
-  margin: 8px 0;
-  font-size: 14px;
+.clima-tarjeta h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
 }

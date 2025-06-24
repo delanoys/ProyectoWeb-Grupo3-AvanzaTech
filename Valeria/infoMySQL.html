@@ -21,9 +21,9 @@
             <ul> <!--MZH: Pendiente enlazar a otras lecciones docs html-->
                 <li><a href="/index.html"><i class="fas fa-basics">Inicio</i></a>
                 </li>
-                <li><a href="#"><i class="fas fa-basics"></i>Introducción</a></li>
-                <li><a href="#">Tipos de datos</a></li>
-                <li><a href="#">Modelado de Datos</a></li>
+                <li><a href="#Introducción"><i class="fas fa-basics"></i>Introducción</a></li>
+                <li><a href="#TiposDatos">Tipos de datos</a></li>
+                <li><a href="#Modeladodatos">Modelado de Datos</a></li>
                 <li><a href="#">Diseño de tablas</a></li>
                 <li><a href="#">Consulta Básicas</a></li>
                
@@ -36,7 +36,7 @@
             <div class="resource-card">
                 <h3><i class="fas fa-bookmark"></i> Índice Rápido</h3>
                 <ul class="resource-list"> <!--MZH: Pendiente enlazar a subtítulos por lección-->
-                    <li><a href="#box-model"><i class="fas fa-square-full"></i> Subtítulo 1</a></li>
+                    <li><a href="#Bases"><i class="fas fa-square-full"></i> Base de Datos</a></li>
                     <li><a href="#flexbox-grid"><i class="fas fa-th-large"></i> Subtítulo 2</a></li>
                     <li><a href="#transiciones"><i class="fas fa-exchange-alt"></i> Subtítulo 3</a></li>
                     <li><a href="#keyframes"><i class="fas fa-film"></i> Subtítulo 4</a></li>
@@ -62,12 +62,12 @@
         <main>
             <!-- Sección de Diseño y Layout -->
             <section id="diseno-layout" class="section">
-                <h2><i class="fas fa-pencil-ruler"></i> Introducción</h2>
+                <h2 id="Introducción"><i class="fas fa-pencil-ruler"></i> Introducción</h2>
                 
                 <article class="article">
                     <p>Por Juan José Lozano Gómez, fuente: clic <a href="https://j2logo.com/">aquí.</a> </p> <!--MZH: Referenciando al autor de la lección-->
 
-                    <h3 id="box-model">Que es una base de datos</h3>
+                    <h3 id="Bases">Que es una base de datos</h3>
                     <p>Una base de datos es un conjunto organizado de datos que se almacenan y se gestionan de forma estructurada, permitiendo su acceso, manipulación y actualización de manera eficiente por medio de un sistema de 
                         gestión de bases de datos (SGBD)
                         <br>
@@ -78,22 +78,11 @@
                          El SGBD actúa como intermediario entre los usuarios y la base de datos, facilitando tareas como la consulta, inserción, actualización y eliminación de información.
 
                     </p>
-                    <div class="interactive-box-model">
-                        <div class="box-content-example">Haz clic en los botones de abajo</div>
-                    </div>
-                    
-                    <div class="box-model-controls">
-                        <button data-action="multiparadigma">Diferencias B relacionales </button>
-                        <button data-action="multiplataforma">Es multiplataforma</button>
-                        <button data-action="tipado">Es dinámicamente tipado</button>
-                        <button data-action="fuertemente">Es fuertemente tipado</button>
-                        <button data-action="interpretado">Es interpretado</button>
-                        <button data-action="reset">Resetear</button>
-                    </div>
+                   
                     
                     <div class="box-model-explanation">
                         <div class="box-model-part margin">
-                            <h4>Tipos de datos</h4>
+                            <h4 id="TiposDatos"> Tipos de datos</h4>
                           <p> Numérico MySQL ofrece una amplia gama de tipos numéricos que van desde enteros 
                               pequeños hasta grandes números decimales:<br><br>
 
@@ -114,19 +103,37 @@
                              CHAR, VARCHAR: Para cadenas de longitud fija o variable.
                              TEXT, MEDIUMTEXT, LONGTEXT: Para almacenar cantidades variables de texto.
                              BLOB, MEDIUMBLOB, LONGBLOB: Para datos binarios grandes.
-                          </p> <br> <br> 
+                          </p> <br> 
 
                           <p>
                              Espacial MySQL también soporta tipos de datos espaciales basados en OpenGIS,
                               ideal para aplicaciones que manejan datos geoespaciales:<br>
                               GEOMETRY, POINT, LINESTRING, POLYGON: Para almacenar puntos, líneas y polígonos.
                               MULTIPOINT, MULTILINESTRING, MULTIPOLYGON, GEOMETRYCOLLECTION: Para colecciones de objetos espaciales.
-                         </p> <br> <br>
-                            
+                         </p> 
+                         <img src="imgmysql/Diagrama.png" alt="Diagrama de tipos de datos MySQL" class="img-diagrama">
+                         <style>
+                            .img-diagrama {
+                                display: block;
+                                margin: 24px auto 0 auto;
+                                max-width: 420px;
+                                width: 95%;
+                                height: auto;
+                                border-radius: 10px;
+                                box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+                                transition: transform 0.35s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+                                will-change: transform;
+                            }
+                            .img-diagrama:hover {
+                                transform: scale(1.04) rotate(-1deg) translateY(-4px);
+                                box-shadow: 0 10px 28px rgba(0,0,0,0.16);
+                                cursor: pointer;
+                            }
+                         </style>
                         </div>
                         
                         <div class="box-model-part border">
-                            <h4>Modelado de Datos</h4>
+                            <h4 id="Modeladodatos">Modelado de Datos</h4>
                          <p>El modelado simplifica el diseño y el mantenimiento de bases de datos, permitiéndole al arquitecto de datos 
                             visualizar los requisitos y resolver problemas de diseño.
                             El diseño de bases de datos basado en modelos es una metodología eficiente para crear bases de datos válidas y de alto rendimiento, 
@@ -135,80 +142,104 @@
 
                             <h4><strong>Tipos de Relaciones</strong></h4>
                             <p>
-                                Uno a uno (1:1):
-                                Cada registro de una tabla se relaciona con un único registro de otra tabla, y viceversa.<br> <br>
-                                <img src="" alt="">
-                                
-                                Uno a muchos (1:N):
+                                Uno a uno (1:1):<br>
+                                Cada registro de una tabla se relaciona con un único registro de otra tabla, y viceversa.<br><br>
+                                <img src="imgmysql/img6.png" alt="" class="relacion-img">
+
+                                Uno a muchos (1:N):<br>
                                 Un registro de la primera tabla puede estar relacionado con varios registros de la segunda tabla, 
-                                pero cada registro de la segunda tabla se relaciona con un único registro de la primera.<br> <br>
-                                Muchos a muchos (N:N):
-                                Un registro de la primera tabla puede estar relacionado con varios registros de la segunda tabla, y viceversa.
-                                
+                                pero cada registro de la segunda tabla se relaciona con un único registro de la primera.<br><br>
+                                <img src="imgmysql/img5.png" alt="" class="relacion-img"><br>
+
+                                Muchos a muchos (N:N):<br>
+                                Un registro de la primera tabla puede estar relacionado con varios registros de la segunda tabla, y viceversa.<br>
+                                <img src="imgmysql/im4.png" alt="" class="relacion-img">
                             </p>
-
-
+                            <style>
+                            .relacion-img {
+                                display: block;
+                                margin: 18px auto 24px auto;
+                                max-width: 320px;
+                                width: 90%;
+                                height: auto;
+                                border-radius: 10px;
+                                box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+                                transition: transform 0.35s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+                                will-change: transform;
+                            }
+                            .relacion-img:hover {
+                                transform: scale(1.06) rotate(-1.5deg) translateY(-6px);
+                                box-shadow: 0 10px 28px rgba(0,0,0,0.16);
+                                cursor: pointer;
+                            }
+                            </style>
 
                             <img src="" alt="">
                            
                 
                         </div>
                         
-                        <div class="box-model-part padding">
+                        <div class="box-model-part padding" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                             <h4>Diseño de Tablas</h4>
-                            <p>Espacio interior entre el contenido y el borde</p>
-
+                            <p style="max-width: 600px;">
+                                En MySQL, el diseño de tablas es crucial para organizar y almacenar datos de manera eficiente y estructurada. 
+                                Las tablas son la base de cualquier base de datos relacional y permiten almacenar información en filas (registros) y columnas 
+                                (campos). El diseño de tablas implica definir la estructura de cada tabla, incluyendo los tipos de datos de las columnas,
+                                las claves primarias y foráneas, y las relaciones entre tablas.
+                            </p>
+                            <img class="img-move-hover" src="./imgmysql/img1.png" alt="Ejemplo de diseño de tabla en MySQL" style="display: block; margin: 20px auto; max-width: 100%; height: auto;">
                         </div>
+                        <style>
+                        .img-move-hover {
+                            transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+                            will-change: transform;
+                        }
+                        .img-move-hover:hover {
+                            transform: scale(1.07) rotate(-2deg) translateY(-8px);
+                            box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+                            cursor: pointer;
+                        }
+                        </style>
                     </div>
                 </article>
                 
                 <article class="article">
-                    <h3 id="flexbox-grid">Flexbox y Grid</h3>
+                    <h3 id="flexbox-grid">Consultas Básicas</h3>
+                   
 
                     <div class="box-model-part padding">
-                            <h4>Consultas Básicas</h4>
-                            <p></p>
+                            <h4></h4>
+                            <p>Las consultas básicas en Mysql sirven para manipular datos en las tablas creadas, 
+                        estas consultas también denomidanas como sentencias SELECT </p>
 
                         </div>
                     
-                    <div class="layout-comparison">
-                        <div class="layout-example">
-                            <h4>Flexbox (1D)</h4>
-                            <div class="flex-container-example">
-                                <div class="flex-item">nom</div>
-                                <div class="flex-item">900</div>
-                                <div class="flex-item">000</div>
-                            </div>
-                            <pre><code>.contenedor {
-    
-}</code></pre>
-                        </div>
+                
                         
-                        <div class="layout-example">
-                            <h4>CSS Grid (2D)</h4>
-                            <div class="grid-container-example">
-                                <div class="grid-item">1</div>
-                                <div class="grid-item">2</div>
-                                <div class="grid-item">3</div>
-                                <div class="grid-item">4</div>
-                                <div class="grid-item">5</div>
-                                <div class="grid-item">6</div>
-                            </div>
-                            <pre><code>.contenedor {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-}</code></pre>
+                        
+
+                             <div class="interactive-box-model">
+                        <div class="box-content-example">Haz clic en los botones de abajo</div>
+                    </div>
+                    
+                    <div class="box-model-controls">
+                        <button data-action="multiparadigma"> INSERT INTO</button>
+                        <button data-action="multiplataforma">SELECT</button>
+                        <button data-action="tipado">WHERE</button>
+                        <button data-action="fuertemente">UPDATE</button>
+                        <button data-action="DELETE">DELETE</button>
+                        <button data-action="LIMIT">LIMIT</button>
+                        <button data-action="ORDER BY">ORDER BY</button>
+                        <button data-action="GROUP BY">GROUP BY</button>
+                        
+                    </div>
+                            
+
+
                         </div>
                     </div>
                     
-                    <div class="use-cases">
-                        <h4>¿Cuándo usar cada uno?</h4>
-                        <ul>
-                            <li><strong>Flexbox</strong>: Diseños unidimensionales (filas o columnas), alineación precisa, componentes pequeños</li>
-                            <li><strong>Grid</strong>: Diseños bidimensionales complejos, layouts completos de página, estructuras regulares</li>
-                        </ul>
-                    </div>
+                    
                 </article>
             </section>
         

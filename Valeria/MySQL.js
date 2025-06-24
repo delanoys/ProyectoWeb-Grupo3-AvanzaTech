@@ -27,20 +27,32 @@ document.addEventListener('DOMContentLoaded', function() {
             
             switch(action) {
                 case 'multiparadigma':
-                    boxContent.textContent = 'Soporta la programación imperativa, programación orientada a objetos y funcional.';
+                    boxContent.textContent = 'Una vez creada la tabla, puedes agregar datos utilizando la instrucción INSERT INTO.';
                     break;
                 case 'multiplataforma':
-                    boxContent.textContent = 'Se puede encontrar un intérprete para Windows, Linux y Mac OS. Además, se puede reutilizar el mismo código.';
+                    boxContent.textContent = 'Para recuperar datos de la tabla, puedes utilizar la instrucción SELECT.';
                     break;
                 case 'tipado':
-                    boxContent.textContent = 'El tipo de las variables se decide en tiempo de ejecución.';
+                    boxContent.textContent = 'Si deseas obtener registros que cumplan ciertas condiciones, puedes usar la cláusula WHERE.';
                     break;
                 case 'fuertemente':
-                    boxContent.textContent = 'No se puede usar una variable en un contexto fuera de su tipo. Si se quisiera, habría que hacer una conversión de tipos.';
+                    boxContent.textContent = 'Para modificar los datos existentes en una tabla, utiliza la instrucción UPDATE junto con la cláusula WHERE para especificar qué registros actualizar.';
                     break;
-                case 'interpretado':
-                    boxContent.textContent = 'El código no se compila a lenguaje máquina.';
+                case 'DELETE':
+                    boxContent.textContent = 'Para eliminar registros de una tabla, utiliza la instrucción DELETE junto con la cláusula WHERE para especificar qué registros eliminar.';
                     break;
+
+                case 'LIMIT':
+                    boxContent.textContent = 'Si deseas obtener solo un número específico de registros, puedes usar la cláusula LIMIT.';
+                    break;
+
+                case 'ORDER BY':
+                    boxContent.textContent = 'Para ordenar los resultados en función de una o más columnas, utiliza la cláusula ORDER BY';
+                    break;
+                case 'GROUP BY':
+                    boxContent.textContent = 'Si deseas realizar operaciones agregadas, como sumas o conteos, puedes utilizar la cláusula GROUP BY.';
+                    break;
+
                 case 'reset':
                     interactiveBox.style.margin = '40px auto';
                     interactiveBox.style.padding = '30px';

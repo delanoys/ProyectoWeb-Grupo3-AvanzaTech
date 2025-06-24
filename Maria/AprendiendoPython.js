@@ -50,15 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Demo interactivo de animaciones
-    document.querySelectorAll('.animated-box').forEach(box => {
-        box.addEventListener('click', function() {
-            this.style.animationPlayState = 
-                this.style.animationPlayState === 'paused' ? 'running' : 'paused';
-        });
-    });
-    
+        
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {

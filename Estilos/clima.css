@@ -1,0 +1,95 @@
+/* .clima-tarjeta {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 15px 20px;
+  width: 460px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.clima-tarjeta h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+} */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 1s ease-in-out;
+}
+
+.clima-tarjeta {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 18px 22px;
+  max-width: 420px;
+  margin: 30px auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  color: #2c2c2c;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.clima-tarjeta em {
+  font-style: normal;
+  color: #666;
+  font-weight: bold;
+}
+
+.error {
+  color: #b00020;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Fondos dinámicos */
+.fondo-soleado {
+  background: linear-gradient(to top, #fbc687, #f7e98f);
+}
+
+.fondo-parcialmente-nublado {
+  background: linear-gradient(to top, #e2e2e2, #f7f7f7);
+}
+
+.fondo-nublado {
+  background: linear-gradient(to top, #a5a5a5, #d5d5d5);
+}
+
+.fondo-niebla {
+  background: linear-gradient(to top, #cfd9df, #e2ebf0);
+}
+
+.fondo-llovizna,
+.fondo-lluvia {
+  background: linear-gradient(to top, #5e768f, #c5d0db);
+  animation: lluvia 2s ease-in-out infinite alternate;
+}
+
+.fondo-nieve {
+  background: linear-gradient(to top, #e0f6ff, #ffffff);
+  animation: nieve 8s linear infinite alternate;
+}
+
+.fondo-tormenta {
+  background: linear-gradient(to top, #2c2c2c, #505050);
+  animation: parpadeo 0.2s ease-in-out infinite alternate;
+}
+
+/* Animaciones */
+@keyframes lluvia {
+  from { filter: brightness(0.95); }
+  to { filter: brightness(1.05); }
+}
+
+@keyframes nieve {
+  from { background-position: 0 0; }
+  to { background-position: 100% 100%; }
+}
+
+@keyframes parpadeo {
+  from { filter: brightness(0.8); }
+  to { filter: brightness(1.2); }
+}

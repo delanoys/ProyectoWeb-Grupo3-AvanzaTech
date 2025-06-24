@@ -1,0 +1,15 @@
+.clima-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 280px;
+  padding: 15px;
+  background-color: transparent; /* Fondo transparente */
+  color: #222; /* Asegúrate de que el texto sea legible */
+  font-family: sans-serif;
+}
+
+#resultadoClima p {
+  margin: 8px 0;
+  font-size: 14px;
+}

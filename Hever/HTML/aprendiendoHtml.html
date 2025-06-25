@@ -274,6 +274,12 @@
   Tu navegador no soporta el elemento de video.
 &lt;/video&gt;</code></pre>
 
+<p><strong>Insertar video desde youtube</strong> (HTML5):</p> 
+<pre><code>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/mNbnV3aN3KA" title="YouTube video player"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mNbnV3aN3KA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
                     <p><strong>Audio</strong> (HTML5):</p>
                     <pre><code>&lt;audio controls&gt;
   &lt;source src="audio.mp3" type="audio/mpeg"&gt;
@@ -465,81 +471,10 @@
             <p id="contador">Clics: 0</p>
             <button onclick="incrementarContador()">Incrementar Contador</button></textarea>
                         <textarea id="css" placeholder="Escribe tu CSS aquí..." cols="70">
-            <!-- body { 
-              font-family: sans-serif; 
-              background: #fefefe; 
-              padding: 20px;
-            }
             
-            h1 { 
-              color: #FF0000; 
-              text-align: center;
-            }
-            
-            table {
-              width: 100%;
-              border-collapse: collapse;
-              margin: 20px 0;
-            }
-            
-            th, td {
-              padding: 10px;
-              text-align: left;
-              border: 1px solid #ddd;
-            }
-            
-            th {
-              background-color: #f2f2f2;
-              font-weight: bold;
-            }
-            
-            button {
-              background-color: #007bff;
-              color: white;
-              padding: 10px 15px;
-              border: none;
-              border-radius: 5px;
-              cursor: pointer;
-              margin: 10px 5px;
-              font-size: 14px;
-            }
-            
-            button:hover {
-              background-color: #0056b3;
-            }
-            
-            #contador {
-              font-size: 18px;
-              font-weight: bold;
-              color: #333;
-            } -->
         </textarea>
                         <textarea id="js" placeholder="Escribe tu JavaScript aquí..." cols="70">
-            <!-- // Contador de clics
-            let contador = 0;
-            
-            function incrementarContador() {
-              contador++;
-              document.getElementById('contador').textContent = `Clics: ${contador}`;
-            }
-            
-            // Array de colores para cambiar el título
-            const colores = ['#FF0000', '#00FF00', '#0000FF', '#FF00FF', '#FFA500', '#800080'];
-            let indiceColor = 0;
-            
-            function cambiarColor() {
-              const titulo = document.querySelector('h1');
-              indiceColor = (indiceColor + 1) % colores.length;
-              titulo.style.color = colores[indiceColor];
-            }
-            
-            // Mensaje de bienvenida en la consola
-            console.log('¡Editor HTML-CSS-JS cargado correctamente!');
-            
-            // Función que se ejecuta al cargar la página
-            window.addEventListener('load', function() {
-              console.log('Página cargada. Puedes empezar a programar!');
-            }); -->
+       
         </textarea>
 
                         <div class="controls">

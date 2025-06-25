@@ -236,9 +236,16 @@ body {
 .newsletter-card button:hover {
     background-color: var(--secondary-color);
 }
-
+/* estilos tip   */
 .tip-card p {
     line-height: 1.5;
+    color: #4666f4;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.tip-card p:hover {
+    color: #1c2566;
+    transform: scale(1.08);
 }
 
 .tip-card code {
@@ -249,6 +256,8 @@ body {
     font-size: 0.9rem;
     color: var(--secondary-color);
 }
+
+
 
 /* Main Content */
 main {

@@ -37,14 +37,15 @@
             <div class="resource-card">
                 <h3><i class="fas fa-bookmark"></i> Índice Rápido</h3>
                 <ul class="resource-list"> <!--MZH: Pendiente enlazar a subtítulos por lección-->
-                    <li><a href="#Bases"><i class="fas fa-square-full"></i> Base de Datos</a></li>
-                    <li><a href="#tiposnumericos"><i class="fas fa-square-full"></i> Tipos Númericos</a></li>
+                    <li><a href="#Bases"><i class="fas fa-square-full"></i> Qué es una Base de Datos</a></li>
+                    <li><a href="#tiposnumericos"><i class="as fa-bullseye"></i> Tipos Númericos</a></li>
                     <li><a href="#tiposdecadena"><i class="fas fa-th-large"></i>Datos de Cadena</a></li>
                     <li><a href="#Datosbinarios"><i class="fas fa-film"></i>Datos Binarios</a></li>
                     <li><a href="#Colecciones"><i class="fas fa-exchange-alt"></i> Datos de Colección</a></li>
                     
-                    <li><a href="#selectores"><i class="fas fa-bullseye"></i> Subtítulo 5</a></li>
-                    <li><a href="#media-queries"><i class="fas fa-desktop"></i> Subtítulo 6</a></li>
+                    <li><a href="#unoauno"><i class="fas fa-bullseye"></i> Relación 1:1</a></li>
+                    <li><a href="#unomuchos"><i class="fas fa-desktop"></i> Relación 1:M</a></li>
+                    <li><a href="#unomuchos"><i class="fas fa-film"></i>Relación M:M</a></li>
                 </ul>
             </div>
             
@@ -278,7 +279,7 @@ Además, un buen SGBD garantiza:<br>
                                  Estas relaciones definen cómo interactúan los datos y son fundamentales para mantener la integridad y la eficiencia del sistema.<br><br>
 
                                   <h5 id="tiposderelaciones"><strong>  Existen tres tipos principales de relaciones:</strong></h5><br> <br>
-                                 <h4><strong> Uno a Uno (1:1) </h4></strong><br>
+                                 <h4 id="unoauno"><strong> Uno a Uno (1:1) </h4></strong><br>
 
                                     Cada registro en una tabla está relacionado con exactamente un solo registro en otra tabla, y viceversa.<br> 
                                     
@@ -317,7 +318,7 @@ Además, un buen SGBD garantiza:<br>
                             </p>
 
                                                         <p>
-                                                            <h4> <strong>Uno a Muchos </strong> </h4><br><br>
+                                                            <h4 id="unomuchos"> <strong>Uno a Muchos </strong> </h4><br><br>
                                                              Definición:<br>
                                                              Un solo registro en la primera tabla puede estar vinculado a múltiples registros en la segunda tabla. Sin embargo, cada registro de la segunda tabla solo puede estar relacionado con un registro de la primera.<br><br>
                                                              Cómo se implementa:
@@ -346,7 +347,7 @@ Además, un buen SGBD garantiza:<br>
                                                         </p>
 
                                                         <p>
-                                                            <h4><strong> Muchos a Muchos </strong></h4><br><br>
+                                                            <h4 id="muchoamuchos"><strong> Muchos a Muchos </strong></h4><br><br>
                                                             Definición:
                                                             Un registro en la primera tabla puede estar relacionado con muchos registros en la segunda tabla, y viceversa.<br><br>
 

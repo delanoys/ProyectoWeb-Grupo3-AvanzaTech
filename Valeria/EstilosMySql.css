@@ -535,6 +535,30 @@ main {
     transform: translateY(-3px);
 }
 
+/* Estilo general para imágenes de contenido */
+.img-diagrama,
+.relacion-img,
+.img-move-hover {
+    display: block;
+    margin: 24px auto;
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(28,37,102,0.10);
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    background: #fff;
+    border: 2px solid #f0f0f0;
+}
+
+/* Efecto de movimiento al pasar el cursor */
+.img-move-hover:hover {
+    transform: scale(1.04) rotate(-2deg) translateY(-8px);
+    box-shadow: 0 12px 32px rgba(28,37,102,0.18);
+    border-color: var(--primary-color);
+    z-index: 2;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .main-content {

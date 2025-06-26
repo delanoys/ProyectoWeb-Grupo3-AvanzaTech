@@ -91,13 +91,13 @@ Además, un buen SGBD garantiza:<br>
                         <div class="box-model-part margin">
                             <h4 id="TiposDatos"> Tipos de datos</h4>
                           <p> MySQL ofrece una amplia variedad de tipos de datos que permiten almacenar distintos tipos de información, desde números hasta datos espaciales.
-                             A continuación se detallan sus principales categorías:<br><br>
+                             A continuación se detallan sus principales categorías:<br><br><br>
                           
 
                           
                              <h3 id="tiposnumericos"><strong>Datos Numéricos</h3></strong>
                              Estos tipos de datos se utilizan para almacenar números, ya sean enteros o con decimales. 
-                             MySQL permite elegir el tipo según el tamaño del número que se necesita representar y si requiere decimales o no.<br><br>
+                             MySQL permite elegir el tipo según el tamaño del número que se necesita representar y si requiere decimales o no.<br><br><br>
                              
                              <br><br>
                              <strong> TINYINT:</strong> Ocupa 1 byte. Almacena números enteros pequeños (de -128 a 127 con signo, o de 0 a 255 sin signo).<br><br>
@@ -108,7 +108,7 @@ Además, un buen SGBD garantiza:<br>
                              
                              <strong> INT o INTEGER:</strong> 4 bytes. El tipo entero más común (de -2 mil millones a +2 mil millones aprox.).<br><br>
                              
-                             <strong> BIGINT: </strong>8 bytes. Para números muy grandes (hasta ±9 quintillones).<br><br>
+                             <strong> BIGINT: </strong>8 bytes. Para números muy grandes (hasta ±9 quintillones).<br><br><br>
                             
                           </p> <br> 
                               <p>
@@ -117,14 +117,14 @@ Además, un buen SGBD garantiza:<br>
                                     
                                     <strong>FLOAT:</strong>  Precisión aproximada en punto flotante. Más rápido que DECIMAL pero menos preciso.<br><br>
                                     
-                                   <strong> DOUBLE (o DOUBLE PRECISION):</strong> Similar a FLOAT pero con doble precisión.<br><br>
+                                   <strong> DOUBLE (o DOUBLE PRECISION):</strong> Similar a FLOAT pero con doble precisión.<br><br><br>
 
 
                               </p>
                            
 
                           <p>
-                             <h3 id="tipos de Fecha y Hora"><strong> Tipos de Fecha y Hora</strong></h3><br> <br> <br>
+                             <h3 id="tipos de Fecha y Hora"><strong> Tipos de Fecha y Hora</strong></h3><br> <br> <br><br>
                                  <strong> MySQL:</strong> proporciona varios tipos para manejar fechas y tiempos, fundamentales para registrar eventos, transacciones o programar acciones.<br> <br> 
                                  
                                  <strong> DATE: </strong>Almacena una fecha en formato ‘YYYY-MM-DD’.<br><br>
@@ -138,42 +138,61 @@ Además, un buen SGBD garantiza:<br>
                                  <strong>YEAR: </strong>  Representa solo un año (por ejemplo, '2025').<br><br>
 
 
-                                 <p>
-                                 <h3><strong id="tiposdecadena"> Tipos de Cadena </strong></h3>
-                                 Estos tipos permiten almacenar texto de diferentes tamaños y, en el caso de BLOB, también datos binarios como imágenes o archivos.<br><br>
-                                 
-                                 <br><br>
-                                 <strong>  CHAR: </strong> Cadena de longitud fija. Se rellenan espacios si el texto es más corto.<br><br>
-                                 
-                                 <strong> VARCHAR: </strong> Cadena de longitud variable. Más eficiente cuando los textos varían en tamaño.<br><br>
-                                 
-                                <strong> TEXT, TINYTEXT, MEDIUMTEXT, LONGTEXT: </strong> Tipos de texto largo para comentarios, artículos o grandes volúmenes de texto.<br><br>
-                                 
-                                <h3 id="Datosbinarios"> <strong> Datos Binarios </strong></h3><br><br>
-                                <strong> BLOB, TINYBLOB, MEDIUMBLOB, LONGBLOB:</strong> Tipos similares a TEXT, pero diseñados para almacenar archivos binarios (por ejemplo, imágenes, archivos PDF, etc.).<br><br>
+                                <p>
+                                    <h3><strong id="tiposdecadena"> Tipos de Cadena </strong></h3>
+                                    Estos tipos permiten almacenar texto de diferentes tamaños y, en el caso de BLOB, también datos binarios como imágenes o archivos.<br><br><br>
+                                    
+                                    <br><br>
+                                    <strong>  CHAR: </strong> Cadena de longitud fija. Se rellenan espacios si el texto es más corto.<br><br>
+                                    
+                                    <strong> VARCHAR: </strong> Cadena de longitud variable. Más eficiente cuando los textos varían en tamaño.<br><br>
+                                    
+                                    <strong> TEXT, TINYTEXT, MEDIUMTEXT, LONGTEXT: </strong> Tipos de texto largo para comentarios, artículos o grandes volúmenes de texto.<br><br>
+                                    
+                                    <h3 id="Datosbinarios"> <strong> Datos Binarios </strong></h3><br><br>
+                                    <strong> BLOB, TINYBLOB, MEDIUMBLOB, LONGBLOB:</strong> Tipos similares a TEXT, pero diseñados para almacenar archivos binarios (por ejemplo, imágenes, archivos PDF, etc.).<br><br>
 
-                               
+                                    <strong> Objetos simples</strong>
+                                    <strong> GEOMETRY:</strong> Tipo genérico para cualquier objeto espacial.<br><br>
+                                    
+                                    <strong> POINT:</strong>Un punto en el espacio (por ejemplo, una ubicación geográfica).<br><br>
+                                    
+                                    <strong> LINESTRING:</strong> Una línea formada por dos o más puntos.<br><br>
+                                    
+                                    <strong> POLYGON:</strong> Una figura cerrada, útil para representar áreas.<br><br>
+                                    
+                                    <h3 id="Colecciones"> <strong >Colecciones</strong> </h3><br> <br>
+                                    <strong> MULTIPOINT:</strong> Múltiples puntos.<br> <br>
+                                    
+                                    <strong> MULTILINESTRING:</strong> Varias líneas.<br><br>
+                                    
+                                    <strong> MULTIPOLYGON:</strong> Varias áreas o zonas.<br><br>
+                                    
+                                    <strong> GEOMETRYCOLLECTION:</strong> Colección de diferentes tipos espaciales.<br><br><br>
 
-                                 <strong> Objetos simples</strong>
-                                 <strong> GEOMETRY:</strong> Tipo genérico para cualquier objeto espacial.<br><br>
-                                 
-                                 <strong> POINT:</strong>Un punto en el espacio (por ejemplo, una ubicación geográfica).<br><br>
-                                 
-                                 <strong> LINESTRING:</strong> Una línea formada por dos o más puntos.<br><br>
-                                 
-                                 <strong> POLYGON:</strong> Una figura cerrada, útil para representar áreas.<br><br>
-                                 
-                                <h3 id="Colecciones"> <strong >Colecciones</strong> </h3><br> <br>
-                                 <strong> MULTIPOINT:</strong> Múltiples puntos.<br> <br>
-                                 
-                                 <strong> MULTILINESTRING:</strong> Varias líneas.<br><br>
-                                 
-                                 <strong> MULTIPOLYGON:</strong> Varias áreas o zonas.<br><br>
-                                 
-                                 <strong> GEOMETRYCOLLECTION:</strong> Colección de diferentes tipos espaciales.
-                             </p>
-                          
-                          <br> 
+                                    <img src="./imgmysql/tipos de datos.png" alt="Tipos de datos MySQL" class="img-diagrama">
+
+                                    <style>
+                                        .img-diagrama {
+                                            display: block;
+                                            margin: 24px auto 0 auto;
+                                            max-width: 420px;
+                                            width: 95%;
+                                            height: auto;
+                                            border-radius: 10px;
+                                            box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+                                            transition: transform 0.35s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+                                            will-change: transform;
+                                        }
+                                        .img-diagrama:hover {
+                                            transform: scale(1.04) rotate(-1deg) translateY(-4px);
+                                            box-shadow: 0 10px 28px rgba(0,0,0,0.16);
+                                            cursor: pointer;
+                                        }
+                                    </style>
+                                </p>
+
+                                <br>
 
 
                           
@@ -206,7 +225,7 @@ Además, un buen SGBD garantiza:<br>
                                 box-shadow: 0 10px 28px rgba(0,0,0,0.16);
                                 cursor: pointer;
                             }
-                         </style>
+                         </style> <br><br> <br>
 
 
                              <h4 id="importanciadtb"><strong>¿Por qué es importante el modelado de datos?</h4></strong> <br>

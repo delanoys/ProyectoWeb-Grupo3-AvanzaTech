@@ -3,9 +3,10 @@
     --secondary-color: #1c2566;
     --dark-color: #1a1a2e;
     --light-color: #f8f9fa;
-    --shadow-color: rgba(0,0,0, 2.5);
+    --shadow-color:  #9b9b9b8f;
     --success-color: #28a745;
     --card-bg: #ffffff;
+
 
     /* tamaño texto parrafo */
     --textParrafo:  1.3rem;
@@ -51,7 +52,7 @@ body {
     text-align: center;
     margin-bottom: 2rem;
     border-radius: 10px;
-    box-shadow: 0 10px 30px var(--shadow-color);
+    
 }
 
 .main-header h1 {
@@ -71,7 +72,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 5px 15px var(--shadow-color);
     backdrop-filter: blur(8px);
     margin-bottom: 30px;
     border-radius: 8px;
@@ -122,7 +122,7 @@ body {
     background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 5px 20px var(--shadow-color);
+    box-shadow: 0 1px 5px var(--shadow-color);
 }
 
 .resource-card h3, .newsletter-card h3, .tip-card h3 {

@@ -6,6 +6,7 @@
     <title>Aprende MySQL</title>
     <link rel="stylesheet" href="EstilosMySql.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 </head>
 <body>
     <header class="main-header">
@@ -24,8 +25,8 @@
                 <li><a href="#Introducción"><i class="fas fa-basics"></i>Introducción</a></li>
                 <li><a href="#TiposDatos">Tipos de datos</a></li>
                 <li><a href="#Modeladodatos">Modelado de Datos</a></li>
-                <li><a href="#">Diseño de tablas</a></li>
-                <li><a href="#">Consulta Básicas</a></li>
+                <li><a href="#DiseñoTablas">Diseño de tablas</a></li>
+                <li><a href="#flexbox-grid">Consulta Básicas</a></li>
                
             </ul>
         </div>
@@ -37,15 +38,17 @@
                 <h3><i class="fas fa-bookmark"></i> Índice Rápido</h3>
                 <ul class="resource-list"> <!--MZH: Pendiente enlazar a subtítulos por lección-->
                     <li><a href="#Bases"><i class="fas fa-square-full"></i> Base de Datos</a></li>
-                    <li><a href="#flexbox-grid"><i class="fas fa-th-large"></i> Subtítulo 2</a></li>
-                    <li><a href="#transiciones"><i class="fas fa-exchange-alt"></i> Subtítulo 3</a></li>
-                    <li><a href="#keyframes"><i class="fas fa-film"></i> Subtítulo 4</a></li>
+                    <li><a href="#tiposnumericos"><i class="fas fa-square-full"></i> Tipos Númericos</a></li>
+                    <li><a href="#tiposdecadena"><i class="fas fa-th-large"></i>Datos de Cadena</a></li>
+                    <li><a href="#Datosbinarios"><i class="fas fa-film"></i>Datos Binarios</a></li>
+                    <li><a href="#Colecciones"><i class="fas fa-exchange-alt"></i> Datos de Colección</a></li>
+                    
                     <li><a href="#selectores"><i class="fas fa-bullseye"></i> Subtítulo 5</a></li>
                     <li><a href="#media-queries"><i class="fas fa-desktop"></i> Subtítulo 6</a></li>
                 </ul>
             </div>
             
-            <div class="newsletter-card">
+            <div class="newsletter-card"> 
                 <h3><i class="fas fa-envelope"></i> Newsletter</h3>
                 <form id="newsletterForm">
                     <input type="email" placeholder="Tu email" required>
@@ -53,10 +56,7 @@
                 </form>
             </div>
 
-            <div class="tip-card">
-                <h3><i class="fas fa-lightbulb"></i> Tip del Día</h3>
-                <p>Asigna un valor a una variable usando el operador de asignación <code>(=)</code> y luego imprímelo con <code>print()</code></p>
-            </div>
+           
         </aside>
 
         <main>
@@ -64,54 +64,131 @@
             <section id="diseno-layout" class="section">
                 <h2 id="Introducción"><i class="fas fa-pencil-ruler"></i> Introducción</h2>
                 
-                <article class="article">
-                    <p>Por Juan José Lozano Gómez, fuente: clic <a href="https://j2logo.com/">aquí.</a> </p> <!--MZH: Referenciando al autor de la lección-->
+              
+
+
+
 
                     <h3 id="Bases">Que es una base de datos</h3>
-                    <p>Una base de datos es un conjunto organizado de datos que se almacenan y se gestionan de forma estructurada, permitiendo su acceso, manipulación y actualización de manera eficiente por medio de un sistema de 
-                        gestión de bases de datos (SGBD)
-                        <br>
-                        <br>
-                        <strong>¿Qué es un SGBD?</strong>(Sistema de Gestión de Bases de Datos)
-                        Es un conjunto de programas de software que permiten definir, crear,
-                         mantener y controlar el acceso a una base de datos, garantizando la integridad, seguridad y consistencia de los datos. 
-                         El SGBD actúa como intermediario entre los usuarios y la base de datos, facilitando tareas como la consulta, inserción, actualización y eliminación de información.
+                    <p>¿Qué es un SGBD? (Sistema de Gestión de Bases de Datos)
+Un Sistema de Gestión de Bases de Datos (SGBD) es un conjunto de programas de software especializado que se utiliza para crear, administrar y manipular bases de datos. Este sistema permite definir la estructura de la base de datos (por ejemplo, qué tipo de datos se almacenarán y cómo se relacionarán entre sí), así como ingresar, modificar, consultar o eliminar información de forma controlada.
 
+El SGBD actúa como un intermediario entre los usuarios y la base de datos, asegurando que las operaciones que se realicen sobre los datos sean correctas, seguras y eficientes. Esto significa que el SGBD protege la información frente a errores, accesos no autorizados y pérdidas accidentales.
+
+Además, un buen SGBD garantiza:<br>
+
+<strong> integridad de los datos:</strong> asegura que los datos almacenados sean correctos y coherentes con las reglas definidas.<br>
+
+<strong> seguridad: </strong>controla quién puede acceder a la base de datos y qué operaciones puede realizar.<br>
+
+<strong> consistencia:</strong> asegura que las transacciones (grupos de operaciones) se completen correctamente, o en caso contrario, que no tengan efecto alguno, evitando que la base de datos quede en un estado incorrecto.<br>
+
+<strong>disponibilidad y rendimiento:</strong> permite que múltiples usuarios accedan a los datos simultáneamente sin afectar negativamente la velocidad de respuesta o el correcto funcionamiento del sistema.<br>
                     </p>
                    
                     
                     <div class="box-model-explanation">
                         <div class="box-model-part margin">
                             <h4 id="TiposDatos"> Tipos de datos</h4>
-                          <p> Numérico MySQL ofrece una amplia gama de tipos numéricos que van desde enteros 
-                              pequeños hasta grandes números decimales:<br><br>
+                          <p> MySQL ofrece una amplia variedad de tipos de datos que permiten almacenar distintos tipos de información, desde números hasta datos espaciales.
+                             A continuación se detallan sus principales categorías:<br><br>
+                          
 
-                              TINYIN, SMALLINT, MEDIUMINT, INT, BIGINT: Estos tipos permiten almacenar enteros con diferentes rangos, 
-                               ya sea con o sin signo.DECIMAL, FLOAT, DOUBLE: 
-                              Para cálculos exactos o aproximados con números decimales.
-                          </p> <br> <br> 
-
-                          <p>
-                             Fecha y Marca Temporal MySQL proporciona varias opciones para almacenar fechas y horas:
-                             DATE, DATETIME: Para fechas y horas específicas.
-                             TIMESTAMP: Ideal para marcas temporales que automáticamente se actualizan.
-                             TIME, YEAR: Para almacenar solo la hora o el año respectivamente.
-                          </p> <br> <br> 
-
-                          <p>
-                             Cadena En el ámbito de las cadenas de caracteres, MySQL ofrece flexibilidad con opciones como:
-                             CHAR, VARCHAR: Para cadenas de longitud fija o variable.
-                             TEXT, MEDIUMTEXT, LONGTEXT: Para almacenar cantidades variables de texto.
-                             BLOB, MEDIUMBLOB, LONGBLOB: Para datos binarios grandes.
+                          
+                             <h3 id="tiposnumericos"><strong>Datos Numéricos</h3></strong>
+                             Estos tipos de datos se utilizan para almacenar números, ya sean enteros o con decimales. 
+                             MySQL permite elegir el tipo según el tamaño del número que se necesita representar y si requiere decimales o no.<br><br>
+                             
+                             <br><br>
+                             <strong> TINYINT:</strong> Ocupa 1 byte. Almacena números enteros pequeños (de -128 a 127 con signo, o de 0 a 255 sin signo).<br><br>
+                             
+                             <strong> SMALLINT:</strong> 2 bytes. Útil para cantidades mayores (de -32,768 a 32,767 con signo).<br><br>
+                             
+                             <strong> MEDIUMINT:</strong> 3 bytes. Abarca un rango más amplio (hasta ±8 millones aprox.).<br><br>
+                             
+                             <strong> INT o INTEGER:</strong> 4 bytes. El tipo entero más común (de -2 mil millones a +2 mil millones aprox.).<br><br>
+                             
+                             <strong> BIGINT: </strong>8 bytes. Para números muy grandes (hasta ±9 quintillones).<br><br>
+                            
                           </p> <br> 
+                              <p>
+                                
+                                   <strong> DECIMAL (o NUMERIC):</strong> Precisión exacta. Ideal para valores monetarios o cálculos donde se requiere evitar errores de redondeo.<br><br>
+                                    
+                                    <strong>FLOAT:</strong>  Precisión aproximada en punto flotante. Más rápido que DECIMAL pero menos preciso.<br><br>
+                                    
+                                   <strong> DOUBLE (o DOUBLE PRECISION):</strong> Similar a FLOAT pero con doble precisión.<br><br>
+
+
+                              </p>
+                           
 
                           <p>
-                             Espacial MySQL también soporta tipos de datos espaciales basados en OpenGIS,
-                              ideal para aplicaciones que manejan datos geoespaciales:<br>
-                              GEOMETRY, POINT, LINESTRING, POLYGON: Para almacenar puntos, líneas y polígonos.
-                              MULTIPOINT, MULTILINESTRING, MULTIPOLYGON, GEOMETRYCOLLECTION: Para colecciones de objetos espaciales.
+                             <h3 id="tipos de Fecha y Hora"><strong> Tipos de Fecha y Hora</strong></h3><br> <br> <br>
+                                 <strong> MySQL:</strong> proporciona varios tipos para manejar fechas y tiempos, fundamentales para registrar eventos, transacciones o programar acciones.<br> <br> 
+                                 
+                                 <strong> DATE: </strong>Almacena una fecha en formato ‘YYYY-MM-DD’.<br><br>
+                                 
+                                 <strong> DATETIME:</strong> Almacena fecha y hora en formato ‘YYYY-MM-DD HH:MM:SS’.<br><br>
+                                 
+                                 <strong>TIMESTAMP:</strong>  Similar a DATETIME pero con zona horaria. Ideal para registrar marcas temporales que se actualizan automáticamente.<br><br>
+                                 
+                                 <strong> TIME: </strong> Almacena solo una hora (por ejemplo, '12:45:30').<br><br>
+                                 
+                                 <strong>YEAR: </strong>  Representa solo un año (por ejemplo, '2025').<br><br>
+
+
+                                 <p>
+                                 <h3><strong id="tiposdecadena"> Tipos de Cadena </strong></h3>
+                                 Estos tipos permiten almacenar texto de diferentes tamaños y, en el caso de BLOB, también datos binarios como imágenes o archivos.<br><br>
+                                 
+                                 <br><br>
+                                 <strong>  CHAR: </strong> Cadena de longitud fija. Se rellenan espacios si el texto es más corto.<br><br>
+                                 
+                                 <strong> VARCHAR: </strong> Cadena de longitud variable. Más eficiente cuando los textos varían en tamaño.<br><br>
+                                 
+                                <strong> TEXT, TINYTEXT, MEDIUMTEXT, LONGTEXT: </strong> Tipos de texto largo para comentarios, artículos o grandes volúmenes de texto.<br><br>
+                                 
+                                <h3 id="Datosbinarios"> <strong> Datos Binarios </strong></h3><br><br>
+                                <strong> BLOB, TINYBLOB, MEDIUMBLOB, LONGBLOB:</strong> Tipos similares a TEXT, pero diseñados para almacenar archivos binarios (por ejemplo, imágenes, archivos PDF, etc.).<br><br>
+
+                               
+
+                                 <strong> Objetos simples</strong>
+                                 <strong> GEOMETRY:</strong> Tipo genérico para cualquier objeto espacial.<br><br>
+                                 
+                                 <strong> POINT:</strong>Un punto en el espacio (por ejemplo, una ubicación geográfica).<br><br>
+                                 
+                                 <strong> LINESTRING:</strong> Una línea formada por dos o más puntos.<br><br>
+                                 
+                                 <strong> POLYGON:</strong> Una figura cerrada, útil para representar áreas.<br><br>
+                                 
+                                <h3 id="Colecciones"> <strong >Colecciones</strong> </h3><br> <br>
+                                 <strong> MULTIPOINT:</strong> Múltiples puntos.<br> <br>
+                                 
+                                 <strong> MULTILINESTRING:</strong> Varias líneas.<br><br>
+                                 
+                                 <strong> MULTIPOLYGON:</strong> Varias áreas o zonas.<br><br>
+                                 
+                                 <strong> GEOMETRYCOLLECTION:</strong> Colección de diferentes tipos espaciales.
+                             </p>
+                          
+                          <br> 
+
+
+                          
                          </p> 
-                         <img src="imgmysql/Diagrama.png" alt="Diagrama de tipos de datos MySQL" class="img-diagrama">
+                        
+                        </div>
+                        
+                        <div class="box-model-part border">
+                            <h4 id="Modeladodatos"><strong> Modelado de Datos </strong></h4>
+                         <p>El modelado de datos es un proceso fundamental en el diseño de sistemas de información,
+                              ya que permite representar de forma visual, lógica y estructurada los datos y las relaciones entre ellos dentro de una organización o sistema.
+                              Su propósito es facilitar la comprensión,
+                              organización y posterior implementación de una base de datos que sea eficiente,
+                              coherente y adaptable a las necesidades reales del negocio o proyecto.<br><br><br>
+                               <img src="imgmysql/Diagrama.png" alt="Diagrama de tipos de datos MySQL" class="img-diagrama">
                          <style>
                             .img-diagrama {
                                 display: block;
@@ -130,57 +207,162 @@
                                 cursor: pointer;
                             }
                          </style>
-                        </div>
-                        
-                        <div class="box-model-part border">
-                            <h4 id="Modeladodatos">Modelado de Datos</h4>
-                         <p>El modelado simplifica el diseño y el mantenimiento de bases de datos, permitiéndole al arquitecto de datos 
-                            visualizar los requisitos y resolver problemas de diseño.
-                            El diseño de bases de datos basado en modelos es una metodología eficiente para crear bases de datos válidas y de alto rendimiento, 
-                            a la vez que proporciona la flexibilidad necesaria para responder a la evolución de los requisitos de datos. 
-                            Los modelos se utilizan para crear diagramas EER y bases de datos físicas MySQL</p> <br>
+
+
+                             <h4 id="importanciadtb"><strong>¿Por qué es importante el modelado de datos?</h4></strong> <br>
+                                El modelado simplifica tanto el diseño inicial como el mantenimiento futuro de una base de datos. A través de este proceso, el arquitecto de datos o el diseñador puede:
+                                
+                                Visualizar claramente los requisitos de información del sistema.<br><br>
+                                
+                                Establecer la estructura lógica de los datos antes de construir físicamente la base de datos.<br><br>
+                                
+                                Identificar problemas potenciales de diseño, como redundancias, dependencias innecesarias o relaciones incorrectas.<br><br>
+                                
+                                Asegurar que los datos estén organizados de manera que faciliten la consulta, actualización y gestión eficiente.<br><br>
+                                
+                                Reducir errores y costos en etapas posteriores del desarrollo.<br><br>
+
+                                 <h4><strong>Tipos de Modelado de Datos</strong></h4><br>
+                                  El proceso de modelado se desarrolla generalmente en tres niveles:<br><br>
+                                  
+                                  Modelo conceptual:
+                                  
+                                  Representa la estructura general de la información sin entrar en detalles técnicos.<br><br>
+                                  
+                                  Utiliza herramientas como el modelo Entidad-Relación (ER) o su versión extendida (EER, Entidad-Relación Extendida).<br><br>
+                                  
+                                  Identifica entidades (objetos importantes), atributos (características) y relaciones (cómo se vinculan las entidades).<br><br>
+                                  
+                                  Modelo lógico:
+                                  
+                                  Traduce el modelo conceptual a un formato lógico compatible con un tipo específico de base de datos (por ejemplo, relacional).<br><br>
+                                  
+                                  Define tablas, claves primarias, claves foráneas, tipos de datos, restricciones, normalización, etc.<br><br>
+                                  
+                                  Modelo físico:
+                                  
+                                  Detalla cómo se almacenarán los datos físicamente en un sistema de gestión de bases de datos (SGBD), como MySQL.<br><br>
+                                  
+                                  Incluye consideraciones de rendimiento, índices, almacenamiento y configuraciones específicas del sistema.
+
+
+                            
+                            
+                            
+                            </p> <br>
 
                             <h4><strong>Tipos de Relaciones</strong></h4>
+
                             <p>
-                                Uno a uno (1:1):<br>
-                                Cada registro de una tabla se relaciona con un único registro de otra tabla, y viceversa.<br><br>
-                                <img src="imgmysql/img6.png" alt="" class="relacion-img">
+                                En el contexto del diseño de bases de datos, especialmente cuando se utilizan modelos relacionales,
+                                 las relaciones entre tablas permiten vincular datos que están distribuidos en distintas entidades.
+                                 Estas relaciones definen cómo interactúan los datos y son fundamentales para mantener la integridad y la eficiencia del sistema.<br><br>
 
-                                Uno a muchos (1:N):<br>
-                                Un registro de la primera tabla puede estar relacionado con varios registros de la segunda tabla, 
-                                pero cada registro de la segunda tabla se relaciona con un único registro de la primera.<br><br>
-                                <img src="imgmysql/img5.png" alt="" class="relacion-img"><br>
+                                  <h5 id="tiposderelaciones"><strong>  Existen tres tipos principales de relaciones:</strong></h5><br> <br>
+                                 <h4><strong> Uno a Uno (1:1) </h4></strong><br>
 
-                                Muchos a muchos (N:N):<br>
-                                Un registro de la primera tabla puede estar relacionado con varios registros de la segunda tabla, y viceversa.<br>
-                                <img src="imgmysql/im4.png" alt="" class="relacion-img">
+                                    Cada registro en una tabla está relacionado con exactamente un solo registro en otra tabla, y viceversa.<br> 
+                                    
+                                    
+                                    Aplicaciones típicas:<br>
+                                    
+                                    Datos que se desean separar por seguridad o privacidad (por ejemplo, información médica).<br>
+                                    
+                                    Datos que no siempre se aplican a todos los registros (como un pasaporte en personas: no todas lo tienen).<br>
+                                    
+                                    Dividir información por motivos de rendimiento.<br>
+                                    
+                                    Cómo se implementa:<br>
+                                    Usualmente mediante claves primarias compartidas, donde la clave primaria de una tabla es también clave foránea de la otra.
                             </p>
+                            <img src="../Valeria/imgmysql/img6.png" alt="Ejemplo relación uno a uno en MySQL" class="relacion-img">
                             <style>
                             .relacion-img {
-                                display: block;
-                                margin: 18px auto 24px auto;
-                                max-width: 320px;
-                                width: 90%;
-                                height: auto;
-                                border-radius: 10px;
-                                box-shadow: 0 4px 18px rgba(0,0,0,0.10);
-                                transition: transform 0.35s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
-                                will-change: transform;
+                                 display: block;
+                                 margin: 18px auto 24px auto;
+                                 max-width: 320px;
+                                 width: 90%;
+                                 height: auto;
+                                 border-radius: 10px;
+                                 box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+                                 transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+                                 will-change: transform;
                             }
                             .relacion-img:hover {
-                                transform: scale(1.06) rotate(-1.5deg) translateY(-6px);
-                                box-shadow: 0 10px 28px rgba(0,0,0,0.16);
-                                cursor: pointer;
+                                 transform: scale(1.07) rotate(-2deg) translateY(-8px);
+                                 box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+                                 cursor: pointer;
                             }
                             </style>
 
-                            <img src="" alt="">
+                            </p>
+
+                                                        <p>
+                                                            <h4> <strong>Uno a Muchos </strong> </h4><br><br>
+                                                             Definición:<br>
+                                                             Un solo registro en la primera tabla puede estar vinculado a múltiples registros en la segunda tabla. Sin embargo, cada registro de la segunda tabla solo puede estar relacionado con un registro de la primera.<br><br>
+                                                             Cómo se implementa:
+                                                             La segunda tabla (el lado “muchos”) incluye una clave foránea que hace referencia a la clave primaria de la tabla del lado “uno”.
+                                                             
+                                                             <img src="../Valeria/imgmysql/img5.png" alt="Ejemplo relación uno a muchos en MySQL" class="relacion-img">
+                                                             <style>
+                                                                .relacion-img {
+                                                                    display: block;
+                                                                    margin: 18px auto 24px auto;
+                                                                    max-width: 320px;
+                                                                    width: 90%;
+                                                                    height: auto;
+                                                                    border-radius: 10px;
+                                                                    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+                                                                    transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+                                                                    will-change: transform;
+                                                                }
+                                                                .relacion-img:hover {
+                                                                    transform: scale(1.07) rotate(-2deg) translateY(-8px);
+                                                                    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+                                                                    cursor: pointer;
+                                                                }
+                                                             </style>
+                                                             
+                                                        </p>
+
+                                                        <p>
+                                                            <h4><strong> Muchos a Muchos </strong></h4><br><br>
+                                                            Definición:
+                                                            Un registro en la primera tabla puede estar relacionado con muchos registros en la segunda tabla, y viceversa.<br><br>
+
+                                                            Cómo se implementa:
+                                                            Este tipo de relación requiere una tabla intermedia o tabla puente (también llamada tabla de unión o junction table), 
+                                                            que contiene las claves foráneas de ambas tablas principales
+
+                                                            <img src="../Valeria/imgmysql/im4.png" alt="Ejemplo relación muchos a muchos en MySQL" class="relacion-img">
+                                                            <style>
+                                                                .relacion-img {
+                                                                    display: block;
+                                                                    margin: 18px auto 24px auto;
+                                                                    max-width: 320px;
+                                                                    width: 90%;
+                                                                    height: auto;
+                                                                    border-radius: 10px;
+                                                                    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+                                                                    transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+                                                                    will-change: transform;
+                                                                }
+                                                                .relacion-img:hover {
+                                                                    transform: scale(1.07) rotate(-2deg) translateY(-8px);
+                                                                    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+                                                                    cursor: pointer;
+                                                                }
+                                                            </style>
+                                                        </p>
+                            
+
                            
                 
                         </div>
                         
                         <div class="box-model-part padding" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                            <h4>Diseño de Tablas</h4>
+                            <h4 id="DiseñoTablas">Diseño de Tablas</h4>
                             <p style="max-width: 600px;">
                                 En MySQL, el diseño de tablas es crucial para organizar y almacenar datos de manera eficiente y estructurada. 
                                 Las tablas son la base de cualquier base de datos relacional y permiten almacenar información en filas (registros) y columnas 
@@ -263,6 +445,13 @@
     </button>
 
     <script src="MySQL.js"></script>
+
+      <article class="article">
+                    <p>Referecencias investigativas <a href="https://dev.mysql.com/doc/ ">aquí.</a>
+                    Elmasri, R., & Navathe, S. B. (2016). Fundamentals of Database Systems (7th ed.). Pearson.
+                    Connolly, T., & Begg, C. (2014). Database Systems: A Practical Approach to Design, Implementation,
+                    and Management (6th ed.). Pearson. </p> <!--MZH: Referenciando al autor de la lección-->
+</p>
             
 </body>
 </html>

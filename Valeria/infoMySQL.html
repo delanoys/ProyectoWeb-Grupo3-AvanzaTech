@@ -103,8 +103,8 @@
             <h4 id="TiposDatos">Tipos de datos</h4>
             <p>
                 MySQL ofrece una amplia variedad de tipos de datos que permiten almacenar distintos tipos de información, desde números hasta datos espaciales. A continuación se detallan sus principales categorías:
-            </p>
-            <h3 id="tiposnumericos"><strong>Datos Numéricos</strong></h3>
+            </p><br>
+            <h3 id="tiposnumericos"><strong>Datos Numéricos</strong></h3><br>
             <p>
                 Estos tipos de datos se utilizan para almacenar números, ya sean enteros o con decimales. MySQL permite elegir el tipo según el tamaño del número que se necesita representar y si requiere decimales o no.
             </p>
@@ -115,9 +115,9 @@
             <p><strong>BIGINT:</strong> 8 bytes. Para números muy grandes (hasta ±9 quintillones).</p>
             <p><strong>DECIMAL (o NUMERIC):</strong> Precisión exacta. Ideal para valores monetarios o cálculos donde se requiere evitar errores de redondeo.</p>
             <p><strong>FLOAT:</strong> Precisión aproximada en punto flotante. Más rápido que DECIMAL pero menos preciso.</p>
-            <p><strong>DOUBLE (o DOUBLE PRECISION):</strong> Similar a FLOAT pero con doble precisión.</p>
+            <p><strong>DOUBLE (o DOUBLE PRECISION):</strong> Similar a FLOAT pero con doble precisión.</p><br>
 
-            <h3 id="tipos de Fecha y Hora"><strong>Tipos de Fecha y Hora</strong></h3>
+            <h3 id="tipos de Fecha y Hora"><strong>Tipos de Fecha y Hora</strong></h3><br>
             <p>
                 <strong>MySQL:</strong> proporciona varios tipos para manejar fechas y tiempos, fundamentales para registrar eventos, transacciones o programar acciones.
             </p>
@@ -125,18 +125,18 @@
             <p><strong>DATETIME:</strong> Almacena fecha y hora en formato ‘YYYY-MM-DD HH:MM:SS’.</p>
             <p><strong>TIMESTAMP:</strong> Similar a DATETIME pero con zona horaria. Ideal para registrar marcas temporales que se actualizan automáticamente.</p>
             <p><strong>TIME:</strong> Almacena solo una hora (por ejemplo, '12:45:30').</p>
-            <p><strong>YEAR:</strong> Representa solo un año (por ejemplo, '2025').</p>
+            <p><strong>YEAR:</strong> Representa solo un año (por ejemplo, '2025').</p><br>
 
-        <h3 id="tiposdecadena"><strong>Tipos de Cadena</strong></h3>
+        <h3 id="tiposdecadena"><strong>Tipos de Cadena</strong></h3><br>
         <p>
             Estos tipos permiten almacenar texto de diferentes tamaños y, en el caso de BLOB, también datos binarios como imágenes o archivos.
         </p>
         <p><strong>CHAR:</strong> Cadena de longitud fija. Se rellenan espacios si el texto es más corto.</p>
         <p><strong>VARCHAR:</strong> Cadena de longitud variable. Más eficiente cuando los textos varían en tamaño.</p>
-        <p><strong>TEXT, TINYTEXT, MEDIUMTEXT, LONGTEXT:</strong> Tipos de texto largo para comentarios, artículos o grandes volúmenes de texto.</p>
+        <p><strong>TEXT, TINYTEXT, MEDIUMTEXT, LONGTEXT:</strong> Tipos de texto largo para comentarios, artículos o grandes volúmenes de texto.</p><br>
 
-        <h3 id="Datosbinarios"><strong>Datos Binarios</strong></h3>
-        <p><strong>BLOB, TINYBLOB, MEDIUMBLOB, LONGBLOB:</strong> Tipos similares a TEXT, pero diseñados para almacenar archivos binarios (por ejemplo, imágenes, archivos PDF, etc.).</p>
+        <h3 id="Datosbinarios"><strong>Datos Binarios</strong></h3><br>
+        <p><strong>BLOB, TINYBLOB, MEDIUMBLOB, LONGBLOB:</strong> Tipos similares a TEXT, pero diseñados para almacenar archivos binarios (por ejemplo, imágenes, archivos PDF, etc.).</p><br>
 
         <h4><strong>Objetos simples</strong></h4>
         <p><strong>GEOMETRY:</strong> Tipo genérico para cualquier objeto espacial.</p>

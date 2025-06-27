@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="AprendiendoGIT.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <!-- Header -->
@@ -17,57 +19,72 @@
 
         <!-- Navigation -->
         <nav class="main-nav">
-            <ul>
-                <li><a href="AprendiendoGIT.html">AprendiendoGIT</a></li>
-                <li><a href="#comandos-recientes"><i class="fas fa-clock"></i> Comandos Recientes</a></li>
-                <li><a href="#iniciando-repo"><i class="fas fa-plus-circle"></i> Iniciar Repo</a></li>
-                <li><a href="#actualizar-ramas"><i class="fas fa-code-branch"></i> Actualizar Ramas</a></li>
-                <li><a href="#eliminar-ramas"><i class="fas fa-trash-alt"></i> Eliminar Ramas</a></li>
-                <li><a href="#descartar-cambios"><i class="fas fa-undo"></i> Descartar Cambios</a></li>
-                <li><a href="#push-ramas"><i class="fas fa-upload"></i> Push Ramas</a></li>
-                <li><a href="#tags-git"><i class="fas fa-tags"></i> Tags</a></li>
-            </ul>
+            <div class="container">
+                <!-- Botón hamburguesa -->
+                <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú de navegación">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul id="mainMenu">
+                    <li><a href="AprendiendoGIT.html">AprendiendoGIT</a></li>
+                    <li><a href="#iniciando-repo"><i class="fas fa-plus-circle"></i> Iniciar Repo</a></li>
+                    <li><a href="#actualizar-ramas"><i class="fas fa-code-branch"></i> Actualizar Ramas</a></li>
+                    <li><a href="#eliminar-ramas"><i class="fas fa-trash-alt"></i> Eliminar Ramas</a></li>
+                    <li><a href="#descartar-cambios"><i class="fas fa-undo"></i> Descartar Cambios</a></li>
+                    <li><a href="#push-ramas"><i class="fas fa-upload"></i> Push Ramas</a></li>
+                    <li><a href="#tags-git"><i class="fas fa-tags"></i> Tags</a></li>
+                </ul>
+            </div>
         </nav>
 
         <!-- Main Content -->
         <main>
-            <section class="tarjeta-git">
-                <h2 id="comandos-recientes"><i class="fas fa-clock"></i> Comandos recientes utilizados</h2>
-                <ul>
-                    <li><strong>git reset --hard 97131fb</strong>: restaura el código a un estado anterior según el hash del commit.</li>
-                    <li><strong>git pull origin main</strong>: actualiza la rama activa con el contenido más reciente del main remoto.</li>
-                    <li><a href="infocod.html"><i class="fas fa-info-circle"></i> Info código Git</a></li>
-                </ul>
-            </section>
-
-            <section class="tarjeta-git">
-                <h2 id="iniciando-repo"><i class="fas fa-plus-circle"></i> INICIANDO REPO</h2>
-                <h3><i class="fas fa-terminal"></i> Create a new repository on the command line</h3>
-                <pre><code>echo "# Python2025" >> README.md
+            <section class="section" id="iniciando-repo">
+                <h2><i class="fas fa-plus-circle"></i> Iniciando Repo</h2>
+                <div class="content-flex">
+                    <div>
+                        <h3><i class="fas fa-terminal"></i> Crear un nuevo repositorio desde la terminal</h3>
+                        <pre><code>echo "# Python2025" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/delanoys/Python2025.git
 git push -u origin main</code></pre>
-                
-                <h3><i class="fas fa-upload"></i> OR push an existing repository from the command line</h3>
-                <pre><code>git remote add origin https://github.com/delanoys/Python2025.git
+                        <h3><i class="fas fa-upload"></i> O subir un repositorio existente</h3>
+                        <pre><code>git remote add origin https://github.com/delanoys/Python2025.git
 git branch -M main
 git push -u origin main</code></pre>
+                    </div>
+                    <img src="/imagenes/git-init.png" alt="Git Init" class="img-git img-shadow">
+                </div>
             </section>
 
-            <section class="tarjeta-git">
-                <h2 id="actualizar-ramas"><i class="fas fa-code-branch"></i> Script de Git para actualizar ramas desde <code>SQL</code></h2>
-                <pre><code>for branch in CSS Html JavaScript Mariano2 Python SQL Git; do
+            <section class="section" id="comandos-recientes">
+                <h2><i class="fas fa-clock"></i> Comandos recientes utilizados</h2>
+                <ul class="list-check">
+                    <li><strong>git reset --hard 97131fb</strong>: restaura el código a un estado anterior según el hash del commit.</li>
+                    <li><strong>git pull origin main</strong>: actualiza la rama activa con el contenido más reciente del main remoto.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="actualizar-ramas">
+                <h2><i class="fas fa-code-branch"></i> Script de Git para actualizar ramas desde <code>SQL</code></h2>
+                <div class="content-flex">
+                    <div>
+                        <pre><code>for branch in CSS Html JavaScript Mariano2 Python SQL Git; do
   git checkout $branch
   git merge SQL
 done</code></pre>
-                <img src="/imagenes/Git Script parte A.png" alt="Script Git Parte A" class="img-git">
+                        <p class="git-note"><i class="fas fa-info-circle"></i> Este script recorre varias ramas y las actualiza con los cambios de la rama <b>SQL</b>.</p>
+                    </div>
+                    <img src="/imagenes/Git Script parte A.png" alt="Script Git Parte A" class="img-git img-shadow">
+                </div>
             </section>
 
-            <section class="tarjeta-git">
-                <h2 id="eliminar-ramas"><i class="fas fa-trash-alt"></i> Acciones para eliminar ramas</h2>
+            <section class="section" id="eliminar-ramas">
+                <h2><i class="fas fa-trash-alt"></i> Acciones para eliminar ramas</h2>
                 <table class="tabla-git">
                     <thead>
                         <tr>
@@ -92,8 +109,8 @@ done</code></pre>
                 </table>
             </section>
 
-            <section class="tarjeta-git">
-                <h2 id="descartar-cambios"><i class="fas fa-undo"></i> Para descartar los cambios del main y pasarlos a una rama nueva sin perder tu trabajo actual</h2>
+            <section class="section" id="descartar-cambios">
+                <h2><i class="fas fa-undo"></i> Descartar cambios y crear rama nueva</h2>
                 <p>Sigue estos pasos:</p>
                 <table class="tabla-git">
                     <thead>
@@ -133,33 +150,33 @@ done</code></pre>
                 </table>
             </section>
 
-            <section class="tarjeta-git">
-                <h2 id="push-ramas"><i class="fas fa-upload"></i> Script para hacer push de todas las ramas</h2>
-                <pre><code>for branch in CSS Html JavaScript Mariano2 Python SQL main; do
+            <section class="section" id="push-ramas">
+                <h2><i class="fas fa-upload"></i> Script para hacer push de todas las ramas</h2>
+                <div class="content-flex">
+                    <div>
+                        <pre><code>for branch in CSS Html JavaScript Mariano2 Python SQL main; do
   git checkout $branch
   git push origin $branch
 done</code></pre>
-                <p><em>Modifica el script con las ramas que desees actualizar. El comando <code>git merge SQL</code> se refiere a integrar cambios desde la rama <strong>SQL</strong>.</em></p>
-                <img src="/imagenes/Git Script parte B.png" alt="Script Git Parte B" class="img-git">
+                        <p class="git-note"><i class="fas fa-info-circle"></i> Modifica el script con las ramas que desees actualizar. El comando <code>git merge SQL</code> se refiere a integrar cambios desde la rama <strong>SQL</strong>.</p>
+                    </div>
+                    <img src="/imagenes/Git Script parte B.png" alt="Script Git Parte B" class="img-git img-shadow">
+                </div>
             </section>
 
-            <section class="tarjeta-git">
-                <h2 id="tags-git"><i class="fas fa-tags"></i> Guía Completa: Tags en Git</h2>
-
+            <section class="section" id="tags-git">
+                <h2><i class="fas fa-tags"></i> Guía Completa: Tags en Git</h2>
                 <div class="git-section">
                     <h3>¿Qué son los Tags en Git?</h3>
                     <p>Los tags (etiquetas) son referencias estáticas que apuntan a momentos específicos en el historial de Git. Se usan principalmente para marcar versiones de lanzamiento (v1.0, v2.1, etc.).</p>
-
                     <h4>Tipos de Tags:</h4>
                     <ul>
                         <li><strong>Lightweight:</strong> Punteros simples a commits específicos</li>
                         <li><strong>Anotados:</strong> Objetos completos en la base de Git (almacenan metadatos)</li>
                     </ul>
                 </div>
-
                 <div class="git-section">
                     <h3>Comandos Esenciales</h3>
-
                     <h4>Crear tags:</h4>
                     <pre><code># Tag ligero
 git tag v1.0
@@ -169,14 +186,12 @@ git tag -a v2.0 -m "Versión 2.0 estable"
 
 # Tag en commit específico
 git tag -a v1.5 abc1234 -m "Versión 1.5 hotfix"</code></pre>
-
                     <h4>Listar tags:</h4>
                     <pre><code># Listar todos los tags
 git tag
 
 # Buscar tags con patrón
 git tag -l "v1.*"</code></pre>
-
                     <h4>Gestionar tags:</h4>
                     <pre><code># Mostrar detalles de un tag
 git show v1.0
@@ -190,7 +205,6 @@ git push origin v2.0
 # Enviar todos los tags
 git push origin --tags</code></pre>
                 </div>
-
                 <div class="git-section">
                     <h3>Ejemplo de Workflow con Tags</h3>
                     <p>Flujo típico para marcar una nueva versión:</p>
@@ -205,7 +219,6 @@ git tag -a v1.2.0 -m "Lanzamiento versión 1.2.0 - Nueva funcionalidad X"
 
 # 4. Subir el tag al repositorio
 git push origin v1.2.0</code></pre>
-
                     <p class="git-note">
                         <strong>Nota:</strong> Es buena práctica seguir <a href="https://semver.org/" target="_blank">Semantic Versioning</a> (vMAJOR.MINOR.PATCH) para los nombres de tags.
                     </p>
@@ -213,16 +226,27 @@ git push origin v1.2.0</code></pre>
             </section>
         </main>
     </div>
-      <footer class="main-footer">
+    <footer class="main-footer">
         <div class="container">
-            <p>© 2024 Aprendiendo Git y GitHub - Todos los derechos reservados</p>
+            <p>© 2025 Developers in process - Todos los derechos reservados</p>
             <div class="social-links">
                 <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
-
+    <script src="AprendiendoGIT.js"></script>
+    <script>
+    // Menú hamburguesa responsive
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mainMenu = document.getElementById('mainMenu');
+        hamburgerBtn.addEventListener('click', function() {
+            mainMenu.classList.toggle('show');
+            hamburgerBtn.classList.toggle('active');
+        });
+    });
+    </script>
     <button id="backToTop" class="back-to-top" title="Volver arriba">
         <i class="fas fa-arrow-up"></i>
     </button>

@@ -29,8 +29,8 @@
     <nav class="main-nav">
         <div class="container">
             <ul>
-                <li><a href="/index.html">INICIO</a></li>
-                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="/index.html">INICIO.</a></li>
+                <li><a href="#introduccion">Introducción.</a></li>
                 <li><a href="#estructura">Estructura</a></li>
                 <li><a href="#texto">Texto</a></li>
                 <li><a href="#colores-html">Colores</a></li>
@@ -527,6 +527,16 @@ if (typeof require !== 'undefined') {
     <script src="aprendiendoHtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script src="/js/editor.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mainMenu = document.getElementById('mainMenu');
+    hamburgerBtn.addEventListener('click', function() {
+        mainMenu.classList.toggle('show');
+        hamburgerBtn.classList.toggle('active');
+    });
+});
+</script>
       
 </body>
 

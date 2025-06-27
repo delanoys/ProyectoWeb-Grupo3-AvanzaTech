@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="AprendiendoGIT.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <!-- Header -->
@@ -19,7 +21,7 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="AprendiendoGIT.html">AprendiendoGIT</a></li>
-                <li><a href="#comandos-recientes"><i class="fas fa-clock"></i> Comandos Recientes</a></li>
+                <!-- <li><a href="#comandos-recientes"><i class="fas fa-clock"></i> Comandos Recientes</a></li> -->
                 <li><a href="#iniciando-repo"><i class="fas fa-plus-circle"></i> Iniciar Repo</a></li>
                 <li><a href="#actualizar-ramas"><i class="fas fa-code-branch"></i> Actualizar Ramas</a></li>
                 <li><a href="#eliminar-ramas"><i class="fas fa-trash-alt"></i> Eliminar Ramas</a></li>
@@ -31,34 +33,40 @@
 
         <!-- Main Content -->
         <main>
-            <section class="tarjeta-git">
+            
+<div  >
+    <section class="section" >
+        <h2 id="iniciando-repo"><i class="fas fa-plus-circle"></i> INICIANDO REPO</h2>
+        <h3><i class="fas fa-terminal"></i> Create a new repository on the command line</h3>
+        <pre><code>echo "# Python2025" >> README.md
+        git init
+        git add README.md
+        git commit -m "first commit"
+        git branch -M main
+        git remote add origin https://github.com/delanoys/Python2025.git
+        git push -u origin main</code></pre>
+
+        <h3><i class="fas fa-upload"></i> OR push an existing repository from the command line</h3>
+        <pre><code>git remote add origin https://github.com/delanoys/Python2025.git
+git branch -M main
+git push -u origin main</code></pre>
+    </section>
+<section class="section">
                 <h2 id="comandos-recientes"><i class="fas fa-clock"></i> Comandos recientes utilizados</h2>
                 <ul>
-                    <li><strong>git reset --hard 97131fb</strong>: restaura el código a un estado anterior según el hash del commit.</li>
-                    <li><strong>git pull origin main</strong>: actualiza la rama activa con el contenido más reciente del main remoto.</li>
-                    <li><a href="infocod.html"><i class="fas fa-info-circle"></i> Info código Git</a></li>
+                    <li><strong>git reset --hard 97131fb</strong>: restaura el código a un estado anterior según el hash
+                        del commit.</li>
+                    <li><strong>git pull origin main</strong>: actualiza la rama activa con el contenido más reciente
+                        del main remoto.</li>
+                    <!-- <li><a href="infocod.html"><i class="fas fa-info-circle"></i> Info código Git</a></li> -->
                 </ul>
             </section>
+</div>
 
-            <section class="tarjeta-git">
-                <h2 id="iniciando-repo"><i class="fas fa-plus-circle"></i> INICIANDO REPO</h2>
-                <h3><i class="fas fa-terminal"></i> Create a new repository on the command line</h3>
-                <pre><code>echo "# Python2025" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/delanoys/Python2025.git
-git push -u origin main</code></pre>
-                
-                <h3><i class="fas fa-upload"></i> OR push an existing repository from the command line</h3>
-                <pre><code>git remote add origin https://github.com/delanoys/Python2025.git
-git branch -M main
-git push -u origin main</code></pre>
-            </section>
-
-            <section class="tarjeta-git">
-                <h2 id="actualizar-ramas"><i class="fas fa-code-branch"></i> Script de Git para actualizar ramas desde <code>SQL</code></h2>
+            <section class="section">
+                <h2 id="actualizar-ramas"><i class="fas fa-code-branch"></i> Script de Git para actualizar ramas desde
+                    <code>SQL</code>
+                </h2>
                 <pre><code>for branch in CSS Html JavaScript Mariano2 Python SQL Git; do
   git checkout $branch
   git merge SQL
@@ -66,7 +74,7 @@ done</code></pre>
                 <img src="/imagenes/Git Script parte A.png" alt="Script Git Parte A" class="img-git">
             </section>
 
-            <section class="tarjeta-git">
+            <section class="section">
                 <h2 id="eliminar-ramas"><i class="fas fa-trash-alt"></i> Acciones para eliminar ramas</h2>
                 <table class="tabla-git">
                     <thead>
@@ -92,8 +100,9 @@ done</code></pre>
                 </table>
             </section>
 
-            <section class="tarjeta-git">
-                <h2 id="descartar-cambios"><i class="fas fa-undo"></i> Para descartar los cambios del main y pasarlos a una rama nueva sin perder tu trabajo actual</h2>
+            <section class="section">
+                <h2 id="descartar-cambios"><i class="fas fa-undo"></i> Para descartar los cambios del main y pasarlos a
+                    una rama nueva sin perder tu trabajo actual</h2>
                 <p>Sigue estos pasos:</p>
                 <table class="tabla-git">
                     <thead>
@@ -133,22 +142,24 @@ done</code></pre>
                 </table>
             </section>
 
-            <section class="tarjeta-git">
+            <section class="section">
                 <h2 id="push-ramas"><i class="fas fa-upload"></i> Script para hacer push de todas las ramas</h2>
                 <pre><code>for branch in CSS Html JavaScript Mariano2 Python SQL main; do
   git checkout $branch
   git push origin $branch
 done</code></pre>
-                <p><em>Modifica el script con las ramas que desees actualizar. El comando <code>git merge SQL</code> se refiere a integrar cambios desde la rama <strong>SQL</strong>.</em></p>
+                <p><em>Modifica el script con las ramas que desees actualizar. El comando <code>git merge SQL</code> se
+                        refiere a integrar cambios desde la rama <strong>SQL</strong>.</em></p>
                 <img src="/imagenes/Git Script parte B.png" alt="Script Git Parte B" class="img-git">
             </section>
 
-            <section class="tarjeta-git">
+            <section class="section">
                 <h2 id="tags-git"><i class="fas fa-tags"></i> Guía Completa: Tags en Git</h2>
 
                 <div class="git-section">
                     <h3>¿Qué son los Tags en Git?</h3>
-                    <p>Los tags (etiquetas) son referencias estáticas que apuntan a momentos específicos en el historial de Git. Se usan principalmente para marcar versiones de lanzamiento (v1.0, v2.1, etc.).</p>
+                    <p>Los tags (etiquetas) son referencias estáticas que apuntan a momentos específicos en el historial
+                        de Git. Se usan principalmente para marcar versiones de lanzamiento (v1.0, v2.1, etc.).</p>
 
                     <h4>Tipos de Tags:</h4>
                     <ul>
@@ -207,24 +218,26 @@ git tag -a v1.2.0 -m "Lanzamiento versión 1.2.0 - Nueva funcionalidad X"
 git push origin v1.2.0</code></pre>
 
                     <p class="git-note">
-                        <strong>Nota:</strong> Es buena práctica seguir <a href="https://semver.org/" target="_blank">Semantic Versioning</a> (vMAJOR.MINOR.PATCH) para los nombres de tags.
+                        <strong>Nota:</strong> Es buena práctica seguir <a href="https://semver.org/"
+                            target="_blank">Semantic Versioning</a> (vMAJOR.MINOR.PATCH) para los nombres de tags.
                     </p>
                 </div>
             </section>
         </main>
     </div>
-      <footer class="main-footer">
+    <footer class="main-footer">
         <div class="container">
-            <p>© 2024 Aprendiendo Git y GitHub - Todos los derechos reservados</p>
+            <p>© 2025 Developers in process - Todos los derechos reservados</p>
             <div class="social-links">
                 <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
-
+<script src="AprendiendoGIT.js"></script>
     <button id="backToTop" class="back-to-top" title="Volver arriba">
         <i class="fas fa-arrow-up"></i>
     </button>
 </body>
+
 </html>

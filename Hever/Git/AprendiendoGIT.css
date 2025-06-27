@@ -77,9 +77,10 @@ body {
 .main-nav ul {
     display: flex;
     list-style: none;
-    justify-content: center;
+    justify-content: space-between;
     padding: 1rem 0;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .main-nav li {

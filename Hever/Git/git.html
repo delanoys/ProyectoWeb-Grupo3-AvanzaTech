@@ -242,6 +242,17 @@ git push origin v1.2.0</code></pre>
         </div>
     </footer>
 <script src="AprendiendoGIT.js"></script>
+<script>
+// Menú hamburguesa responsive
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mainMenu = document.getElementById('mainMenu');
+    hamburgerBtn.addEventListener('click', function() {
+        mainMenu.classList.toggle('show');
+        hamburgerBtn.classList.toggle('active');
+    });
+});
+</script>
     <button id="backToTop" class="back-to-top" title="Volver arriba">
         <i class="fas fa-arrow-up"></i>
     </button>

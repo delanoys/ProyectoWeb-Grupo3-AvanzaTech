@@ -26,10 +26,10 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 98%;              /* Más ancho en pantallas grandes */
+    max-width: 1600px;       /* Aumenta el máximo a 1600px */
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 30px;         /* Más espacio lateral */
 }
 
 .main-content {

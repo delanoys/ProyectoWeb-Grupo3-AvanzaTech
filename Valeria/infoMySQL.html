@@ -11,7 +11,7 @@
 <body>
     <header class="main-header">
         <div class="container">
-            <h1> <i class="fa-solid fa-database"></i> Aprendiendo MySql</h1><!--MZH: Conseguir icono python-->
+            <h1> <i class="fa-solid fa-database"></i> Aprendiendo MySQL</h1><!--MZH: Conseguir icono python-->
 
             <p></p>
         </div>
@@ -37,7 +37,8 @@
                 <ul class="resource-list"> <!--MZH: Pendiente enlazar a subtítulos por lección-->
 
                     <li><a href="#Bases"><i class="fas fa-database"></i> Qué es una Base de Datos</a></li>
-                    <li><a href="#tiposnumericos"><i class="fas fa-hashtag"></i> Tipos Numéricos</a></li>
+                    <li><a href="#tiposnumericos"><i class="fas fa-hashtag"></i> Datos Numéricos</a></li>
+                    <li><a href="#tipos de Fecha y Hora"><i class="fas fa-clock"></i> Datos de Fecha y Hora</a></li>
                     <li><a href="#tiposdecadena"><i class="fas fa-font"></i> Datos de Cadena</a></li>
                     <li><a href="#Datosbinarios"><i class="fas fa-file-code"></i> Datos Binarios</a></li>
                     <li><a href="#Colecciones"><i class="fas fa-layer-group"></i> Datos de Colección</a></li>
@@ -117,7 +118,7 @@
             <p><strong>FLOAT:</strong> Precisión aproximada en punto flotante. Más rápido que DECIMAL pero menos preciso.</p>
             <p><strong>DOUBLE (o DOUBLE PRECISION):</strong> Similar a FLOAT pero con doble precisión.</p><br>
 
-            <h3 id="tipos de Fecha y Hora"><strong>Tipos de Fecha y Hora</strong></h3><br>
+            <h3 id="tipos de Fecha y Hora"><strong>Datos de Fecha y Hora</strong></h3><br>
             <p>
                 <strong>MySQL:</strong> proporciona varios tipos para manejar fechas y tiempos, fundamentales para registrar eventos, transacciones o programar acciones.
             </p>
@@ -127,7 +128,7 @@
             <p><strong>TIME:</strong> Almacena solo una hora (por ejemplo, '12:45:30').</p>
             <p><strong>YEAR:</strong> Representa solo un año (por ejemplo, '2025').</p><br>
 
-        <h3 id="tiposdecadena"><strong>Tipos de Cadena</strong></h3><br>
+        <h3 id="tiposdecadena"><strong>Datos de Cadena</strong></h3><br>
         <p>
             Estos tipos permiten almacenar texto de diferentes tamaños y, en el caso de BLOB, también datos binarios como imágenes o archivos.
         </p>
@@ -138,13 +139,13 @@
         <h3 id="Datosbinarios"><strong>Datos Binarios</strong></h3><br>
         <p><strong>BLOB, TINYBLOB, MEDIUMBLOB, LONGBLOB:</strong> Tipos similares a TEXT, pero diseñados para almacenar archivos binarios (por ejemplo, imágenes, archivos PDF, etc.).</p><br>
 
-        <h4><strong>Objetos simples</strong></h4>
+        <h3 id="objetossimples"><strong>Objetos simples</strong></h3><br>
         <p><strong>GEOMETRY:</strong> Tipo genérico para cualquier objeto espacial.</p>
         <p><strong>POINT:</strong> Un punto en el espacio (por ejemplo, una ubicación geográfica).</p>
         <p><strong>LINESTRING:</strong> Una línea formada por dos o más puntos.</p>
-        <p><strong>POLYGON:</strong> Una figura cerrada, útil para representar áreas.</p>
+        <p><strong>POLYGON:</strong> Una figura cerrada, útil para representar áreas.</p><br>
 
-        <h3 id="Colecciones"><strong>Colecciones</strong></h3>
+        <h3 id="Colecciones"><strong> Datos de Colecciones</strong></h3><br>
         <p><strong>MULTIPOINT:</strong> Múltiples puntos.</p>
         <p><strong>MULTILINESTRING:</strong> Varias líneas.</p>
         <p><strong>MULTIPOLYGON:</strong> Varias áreas o zonas.</p>
@@ -160,7 +161,7 @@
     <div class="box-model-part border" style="margin-bottom: 32px;">
         <h4 id="Modeladodatos"><strong>Modelado de Datos</strong></h4>
         <p>
-            El bb  modelado de datos es un proceso fundamental en el diseño de sistemas de información, ya que permite representar de forma visual, lógica y estructurada los datos y las relaciones entre ellos dentro de una organización o sistema. Su propósito es facilitar la comprensión, organización y posterior implementación de una base de datos que sea eficiente, coherente y adaptable a las necesidades reales del negocio o proyecto.
+            El modelado de datos es un proceso fundamental en el diseño de sistemas de información, ya que permite representar de forma visual, lógica y estructurada los datos y las relaciones entre ellos dentro de una organización o sistema. Su propósito es facilitar la comprensión, organización y posterior implementación de una base de datos que sea eficiente, coherente y adaptable a las necesidades reales del negocio o proyecto.
         </p>
         <img src="imgmysql/Diagrama.png" alt="Diagrama de tipos de datos MySQL" class="img-diagrama img-move-hover">
         <h4 id="importanciadtb"><strong>¿Por qué es importante el modelado de datos?</strong></h4>
@@ -168,7 +169,7 @@
         <p>Establecer la estructura lógica de los datos antes de construir físicamente la base de datos.</p>
         <p>Identificar problemas potenciales de diseño, como redundancias, dependencias innecesarias o relaciones incorrectas.</p>
         <p>Asegurar que los datos estén organizados de manera que faciliten la consulta, actualización y gestión eficiente.</p>
-        <p>Reducir errores y costos en etapas posteriores del desarrollo.</p>
+        <p>Reducir errores y costos en etapas posteriores del desarrollo.</p><br>
         <h4><strong>Tipos de Modelado de Datos</strong></h4>
         <p><strong>Modelo conceptual:</strong> Representa la estructura general de la información sin entrar en detalles técnicos. Utiliza herramientas como el modelo Entidad-Relación (ER) o su versión extendida (EER, Entidad-Relación Extendida). Identifica entidades (objetos importantes), atributos (características) y relaciones (cómo se vinculan las entidades).</p>
         <p><strong>Modelo lógico:</strong> Traduce el modelo conceptual a un formato lógico compatible con un tipo específico de base de datos (por ejemplo, relacional). Define tablas, claves primarias, claves foráneas, tipos de datos, restricciones, normalización, etc.</p>
@@ -184,7 +185,7 @@
         <p>
             En el contexto del diseño de bases de datos, especialmente cuando se utilizan modelos relacionales, las relaciones entre tablas permiten vincular datos que están distribuidos en distintas entidades. Estas relaciones definen cómo interactúan los datos y son fundamentales para mantener la integridad y la eficiencia del sistema.
         </p>
-        <h5 id="tiposderelaciones"><strong>Existen tres tipos principales de relaciones:</strong></h5>
+        <h5 id="tiposderelaciones"><strong>Existen tres tipos principales de relaciones:</strong></h5><br>
         <h4 id="unoauno"><strong>Uno a Uno (1:1)</strong></h4>
         <p>
             Cada registro en una tabla está relacionado con exactamente un solo registro en otra tabla, y viceversa.<br>

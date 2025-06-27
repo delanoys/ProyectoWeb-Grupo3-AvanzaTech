@@ -614,41 +614,6 @@ main {
     }
 }
 
-@media (max-width: 900px) {
-    .main-nav ul {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: #fff;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem 2rem;
-        box-shadow: 0 8px 30px var(--shadow-color);
-        border-radius: 0 0 12px 12px;
-        display: none;
-        z-index: 1000;
-    }
-    .main-nav ul.show {
-        display: flex;
-    }
-    .main-nav li {
-        margin: 1rem 0;
-        width: 100%;
-    }
-    .main-nav a {
-        width: 100%;
-        padding: 1rem 0.5rem;
-        font-size: 1.1rem;
-    }
-    .hamburger {
-        display: flex;
-    }
-    .main-nav {
-        position: relative;
-    }
-}
-
 @media (max-width: 768px) {
     .main-nav ul {
         flex-direction: column;

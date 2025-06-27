@@ -45,16 +45,9 @@
                     <li><a href="#unomuchos"><i class="fas fa-sitemap"></i> Relación 1:M</a></li>
                     <li><a href="#muchoamuchos"><i class="fas fa-project-diagram"></i> Relación M:M</a></li>
 
-                    <li><a href="#Bases"><i class="fas fa-square-full"></i> Qué es una Base de Datos</a></li>
-                    <li><a href="#tiposnumericos"><i class="as fa-bullseye"></i> Tipos Númericos</a></li>
-                    <li><a href="#tiposdecadena"><i class="fas fa-th-large"></i>Datos de Cadena</a></li>
-                    <li><a href="#Datosbinarios"><i class="fas fa-film"></i>Datos Binarios</a></li>
-                    <li><a href="#Colecciones"><i class="fas fa-exchange-alt"></i> Datos de Colección</a></li>
+                   
                     
-                    <li><a href="#unoauno"><i class="fas fa-bullseye"></i> Relación 1:1</a></li>
-                    <li><a href="#unomuchos"><i class="fas fa-desktop"></i> Relación 1:M</a></li>
-                    <li><a href="#unomuchos"><i class="fas fa-film"></i>Relación M:M</a></li>
-
+                 
                 </ul>
             </div>
             
@@ -76,7 +69,9 @@
                 
               
 
-
+              <section class="section">
+                  
+              
                      <p>Empezaremos hablando sobre lo que es <strong>SQL</strong>. es un acrónimo en inglés para Structured Query Language.
                         Un Lenguaje de Consulta Estructurado. Un tipo de lenguaje de programación que te permite manipular y descargar datos de una base de datos. 
                         Tiene capacidad de hacer cálculos avanzados y álgebra. Es utilizado en la mayoría de empresas que almacenan datos en una base de datos.
@@ -84,83 +79,82 @@
 
                     <h3 id="Bases">Que es un sistema de base de datos</h3>
                     <p>¿Qué es un SGBD? (Sistema de Gestión de Bases de Datos)
-Un Sistema de Gestión de Bases de Datos (SGBD) es un conjunto de programas de software especializado que se utiliza para crear, administrar y manipular bases de datos. Este sistema permite definir la estructura de la base de datos (por ejemplo, qué tipo de datos se almacenarán y cómo se relacionarán entre sí), así como ingresar, modificar, consultar o eliminar información de forma controlada.
-
-El SGBD actúa como un intermediario entre los usuarios y la base de datos, asegurando que las operaciones que se realicen sobre los datos sean correctas, seguras y eficientes. Esto significa que el SGBD protege la información frente a errores, accesos no autorizados y pérdidas accidentales.
-
-Además, un buen SGBD garantiza:<br>
-
-<strong> integridad de los datos:</strong> asegura que los datos almacenados sean correctos y coherentes con las reglas definidas.<br>
-
-<strong> seguridad: </strong>controla quién puede acceder a la base de datos y qué operaciones puede realizar.<br>
-
-<strong> consistencia:</strong> asegura que las transacciones (grupos de operaciones) se completen correctamente, o en caso contrario, que no tengan efecto alguno, evitando que la base de datos quede en un estado incorrecto.<br>
-
-<strong>disponibilidad y rendimiento:</strong> permite que múltiples usuarios accedan a los datos simultáneamente sin afectar negativamente la velocidad de respuesta o el correcto funcionamiento del sistema.<br>
+                      Un Sistema de Gestión de Bases de Datos (SGBD) es un conjunto de programas de software especializado que se utiliza para crear, administrar y manipular bases de datos. Este sistema permite definir la estructura de la base de datos (por ejemplo, qué tipo de datos se almacenarán y cómo se relacionarán entre sí), así como ingresar, modificar, consultar o eliminar información de forma controlada.
+                      
+                      El SGBD actúa como un intermediario entre los usuarios y la base de datos, asegurando que las operaciones que se realicen sobre los datos sean correctas, seguras y eficientes. Esto significa que el SGBD protege la información frente a errores, accesos no autorizados y pérdidas accidentales.
+                      
+                      Además, un buen SGBD garantiza:<br>
+                      
+                      <strong> integridad de los datos:</strong> asegura que los datos almacenados sean correctos y coherentes con las reglas definidas.<br>
+                      
+                      <strong> seguridad: </strong>controla quién puede acceder a la base de datos y qué operaciones puede realizar.<br>
+                      
+                      <strong> consistencia:</strong> asegura que las transacciones (grupos de operaciones) se completen correctamente, o en caso contrario, que no tengan efecto alguno, evitando que la base de datos quede en un estado incorrecto.<br>
+                      
+                      <strong>disponibilidad y rendimiento:</strong> permite que múltiples usuarios accedan a los datos simultáneamente sin afectar negativamente la velocidad de respuesta o el correcto funcionamiento del sistema.<br>
                     </p>
-                   
-                    
+                </section>
+
+
+ <section class="section">   
                     <div class="box-model-explanation" style="display: block;">
-    <!-- Tipos de datos -->
-    <div class="box-model-part margin" style="margin-bottom: 32px;">
-        <h4 id="TiposDatos">Tipos de datos</h4>
-        <p>
-            MySQL ofrece una amplia variedad de tipos de datos que permiten almacenar distintos tipos de información, desde números hasta datos espaciales. A continuación se detallan sus principales categorías:
-        </p>
-        <h3 id="tiposnumericos"><strong>Datos Numéricos</strong></h3>
-        <p>
-            Estos tipos de datos se utilizan para almacenar números, ya sean enteros o con decimales. MySQL permite elegir el tipo según el tamaño del número que se necesita representar y si requiere decimales o no.
-        </p>
-        <ul>
-            <li><strong>TINYINT:</strong> Ocupa 1 byte. Almacena números enteros pequeños (de -128 a 127 con signo, o de 0 a 255 sin signo).</li>
-            <li><strong>SMALLINT:</strong> 2 bytes. Útil para cantidades mayores (de -32,768 a 32,767 con signo).</li>
-            <li><strong>MEDIUMINT:</strong> 3 bytes. Abarca un rango más amplio (hasta ±8 millones aprox.).</li>
-            <li><strong>INT o INTEGER:</strong> 4 bytes. El tipo entero más común (de -2 mil millones a +2 mil millones aprox.).</li>
-            <li><strong>BIGINT:</strong> 8 bytes. Para números muy grandes (hasta ±9 quintillones).</li>
-            <li><strong>DECIMAL (o NUMERIC):</strong> Precisión exacta. Ideal para valores monetarios o cálculos donde se requiere evitar errores de redondeo.</li>
-            <li><strong>FLOAT:</strong> Precisión aproximada en punto flotante. Más rápido que DECIMAL pero menos preciso.</li>
-            <li><strong>DOUBLE (o DOUBLE PRECISION):</strong> Similar a FLOAT pero con doble precisión.</li>
-        </ul>
-        <h3 id="tipos de Fecha y Hora"><strong>Tipos de Fecha y Hora</strong></h3>
-        <p>
-            <strong>MySQL:</strong> proporciona varios tipos para manejar fechas y tiempos, fundamentales para registrar eventos, transacciones o programar acciones.
-        </p>
-        <ul>
-            <li><strong>DATE:</strong> Almacena una fecha en formato ‘YYYY-MM-DD’.</li>
-            <li><strong>DATETIME:</strong> Almacena fecha y hora en formato ‘YYYY-MM-DD HH:MM:SS’.</li>
-            <li><strong>TIMESTAMP:</strong> Similar a DATETIME pero con zona horaria. Ideal para registrar marcas temporales que se actualizan automáticamente.</li>
-            <li><strong>TIME:</strong> Almacena solo una hora (por ejemplo, '12:45:30').</li>
-            <li><strong>YEAR:</strong> Representa solo un año (por ejemplo, '2025').</li>
-        </ul>
+        <!-- Tipos de datos -->
+        <div class="box-model-part margin" style="margin-bottom: 32px;">
+            <h4 id="TiposDatos">Tipos de datos</h4>
+            <p>
+                MySQL ofrece una amplia variedad de tipos de datos que permiten almacenar distintos tipos de información, desde números hasta datos espaciales. A continuación se detallan sus principales categorías:
+            </p>
+            <h3 id="tiposnumericos"><strong>Datos Numéricos</strong></h3>
+            <p>
+                Estos tipos de datos se utilizan para almacenar números, ya sean enteros o con decimales. MySQL permite elegir el tipo según el tamaño del número que se necesita representar y si requiere decimales o no.
+            </p>
+            <p><strong>TINYINT:</strong> Ocupa 1 byte. Almacena números enteros pequeños (de -128 a 127 con signo, o de 0 a 255 sin signo).</p>
+            <p><strong>SMALLINT:</strong> 2 bytes. Útil para cantidades mayores (de -32,768 a 32,767 con signo).</p>
+            <p><strong>MEDIUMINT:</strong> 3 bytes. Abarca un rango más amplio (hasta ±8 millones aprox.).</p>
+            <p><strong>INT o INTEGER:</strong> 4 bytes. El tipo entero más común (de -2 mil millones a +2 mil millones aprox.).</p>
+            <p><strong>BIGINT:</strong> 8 bytes. Para números muy grandes (hasta ±9 quintillones).</p>
+            <p><strong>DECIMAL (o NUMERIC):</strong> Precisión exacta. Ideal para valores monetarios o cálculos donde se requiere evitar errores de redondeo.</p>
+            <p><strong>FLOAT:</strong> Precisión aproximada en punto flotante. Más rápido que DECIMAL pero menos preciso.</p>
+            <p><strong>DOUBLE (o DOUBLE PRECISION):</strong> Similar a FLOAT pero con doble precisión.</p>
+
+            <h3 id="tipos de Fecha y Hora"><strong>Tipos de Fecha y Hora</strong></h3>
+            <p>
+                <strong>MySQL:</strong> proporciona varios tipos para manejar fechas y tiempos, fundamentales para registrar eventos, transacciones o programar acciones.
+            </p>
+            <p><strong>DATE:</strong> Almacena una fecha en formato ‘YYYY-MM-DD’.</p>
+            <p><strong>DATETIME:</strong> Almacena fecha y hora en formato ‘YYYY-MM-DD HH:MM:SS’.</p>
+            <p><strong>TIMESTAMP:</strong> Similar a DATETIME pero con zona horaria. Ideal para registrar marcas temporales que se actualizan automáticamente.</p>
+            <p><strong>TIME:</strong> Almacena solo una hora (por ejemplo, '12:45:30').</p>
+            <p><strong>YEAR:</strong> Representa solo un año (por ejemplo, '2025').</p>
+
         <h3 id="tiposdecadena"><strong>Tipos de Cadena</strong></h3>
         <p>
             Estos tipos permiten almacenar texto de diferentes tamaños y, en el caso de BLOB, también datos binarios como imágenes o archivos.
         </p>
-        <ul>
-            <li><strong>CHAR:</strong> Cadena de longitud fija. Se rellenan espacios si el texto es más corto.</li>
-            <li><strong>VARCHAR:</strong> Cadena de longitud variable. Más eficiente cuando los textos varían en tamaño.</li>
-            <li><strong>TEXT, TINYTEXT, MEDIUMTEXT, LONGTEXT:</strong> Tipos de texto largo para comentarios, artículos o grandes volúmenes de texto.</li>
-        </ul>
+        <p><strong>CHAR:</strong> Cadena de longitud fija. Se rellenan espacios si el texto es más corto.</p>
+        <p><strong>VARCHAR:</strong> Cadena de longitud variable. Más eficiente cuando los textos varían en tamaño.</p>
+        <p><strong>TEXT, TINYTEXT, MEDIUMTEXT, LONGTEXT:</strong> Tipos de texto largo para comentarios, artículos o grandes volúmenes de texto.</p>
+
         <h3 id="Datosbinarios"><strong>Datos Binarios</strong></h3>
-        <ul>
-            <li><strong>BLOB, TINYBLOB, MEDIUMBLOB, LONGBLOB:</strong> Tipos similares a TEXT, pero diseñados para almacenar archivos binarios (por ejemplo, imágenes, archivos PDF, etc.).</li>
-        </ul>
+        <p><strong>BLOB, TINYBLOB, MEDIUMBLOB, LONGBLOB:</strong> Tipos similares a TEXT, pero diseñados para almacenar archivos binarios (por ejemplo, imágenes, archivos PDF, etc.).</p>
+
         <h4><strong>Objetos simples</strong></h4>
-        <ul>
-            <li><strong>GEOMETRY:</strong> Tipo genérico para cualquier objeto espacial.</li>
-            <li><strong>POINT:</strong> Un punto en el espacio (por ejemplo, una ubicación geográfica).</li>
-            <li><strong>LINESTRING:</strong> Una línea formada por dos o más puntos.</li>
-            <li><strong>POLYGON:</strong> Una figura cerrada, útil para representar áreas.</li>
-        </ul>
+        <p><strong>GEOMETRY:</strong> Tipo genérico para cualquier objeto espacial.</p>
+        <p><strong>POINT:</strong> Un punto en el espacio (por ejemplo, una ubicación geográfica).</p>
+        <p><strong>LINESTRING:</strong> Una línea formada por dos o más puntos.</p>
+        <p><strong>POLYGON:</strong> Una figura cerrada, útil para representar áreas.</p>
+
         <h3 id="Colecciones"><strong>Colecciones</strong></h3>
-        <ul>
-            <li><strong>MULTIPOINT:</strong> Múltiples puntos.</li>
-            <li><strong>MULTILINESTRING:</strong> Varias líneas.</li>
-            <li><strong>MULTIPOLYGON:</strong> Varias áreas o zonas.</li>
-            <li><strong>GEOMETRYCOLLECTION:</strong> Colección de diferentes tipos espaciales.</li>
-        </ul>
+        <p><strong>MULTIPOINT:</strong> Múltiples puntos.</p>
+        <p><strong>MULTILINESTRING:</strong> Varias líneas.</p>
+        <p><strong>MULTIPOLYGON:</strong> Varias áreas o zonas.</p>
+        <p><strong>GEOMETRYCOLLECTION:</strong> Colección de diferentes tipos espaciales.</p>
+
         <img src="./imgmysql/tipos de datos.png" alt="Tipos de datos MySQL" class="img-diagrama  img-move-hover">
     </div>
+ </section>  
+
+ <section class="section">  
 
     <!-- Modelado de Datos -->
     <div class="box-model-part border" style="margin-bottom: 32px;">
@@ -170,20 +164,19 @@ Además, un buen SGBD garantiza:<br>
         </p>
         <img src="imgmysql/Diagrama.png" alt="Diagrama de tipos de datos MySQL" class="img-diagrama img-move-hover">
         <h4 id="importanciadtb"><strong>¿Por qué es importante el modelado de datos?</strong></h4>
-        <ul>
-            <li>Visualizar claramente los requisitos de información del sistema.</li>
-            <li>Establecer la estructura lógica de los datos antes de construir físicamente la base de datos.</li>
-            <li>Identificar problemas potenciales de diseño, como redundancias, dependencias innecesarias o relaciones incorrectas.</li>
-            <li>Asegurar que los datos estén organizados de manera que faciliten la consulta, actualización y gestión eficiente.</li>
-            <li>Reducir errores y costos en etapas posteriores del desarrollo.</li>
-        </ul>
+        <p>Visualizar claramente los requisitos de información del sistema.</p>
+        <p>Establecer la estructura lógica de los datos antes de construir físicamente la base de datos.</p>
+        <p>Identificar problemas potenciales de diseño, como redundancias, dependencias innecesarias o relaciones incorrectas.</p>
+        <p>Asegurar que los datos estén organizados de manera que faciliten la consulta, actualización y gestión eficiente.</p>
+        <p>Reducir errores y costos en etapas posteriores del desarrollo.</p>
         <h4><strong>Tipos de Modelado de Datos</strong></h4>
-        <ul>
-            <li><strong>Modelo conceptual:</strong> Representa la estructura general de la información sin entrar en detalles técnicos. Utiliza herramientas como el modelo Entidad-Relación (ER) o su versión extendida (EER, Entidad-Relación Extendida). Identifica entidades (objetos importantes), atributos (características) y relaciones (cómo se vinculan las entidades).</li>
-            <li><strong>Modelo lógico:</strong> Traduce el modelo conceptual a un formato lógico compatible con un tipo específico de base de datos (por ejemplo, relacional). Define tablas, claves primarias, claves foráneas, tipos de datos, restricciones, normalización, etc.</li>
-            <li><strong>Modelo físico:</strong> Detalla cómo se almacenarán los datos físicamente en un sistema de gestión de bases de datos (SGBD), como MySQL. Incluye consideraciones de rendimiento, índices, almacenamiento y configuraciones específicas del sistema.</li>
-        </ul>
+        <p><strong>Modelo conceptual:</strong> Representa la estructura general de la información sin entrar en detalles técnicos. Utiliza herramientas como el modelo Entidad-Relación (ER) o su versión extendida (EER, Entidad-Relación Extendida). Identifica entidades (objetos importantes), atributos (características) y relaciones (cómo se vinculan las entidades).</p>
+        <p><strong>Modelo lógico:</strong> Traduce el modelo conceptual a un formato lógico compatible con un tipo específico de base de datos (por ejemplo, relacional). Define tablas, claves primarias, claves foráneas, tipos de datos, restricciones, normalización, etc.</p>
+        <p><strong>Modelo físico:</strong> Detalla cómo se almacenarán los datos físicamente en un sistema de gestión de bases de datos (SGBD), como MySQL. Incluye consideraciones de rendimiento, índices, almacenamiento y configuraciones específicas del sistema.</p>
     </div>
+  </section>
+
+  <section class="section">  
 
     <!-- Tipos de Relaciones -->
     <div class="box-model-part border" style="margin-bottom: 32px;">
@@ -196,10 +189,10 @@ Además, un buen SGBD garantiza:<br>
         <p>
             Cada registro en una tabla está relacionado con exactamente un solo registro en otra tabla, y viceversa.<br>
             <strong>Aplicaciones típicas:</strong>
-            <ul>
-                <li>Datos que se desean separar por seguridad o privacidad (por ejemplo, información médica).</li>
-                <li>Datos que no siempre se aplican a todos los registros (como un pasaporte en personas: no todas lo tienen).</li>
-                <li>Dividir información por motivos de rendimiento.</li>
+        </p>
+        <p>Datos que se desean separar por seguridad o privacidad (por ejemplo, información médica).</p>
+        <p>Datos que no siempre se aplican a todos los registros (como un pasaporte en personas: no todas lo tienen).</p>
+        <p>Dividir información por motivos de rendimiento.</p>
             </ul>
             <strong>Cómo se implementa:</strong> Usualmente mediante claves primarias compartidas, donde la clave primaria de una tabla es también clave foránea de la otra.
         </p>
@@ -219,6 +212,9 @@ Además, un buen SGBD garantiza:<br>
         </p>
         <img src="../Valeria/imgmysql/im4.png" alt="Ejemplo relación muchos a muchos en MySQL" class="relacion-img img-move-hover">
     </div>
+ </section>
+
+ <section class="section">  
 
     <!-- Diseño de Tablas -->
     <div class="box-model-part padding" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 32px;">
@@ -228,7 +224,8 @@ Además, un buen SGBD garantiza:<br>
         </p>
         <img class="img-move-hover" src="./imgmysql/img1.png" alt="Ejemplo de diseño de tabla en MySQL" style="display: block; margin: 20px auto; max-width: 100%; height: auto;">
     </div>
-</div>
+</section>
+
                 </article>
                 
                 <article class="article">

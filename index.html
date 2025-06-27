@@ -1,74 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desarrollo Web developersinprocess</title>
-    
-    <!-- Favicon - icono en la pestaña -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/imagenes/ux-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/imagenes/ux-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/imagenes/ux-180x180.png">
-    
-    <!-- Para redes sociales -->
-    <meta property="og:title" content="Developers in Process">
-    <meta property="og:description" content="Blog de desarrollo web y tecnología">
-    <meta property="og:image" content="https://developersinprocess.blog/imagenes/ux.png">
-    <meta property="og:url" content="https://developersinprocess.blog/">
-    
-    <!-- CSS y Fuentes -->
-    <link rel="stylesheet" href="estilos/Estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desarrollo Web developersinprocess</title>
+
+  <!-- Favicon - icono en la pestaña -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/imagenes/ux-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/imagenes/ux-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/imagenes/ux-180x180.png">
+
+  <!-- Para redes sociales -->
+  <meta property="og:title" content="Developers in Process">
+  <meta property="og:description" content="Blog de desarrollo web y tecnología">
+  <meta property="og:image" content="https://developersinprocess.blog/imagenes/ux.png">
+  <meta property="og:url" content="https://developersinprocess.blog/">
+
+  <!-- CSS y Fuentes -->
+  <link rel="stylesheet" href="estilos/Estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- css consumo Api tiempo -->
+<link rel="stylesheet" href="clima.css">
+
 </head>
+
 <body>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aprende Lenguajes Web</title>
-  
-</head> 
+  <!DOCTYPE html>
+  <html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprende Lenguajes Web</title>
+
+  </head>
+
   <body>
+   
+   <header >
+ <div id="resultadoClima"></div>
+<script src="/estilos/clima.css"></script>
+
+</header>
+
+    <main>
       <div class="gradient">
       </div>
-            <h1>Conviértete en desarrollador <br> web desde cero</h1>
-            <p>Explora los lenguajes claves para construir sitios y aplicaciones increíbles.</p>
+      <h1>Conviértete en desarrollador <br> web desde cero</h1>
+      <p>Explora los lenguajes claves para construir sitios y aplicaciones increíbles.</p>
 
-        <div class="botones">
-                <a href="./Hever/HTML/aprendiendoHtml.html" class="html-btn">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="icono" alt="HTML">
-                  HTML
-                </a>
-                <a href="Hever/CSS/AprendiendoCSS.html" class="css-btn">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="icono" alt="CSS">
-                  CSS
-                </a>
-                <a href="./Mariano/NuevoInfo.html" class="js-btn">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icono" alt="JavaScript">JAVASCRIPT
-                </a>
-                <a href="Maria/InfoPython.html" class="Pyth-btn">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icono" alt="Python">
-                  PYTHON
-                </a>
-                <a href="Valeria/infoMySQL.html" class="SQL-btn">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="icono blanco"  alt="SQL">
-                  MySql
-                </a>
-                <a href="Hever/Git/AprendiendoGIT.html" class="GIT-btn">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="icono" alt="Git">
-                  GIT
-                </a>
-        </div>
+      <div class="botones">
+        <a href="Hever/HTML/aprendiendoHtml.html" class="html-btn">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="icono"
+            alt="HTML">
+          HTML
+        </a>
+        <a href="Hever/CSS/AprendiendoCSS.html" class="css-btn">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="icono" alt="CSS">
+          CSS
+        </a>
 
-          </div>
-        
-       
-   </body>
-</html>
+        <a href="./Mariano/NuevoInfo.html" class="js-btn">
 
-   
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icono"
+            alt="JavaScript">JAVASCRIPT
+        </a>
+        <a href="Maria/InfoPython.html" class="Pyth-btn">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="icono"
+            alt="Python">
+          PYTHON
+        </a>
+        <a href="Valeria/infoMySQL.html" class="SQL-btn">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="icono blanco"
+            alt="SQL">
+          MySql
+        </a>
+        <a href="Hever/Git/AprendiendoGIT.html" class="GIT-btn">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="icono" alt="Git">
+          GIT
+        </a>
+      </div>
+
+      </div>
+    </main>
+
+
+
+<footer style="position: fixed; left: 0; bottom: 0; width: 100%;  color: #fff; text-align: center; padding: 10px 0; z-index: 100;">
+   <!-- consumo API tiempo -->
+  <div id="resultadoClima"></div>
+</footer>
+  
+
+  </body>
+
+  </html>
+  <!-- consumo API tiempo
+  <script src="./js/clima.js"></script>-->
 </body>
+
 </html>

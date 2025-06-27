@@ -34,7 +34,7 @@
    
 
      h1 {
-      font-size: 60px;
+      font-size: 70px;
       color: #ffffff;
       margin-bottom: 1px;
       font-family:"Archivo Black", sans-serif;
@@ -160,115 +160,11 @@
       h1 {
         font-size: 40px;
       }
-<<<<<<< HEAD
-      p {
-        font-size: 20px;
-      }
-      .botones a {
-        font-size: auto;
-        padding: 12px 18px;
-      }
-    }
-
-    @media (max-width: 800px) {
-      body {
-        padding: 10px;
-        height: auto;
-        min-height: 100vh;
-      }
-      h1 {
-        font-size: 28px;
-      }
-      p {
-        font-size: 16px;
-      }
-      .botones {
-        flex-direction: column;
-        gap: 20px;
-        width: 90%;
-        align-items: center;
-      }
-      .botones a {
-        width: 90%;
-        justify-content: center;
-        font-size: 14px;
-        padding: 10px 0;
-      }
-      .icono {
-        width: 20px;
-        height: 20px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      body {
-        padding: 10px;
-        height: auto;
-        min-height: 100vh;
-      }
-      h1 {
-        font-size: 25px;
-      }
-      p {
-        padding: 25px;
-        margin: 10px 0;
-        font-size: 18px;
-      }
-      .botones {
-        flex-direction: column;
-        gap: 20px;
-        width: 70%;
-        align-items: center;
-      }
-      .botones a {
-        width: 90%;
-        justify-content: center;
-        font-size: 20px;
-        padding: 10px 0;
-      }
-      .icono {
-        width: auto;
-        height: 30px;
-      }
-    }
-      @media (max-width: 400px) {
-      body {
-        padding: 10px;
-        height: auto;
-        min-height: 100vh;
-      }
-      h1 {
-        font-size: 25px;
-      }
-      p {
-         padding: 5px;
-        margin: 10px 0;
-        font-size: 16px;
-      }
-      .botones {
-        flex-direction: column;
-        gap: 20px;
-        width: 80%;
-        align-items: center;
-      }
-      .botones a {
-        width: 90%;
-        justify-content: center;
-        font-size: 20px;
-        padding: 10px 0;
-      }
-      .icono {
-        width: auto;
-        height: 30px;
-      }
-    }
-=======
       .botones a {
         font-size: 15px;
         padding: 12px 18px;
       }
     }
->>>>>>> eff9b41015870b0a5636f6e7526a3e9b1a0ad01c
 
     @media (max-width: 600px) {
       body {

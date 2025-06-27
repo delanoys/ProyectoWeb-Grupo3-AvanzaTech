@@ -19,8 +19,14 @@
 
     <nav class="main-nav">
         <div class="container">
-            <ul>
-                 <li><a href="/index.html"><i class="fas fa-clock"></i> INICIO</a></li>
+            <!-- Botón hamburguesa -->
+            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú de navegación">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul id="mainMenu">
+                <li><a href="/index.html"><i class="fas fa-clock"></i> INICIO</a></li>
                 <li><a href="#que-es-git"><i class="fas fa-question-circle"></i> ¿Qué es Git?</a></li>
                 <li><a href="#comandos-basicos"><i class="fas fa-terminal"></i> Comandos Básicos</a></li>
                 <li><a href="#github"><i class="fab fa-github"></i> GitHub</a></li>
@@ -35,12 +41,12 @@
             <div class="resource-card">
                 <h3><i class="fas fa-bookmark"></i> Índice Rápido</h3>
                 <ul class="resource-list">
-                    
+
                     <li><a href="#que-es-git"><i class="fas fa-question"></i> ¿Qué es Git?</a></li>
                     <li><a href="#comandos-basicos"><i class="fas fa-terminal"></i> Comandos Básicos</a></li>
                     <li><a href="#github"><i class="fab fa-github"></i> GitHub</a></li>
                     <li><a href="#flujo-trabajo"><i class="fas fa-project-diagram"></i> Flujo de Trabajo</a></li>
-                    <li><a href="git.html"><i class="fas fa-clock"></i> Comandos recientes utilizados</a></li>
+                    <li><a href="git.html"><i class="fas fa-clock"></i> Guía Completa Flujo de Trabajo</a></li>
                     <li><a href="#recursos"><i class="fas fa-book"></i> Recursos</a></li>
                 </ul>
             </div>
@@ -53,14 +59,19 @@
         <main>
             <section id="que-es-git" class="section">
                 <h2><i class="fab fa-git-alt"></i> ¿Qué es Git?</h2>
+               
                 <p>
-                    Git es un sistema de control de versiones distribuido que permite gestionar los cambios en el código fuente de un proyecto. Facilita la colaboración entre desarrolladores y el seguimiento del historial de modificaciones.
+                    Git es un sistema de control de versiones distribuido que permite gestionar los cambios en el código
+                    fuente de un proyecto. Facilita la colaboración entre desarrolladores y el seguimiento del historial
+                    de modificaciones.
                 </p>
                 <ul>
                     <li>Permite trabajar en equipo sin sobrescribir el trabajo de otros.</li>
                     <li>Guarda el historial de cambios y facilita la recuperación de versiones anteriores.</li>
                     <li>Es la base de plataformas como GitHub, GitLab y Bitbucket.</li>
                 </ul>
+
+
             </section>
 
             <section id="comandos-basicos" class="section">
@@ -100,15 +111,29 @@
             <section id="github" class="section">
                 <h2><i class="fab fa-github"></i> ¿Qué es GitHub?</h2>
                 <p>
-                    GitHub es una plataforma en línea para alojar repositorios Git y facilitar la colaboración entre desarrolladores. Permite compartir código, gestionar proyectos y contribuir a proyectos de código abierto.
+                    GitHub es una plataforma en línea para alojar repositorios Git y facilitar la colaboración entre
+                    desarrolladores. Permite compartir código, gestionar proyectos y contribuir a proyectos de código
+                    abierto.
                 </p>
                 <ul>
                     <li>Permite crear repositorios públicos y privados.</li>
                     <li>Facilita la colaboración mediante pull requests y revisiones de código.</li>
                     <li>Incluye herramientas para gestión de incidencias, documentación y despliegue.</li>
                 </ul>
+                <div class="video-container" style="margin:2em 0;">
+                    <h3><i class="fas fa-video"></i> Video recomendado: Curso de Git y GitHub</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ANF1X42_ae4"
+                        title="Curso de Git y GitHub" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <p>
+                        <a href="https://www.youtube.com/watch?v=ANF1X42_ae4&list=PLU8oAlHdN5BlyaPFiNQcV0xDqy0eR35aU"
+                            target="_blank" rel="noopener">
+                            Ver la lista completa en YouTube
+                        </a>
+                    </p>
+                </div>
             </section>
-
             <section id="flujo-trabajo" class="section">
                 <h2><i class="fas fa-project-diagram"></i> Flujo de Trabajo Básico</h2>
                 <ol>
@@ -126,8 +151,10 @@
                 <ul>
                     <li><a href="https://git-scm.com/book/es/v2" target="_blank">Pro Git (Libro gratuito)</a></li>
                     <li><a href="https://guides.github.com/" target="_blank">Guías de GitHub</a></li>
-                    <li><a href="https://learngitbranching.js.org/" target="_blank">Learn Git Branching (Interactivo)</a></li>
-                    <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Tutoriales de Git por Atlassian</a></li>
+                    <li><a href="https://learngitbranching.js.org/" target="_blank">Learn Git Branching
+                            (Interactivo)</a></li>
+                    <li><a href="https://www.atlassian.com/git/tutorials" target="_blank">Tutoriales de Git por
+                            Atlassian</a></li>
                 </ul>
             </section>
         </main>
@@ -135,15 +162,27 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p>© 2024 Aprendiendo Git y GitHub - Todos los derechos reservados</p>
+            <p>© 2025 Developers in process - Todos los derechos reservados</p>
+            <p>Guía educativa sobre GIT para principiantes</p>
             <div class="social-links">
                 <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
-
-    <button id="que-es-git" class="back-to-top" title="Volver arriba">
+    <script src="AprendiendoGIT.js"></script>
+    <script>
+    // Menú hamburguesa responsive
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mainMenu = document.getElementById('mainMenu');
+        hamburgerBtn.addEventListener('click', function() {
+            mainMenu.classList.toggle('show');
+            hamburgerBtn.classList.toggle('active');
+        });
+    });
+    </script>
+    <button id="backToTop" class="back-to-top" title="Volver arriba">
         <i class="fas fa-arrow-up"></i>
     </button>
 </body>

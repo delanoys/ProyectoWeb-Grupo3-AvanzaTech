@@ -26,8 +26,8 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 98%;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -100,10 +100,10 @@ body {
 <<<<<<<<< Temporary merge branch 1
      background-color: var(--primary-color);
     color: rgb(247, 244, 244);
-=========
+
     background-color: hsl(33, 73%, 62%);
     color: rgb(0, 0, 0);
->>>>>>>>> Temporary merge branch 2
+
     transform: translateY(-2px);
 }
 

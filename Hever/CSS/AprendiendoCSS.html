@@ -24,10 +24,11 @@
         <div class="container">
             <ul>
                 <li><a href="/index.html"><i class="fas fa-basics"></i> INICIO</a></li>
+                <li><a href="#introduccion-css"><i class="fas fa-basics"></i> introduccion-css</a></li>
                 <li><a href="#diseno-layout"><i class="fas fa-basics"></i> Diseño y Layout</a></li>
                 <li><a href="#animaciones"><i class="fas fa-magic"></i> Animaciones</a></li>
                 <li><a href="#selectores"><i class="fas fa-mouse-pointer"></i> Selectores</a></li>
-                <li><a href="#responsive"><i class="fas fa-mobile-alt"></i> Responsive</a></li>
+                 <li><a href="#media-queries"><i class="fas fa-desktop"></i> Media Queries</a></li>
                 <li><a href="#editor"><i class="fa-solid fa-code"></i> Editor on Line</a></li>
             </ul>
         </div>
@@ -38,11 +39,14 @@
             <div class="resource-card">
                 <h3><i class="fas fa-bookmark"></i> Índice Rápido</h3>
                 <ul class="resource-list">
-                    <li><a href="#box-model"><i class="fas fa-square-full"></i> Modelo de Caja</a></li>
+                    <li><a href="#introduccion-css"><i class="fas fa-book"></i> introduccion-css</a></li>
+                    <li><a href="#clases-identificadores"><i class="fas fa-hashtag"></i> Identificadores y Clases</a></li>
+                    <li><a href="#diseno-layout"><i class="fas fa-square-full"></i> Modelo de Caja</a></li>
                     <li><a href="#flexbox-grid"><i class="fas fa-th-large"></i> Flexbox & Grid</a></li>
                     <li><a href="#transiciones"><i class="fas fa-exchange-alt"></i> Transiciones</a></li>
                     <li><a href="#keyframes"><i class="fas fa-film"></i> @keyframes</a></li>
                     <li><a href="#selectores"><i class="fas fa-bullseye"></i> Selectores</a></li>
+                    <li><a href="#responsive"><i class="fas fa-mobile-alt"></i> Responsive</a></li>
                     <li><a href="#media-queries"><i class="fas fa-desktop"></i> Media Queries</a></li>
                     <li><a href="#editor"><i class="fa-solid fa-code"></i> Editor on Line</a></li>
                 </ul>
@@ -56,13 +60,109 @@
                 </form>
             </div>
 
-            <div class="tip-card">
+            <div class="tip-card" id="css-tip-card">
                 <h3><i class="fas fa-lightbulb"></i> Tip del Día</h3>
-                <p>Usa <code>gap</code> en lugar de márgenes para espaciado entre elementos en Flexbox y Grid.</p>
+                <p id="css-tip-text">Cargando tip...</p>
             </div>
+            <script src="/js/tipsCSS.js"></script>
         </aside>
 
         <main>
+            <!-- Introduccion a css -->
+            <section id="introduccion-css" class="section">
+                <h2><i class="fab fa-css3-alt"></i> Introducción a CSS</h2>
+                <article class="article">
+                    <p>
+                        <strong>CSS</strong> (<em>Cascading Style Sheets</em> o Hojas de Estilo en Cascada) es el
+                        lenguaje utilizado para describir la presentación y el diseño de las páginas web. Permite
+                        separar el contenido (HTML) de la apariencia visual, facilitando la creación de sitios web
+                        atractivos, accesibles y fáciles de mantener.
+                    </p>
+                    <ul>
+                        <li><strong>¿Qué hace CSS?</strong> Define colores, fuentes, márgenes, posiciones, animaciones y
+                            mucho más.</li>
+                        <li><strong>¿Por qué usarlo?</strong> Permite reutilizar estilos, mejorar la experiencia de
+                            usuario y adaptar el diseño a diferentes dispositivos.</li>
+                    </ul>
+                    <h3>¿Cómo se aplica CSS?</h3>
+                    <ol>
+                        <li>
+                            <strong>En línea:</strong>
+                            <pre><code>&lt;p style="color: blue;"&gt;Texto azul&lt;/p&gt;</code></pre>
+                        </li>
+                        <li>
+                            <strong>En la cabecera (interno):</strong>
+                            <pre><code>&lt;style&gt;
+p { color: blue; }
+&lt;/style&gt;</code></pre>
+                        </li>
+                        <li>
+                            <strong>En archivo externo:</strong>
+                            <pre><code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code></pre>
+                        </li>
+                    </ol>
+                    <h3>Sintaxis básica</h3>
+                    <pre><code>selector {
+    propiedad: valor;
+}</code></pre>
+                    <p>
+                        Por ejemplo, para cambiar el color de todos los títulos:
+                    </p>
+                    <pre><code>h1 {
+    color: #1c2566;
+    font-size: 2.5em;
+}</code></pre>
+                    <h3>Ventajas de CSS</h3>
+                    <ul>
+                        <li>Separación de contenido y presentación</li>
+                        <li>Facilita el mantenimiento y la escalabilidad</li>
+                        <li>Permite crear diseños responsivos y modernos</li>
+                        <li>Reduce la duplicación de código</li>
+                    </ul>
+                </article>
+            </section>
+            <!--  clases y los identificadores en css -->
+            <section id="clases-identificadores" class="section">
+                <h2><i class="fas fa-hashtag"></i> Clases y Identificadores en CSS</h2>
+                <article class="article">
+                    <p>
+                        En CSS, <strong>clases</strong> y <strong>identificadores (IDs)</strong> son selectores que
+                        permiten aplicar estilos a elementos HTML específicos.
+                    </p>
+                    <h3>Clases (<code>.clase</code>)</h3>
+                    <ul>
+                        <li>Se definen con un punto (<code>.</code>) seguido del nombre.</li>
+                        <li>Pueden ser usadas en varios elementos.</li>
+                        <li>Ejemplo de uso:</li>
+                    </ul>
+                    <pre><code>&lt;p class="destacado"&gt;Este texto es importante&lt;/p&gt;
+
+.destacado {
+    color: #007bff;
+    font-weight: bold;
+}
+</code></pre>
+                    <h3>Identificadores (<code>#id</code>)</h3>
+                    <ul>
+                        <li>Se definen con una almohadilla (<code>#</code>) seguida del nombre.</li>
+                        <li>Solo deben usarse una vez por página.</li>
+                        <li>Ejemplo de uso:</li>
+                    </ul>
+                    <pre><code>&lt;div id="banner"&gt;Bienvenido&lt;/div&gt;
+
+#banner {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+</code></pre>
+                    <h3>Diferencias clave</h3>
+                    <ul>
+                        <li><strong>Clases</strong>: reutilizables, para grupos de elementos.</li>
+                        <li><strong>IDs</strong>: únicos, para un solo elemento.</li>
+                    </ul>
+                </article>
+            </section>
             <!-- Sección de Diseño y Layout -->
             <section id="diseno-layout" class="section">
                 <h2><i class="fas fa-pencil-ruler"></i> Diseño y Layout</h2>
@@ -151,12 +251,17 @@
                     <div class="use-cases">
                         <h4>¿Cuándo usar cada uno?</h4>
                         <ul>
-                            <li><strong>Flexbox</strong>: Diseños unidimensionales (filas o columnas), alineación
-                                precisa, componentes pequeños</li>
-                            <li><strong>Grid</strong>: Diseños bidimensionales complejos, layouts completos de página,
-                                estructuras regulares</li>
+                            <li><strong>Flexbox</strong>: Diseños unidimensionales (filas o columnas), alineación precisa, componentes pequeños</li>
+                            <li><strong>Grid</strong>: Diseños bidimensionales complejos, layouts completos de página, estructuras regulares</li>
                         </ul>
+                        <div style="text-align: center; margin: 15px 0;">
+                            <img src="/imagenes/CaCSS Flex Layout.png" alt="CSS Flex Layout" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                            <div style="margin-top: 8px;">
+                                <a href="https://angrytools.com/css-flex/" target="_blank">CSS Flex Layout</a>
+                            </div>
+                        </div>
                     </div>
+               
                 </article>
             </section>
 
@@ -232,9 +337,197 @@
                     </div>
                 </article>
             </section>
+            <!-- Sección de Selectores en CSS -->
+            <section id="selectores" class="section">
+                <h2><i class="fas fa-mouse-pointer"></i> Selectores en CSS</h2>
+                <article class="article">
+                    <p>
+                        Los <strong>selectores</strong> en CSS permiten elegir a qué elementos HTML se aplicarán los estilos. Son la base para personalizar la apariencia de tu sitio web.
+                    </p>
+                    <h3>Tipos principales de selectores</h3>
+                    <ul>
+                        <li>
+                            <strong>Selector de etiqueta:</strong> Aplica estilos a todos los elementos de un tipo.<br>
+                            <code>p { color: #333; }</code>
+                        </li>
+                        <li>
+                            <strong>Selector de clase:</strong> Aplica estilos a los elementos con una clase específica.<br>
+                            <code>.destacado { background: #ffeeba; }</code>
+                        </li>
+                        <li>
+                            <strong>Selector de ID:</strong> Aplica estilos a un elemento con un ID único.<br>
+                            <code>#principal { padding: 20px; }</code>
+                        </li>
+                        <li>
+                            <strong>Selector universal:</strong> Selecciona todos los elementos.<br>
+                            <code>* { box-sizing: border-box; }</code>
+                        </li>
+                        <li>
+                            <strong>Selector de atributo:</strong> Selecciona elementos según un atributo.<br>
+                            <code>input[type="text"] { border: 1px solid #007bff; }</code>
+                        </li>
+                    </ul>
+                    <h3>Selectores combinados y avanzados</h3>
+                    <ul>
+                        <li>
+                            <strong>Selector descendiente:</strong> <code>nav ul li { ... }</code> (selecciona <code>li</code> dentro de <code>ul</code> dentro de <code>nav</code>)
+                        </li>
+                        <li>
+                            <strong>Selector hijo directo:</strong> <code>div > p { ... }</code> (solo <code>p</code> hijos directos de <code>div</code>)
+                        </li>
+                        <li>
+                            <strong>Selector de hermano adyacente:</strong> <code>h2 + p { ... }</code> (primer <code>p</code> después de <code>h2</code>)
+                        </li>
+                        <li>
+                            <strong>Selector de hermanos generales:</strong> <code>h2 ~ p { ... }</code> (todos los <code>p</code> después de <code>h2</code>)
+                        </li>
+                        <li>
+                            <strong>Pseudoclases:</strong> <code>a:hover { color: red; }</code> (cuando el mouse pasa sobre un enlace)
+                        </li>
+                        <li>
+                            <strong>Pseudoelementos:</strong> <code>p::first-line { font-weight: bold; }</code> (primera línea de un párrafo)
+                        </li>
+                    </ul>
+                    <h3>Ejemplo práctico</h3>
+                    <pre><code>&lt;ul&gt;
+              &lt;li class="importante"&gt;Elemento 1&lt;/li&gt;
+              &lt;li&gt;Elemento 2&lt;/li&gt;
+            &lt;/ul&gt;
 
+            ul li.importante {
+              color: #e74c3c;
+              font-weight: bold;
+            }
+            </code></pre>
+                    <p>
+                        <strong>Consejo:</strong> Usa selectores específicos para evitar conflictos y mantener tu CSS organizado.
+                    </p>
+                </article>
+            </section>
+         
+          
+            <!-- Sección de Media Queries -->
+
+            <section id="media-queries" class="section">
+                <h2><i class="fas fa-desktop"></i> Media Queries en CSS</h2>
+                <article class="article" >
+                    <p>
+                        <strong>Media Queries</strong> permiten adaptar el diseño de tu sitio web a diferentes tamaños de pantalla y dispositivos, haciendo posible el <strong>diseño responsivo</strong>.
+                    </p>
+                    <h3>¿Cómo funcionan?</h3>
+                    <p>
+                        Una media query aplica estilos CSS solo si se cumple una condición sobre el dispositivo, como el ancho de la pantalla.
+                    </p>
+                    <pre><code>@media (max-width: 600px) {
+              body {
+                background-color: #f0f8ff;
+              }
+              h1 {
+                font-size: 1.5em;
+              }
+            }</code></pre>
+                    <ul>
+                        <li><strong>max-width</strong>: Aplica estilos cuando la pantalla es igual o menor a 600px.</li>
+                        <li><strong>min-width</strong>: Aplica estilos cuando la pantalla es igual o mayor a cierto tamaño.</li>
+                    </ul>
+                    <h3>Ejemplo práctico</h3>
+                    <pre><code>/* Estilos generales */
+            nav ul {
+              display: flex;
+              gap: 20px;
+            }
+
+            /* Para pantallas pequeñas */
+            @media (max-width: 768px) {
+              nav ul {
+                flex-direction: column;
+                gap: 10px;
+              }
+            }</code></pre>
+                    <h3>Otras condiciones útiles</h3>
+                    <ul>
+                        <li><code>orientation: portrait</code> (modo vertical)</li>
+                        <li><code>orientation: landscape</code> (modo horizontal)</li>
+                        <li><code>min-height</code> y <code>max-height</code></li>
+                        <li><code>print</code> (para impresión)</li>
+                    </ul>
+                    <h3>Consejos</h3>
+                    <ul>
+                        <li>Empieza diseñando para móviles (<strong>mobile first</strong>) y usa <code>min-width</code> para ampliar.</li>
+                        <li>Utiliza unidades relativas (<code>em</code>, <code>rem</code>, <code>%</code>) para mayor flexibilidad.</li>
+                        <li>Prueba tu sitio en diferentes dispositivos y resoluciones.</li>
+                    </ul>
+                    <div style="text-align:center; margin: 16px 0;">
+                        <img src="/imagenes/media query.png" alt="Ejemplo de Media Queries" style="max-width: 60%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <div style="margin-top: 8px;">
+                            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">Más sobre Media Queries en MDN</a>
+                        </div>
+                    </div>
+                </article>
+                   <!-- Sección de Responsive Design -->
+                <h2><i class="fas fa-mobile-alt"></i> ¿Qué es Responsive Design?</h2>
+                <article class="article" id="responsive">
+                    <p>
+                        <strong>Responsive Design</strong> o <em>diseño web adaptable</em> es una técnica que permite que las páginas web se vean y funcionen correctamente en cualquier dispositivo, ya sea un computador, tablet o teléfono móvil. El objetivo es que el contenido se adapte automáticamente al tamaño de la pantalla del usuario.
+                    </p>
+                    <h3>¿Por qué es importante?</h3>
+                    <ul>
+                        <li>Mejora la experiencia del usuario en todos los dispositivos.</li>
+                        <li>Evita la necesidad de hacer zoom o desplazarse horizontalmente.</li>
+                        <li>Es recomendado por Google para el SEO.</li>
+                    </ul>
+                    <h3>¿Cómo se logra?</h3>
+                    <ul>
+                        <li>Usando <strong>media queries</strong> para aplicar estilos según el ancho de la pantalla.</li>
+                        <li>Utilizando <strong>unidades flexibles</strong> como %, em, rem y vw/vh.</li>
+                        <li>Diseñando layouts fluidos con <strong>Flexbox</strong> o <strong>CSS Grid</strong>.</li>
+                        <li>Imágenes y videos adaptables con <code>max-width: 100%;</code>.</li>
+                    </ul>
+                    <h3>Ejemplo básico de Responsive</h3>
+                    <pre><code>&lt;style&gt;
+            .container {
+              width: 90%;
+              max-width: 800px;
+              margin: auto;
+            }
+            img {
+              max-width: 100%;
+              height: auto;
+            }
+            @media (max-width: 600px) {
+              .container {
+                width: 100%;
+                padding: 10px;
+              }
+              h1 {
+                font-size: 1.2em;
+              }
+            }
+            &lt;/style&gt;
+
+            &lt;div class="container"&gt;
+              &lt;h1&gt;¡Este sitio es responsive!&lt;/h1&gt;
+              &lt;img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Ejemplo Responsive"&gt;
+              &lt;p&gt;Prueba cambiar el tamaño de la ventana para ver el efecto.&lt;/p&gt;
+            &lt;/div&gt;
+            </code></pre>
+                    <div style="text-align:center; margin: 16px 0;">
+                        <img src="/imagenes/responsive.png" alt="Responsive Design Ejemplo" style="max-width: 60%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <div style="margin-top: 8px;">
+                            <a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">Más sobre Responsive Design en MDN</a>
+                        </div>
+                        
+                    </div>
+                    <h3>Consejos rápidos</h3>
+                    <ul>
+                        <li>Empieza diseñando para móviles (<strong>mobile first</strong>).</li>
+                        <li>Evita valores fijos de ancho y alto.</li>
+                        <li>Prueba tu web en diferentes dispositivos y resoluciones.</li>
+                    </ul>
+                </article>
+            </section>
             <!-- Otras secciones... -->
-             <section id="editor" class="section">
+            <section id="editor" class="section">
                 <h2>Editor HTML-CSS-JS</h2>
                 <article class="article">
                     <div class="editor-wrapper">
@@ -355,12 +648,22 @@
                     <iframe id="preview"></iframe>
                 </article>
             </section>
+            <section id="recursos" class="section">
+                        <h2><i class="fas fa-book"></i> Recursos Recomendados</h2>
+                        <ul>
+                            <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">W3Schools CSS Tutorial</a></li>
+                            <li><a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">developer.mozilla.org CSS</a></li>
+                            <li><a href="https://www.codecademy.com/learn/learn-css" target="_blank">Learn CSS codecademy</a></li>
+                            
+                        </ul>
+                    </section>
         </main>
     </div>
 
     <footer class="main-footer">
         <div class="container">
-            <p>© 2023 Aprendiendo CSS - Todos los derechos reservados</p>
+            <p>© 2025 Developers in process - Todos los derechos reservados</p>
+             <p>Guía educativa sobre CSS para principiantes</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>

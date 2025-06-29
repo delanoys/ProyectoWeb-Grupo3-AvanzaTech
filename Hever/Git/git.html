@@ -219,11 +219,67 @@ git tag -a v1.2.0 -m "Lanzamiento versión 1.2.0 - Nueva funcionalidad X"
 
 # 4. Subir el tag al repositorio
 git push origin v1.2.0</code></pre>
-                    <p class="git-note">
+                    
+                </div>
+    
+                <div  class="git-section">
+  <h2>📌 Cómo crear un tag y restaurar tu rama main en Git</h2>
+
+  <ol>
+    <li>
+      <strong>1️⃣ Ver los tags existentes</strong>
+      <pre><code>git tag</code></pre>
+      <p>✔️ Muestra la lista de tags en el repositorio.</p>
+    </li>
+
+    <li>
+      <strong>2️⃣ Intentar crear un tag existente (error)</strong>
+      <pre><code>git tag -a v2.0 89524b3 -m "Versión 2.0 final para exposición 28-06-2025"</code></pre>
+      <p>❌ Resultado: <code>fatal: tag 'v2.0' already exists</code></p>
+    </li>
+
+    <li>
+      <strong>3️⃣ Crear un nuevo tag con un nombre diferente</strong>
+      <pre><code>git tag -a v2.01 89524b3 -m "Versión 2.0 final para exposición 28-06-2025"</code></pre>
+      <p>✔️ Crea un tag anotado llamado <code>v2.01</code> apuntando al commit <code>89524b3</code>.</p>
+    </li>
+
+    <li>
+      <strong>4️⃣ Verificar los tags nuevamente</strong>
+      <pre><code>git tag</code></pre>
+      <p>✔️ Debe mostrar <code>v2.01</code> en la lista.</p>
+    </li>
+
+    <li>
+      <strong>5️⃣ Subir el tag al repositorio remoto</strong>
+      <pre><code>git push origin v2.01</code></pre>
+      <p>✔️ Envía el nuevo tag <code>v2.01</code> al repositorio en GitHub o similar.</p>
+    </li>
+
+    <li>
+      <strong>6️⃣ Restaurar la rama main al tag v2.01</strong>
+      <pre><code>git checkout main
+git reset --hard v2.01</code></pre>
+      <p>✔️ Ahora <code>main</code> apunta al commit del tag <code>v2.01</code>.</p>
+    </li>
+
+    <li>
+      <strong>7️⃣ Actualizar el remoto (opcional y peligroso)</strong>
+      <pre><code>git push origin main --force</code></pre>
+      <p>⚠️ <strong>ATENCIÓN:</strong> Usar <code>--force</code> reemplaza el historial remoto. Coordina con tu equipo.</p>
+    </li>
+
+    <li>
+      <strong>✅ Resumen en una línea para restaurar</strong>
+      <pre><code>git checkout main && git reset --hard v2.01 && git push origin main --force</code></pre>
+    </li>
+  </ol>
+</div>
+
+</section>
+<p class="git-note">
                         <strong>Nota:</strong> Es buena práctica seguir <a href="https://semver.org/" target="_blank">Semantic Versioning</a> (vMAJOR.MINOR.PATCH) para los nombres de tags.
                     </p>
-                </div>
-            </section>
         </main>
     </div>
     <footer class="main-footer">
